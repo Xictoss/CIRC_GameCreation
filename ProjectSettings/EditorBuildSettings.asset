@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/ZircliX.unity
+    path: Assets/Scenes/Lois_Test/ZircliX.unity
     guid: 77de1baaa8e29044d88d826b4dec1edf
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 46661899d2991954fb32fdca03a8b7e5, type: 2}
