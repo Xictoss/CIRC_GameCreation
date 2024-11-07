@@ -9,7 +9,7 @@ namespace NomDuJeu.Progression.Core
         {
             string json = JsonUtility.ToJson(saveData, true);
 
-            string directoryPath = Path.Combine(Application.dataPath, "StreamingAssets");
+            string directoryPath = Path.Combine(Application.persistentDataPath, "StreamingAssets");
             if (!Directory.Exists(directoryPath))
             {
                 Directory.CreateDirectory(directoryPath);
@@ -21,7 +21,7 @@ namespace NomDuJeu.Progression.Core
 
         public static SaveData LoadProgressData()
         {
-            string jsonData = File.ReadAllText(Application.dataPath + "/StreamingAssets/PlayerProgressionSave.json");
+            string jsonData = File.ReadAllText(Application.persistentDataPath + "/StreamingAssets/PlayerProgressionSave.json");
             SaveData progressToLoad = JsonUtility.FromJson<SaveData>(jsonData);
             
             return progressToLoad;

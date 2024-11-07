@@ -2,15 +2,15 @@
     "saveVersion": "0.1",
     "<PlayerProgression>k__BackingField": [
         {
-            "guidID": "ab1c04c0e87f1824dbc1d300c0c3ffd6",
+            "guidID": "a6d7771eaf050b149be34e974bfa60c2",
+            "isComplete": true
+        },
+        {
+            "guidID": "992548e6d16ee464c9aac899e2920e0c",
             "isComplete": false
         },
         {
-            "guidID": "c8632d813da5cdb448253b4f78130d91",
-            "isComplete": false
-        },
-        {
-            "guidID": "6bead68f6e116954bbb021170d80c2db",
+            "guidID": "e9716fe6953d41949b5725cc0806443c",
             "isComplete": false
         }
     ]

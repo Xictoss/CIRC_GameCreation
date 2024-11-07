@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using LTX.ChanneledProperties;
 using NomDuJeu.Progression.Core;
@@ -15,12 +16,14 @@ namespace NomDuJeu.Core
 
         #endregion
 
+        public static event Action GameSaved;
+
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         private static void Load()
         {
             Application.quitting += UnLoad;
             
-            ExampleUseOfPrioritisedProperty();
+            SetupCursor();
             LoadPlayerProgress();
         }
         
@@ -29,7 +32,9 @@ namespace NomDuJeu.Core
             SavePlayerProgress();
         }
 
-        private static void SavePlayerProgress()
+        #region Progress Functions
+
+        public static void SavePlayerProgress()
         {
             Debug.Log("Saving player progress");
             
@@ -42,9 +47,11 @@ namespace NomDuJeu.Core
             }
 
             ProgressionController.SaveProgressData(dataToSave);
+            
+            GameSaved?.Invoke();
         }
 
-        private static void LoadPlayerProgress()
+        public static void LoadPlayerProgress()
         {
             Debug.Log("Loading player progress");
             
@@ -55,20 +62,24 @@ namespace NomDuJeu.Core
             {
                 foreach (SaveScriptable gameSaveElement in gameProgressElements)
                 {
-                    if (playerSaveElement.guidID == gameSaveElement.scriptableSaveElement.guidID && playerSaveElement.isComplete)
+                    if (playerSaveElement.guidID == gameSaveElement.scriptableSaveElement.guidID)
                     {
-                        gameSaveElement.saveElementName = "PlayerDoneThis";
+                        gameSaveElement.scriptableSaveElement.isComplete = playerSaveElement.isComplete;
                     }
                 }
             }
         }
+
+        #endregion
 
         private static List<SaveScriptable> LoadGameProgressElements()
         {
             return new List<SaveScriptable>(Resources.LoadAll<SaveScriptable>("GameScriptables"));
         }
 
-        private static void ExampleUseOfPrioritisedProperty()
+        #region Exemple Use Of Prioritised Properties
+
+        private static void SetupCursor()
         {
             CursorVisibility = new PrioritisedProperty<bool>(true);
             CursorLockMode = new PrioritisedProperty<CursorLockMode>(UnityEngine.CursorLockMode.None);
@@ -86,5 +97,7 @@ namespace NomDuJeu.Core
         {
             Cursor.visible = isVisible;
         }
+
+        #endregion
     }
 }
