@@ -9,7 +9,7 @@ namespace NomDuJeu.Progression.Core
         {
             string json = JsonUtility.ToJson(saveData, true);
 
-            string directoryPath = StreamingAssetPathForReal();
+            string directoryPath = GetSavePathFromDevice();
             if (!Directory.Exists(directoryPath))
             {
                 Directory.CreateDirectory(directoryPath);
@@ -21,7 +21,7 @@ namespace NomDuJeu.Progression.Core
 
         public static SaveData LoadProgressData()
         {
-            string jsonData = File.ReadAllText(Path.Combine(StreamingAssetPathForReal(),"PlayerProgressionSave.json"));
+            string jsonData = File.ReadAllText(Path.Combine(GetSavePathFromDevice(),"PlayerProgressionSave.json"));
             SaveData progressToLoad = JsonUtility.FromJson<SaveData>(jsonData);
             
             return progressToLoad;
@@ -41,14 +41,14 @@ namespace NomDuJeu.Progression.Core
             return progressToLoad;
         }
         
-        private static string StreamingAssetPathForReal()
+        private static string GetSavePathFromDevice()
         {
             #if UNITY_EDITOR
-            return "file://" + Application.dataPath + "/StreamingAssets/";
+            return "file://" + Application.persistentDataPath + "/StreamingAssets/";
             #elif UNITY_ANDROID
-            return "jar:file://" + Application.dataPath + "!/assets/";
+            return "jar:file://" + Application.persistentDataPath + "!/assets/";
             #elif UNITY_IOS
-            return "file://" + Application.dataPath + "/Raw/";
+            return "file://" + Application.persistentDataPath + "/Raw/";
             #endif
         }
     }
