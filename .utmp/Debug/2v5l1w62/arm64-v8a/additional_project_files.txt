@@ -1,0 +1,1 @@
+C:\Users\lolof\Documents\GitHub\CIRC_GameCreation\Library\PramData\AndroidApplicationController\Cache\com.EArtsup.HeroDeLaSante\gradle-project\unityLibrary\src\main\cpp\FramePacing\UnitySwappyWrapper.h

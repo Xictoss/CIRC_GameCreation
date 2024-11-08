@@ -21,20 +21,21 @@ namespace NomDuJeu.Core
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         private static void Load()
         {
-            Application.quitting += UnLoad;
+            Application.wantsToQuit += UnLoad;
             
             SetupCursor();
-            LoadPlayerProgress();
+            LoadPlayerProgressFromPlayerPrefs();
         }
-        
-        private static void UnLoad()
+
+        private static bool UnLoad()
         {
-            SavePlayerProgress();
+            SavePlayerProgressToPlayerPrefs();
+            return true;
         }
 
         #region Progress Functions
 
-        public static void SavePlayerProgress()
+        /*public static void SavePlayerProgress()
         {
             Debug.Log("Saving player progress");
             
@@ -56,6 +57,42 @@ namespace NomDuJeu.Core
             Debug.Log("Loading player progress");
             
             SaveData playerProgressData = ProgressionController.LoadProgressData();
+            List<SaveScriptable> gameProgressElements = LoadGameProgressElements();
+
+            foreach (SaveElement playerSaveElement in playerProgressData.PlayerProgression)
+            {
+                foreach (SaveScriptable gameSaveElement in gameProgressElements)
+                {
+                    if (playerSaveElement.guidID == gameSaveElement.scriptableSaveElement.guidID)
+                    {
+                        gameSaveElement.scriptableSaveElement.isComplete = playerSaveElement.isComplete;
+                    }
+                }
+            }
+        }*/
+        
+        public static void SavePlayerProgressToPlayerPrefs()
+        {
+            Debug.Log("Saving player progress");
+            
+            SaveData dataToSave = new SaveData(Application.version);
+            List<SaveScriptable> gameProgressElements = LoadGameProgressElements();
+            
+            foreach (SaveScriptable progressElement in gameProgressElements)
+            {
+                dataToSave.Write(progressElement.scriptableSaveElement);
+            }
+
+            ProgressionController.SaveProgressDataToPlayerPrefs(dataToSave);
+            
+            GameSaved?.Invoke();
+        }
+        
+        public static void LoadPlayerProgressFromPlayerPrefs()
+        {
+            Debug.Log("Loading player progress");
+            
+            SaveData playerProgressData = ProgressionController.LoadProgressDataFromPlayerPrefs();
             List<SaveScriptable> gameProgressElements = LoadGameProgressElements();
 
             foreach (SaveElement playerSaveElement in playerProgressData.PlayerProgression)
