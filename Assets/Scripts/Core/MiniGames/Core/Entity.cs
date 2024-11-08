@@ -1,41 +1,44 @@
+using NomDuJeu.Core;
 using UnityEngine;
 
 namespace NomDuJeu.MiniGames.Core
 {
     public class Entity : MonoBehaviour
     {
-        [SerializeField] private EntityData entityData;
+        [field : SerializeField] public EntityData entityData { get; private set; }
         [SerializeField] private SpriteRenderer sr;
         
-        public BoxCollider2D moveBounds;
+        public BoxCollider2D boundsCollider;
         private Vector3 targetPosition;
 
-        public void Awake()
-        {
-            sr = gameObject.GetComponent<SpriteRenderer>();
-            sr.sprite = entityData.Sprite;
-        }
+        public bool isDragged;
         
-        public bool FirstFrame()
+        public void FirstFrame()
         {
+            sr.sprite = entityData.Sprite;
             SetNewTargetPosition();
-            return true;
         }
 
-        public bool Refresh()
+        public void Refresh()
         {
-            MoveEntity();
-            
-            return true;
+            if (!isDragged)
+            {
+                MoveEntity();
+            }
+            else
+            {
+                FollowTouchPosition();
+            }
+        }
+
+        private void FollowTouchPosition()
+        {
+            transform.position = InputController.Instance.worldTouchPosition;
         }
 
         private void SetNewTargetPosition()
         {
-            targetPosition = new Vector3(
-                Random.Range(moveBounds.bounds.min.x, moveBounds.bounds.max.x),
-                Random.Range(moveBounds.bounds.min.y, moveBounds.bounds.max.y),
-                transform.position.z
-            );
+            targetPosition = StaticFunctions.GetRandomPositionWithinBounds2D(boundsCollider, transform.position.z);
         }
 
         private void MoveEntity()
