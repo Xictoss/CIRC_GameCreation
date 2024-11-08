@@ -5,7 +5,7 @@ namespace NomDuJeu.Progression.Core
 {
     public static class ProgressionController
     {
-        public static void SaveProgressData(SaveData saveData)
+        /*public static void SaveProgressData(SaveData saveData)
         {
             string json = JsonUtility.ToJson(saveData, true);
 
@@ -25,7 +25,7 @@ namespace NomDuJeu.Progression.Core
             SaveData progressToLoad = JsonUtility.FromJson<SaveData>(jsonData);
             
             return progressToLoad;
-        }
+        }*/
 
         public static void SaveProgressDataToPlayerPrefs(SaveData saveData)
         {

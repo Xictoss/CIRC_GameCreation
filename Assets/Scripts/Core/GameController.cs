@@ -35,7 +35,7 @@ namespace NomDuJeu.Core
 
         #region Progress Functions
 
-        public static void SavePlayerProgress()
+        /*public static void SavePlayerProgress()
         {
             Debug.Log("Saving player progress");
             
@@ -69,7 +69,7 @@ namespace NomDuJeu.Core
                     }
                 }
             }
-        }
+        }*/
         
         public static void SavePlayerProgressToPlayerPrefs()
         {
