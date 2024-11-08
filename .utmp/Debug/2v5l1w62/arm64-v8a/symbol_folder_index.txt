@@ -1,1 +1,0 @@
-C:\Users\lolof\Documents\GitHub\CIRC_GameCreation\Library\PramData\AndroidApplicationController\Cache\com.EArtsup.HeroDeLaSante\gradle-project\unityLibrary\build\intermediates\cxx\Debug\2v5l1w62\obj\arm64-v8a
