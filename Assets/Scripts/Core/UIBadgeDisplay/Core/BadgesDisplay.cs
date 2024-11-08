@@ -60,7 +60,7 @@ namespace NomDuJeu.UIBadgeDisplay.Core
         
         public void SaveGameData()
         {
-            GameController.SavePlayerProgress();
+            GameController.SavePlayerProgressToPlayerPrefs();
         }
     }
 }

@@ -9,9 +9,8 @@ namespace NomDuJeu.MiniGames.Core
         
         public BoxCollider2D moveBounds;
         private Vector3 targetPosition;
-        private float moveTimer = 0f;
 
-        public void LoadScene()
+        public void Awake()
         {
             sr = gameObject.GetComponent<SpriteRenderer>();
             sr.sprite = entityData.Sprite;

@@ -15,5 +15,5 @@ MonoBehaviour:
   ID: 1
   Speed: 2
   NewTargetRate: 1.25
-  Sprite: {fileID: 21300000, guid: 3faebebfb41380b4f8820adf0d965690, type: 3}
+  Sprite: {fileID: 21300000, guid: 9dc58fb07aa97b1489201500cf80db2c, type: 3}
   Good: 1
