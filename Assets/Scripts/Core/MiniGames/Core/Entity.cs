@@ -25,13 +25,6 @@ namespace NomDuJeu.MiniGames.Core
 
         public bool Refresh()
         {
-            moveTimer += Time.deltaTime;
-            if (moveTimer >= entityData.NewTargetRate)
-            {
-                SetNewTargetPosition();
-                moveTimer = 0f;
-            }
-            
             MoveEntity();
             
             return true;
@@ -48,7 +41,7 @@ namespace NomDuJeu.MiniGames.Core
 
         private void MoveEntity()
         {
-            if (Mathf.Abs(targetPosition.magnitude - transform.position.magnitude) < 0.1f) return;
+            if (Mathf.Abs(targetPosition.magnitude - transform.position.magnitude) < 0.1f) SetNewTargetPosition();
             
             Vector3 direction = (targetPosition - transform.position).normalized;
             transform.Translate(direction * (entityData.Speed * Time.deltaTime));

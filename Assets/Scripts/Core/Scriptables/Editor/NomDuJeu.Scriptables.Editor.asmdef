@@ -9,7 +9,6 @@
     "includePlatforms": [],
     "excludePlatforms": [
         "Android",
-        "Editor",
         "WindowsStandalone32",
         "WindowsStandalone64"
     ],

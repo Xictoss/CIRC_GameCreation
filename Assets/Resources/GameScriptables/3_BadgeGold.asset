@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 964783772963464ca3a70eca161a2ff4, type: 3}
-  m_Name: NewBadgeScriptable 1
+  m_Name: 3_BadgeGold
   m_EditorClassIdentifier: 
   scriptableSaveElement:
-    guidID: 992548e6d16ee464c9aac899e2920e0c
+    guidID: e9716fe6953d41949b5725cc0806443c
     isComplete: 0
-  badgeName: NewBadgeScriptable 1
-  badgeDisplayImage: {fileID: 21300000, guid: e521aa3117469894ea8013d1a6871b97, type: 3}
+  badgeName: 3_BadgeGold
+  badgeDisplayImage: {fileID: 21300000, guid: ed9da05140c5ce94db368f44624506a6, type: 3}
