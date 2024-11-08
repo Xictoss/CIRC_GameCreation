@@ -1,7 +1,8 @@
 using NomDuJeu.Core;
+using NomDuJeu.Inputs.SortAndSplode;
 using UnityEngine;
 
-namespace NomDuJeu.MiniGames.Core
+namespace NomDuJeu.MiniGames.Core.SortAndSplode
 {
     public class Entity : MonoBehaviour
     {

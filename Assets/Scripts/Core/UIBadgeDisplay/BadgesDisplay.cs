@@ -48,7 +48,7 @@ namespace NomDuJeu.UIBadgeDisplay.Core
         public void ToggleUnlockAchievement(int index)
         {
             badgesData[index].scriptableSaveElement.isComplete = toggles[index].isOn;
-                
+            
             if (toggles[index].isOn)
             {
                 badgesDisplay[index].sprite = badgesData[index].badgeDisplayImage;

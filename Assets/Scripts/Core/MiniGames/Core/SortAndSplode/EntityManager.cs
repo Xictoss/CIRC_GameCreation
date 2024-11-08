@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using LTX.Tools;
 using NomDuJeu.Core;
+using NomDuJeu.Inputs.SortAndSplode;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace NomDuJeu.MiniGames.Core
+namespace NomDuJeu.MiniGames.Core.SortAndSplode
 {
     public class EntityManager : MonoBehaviour
     {
@@ -17,20 +17,21 @@ namespace NomDuJeu.MiniGames.Core
         private List<Entity> spawnedEntities;
         private DynamicBuffer<Entity> spawnedEntitiesBuffer;
         private GameObject draggedGameObject;
+        private Entity draggedEntity;
         
         [SerializeField] private BoxCollider2D boundsCollider;
 
         private void OnEnable()
         {
-            InputController.Instance.EntityDragged += OnEntityDragged;
-            InputController.Instance.EntityReleased += OnEntityReleased;
-            InputController.Instance.EntityReleasedOnEmpty += OnEntityReleasedOnEmpty;
+            SortAndSplodeInput.Instance.EntityDragged += OnEntityDragged;
+            SortAndSplodeInput.Instance.EntityReleased += OnEntityReleased;
+            SortAndSplodeInput.Instance.EntityReleasedOnEmpty += OnEntityReleasedOnEmpty;
         }
         private void OnDisable()
         {
-            InputController.Instance.EntityDragged -= OnEntityDragged;
-            InputController.Instance.EntityReleased -= OnEntityReleased;
-            InputController.Instance.EntityReleasedOnEmpty -= OnEntityReleasedOnEmpty;
+            SortAndSplodeInput.Instance.EntityDragged -= OnEntityDragged;
+            SortAndSplodeInput.Instance.EntityReleased -= OnEntityReleased;
+            SortAndSplodeInput.Instance.EntityReleasedOnEmpty -= OnEntityReleasedOnEmpty;
         }
 
         private void Awake()
@@ -69,44 +70,43 @@ namespace NomDuJeu.MiniGames.Core
             if (spawnedEntities.Count == 0)
             {
                 Debug.Log("Player Won !!!");
+                //Implement logic for MiniGame isComplete + Badge
             }
         }
 
         private void OnEntityDragged(GameObject hitObject)
         {
             draggedGameObject = hitObject;
-            draggedGameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
-            draggedGameObject.GetComponent<Entity>().isDragged = true;
+            draggedEntity = draggedGameObject.GetComponent<Entity>();
+
+            SetEntityDragged(true);
         }
         
         private void OnEntityReleased(GameObject releasedInZone)
         {
             if (!draggedGameObject) return;
+
+            SetEntityDragged(false);
             
-            draggedGameObject.GetComponent<Entity>().isDragged = false;
-            
-            if (ValidEndZone(releasedInZone))
+            if (ValidEndZone(releasedInZone)) //Correct End Zone
             {
                 //Debug.Log("Correct Object Drag");
-                
-                spawnedEntities.Remove(draggedGameObject.GetComponent<Entity>());
-                Destroy(draggedGameObject, 0.5f);
-                draggedGameObject = null;
+                spawnedEntities.Remove(draggedEntity);
+                Destroy(draggedGameObject);
             }
-            else
+            else //Incorrect End Zone
             {
                 //Debug.Log("Not a Correct Object Drag !!!");
-                
                 draggedGameObject.layer = LayerMask.NameToLayer("Default");
-                draggedGameObject = null;
             }
+
+            SetEntityReferencesNull();
         }
 
         private void OnEntityReleasedOnEmpty()
         {
-            draggedGameObject.layer = LayerMask.NameToLayer("Default");
-            draggedGameObject.GetComponent<Entity>().isDragged = false;
-            draggedGameObject = null;
+            SetEntityDragged(false);
+            SetEntityReferencesNull();
         }
 
         private bool ValidEndZone(GameObject zone)
@@ -114,6 +114,18 @@ namespace NomDuJeu.MiniGames.Core
             EntityData entityData = draggedGameObject.GetComponent<Entity>().entityData;
             
             return (zone.CompareTag("MiniGameZone1") && entityData.Good) || (zone.CompareTag("MiniGameZone2") && !entityData.Good);
+        }
+
+        private void SetEntityReferencesNull()
+        {
+            draggedGameObject = null;
+            draggedEntity = null;
+        }
+
+        private void SetEntityDragged(bool state)
+        {
+            draggedEntity.isDragged = state;
+            draggedGameObject.layer = state ? LayerMask.NameToLayer("Ignore Raycast") : LayerMask.NameToLayer("Default");
         }
     }
 }
