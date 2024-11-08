@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using UnityEngine;
 
 namespace NomDuJeu.Progression.Core
