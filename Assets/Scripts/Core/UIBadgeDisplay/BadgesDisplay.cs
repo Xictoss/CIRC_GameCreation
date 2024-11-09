@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using NomDuJeu.Core;
 using NomDuJeu.Scriptables.Core;
 using UnityEngine;
@@ -10,7 +12,7 @@ namespace NomDuJeu.UIBadgeDisplay.Core
         [SerializeField] private Image[] badgesDisplay;
         
         [SerializeField] private Sprite badgeNotCompleted;
-        [SerializeField] private BadgeScriptable[] badgesData;
+        private BadgeScriptable[] badgesData;
 
         [SerializeField] private Toggle[] toggles;
 
@@ -22,7 +24,12 @@ namespace NomDuJeu.UIBadgeDisplay.Core
         {
             GameController.GameSaved -= RefreshUI;
         }
-        
+
+        private void Awake()
+        {
+            badgesData = Resources.LoadAll<BadgeScriptable>("SaveScriptables/Badges");
+        }
+
         private void Start()
         {
             RefreshUI();

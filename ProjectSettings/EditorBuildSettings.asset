@@ -6,8 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Lois_Test/ZircliX.unity
-    guid: 77de1baaa8e29044d88d826b4dec1edf
+    path: Assets/Scenes/Lois_Test/MiniGameAndBadge.unity
+    guid: 96655fbf81c1f2141a05d2d260c57c16
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/ZircliX_MiniGame.unity
+    guid: 2900355bd6a49184f8c082d31d20d61d
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 46661899d2991954fb32fdca03a8b7e5, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: f120053cde1ae38408022f418871162c, type: 2}

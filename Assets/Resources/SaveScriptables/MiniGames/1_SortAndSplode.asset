@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 597b13824fec4c03acff5d3013678bf3, type: 3}
-  m_Name: SortAndSplode
+  m_Name: 1_SortAndSplode
   m_EditorClassIdentifier: 
   scriptableSaveElement:
     guidID: d7dc890f09be7604e9104adafa3a0ff4
     isComplete: 0
-  miniGameName: SortAndSplode
+  miniGameName: 1_SortAndSplode
   miniGameBadge: {fileID: 11400000, guid: 2e14a33b5873b8549904c0f59a5ce4fc, type: 2}

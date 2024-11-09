@@ -11,7 +11,7 @@ namespace NomDuJeu.MiniGames.Core.SortAndSplode
     public class EntityManager : MonoBehaviour
     {
         [SerializeField] private int entityToSpawn = 1;
-        [SerializeField] private int spawnTimeout = 1;
+        [SerializeField] private float spawnTimeout = 1;
         [SerializeField] private GameObject[] entities;
         
         private List<Entity> spawnedEntities;
@@ -69,8 +69,8 @@ namespace NomDuJeu.MiniGames.Core.SortAndSplode
 
             if (spawnedEntities.Count == 0)
             {
-                Debug.Log("Player Won !!!");
-                //Implement logic for MiniGame isComplete + Badge
+                //Debug.Log("Player Won !!!");
+                MiniGameController.Instance.FinishMiniGame();
             }
         }
 

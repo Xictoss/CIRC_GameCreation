@@ -115,11 +115,29 @@ namespace NomDuJeu.Core
             }
         }
 
+        public static void DeleteProgress()
+        {
+            List<SaveScriptable> gameProgressElements = LoadGameProgressElements();
+            foreach (SaveScriptable gameSaveElement in gameProgressElements)
+            {
+                gameSaveElement.scriptableSaveElement.isComplete = false;
+            }
+        }
+
         #endregion
 
         private static List<SaveScriptable> LoadGameProgressElements()
         {
-            return new List<SaveScriptable>(Resources.LoadAll<SaveScriptable>("GameScriptables"));
+            List<SaveScriptable> allSaveScriptables = new List<SaveScriptable>();
+            
+            string[] folders = { "SaveScriptables", "SaveScriptables/Badges", "SaveScriptables/MiniGames" };
+            
+            foreach (string folder in folders)
+            {
+                allSaveScriptables.AddRange(Resources.LoadAll<SaveScriptable>(folder));
+            }
+            
+            return allSaveScriptables;
         }
 
         #region Exemple Use Of Prioritised Properties
