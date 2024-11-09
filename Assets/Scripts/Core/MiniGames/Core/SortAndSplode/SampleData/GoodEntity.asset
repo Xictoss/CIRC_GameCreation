@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09336b16c51a4092ba84d1293e301d23, type: 3}
-  m_Name: BadEntity
+  m_Name: GoodEntity
   m_EditorClassIdentifier: 
   ID: 1
-  Speed: 2.5
-  NewTargetRate: 1
-  Sprite: {fileID: 21300000, guid: f244bcedbf1c0334f9374ae6549fd0ca, type: 3}
-  Good: 0
+  Speed: 2
+  NewTargetRate: 1.25
+  Sprite: {fileID: 21300000, guid: ec33b29f67465db45aa8df22663e89f5, type: 3}
+  Good: 1

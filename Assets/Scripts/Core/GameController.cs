@@ -29,6 +29,8 @@ namespace NomDuJeu.Core
 
         private static bool UnLoad()
         {
+            Debug.Log("Called save on application.wantsToQuit");
+            
             SavePlayerProgressToPlayerPrefs();
             return true;
         }
@@ -93,6 +95,7 @@ namespace NomDuJeu.Core
             Debug.Log("Loading player progress");
             
             SaveData playerProgressData = ProgressionController.LoadProgressDataFromPlayerPrefs();
+            
             List<SaveScriptable> gameProgressElements = LoadGameProgressElements();
 
             foreach (SaveElement playerSaveElement in playerProgressData.PlayerProgression)
@@ -101,9 +104,23 @@ namespace NomDuJeu.Core
                 {
                     if (playerSaveElement.guidID == gameSaveElement.scriptableSaveElement.guidID)
                     {
+                        if (playerProgressData.saveVersion == "0")
+                        {
+                            gameSaveElement.scriptableSaveElement.isComplete = false;
+                            continue;
+                        }
                         gameSaveElement.scriptableSaveElement.isComplete = playerSaveElement.isComplete;
                     }
                 }
+            }
+        }
+
+        public static void DeleteProgress()
+        {
+            List<SaveScriptable> gameProgressElements = LoadGameProgressElements();
+            foreach (SaveScriptable gameSaveElement in gameProgressElements)
+            {
+                gameSaveElement.scriptableSaveElement.isComplete = false;
             }
         }
 
@@ -111,7 +128,16 @@ namespace NomDuJeu.Core
 
         private static List<SaveScriptable> LoadGameProgressElements()
         {
-            return new List<SaveScriptable>(Resources.LoadAll<SaveScriptable>("GameScriptables"));
+            List<SaveScriptable> allSaveScriptables = new List<SaveScriptable>();
+            
+            string[] folders = { "SaveScriptables", "SaveScriptables/Badges", "SaveScriptables/MiniGames" };
+            
+            foreach (string folder in folders)
+            {
+                allSaveScriptables.AddRange(Resources.LoadAll<SaveScriptable>(folder));
+            }
+            
+            return allSaveScriptables;
         }
 
         #region Exemple Use Of Prioritised Properties
