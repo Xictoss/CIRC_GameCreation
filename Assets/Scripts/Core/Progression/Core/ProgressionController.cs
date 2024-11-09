@@ -32,7 +32,6 @@ namespace NomDuJeu.Progression.Core
         {
             string json = JsonUtility.ToJson(saveData, true);
             
-            PlayerPrefs.SetString("PlayerProgressSaveVersion", saveData.saveVersion);
             PlayerPrefs.SetString("PlayerProgressSave", json);
         }
         
@@ -45,7 +44,6 @@ namespace NomDuJeu.Progression.Core
                 Debug.Log("Loaded Player Progression");
                 
                 string json = PlayerPrefs.GetString("PlayerProgressSave", "Default");
-                Debug.Log(json);
                 progressToLoad = JsonUtility.FromJson<SaveData>(json);
             }
             catch

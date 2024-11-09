@@ -12,5 +12,11 @@ namespace NomDuJeu.Core
                 positionZ
             );
         }
+        
+        public static void LoadScene(int sceneIndex)
+        {
+            Debug.Log("Load Scene" + sceneIndex);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(sceneIndex);
+        }
     }
 }

@@ -10,122 +10,111 @@ namespace NomDuJeu.MiniGames.Core.SortAndSplode
 {
     public class EntityManager : MonoBehaviour
     {
-        [SerializeField] private int entityToSpawn = 1;
+        [SerializeField] private int entitiesToSpawn = 10;
         [SerializeField] private float spawnTimeout = 1;
-        [SerializeField] private GameObject[] entities;
+        [SerializeField] private GameObject[] entityTypes;
+        [SerializeField] private BoxCollider2D spawnBounds;
         
-        private List<Entity> spawnedEntities;
-        private DynamicBuffer<Entity> spawnedEntitiesBuffer;
-        private GameObject draggedGameObject;
+        private readonly List<Entity> spawnedEntities = new List<Entity>();
+        private readonly DynamicBuffer<Entity> spawnedEntitiesBuffer = new DynamicBuffer<Entity>(64);
+        
+        private GameObject draggedEntityGameObject;
         private Entity draggedEntity;
-        
-        [SerializeField] private BoxCollider2D boundsCollider;
+
+        #region Events
 
         private void OnEnable()
         {
-            SortAndSplodeInput.Instance.EntityDragged += OnEntityDragged;
-            SortAndSplodeInput.Instance.EntityReleased += OnEntityReleased;
-            SortAndSplodeInput.Instance.EntityReleasedOnEmpty += OnEntityReleasedOnEmpty;
+            SortAndSplodeInputController.Instance.EntityDragged += OnEntityDragged;
+            SortAndSplodeInputController.Instance.EntityReleased += OnEntityReleased;
         }
         private void OnDisable()
         {
-            SortAndSplodeInput.Instance.EntityDragged -= OnEntityDragged;
-            SortAndSplodeInput.Instance.EntityReleased -= OnEntityReleased;
-            SortAndSplodeInput.Instance.EntityReleasedOnEmpty -= OnEntityReleasedOnEmpty;
+            SortAndSplodeInputController.Instance.EntityDragged -= OnEntityDragged;
+            SortAndSplodeInputController.Instance.EntityReleased -= OnEntityReleased;
         }
 
-        private void Awake()
-        {
-            spawnedEntities = new List<Entity>();
-            spawnedEntitiesBuffer = new DynamicBuffer<Entity>(64);
-        }
+        #endregion
         
-        private IEnumerator Start()
+        private IEnumerator Start() //Spawns the Entities
         {
-            while (spawnedEntities.Count < entityToSpawn)
+            int spawnCount = 0;
+            while (spawnCount < entitiesToSpawn)
             {
-                Vector3 randomPosition = StaticFunctions.GetRandomPositionWithinBounds2D(boundsCollider, 0f);
+                Vector3 spawnPosition = StaticFunctions.GetRandomPositionWithinBounds2D(spawnBounds, 0f);
                 
-                GameObject entity = Instantiate(entities[Random.Range(0, entities.Length)], randomPosition, Quaternion.identity);
+                GameObject entity = Instantiate(entityTypes[Random.Range(0, entityTypes.Length)], spawnPosition, Quaternion.identity);
                 Entity entityScript = entity.GetComponent<Entity>();
                 
-                entityScript.boundsCollider = boundsCollider;
+                entityScript.moveBounds = spawnBounds;
                 entityScript.FirstFrame();
                 
                 spawnedEntities.Add(entityScript);
+                spawnedEntitiesBuffer.CopyFrom(spawnedEntities);
 
+                spawnCount++;
                 yield return new WaitForSeconds(spawnTimeout);
             }
         }
 
-        private void Update()
+        private void Update() //Call the entity Update Function
         {
-            spawnedEntitiesBuffer.CopyFrom(spawnedEntities);
-                
             for (int i = 0; i < spawnedEntitiesBuffer.Length; i++)
             {
                 spawnedEntitiesBuffer[i].Refresh();
             }
-
-            if (spawnedEntities.Count == 0)
-            {
-                //Debug.Log("Player Won !!!");
-                MiniGameController.Instance.FinishMiniGame();
-            }
         }
 
-        private void OnEntityDragged(GameObject hitObject)
+        private void OnEntityDragged(Collider2D hitObject)
         {
-            draggedGameObject = hitObject;
-            draggedEntity = draggedGameObject.GetComponent<Entity>();
+            draggedEntityGameObject = hitObject.gameObject;
+            draggedEntity = draggedEntityGameObject.GetComponent<Entity>();
 
-            SetEntityDragged(true);
+            SetEntityDraggedState(true);
         }
         
-        private void OnEntityReleased(GameObject releasedInZone)
+        private void OnEntityReleased(Collider2D endZoneCollider)
         {
-            if (!draggedGameObject) return;
-
-            SetEntityDragged(false);
+            SetEntityDraggedState(false);
             
-            if (ValidEndZone(releasedInZone)) //Correct End Zone
+            if (IsValidEndZone(endZoneCollider))
             {
-                //Debug.Log("Correct Object Drag");
-                spawnedEntities.Remove(draggedEntity);
-                Destroy(draggedGameObject);
-            }
-            else //Incorrect End Zone
-            {
-                //Debug.Log("Not a Correct Object Drag !!!");
-                draggedGameObject.layer = LayerMask.NameToLayer("Default");
+                RemoveEntity();
             }
 
-            SetEntityReferencesNull();
-        }
-
-        private void OnEntityReleasedOnEmpty()
-        {
-            SetEntityDragged(false);
-            SetEntityReferencesNull();
-        }
-
-        private bool ValidEndZone(GameObject zone)
-        {
-            EntityData entityData = draggedGameObject.GetComponent<Entity>().entityData;
-            
-            return (zone.CompareTag("MiniGameZone1") && entityData.Good) || (zone.CompareTag("MiniGameZone2") && !entityData.Good);
-        }
-
-        private void SetEntityReferencesNull()
-        {
-            draggedGameObject = null;
+            draggedEntityGameObject = null;
             draggedEntity = null;
         }
-
-        private void SetEntityDragged(bool state)
+        
+        private void SetEntityDraggedState(bool state)
         {
             draggedEntity.isDragged = state;
-            draggedGameObject.layer = state ? LayerMask.NameToLayer("Ignore Raycast") : LayerMask.NameToLayer("Default");
+            draggedEntityGameObject.layer = state ? LayerMask.NameToLayer("Ignore Raycast") : LayerMask.NameToLayer("Default");
+        }
+
+        private bool IsValidEndZone(Collider2D endZone)
+        {
+            if (!endZone) return false;
+            
+            return (endZone.gameObject.CompareTag("MiniGameZone1") && draggedEntity.entityData.good) || 
+                   (endZone.gameObject.CompareTag("MiniGameZone2") && !draggedEntity.entityData.good);
+        }
+        
+        private void RemoveEntity()
+        {
+            spawnedEntities.Remove(draggedEntity);
+            spawnedEntitiesBuffer.CopyFrom(spawnedEntities);
+
+            CheckForGameEnd();
+            Destroy(draggedEntityGameObject);
+        }
+        
+        private void CheckForGameEnd()
+        {
+            if (spawnedEntities.Count == 0)
+            {
+                MiniGameController.Instance.FinishMiniGame();
+            }
         }
     }
 }

@@ -13,7 +13,7 @@ namespace NomDuJeu.MiniGames.Core
         {
             MiniGameScriptable.scriptableSaveElement.isComplete = true;
             MiniGameScriptable.miniGameBadge.scriptableSaveElement.isComplete = true;
-            SceneManager.LoadScene(0);
+            StaticFunctions.LoadScene(0);
         }
     }
 }

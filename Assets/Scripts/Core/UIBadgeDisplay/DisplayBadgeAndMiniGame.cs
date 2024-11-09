@@ -46,7 +46,8 @@ namespace NomDuJeu.UIBadgeDisplay.Core
 
         public void PlayGame()
         {
-            SceneManager.LoadScene(1);
+            
+            StaticFunctions.LoadScene(1);
         }
         
         public void SaveGameData()

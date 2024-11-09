@@ -9,45 +9,39 @@ namespace NomDuJeu.MiniGames.Core.SortAndSplode
         [field : SerializeField] public EntityData entityData { get; private set; }
         [SerializeField] private SpriteRenderer sr;
         
-        public BoxCollider2D boundsCollider;
+        public BoxCollider2D moveBounds;
         private Vector3 targetPosition;
-
         public bool isDragged;
         
         public void FirstFrame()
         {
-            sr.sprite = entityData.Sprite;
+            sr.sprite = entityData.sprite;
             SetNewTargetPosition();
         }
 
         public void Refresh()
         {
-            if (!isDragged)
+            if (isDragged)
             {
-                MoveEntity();
+                transform.position = InputController.Instance.worldTouchPosition;
             }
             else
             {
-                FollowTouchPosition();
+                MoveEntity();
             }
-        }
-
-        private void FollowTouchPosition()
-        {
-            transform.position = InputController.Instance.worldTouchPosition;
         }
 
         private void SetNewTargetPosition()
         {
-            targetPosition = StaticFunctions.GetRandomPositionWithinBounds2D(boundsCollider, transform.position.z);
+            targetPosition = StaticFunctions.GetRandomPositionWithinBounds2D(moveBounds, transform.position.z);
         }
 
         private void MoveEntity()
         {
-            if (Mathf.Abs(targetPosition.magnitude - transform.position.magnitude) < 0.1f) SetNewTargetPosition();
+            if (Mathf.Abs(targetPosition.magnitude - transform.position.magnitude) <= 0.1f) SetNewTargetPosition();
             
             Vector3 direction = (targetPosition - transform.position).normalized;
-            transform.Translate(direction * (entityData.Speed * Time.deltaTime));
+            transform.Translate(direction * (entityData.speed * Time.deltaTime));
         }
     }
 }

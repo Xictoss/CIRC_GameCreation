@@ -36,42 +36,6 @@ namespace NomDuJeu.Core
         }
 
         #region Progress Functions
-
-        /*public static void SavePlayerProgress()
-        {
-            Debug.Log("Saving player progress");
-            
-            SaveData dataToSave = new SaveData(Application.version);
-            List<SaveScriptable> gameProgressElements = LoadGameProgressElements();
-            
-            foreach (SaveScriptable progressElement in gameProgressElements)
-            {
-                dataToSave.Write(progressElement.scriptableSaveElement);
-            }
-
-            ProgressionController.SaveProgressData(dataToSave);
-            
-            GameSaved?.Invoke();
-        }
-
-        public static void LoadPlayerProgress()
-        {
-            Debug.Log("Loading player progress");
-            
-            SaveData playerProgressData = ProgressionController.LoadProgressData();
-            List<SaveScriptable> gameProgressElements = LoadGameProgressElements();
-
-            foreach (SaveElement playerSaveElement in playerProgressData.PlayerProgression)
-            {
-                foreach (SaveScriptable gameSaveElement in gameProgressElements)
-                {
-                    if (playerSaveElement.guidID == gameSaveElement.scriptableSaveElement.guidID)
-                    {
-                        gameSaveElement.scriptableSaveElement.isComplete = playerSaveElement.isComplete;
-                    }
-                }
-            }
-        }*/
         
         public static void SavePlayerProgressToPlayerPrefs()
         {
@@ -86,6 +50,7 @@ namespace NomDuJeu.Core
             }
 
             ProgressionController.SaveProgressDataToPlayerPrefs(dataToSave);
+            //ProgressionController.SaveProgressData(dataToSave);
             
             GameSaved?.Invoke();
         }
@@ -95,6 +60,7 @@ namespace NomDuJeu.Core
             Debug.Log("Loading player progress");
             
             SaveData playerProgressData = ProgressionController.LoadProgressDataFromPlayerPrefs();
+            //SaveData playerProgressData = ProgressionController.LoadProgressData();
             
             List<SaveScriptable> gameProgressElements = LoadGameProgressElements();
 
