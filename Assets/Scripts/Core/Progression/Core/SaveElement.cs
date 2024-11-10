@@ -6,20 +6,20 @@ namespace NomDuJeu.Progression.Core
     [System.Serializable]
     public struct SaveElement : IEquatable<SaveElement>
     {
-        public string guidID;
-        public bool isComplete;
+        public string GuidID;
+        public bool IsComplete;
 
         public SaveElement(string guidID)
         {
-            this.guidID = guidID;
-            isComplete = false;
+            GuidID = guidID;
+            IsComplete = false;
         }
 
         #region Equals Override
 
         public bool Equals(SaveElement other)
         {
-            return guidID == other.guidID;
+            return GuidID == other.GuidID;
         }
 
         public override bool Equals(object obj)
@@ -29,7 +29,7 @@ namespace NomDuJeu.Progression.Core
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(guidID);
+            return HashCode.Combine(GuidID);
         }
 
         #endregion

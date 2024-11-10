@@ -46,7 +46,7 @@ namespace NomDuJeu.Core
             
             foreach (SaveScriptable progressElement in gameProgressElements)
             {
-                dataToSave.Write(progressElement.scriptableSaveElement);
+                dataToSave.Write(progressElement.ScriptableSaveElement);
             }
 
             ProgressionController.SaveProgressDataToPlayerPrefs(dataToSave);
@@ -68,14 +68,14 @@ namespace NomDuJeu.Core
             {
                 foreach (SaveScriptable gameSaveElement in gameProgressElements)
                 {
-                    if (playerSaveElement.guidID == gameSaveElement.scriptableSaveElement.guidID)
+                    if (playerSaveElement.GuidID == gameSaveElement.ScriptableSaveElement.GuidID)
                     {
-                        if (playerProgressData.saveVersion == "0")
+                        if (playerProgressData.SaveVersion == "0")
                         {
-                            gameSaveElement.scriptableSaveElement.isComplete = false;
+                            gameSaveElement.ScriptableSaveElement.IsComplete = false;
                             continue;
                         }
-                        gameSaveElement.scriptableSaveElement.isComplete = playerSaveElement.isComplete;
+                        gameSaveElement.ScriptableSaveElement.IsComplete = playerSaveElement.IsComplete;
                     }
                 }
             }
@@ -86,7 +86,7 @@ namespace NomDuJeu.Core
             List<SaveScriptable> gameProgressElements = LoadGameProgressElements();
             foreach (SaveScriptable gameSaveElement in gameProgressElements)
             {
-                gameSaveElement.scriptableSaveElement.isComplete = false;
+                gameSaveElement.ScriptableSaveElement.IsComplete = false;
             }
         }
 

@@ -1,28 +1,54 @@
+using System.Collections.Generic;
 using LTX.Singletons;
+using NomDuJeu.Core;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
-namespace NomDuJeu.Core
+namespace NomDuJeu.Inputs.Core
 {
     public class InputController : MonoSingleton<InputController>
     {
-        public Vector3 worldTouchPosition { get; private set; }
-        public Vector3 screenTouchPosition { get; private set; }
+        public Vector3 WorldTouchPosition { get; private set; }
+        public Vector3 ScreenTouchPosition { get; private set; }
+        
+        private PointerEventData _pointerEventData;
+        [SerializeField] private GraphicRaycaster _graphicRaycaster;
+        [SerializeField] private EventSystem _eventSystem;
 
         public void GetTouchPositionInput(InputAction.CallbackContext context)
         {
             Vector2 touchInput = context.ReadValue<Vector2>();
-            screenTouchPosition = new Vector3(touchInput.x, touchInput.y, 0f);
-
-            if (Camera.main != null) worldTouchPosition = Camera.main.ScreenToWorldPoint(screenTouchPosition);
-            worldTouchPosition = new Vector3(worldTouchPosition.x, worldTouchPosition.y, 0f);
+            ScreenTouchPosition = new Vector3(touchInput.x, touchInput.y, 0f);
+            WorldTouchPosition = StaticFunctions.FromScreenPointToWorldPoint(ScreenTouchPosition);
         }
         
-        public RaycastHit2D RayCastShoot(string layerMaskName)
+        public RaycastHit2D RayCastToWorld(string layerMaskName)
         {
-            Ray ray = Camera.main!.ScreenPointToRay(screenTouchPosition);
+            Ray ray = Camera.main!.ScreenPointToRay(ScreenTouchPosition);
             RaycastHit2D raycastHit = Physics2D.Raycast(ray.origin, ray.direction, 100f, LayerMask.GetMask(layerMaskName));
             return raycastHit;
+        }
+        
+        public GameObject RaycastToUI()
+        {
+            _pointerEventData = new PointerEventData(_eventSystem)
+            {
+                position = Pointer.current.position.ReadValue()
+            };
+
+            List<RaycastResult> results = new List<RaycastResult>();
+            _graphicRaycaster.Raycast(_pointerEventData, results);
+            
+            foreach (var result in results)
+            {
+                if (result.gameObject.layer == LayerMask.NameToLayer("Ignore Raycast")) continue;
+                
+                return result.gameObject;
+            }
+
+            return null;
         }
     }
 }

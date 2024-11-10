@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 597b13824fec4c03acff5d3013678bf3, type: 3}
   m_Name: 1_SortAndSplode
   m_EditorClassIdentifier: 
-  scriptableSaveElement:
-    guidID: d7dc890f09be7604e9104adafa3a0ff4
-    isComplete: 0
-  miniGameName: 1_SortAndSplode
-  miniGameBadge: {fileID: 11400000, guid: 2e14a33b5873b8549904c0f59a5ce4fc, type: 2}
+  ScriptableSaveElement:
+    GuidID: bac3d6b7e721de14e892f4f9bbd62f82
+    IsComplete: 0
+  MiniGameName: 1_SortAndSplode
+  MiniGameBadge: {fileID: 11400000, guid: 6ef9072bd11d861419f8368bf6f9535d, type: 2}
