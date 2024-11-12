@@ -7,13 +7,20 @@ namespace NomDuJeu.MiniGames.Core
 {
     public class MiniGameController : MonoSingleton<MiniGameController>
     {
-        [field : SerializeField] public MiniGameScriptable _miniGameScriptable { get; private set; }
+        [field : SerializeField] public MiniGameScriptable MiniGameScriptable { get; private set; }
 
         public void FinishMiniGame()
         {
-            _miniGameScriptable.ScriptableSaveElement.IsComplete = true;
-            _miniGameScriptable.MiniGameBadge.ScriptableSaveElement.IsComplete = true;
+            SaveProgress();
             StaticFunctions.LoadScene(0);
+        }
+
+        private void SaveProgress()
+        {
+            MiniGameScriptable.ScriptableSaveElement.IsComplete = true;
+            MiniGameScriptable.MiniGameBadge.ScriptableSaveElement.IsComplete = true;
+            
+            GameController.SavePlayerProgressToPlayerPrefs();
         }
     }
 }

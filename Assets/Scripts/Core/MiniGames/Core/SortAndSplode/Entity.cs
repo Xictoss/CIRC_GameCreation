@@ -11,8 +11,8 @@ namespace NomDuJeu.MiniGames.Core.SortAndSplode
         [field : SerializeField] public EntityData EntityData { get; private set; }
         
         [Header("Move Data")]
-        [HideInInspector] public RectTransform MoveArea;
-        [HideInInspector] public bool IsDragged;
+        internal RectTransform MoveArea;
+        internal bool IsDragged;
         private Vector2 targetPosition;
         
         [Header("References")]

@@ -101,8 +101,6 @@ namespace NomDuJeu.MiniGames.Core.SortAndSplode
 
         private bool IsValidEndZone(GameObject endZone)
         {
-            if (!endZone) return false;
-            
             return (endZone.CompareTag("MiniGameZone1") && _draggedEntity.EntityData.Good) || 
                    (endZone.CompareTag("MiniGameZone2") && !_draggedEntity.EntityData.Good);
         }

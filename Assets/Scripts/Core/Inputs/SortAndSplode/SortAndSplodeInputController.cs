@@ -31,13 +31,13 @@ namespace NomDuJeu.Inputs.SortAndSplode
         private void EnterClick()
         {
             _isDragging = true;
-            EntityDragged?.Invoke(_selectedUIElement);
+            EntityDragged?.Invoke(_selectedUIElement); //Entity
         }
 
         private void ReleaseClick()
         {
             _isDragging = false;
-            EntityReleased?.Invoke(_selectedUIElement);
+            EntityReleased?.Invoke(_selectedUIElement); //End Zone
         }
 
         #endregion

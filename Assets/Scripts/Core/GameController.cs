@@ -22,6 +22,7 @@ namespace NomDuJeu.Core
         private static void Load()
         {
             Application.wantsToQuit += UnLoad;
+            Application.targetFrameRate = 60;
             
             SetupCursor();
             LoadPlayerProgressFromPlayerPrefs();
@@ -29,8 +30,6 @@ namespace NomDuJeu.Core
 
         private static bool UnLoad()
         {
-            Debug.Log("Called save on application.wantsToQuit");
-            
             SavePlayerProgressToPlayerPrefs();
             return true;
         }
@@ -90,8 +89,6 @@ namespace NomDuJeu.Core
             }
         }
 
-        #endregion
-
         private static List<SaveScriptable> LoadGameProgressElements()
         {
             List<SaveScriptable> allSaveScriptables = new List<SaveScriptable>();
@@ -105,6 +102,8 @@ namespace NomDuJeu.Core
             
             return allSaveScriptables;
         }
+        
+        #endregion
 
         #region Exemple Use Of Prioritised Properties
 
