@@ -12,7 +12,7 @@ namespace NomDuJeu.MiniGames.Core
         public void FinishMiniGame()
         {
             SaveProgress();
-            StaticFunctions.LoadScene(0);
+            0.LoadScene();
         }
 
         private void SaveProgress()

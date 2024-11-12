@@ -39,7 +39,7 @@ namespace NomDuJeu.MiniGames.Core.SortAndSplode
 
         private void SetNewTargetPosition()
         {
-            targetPosition = StaticFunctions.GetRandomPositionWithinRectTransform(MoveArea);
+            targetPosition = MoveArea.GetRandomPositionWithinRectTransform();
         }
 
         private void MoveEntity()

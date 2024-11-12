@@ -21,7 +21,7 @@ namespace NomDuJeu.Inputs.Core
         {
             Vector2 touchInput = context.ReadValue<Vector2>();
             ScreenTouchPosition = new Vector3(touchInput.x, touchInput.y, 0f);
-            WorldTouchPosition = StaticFunctions.FromScreenPointToWorldPoint(ScreenTouchPosition);
+            WorldTouchPosition = ScreenTouchPosition.FromScreenPointToWorldPoint();
         }
         
         public RaycastHit2D RayCastToWorld(string layerMaskName)

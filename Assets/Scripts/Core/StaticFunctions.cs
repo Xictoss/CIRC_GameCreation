@@ -4,7 +4,7 @@ namespace NomDuJeu.Core
 {
     public static class StaticFunctions
     {
-        public static Vector2 GetRandomPositionWithinRectTransform(RectTransform imageRectTransform)
+        public static Vector2 GetRandomPositionWithinRectTransform(this RectTransform imageRectTransform)
         {
             float randomX = Random.Range(0f, 1f);
             float randomY = Random.Range(0f, 1f);
@@ -16,7 +16,7 @@ namespace NomDuJeu.Core
             return localPosition;
         }
 
-        public static Vector3 FromScreenPointToWorldPoint(Vector3 screenPosition)
+        public static Vector3 FromScreenPointToWorldPoint(this Vector3 screenPosition)
         {
             if (Camera.main)
             {
@@ -28,7 +28,7 @@ namespace NomDuJeu.Core
             return Vector3.zero;
         }
         
-        public static void LoadScene(int sceneIndex)
+        public static void LoadScene(this int sceneIndex)
         {
             Debug.Log("Load Scene" + sceneIndex);
             UnityEngine.SceneManagement.SceneManager.LoadScene(sceneIndex);

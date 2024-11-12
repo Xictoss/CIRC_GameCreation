@@ -42,7 +42,7 @@ namespace NomDuJeu.MiniGames.Core.SortAndSplode
             int spawnCount = 0;
             while (spawnCount < _entitiesToSpawn)
             {
-                Vector2 spawnPosition = StaticFunctions.GetRandomPositionWithinRectTransform(_spawnArea);
+                Vector2 spawnPosition = _spawnArea.GetRandomPositionWithinRectTransform();
                 
                 Entity entity = Instantiate(_entityTypes[Random.Range(0, _entityTypes.Length)], spawnPosition, Quaternion.identity, _spawnArea);
 
