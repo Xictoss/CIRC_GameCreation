@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using NomDuJeu.Core;
 using NomDuJeu.Scriptables.Core;
 using UnityEngine;
@@ -9,12 +7,12 @@ namespace NomDuJeu.UIBadgeDisplay.Core
 {
     public class BadgesDisplay : MonoBehaviour
     {
-        [SerializeField] private Image[] badgesDisplay;
+        [SerializeField] private Image[] _badgesDisplay;
         
-        [SerializeField] private Sprite badgeNotCompleted;
-        private BadgeScriptable[] badgesData;
+        [SerializeField] private Sprite _badgeNotCompleted;
+        private BadgeScriptable[] _badgesData;
 
-        [SerializeField] private Toggle[] toggles;
+        [SerializeField] private Toggle[] _toggles;
 
         private void OnEnable()
         {
@@ -27,7 +25,7 @@ namespace NomDuJeu.UIBadgeDisplay.Core
 
         private void Awake()
         {
-            badgesData = Resources.LoadAll<BadgeScriptable>("SaveScriptables/Badges");
+            _badgesData = Resources.LoadAll<BadgeScriptable>("SaveScriptables/Badges");
         }
 
         private void Start()
@@ -39,30 +37,30 @@ namespace NomDuJeu.UIBadgeDisplay.Core
         {
             Debug.Log("Refreshing UI");
             
-            for (int i = 0; i < badgesDisplay.Length; i++)
+            for (int i = 0; i < _badgesDisplay.Length; i++)
             {
-                if (badgesData[i].scriptableSaveElement.isComplete)
+                if (_badgesData[i].ScriptableSaveElement.IsComplete)
                 {
-                    badgesDisplay[i].sprite = badgesData[i].badgeDisplayImage;
-                    toggles[i].isOn = true;
+                    _badgesDisplay[i].sprite = _badgesData[i].BadgeDisplayImage;
+                    _toggles[i].isOn = true;
                     continue;
                 }
                 
-                badgesDisplay[i].sprite = badgeNotCompleted;
+                _badgesDisplay[i].sprite = _badgeNotCompleted;
             }
         }
 
         public void ToggleUnlockAchievement(int index)
         {
-            badgesData[index].scriptableSaveElement.isComplete = toggles[index].isOn;
+            _badgesData[index].ScriptableSaveElement.IsComplete = _toggles[index].isOn;
             
-            if (toggles[index].isOn)
+            if (_toggles[index].isOn)
             {
-                badgesDisplay[index].sprite = badgesData[index].badgeDisplayImage;
+                _badgesDisplay[index].sprite = _badgesData[index].BadgeDisplayImage;
                 return;
             }
 
-            badgesDisplay[index].sprite = badgeNotCompleted;
+            _badgesDisplay[index].sprite = _badgeNotCompleted;
         }
         
         public void SaveGameData()

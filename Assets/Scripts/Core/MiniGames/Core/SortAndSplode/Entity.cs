@@ -1,53 +1,56 @@
 using NomDuJeu.Core;
-using NomDuJeu.Inputs.SortAndSplode;
+using NomDuJeu.Inputs.Core;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace NomDuJeu.MiniGames.Core.SortAndSplode
 {
     public class Entity : MonoBehaviour
     {
-        [field : SerializeField] public EntityData entityData { get; private set; }
-        [SerializeField] private SpriteRenderer sr;
+        [Header("Entity Data")]
+        [field : SerializeField] public EntityData EntityData { get; private set; }
         
-        public BoxCollider2D boundsCollider;
-        private Vector3 targetPosition;
-
-        public bool isDragged;
+        [Header("Move Data")]
+        internal RectTransform MoveArea;
+        internal bool IsDragged;
+        private Vector2 targetPosition;
+        
+        [Header("References")]
+        [field : SerializeField] public RectTransform RectTransform { get; private set; }
+        [SerializeField] private Image _image;
         
         public void FirstFrame()
         {
-            sr.sprite = entityData.Sprite;
+            _image.sprite = EntityData.Sprite;
             SetNewTargetPosition();
         }
-
+        
         public void Refresh()
         {
-            if (!isDragged)
+            if (IsDragged)
             {
-                MoveEntity();
+                transform.position = InputController.Instance.ScreenTouchPosition;
             }
             else
             {
-                FollowTouchPosition();
+                MoveEntity();
             }
-        }
-
-        private void FollowTouchPosition()
-        {
-            transform.position = InputController.Instance.worldTouchPosition;
         }
 
         private void SetNewTargetPosition()
         {
-            targetPosition = StaticFunctions.GetRandomPositionWithinBounds2D(boundsCollider, transform.position.z);
+            targetPosition = MoveArea.GetRandomPositionWithinRectTransform();
         }
 
         private void MoveEntity()
         {
-            if (Mathf.Abs(targetPosition.magnitude - transform.position.magnitude) < 0.1f) SetNewTargetPosition();
+            if (Vector2.Distance(targetPosition, RectTransform.anchoredPosition) <= 10f)
+            {
+                SetNewTargetPosition();
+            }
             
-            Vector3 direction = (targetPosition - transform.position).normalized;
-            transform.Translate(direction * (entityData.Speed * Time.deltaTime));
+            Vector2 direction = (targetPosition - RectTransform.anchoredPosition).normalized;
+            RectTransform.anchoredPosition += direction * (EntityData.Speed * Time.deltaTime);
         }
     }
 }

@@ -22,6 +22,7 @@ namespace NomDuJeu.Core
         private static void Load()
         {
             Application.wantsToQuit += UnLoad;
+            Application.targetFrameRate = 60;
             
             SetupCursor();
             LoadPlayerProgressFromPlayerPrefs();
@@ -29,49 +30,11 @@ namespace NomDuJeu.Core
 
         private static bool UnLoad()
         {
-            Debug.Log("Called save on application.wantsToQuit");
-            
             SavePlayerProgressToPlayerPrefs();
             return true;
         }
 
         #region Progress Functions
-
-        /*public static void SavePlayerProgress()
-        {
-            Debug.Log("Saving player progress");
-            
-            SaveData dataToSave = new SaveData(Application.version);
-            List<SaveScriptable> gameProgressElements = LoadGameProgressElements();
-            
-            foreach (SaveScriptable progressElement in gameProgressElements)
-            {
-                dataToSave.Write(progressElement.scriptableSaveElement);
-            }
-
-            ProgressionController.SaveProgressData(dataToSave);
-            
-            GameSaved?.Invoke();
-        }
-
-        public static void LoadPlayerProgress()
-        {
-            Debug.Log("Loading player progress");
-            
-            SaveData playerProgressData = ProgressionController.LoadProgressData();
-            List<SaveScriptable> gameProgressElements = LoadGameProgressElements();
-
-            foreach (SaveElement playerSaveElement in playerProgressData.PlayerProgression)
-            {
-                foreach (SaveScriptable gameSaveElement in gameProgressElements)
-                {
-                    if (playerSaveElement.guidID == gameSaveElement.scriptableSaveElement.guidID)
-                    {
-                        gameSaveElement.scriptableSaveElement.isComplete = playerSaveElement.isComplete;
-                    }
-                }
-            }
-        }*/
         
         public static void SavePlayerProgressToPlayerPrefs()
         {
@@ -82,19 +45,21 @@ namespace NomDuJeu.Core
             
             foreach (SaveScriptable progressElement in gameProgressElements)
             {
-                dataToSave.Write(progressElement.scriptableSaveElement);
+                dataToSave.Write(progressElement.ScriptableSaveElement);
             }
 
             ProgressionController.SaveProgressDataToPlayerPrefs(dataToSave);
+            //ProgressionController.SaveProgressData(dataToSave);
             
             GameSaved?.Invoke();
         }
         
         public static void LoadPlayerProgressFromPlayerPrefs()
         {
-            Debug.Log("Loading player progress");
+            //Debug.Log("Loading player progress");
             
             SaveData playerProgressData = ProgressionController.LoadProgressDataFromPlayerPrefs();
+            //SaveData playerProgressData = ProgressionController.LoadProgressData();
             
             List<SaveScriptable> gameProgressElements = LoadGameProgressElements();
 
@@ -102,14 +67,14 @@ namespace NomDuJeu.Core
             {
                 foreach (SaveScriptable gameSaveElement in gameProgressElements)
                 {
-                    if (playerSaveElement.guidID == gameSaveElement.scriptableSaveElement.guidID)
+                    if (playerSaveElement.GuidID == gameSaveElement.ScriptableSaveElement.GuidID)
                     {
-                        if (playerProgressData.saveVersion == "0")
+                        if (playerProgressData.SaveVersion == "0")
                         {
-                            gameSaveElement.scriptableSaveElement.isComplete = false;
+                            gameSaveElement.ScriptableSaveElement.IsComplete = false;
                             continue;
                         }
-                        gameSaveElement.scriptableSaveElement.isComplete = playerSaveElement.isComplete;
+                        gameSaveElement.ScriptableSaveElement.IsComplete = playerSaveElement.IsComplete;
                     }
                 }
             }
@@ -120,11 +85,9 @@ namespace NomDuJeu.Core
             List<SaveScriptable> gameProgressElements = LoadGameProgressElements();
             foreach (SaveScriptable gameSaveElement in gameProgressElements)
             {
-                gameSaveElement.scriptableSaveElement.isComplete = false;
+                gameSaveElement.ScriptableSaveElement.IsComplete = false;
             }
         }
-
-        #endregion
 
         private static List<SaveScriptable> LoadGameProgressElements()
         {
@@ -139,6 +102,8 @@ namespace NomDuJeu.Core
             
             return allSaveScriptables;
         }
+        
+        #endregion
 
         #region Exemple Use Of Prioritised Properties
 

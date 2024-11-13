@@ -1,5 +1,3 @@
-using System;
-using System.IO;
 using UnityEngine;
 
 namespace NomDuJeu.Progression.Core
@@ -32,7 +30,6 @@ namespace NomDuJeu.Progression.Core
         {
             string json = JsonUtility.ToJson(saveData, true);
             
-            PlayerPrefs.SetString("PlayerProgressSaveVersion", saveData.saveVersion);
             PlayerPrefs.SetString("PlayerProgressSave", json);
         }
         
@@ -42,15 +39,14 @@ namespace NomDuJeu.Progression.Core
             
             try
             {
-                Debug.Log("Loaded Player Progression");
+                //Debug.Log("Loaded Player Progression");
                 
                 string json = PlayerPrefs.GetString("PlayerProgressSave", "Default");
-                Debug.Log(json);
                 progressToLoad = JsonUtility.FromJson<SaveData>(json);
             }
             catch
             {
-                Debug.Log("Loaded Default Save");
+                //Debug.Log("Loaded Default Save");
             }
             
             return progressToLoad;

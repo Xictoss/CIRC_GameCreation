@@ -7,12 +7,12 @@ namespace NomDuJeu.Progression.Core
     [System.Serializable]
     public struct SaveData
     {
-        public string saveVersion;
+        public string SaveVersion;
         [field : SerializeField] public List<SaveElement> PlayerProgression { get; private set; }
 
         public SaveData(string version)
         {
-            saveVersion = version;
+            SaveVersion = version;
             PlayerProgression = new List<SaveElement>();
         }
 
@@ -32,13 +32,13 @@ namespace NomDuJeu.Progression.Core
 
         public void SetPlayerCompleted(string guidID)
         {
-            SaveElement element = PlayerProgression.Find(e => e.guidID == guidID);
+            SaveElement element = PlayerProgression.Find(e => e.GuidID == guidID);
             SetPlayerCompleted(element);
         }
 
         public void SetPlayerCompleted(SaveElement element)
         {
-            element.isComplete = true;
+            element.IsComplete = true;
             Write(element);
         }
     }
