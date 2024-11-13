@@ -12,11 +12,11 @@ namespace NomDuJeu.Scriptables.Editor
 
         #region SerializedProperties
 
-        private SerializedProperty m_MiniGameName;
-        private SerializedProperty m_MiniGameBadge;
+        private SerializedProperty _miniGameName;
+        private SerializedProperty _miniGameBadge;
         
-        private SerializedProperty m_GuidID;
-        private SerializedProperty m_IsComplete;
+        private SerializedProperty _guidID;
+        private SerializedProperty _isComplete;
 
         #endregion
 
@@ -27,11 +27,11 @@ namespace NomDuJeu.Scriptables.Editor
         {
             saveScriptable = target as SaveScriptable;
 
-            m_MiniGameName = serializedObject.FindProperty("miniGameName");
-            m_MiniGameBadge = serializedObject.FindProperty("miniGameBadge");
+            _miniGameName = serializedObject.FindProperty("MiniGameName");
+            _miniGameBadge = serializedObject.FindProperty("MiniGameBadge");
             
-            m_GuidID = serializedObject.FindProperty("scriptableSaveElement.guidID");
-            m_IsComplete = serializedObject.FindProperty("scriptableSaveElement.isComplete");
+            _guidID = serializedObject.FindProperty("ScriptableSaveElement.GuidID");
+            _isComplete = serializedObject.FindProperty("ScriptableSaveElement.IsComplete");
         }
         
         public override void OnInspectorGUI()
@@ -45,15 +45,15 @@ namespace NomDuJeu.Scriptables.Editor
             elementPropertiesGroup = EditorGUILayout.BeginFoldoutHeaderGroup(elementPropertiesGroup, "Scriptable Basic Attributes");
             if (elementPropertiesGroup)
             {
-                EditorGUILayout.PropertyField(m_MiniGameName, new GUIContent("Element Name"));
-                if (m_MiniGameName.stringValue != saveScriptable.name)
+                EditorGUILayout.PropertyField(_miniGameName, new GUIContent("Element Name"));
+                if (_miniGameName.stringValue != saveScriptable.name)
                 {
                     if (GUILayout.Button("Reset MiniGame Name"))
                     {
-                        m_MiniGameName.stringValue = saveScriptable.name;
+                        _miniGameName.stringValue = saveScriptable.name;
                     }
                 }
-                EditorGUILayout.PropertyField(m_MiniGameBadge, new GUIContent("MiniGame Badge"));
+                EditorGUILayout.PropertyField(_miniGameBadge, new GUIContent("MiniGame Badge"));
                 
                 EditorGUILayout.Space(15);
             }
@@ -66,16 +66,16 @@ namespace NomDuJeu.Scriptables.Editor
             elementSaveInfosGroup = EditorGUILayout.BeginFoldoutHeaderGroup(elementSaveInfosGroup, "Scriptables Save Infos");
             if (elementSaveInfosGroup)
             {
-                EditorGUILayout.PropertyField(m_GuidID, new GUIContent("GuidID"));
-                if (m_GuidID.stringValue == string.Empty)
+                EditorGUILayout.PropertyField(_guidID, new GUIContent("GuidID"));
+                if (_guidID.stringValue == string.Empty)
                 {
                     if (GUILayout.Button("Generate GUID"))
                     {
-                        m_GuidID.stringValue = GUID.Generate().ToString();
+                        _guidID.stringValue = GUID.Generate().ToString();
                     }
                     EditorGUILayout.Space();
                 }
-                EditorGUILayout.PropertyField(m_IsComplete, new GUIContent("IsComplete"));
+                EditorGUILayout.PropertyField(_isComplete, new GUIContent("IsComplete"));
                 
                 EditorGUILayout.Space(15);
             }

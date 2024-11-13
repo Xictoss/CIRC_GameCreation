@@ -11,9 +11,16 @@ namespace NomDuJeu.MiniGames.Core
 
         public void FinishMiniGame()
         {
-            MiniGameScriptable.scriptableSaveElement.isComplete = true;
-            MiniGameScriptable.miniGameBadge.scriptableSaveElement.isComplete = true;
-            StaticFunctions.LoadScene(0);
+            SaveProgress();
+            0.LoadScene();
+        }
+
+        private void SaveProgress()
+        {
+            MiniGameScriptable.ScriptableSaveElement.IsComplete = true;
+            MiniGameScriptable.MiniGameBadge.ScriptableSaveElement.IsComplete = true;
+            
+            GameController.SavePlayerProgressToPlayerPrefs();
         }
     }
 }

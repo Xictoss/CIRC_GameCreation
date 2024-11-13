@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 964783772963464ca3a70eca161a2ff4, type: 3}
   m_Name: 1_BadgeBronze
   m_EditorClassIdentifier: 
-  scriptableSaveElement:
-    guidID: 72468ac02a96fdf48bafb5da8f630c91
-    isComplete: 0
-  badgeName: 1_BadgeBronze
-  badgeDisplayImage: {fileID: 21300000, guid: d5c5fa68468517d4cb71e6509e972b29, type: 3}
+  ScriptableSaveElement:
+    GuidID: 17fd38f6ede80b44fa17b6131b5b9a64
+    IsComplete: 0
+  BadgeName: 1_BadgeBronze
+  BadgeDisplayImage: {fileID: 21300000, guid: d5c5fa68468517d4cb71e6509e972b29, type: 3}

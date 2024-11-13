@@ -1,6 +1,6 @@
 using System;
 using LTX.Singletons;
-using NomDuJeu.Core;
+using NomDuJeu.Inputs.Core;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,44 +10,35 @@ namespace NomDuJeu.Inputs.SortAndSplode
     {
         #region Events
 
-        public event Action<Collider2D> EntityDragged;
-        public event Action<Collider2D> EntityReleased;
+        public event Action<GameObject> EntityDragged;
+        public event Action<GameObject> EntityReleased;
 
         #endregion
         
-        private bool isDragging;
-        private RaycastHit2D hit;
-        
+        private bool _isDragging;
+        private GameObject _selectedUIElement;
+
         public void GetTouchInput(InputAction.CallbackContext context)
         {
-            hit = InputController.Instance.RayCastShoot("Default");
+            _selectedUIElement = InputController.Instance.RaycastToUI();
             
             if (context.performed) EnterClick();
-            if (context.canceled && isDragging) ReleaseClick();
+            if (context.canceled && _isDragging) ReleaseClick();
         }
 
         #region Click State
 
         private void EnterClick()
         {
-            if (IsRaycastHitNull() || !IsRaycastHitEntity()) return;
-            
-            isDragging = true;
-            EntityDragged?.Invoke(hit.collider);
+            _isDragging = true;
+            EntityDragged?.Invoke(_selectedUIElement); //Entity
         }
 
         private void ReleaseClick()
         {
-            isDragging = false;
-            EntityReleased?.Invoke(hit.collider);
+            _isDragging = false;
+            EntityReleased?.Invoke(_selectedUIElement); //End Zone
         }
-
-        #endregion
-
-        #region RayCastHitTypeCheck
-
-        private bool IsRaycastHitEntity() => hit.collider.CompareTag("MiniGameEntity");
-        private bool IsRaycastHitNull() => !hit.collider;
 
         #endregion
     }

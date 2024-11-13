@@ -8,15 +8,15 @@ namespace NomDuJeu.Scriptables.Editor
     [CustomEditor(typeof(BadgeScriptable))]
     public class BadgeScriptableEditor : UnityEditor.Editor
     {
-        private SaveScriptable saveScriptable;
+        private SaveScriptable _saveScriptable;
 
         #region SerializedProperties
 
-        private SerializedProperty m_BadgeName;
-        private SerializedProperty m_BadgeDisplayImage;
+        private SerializedProperty _badgeName;
+        private SerializedProperty _badgeDisplayImage;
         
-        private SerializedProperty m_GuidID;
-        private SerializedProperty m_IsComplete;
+        private SerializedProperty _guidID;
+        private SerializedProperty _isComplete;
 
         #endregion
 
@@ -25,13 +25,13 @@ namespace NomDuJeu.Scriptables.Editor
 
         private void OnEnable()
         {
-            saveScriptable = target as SaveScriptable;
+            _saveScriptable = target as SaveScriptable;
 
-            m_BadgeName = serializedObject.FindProperty("badgeName");
-            m_BadgeDisplayImage = serializedObject.FindProperty("badgeDisplayImage");
+            _badgeName = serializedObject.FindProperty("BadgeName");
+            _badgeDisplayImage = serializedObject.FindProperty("BadgeDisplayImage");
             
-            m_GuidID = serializedObject.FindProperty("scriptableSaveElement.guidID");
-            m_IsComplete = serializedObject.FindProperty("scriptableSaveElement.isComplete");
+            _guidID = serializedObject.FindProperty("ScriptableSaveElement.GuidID");
+            _isComplete = serializedObject.FindProperty("ScriptableSaveElement.IsComplete");
         }
         
         public override void OnInspectorGUI()
@@ -45,15 +45,15 @@ namespace NomDuJeu.Scriptables.Editor
             elementPropertiesGroup = EditorGUILayout.BeginFoldoutHeaderGroup(elementPropertiesGroup, "Scriptable Basic Attributes");
             if (elementPropertiesGroup)
             {
-                EditorGUILayout.PropertyField(m_BadgeName, new GUIContent("Element Name"));
-                if (m_BadgeName.stringValue != saveScriptable.name)
+                EditorGUILayout.PropertyField(_badgeName, new GUIContent("Element Name"));
+                if (_badgeName.stringValue != _saveScriptable.name)
                 {
                     if (GUILayout.Button("Reset Element Name"))
                     {
-                        m_BadgeName.stringValue = saveScriptable.name;
+                        _badgeName.stringValue = _saveScriptable.name;
                     }
                 }
-                EditorGUILayout.PropertyField(m_BadgeDisplayImage, new GUIContent("Badge Illustration"));
+                EditorGUILayout.PropertyField(_badgeDisplayImage, new GUIContent("Badge Illustration"));
                 
                 EditorGUILayout.Space(15);
             }
@@ -66,16 +66,16 @@ namespace NomDuJeu.Scriptables.Editor
             elementSaveInfosGroup = EditorGUILayout.BeginFoldoutHeaderGroup(elementSaveInfosGroup, "Scriptables Save Infos");
             if (elementSaveInfosGroup)
             {
-                EditorGUILayout.PropertyField(m_GuidID, new GUIContent("GuidID"));
-                if (m_GuidID.stringValue == string.Empty)
+                EditorGUILayout.PropertyField(_guidID, new GUIContent("GuidID"));
+                if (_guidID.stringValue == string.Empty)
                 {
                     if (GUILayout.Button("Generate GUID"))
                     {
-                        m_GuidID.stringValue = GUID.Generate().ToString();
+                        _guidID.stringValue = GUID.Generate().ToString();
                     }
                     EditorGUILayout.Space();
                 }
-                EditorGUILayout.PropertyField(m_IsComplete, new GUIContent("IsComplete"));
+                EditorGUILayout.PropertyField(_isComplete, new GUIContent("IsComplete"));
                 
                 EditorGUILayout.Space(15);
             }

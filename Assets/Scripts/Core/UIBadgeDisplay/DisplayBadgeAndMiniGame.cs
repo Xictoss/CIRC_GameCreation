@@ -7,10 +7,10 @@ namespace NomDuJeu.UIBadgeDisplay.Core
 {
     public class DisplayBadgeAndMiniGame : MonoBehaviour
     {
-        [SerializeField] private Image badgeDisplay;
+        [SerializeField] private Image _badgeDisplay;
         
-        [SerializeField] private Sprite badgeNotCompleted;
-        private MiniGameScriptable miniGameData;
+        [SerializeField] private Sprite _badgeNotCompleted;
+        private MiniGameScriptable _miniGameData;
 
         private void OnEnable()
         {
@@ -23,7 +23,7 @@ namespace NomDuJeu.UIBadgeDisplay.Core
 
         private void Awake()
         {
-            miniGameData = Resources.Load<MiniGameScriptable>("SaveScriptables/MiniGames/1_SortAndSplode");
+            _miniGameData = Resources.Load<MiniGameScriptable>("SaveScriptables/MiniGames/1_SortAndSplode");
         }
 
         private void Start()
@@ -33,21 +33,21 @@ namespace NomDuJeu.UIBadgeDisplay.Core
 
         private void RefreshUI()
         {
-            Debug.Log("Refreshing UI");
+            //Debug.Log("Refreshing UI");
             
-            if (miniGameData.scriptableSaveElement.isComplete)
+            if (_miniGameData.ScriptableSaveElement.IsComplete)
             {
-                badgeDisplay.sprite = miniGameData.miniGameBadge.badgeDisplayImage;
+                _badgeDisplay.sprite = _miniGameData.MiniGameBadge.BadgeDisplayImage;
                 return;
             }
             
-            badgeDisplay.sprite = badgeNotCompleted;
+            _badgeDisplay.sprite = _badgeNotCompleted;
         }
 
         public void PlayGame()
         {
             
-            StaticFunctions.LoadScene(1);
+            1.LoadScene();
         }
         
         public void SaveGameData()
