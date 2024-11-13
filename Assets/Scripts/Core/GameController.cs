@@ -56,7 +56,7 @@ namespace NomDuJeu.Core
         
         public static void LoadPlayerProgressFromPlayerPrefs()
         {
-            Debug.Log("Loading player progress");
+            //Debug.Log("Loading player progress");
             
             SaveData playerProgressData = ProgressionController.LoadProgressDataFromPlayerPrefs();
             //SaveData playerProgressData = ProgressionController.LoadProgressData();

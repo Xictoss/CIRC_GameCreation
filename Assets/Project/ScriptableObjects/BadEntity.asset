@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09336b16c51a4092ba84d1293e301d23, type: 3}
   m_Name: BadEntity
   m_EditorClassIdentifier: 
-  Speed: 500
+  Speed: 300
   Sprite: {fileID: -2413806693520163455, guid: e074a9b4b276847b0b578d2c96d2c1db, type: 3}
   Good: 0

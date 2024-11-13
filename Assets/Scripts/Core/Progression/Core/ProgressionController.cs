@@ -39,14 +39,14 @@ namespace NomDuJeu.Progression.Core
             
             try
             {
-                Debug.Log("Loaded Player Progression");
+                //Debug.Log("Loaded Player Progression");
                 
                 string json = PlayerPrefs.GetString("PlayerProgressSave", "Default");
                 progressToLoad = JsonUtility.FromJson<SaveData>(json);
             }
             catch
             {
-                Debug.Log("Loaded Default Save");
+                //Debug.Log("Loaded Default Save");
             }
             
             return progressToLoad;

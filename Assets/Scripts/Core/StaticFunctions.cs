@@ -30,7 +30,7 @@ namespace NomDuJeu.Core
         
         public static void LoadScene(this int sceneIndex)
         {
-            Debug.Log("Load Scene" + sceneIndex);
+            //Debug.Log("Load Scene : " + sceneIndex);
             UnityEngine.SceneManagement.SceneManager.LoadScene(sceneIndex);
         }
     }

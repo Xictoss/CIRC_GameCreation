@@ -33,7 +33,7 @@ namespace NomDuJeu.UIBadgeDisplay.Core
 
         private void RefreshUI()
         {
-            Debug.Log("Refreshing UI");
+            //Debug.Log("Refreshing UI");
             
             if (_miniGameData.ScriptableSaveElement.IsComplete)
             {
@@ -47,7 +47,7 @@ namespace NomDuJeu.UIBadgeDisplay.Core
         public void PlayGame()
         {
             
-            StaticFunctions.LoadScene(1);
+            1.LoadScene();
         }
         
         public void SaveGameData()

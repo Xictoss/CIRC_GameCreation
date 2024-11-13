@@ -66,7 +66,7 @@ namespace NomDuJeu.MiniGames.Core.SortAndSplode
             }
         }
 
-        private bool IsUIRaycastHitEntity(GameObject hit) => hit.CompareTag("MiniGameEntity");
+        private bool IsUIRaycastHitEntity(GameObject hit) => !IsUIRaycastHitNull(hit) && hit.CompareTag("MiniGameEntity");
         private void OnEntityDragged(GameObject hitObject)
         {
             if (!IsUIRaycastHitEntity(hitObject)) return;
@@ -96,11 +96,13 @@ namespace NomDuJeu.MiniGames.Core.SortAndSplode
         private void SetEntityDraggedState(bool state)
         {
             _draggedEntity.IsDragged = state;
-            _draggedEntityGameObject.layer = state ? LayerMask.NameToLayer("Ignore Raycast") : LayerMask.NameToLayer("Default");
+            _draggedEntityGameObject.layer = state ? LayerMask.NameToLayer("Ignore Raycast") : LayerMask.NameToLayer("UI");
         }
 
         private bool IsValidEndZone(GameObject endZone)
         {
+            if (IsUIRaycastHitNull(endZone)) return false;
+            
             return (endZone.CompareTag("MiniGameZone1") && _draggedEntity.EntityData.Good) || 
                    (endZone.CompareTag("MiniGameZone2") && !_draggedEntity.EntityData.Good);
         }
