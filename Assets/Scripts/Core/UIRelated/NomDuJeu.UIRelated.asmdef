@@ -1,0 +1,17 @@
+{
+    "name": "NomDuJeu.UIRelated",
+    "rootNamespace": "NomDuJeu.UIRelated",
+    "references": [
+        "GUID:2ace7ebb826df10459d12b4f3c4a9407",
+        "GUID:6f42ce528ce4a90448281858b0f6cc42"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

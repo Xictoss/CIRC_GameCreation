@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace NomDuJeu.Core
 {
@@ -31,7 +32,13 @@ namespace NomDuJeu.Core
         public static void LoadScene(this int sceneIndex)
         {
             //Debug.Log("Load Scene : " + sceneIndex);
-            UnityEngine.SceneManagement.SceneManager.LoadScene(sceneIndex);
+            SceneManager.LoadScene(sceneIndex);
+        }
+        
+        public static void LoadScene(this string sceneName)
+        {
+            //Debug.Log("Load Scene : " + sceneIndex);
+            SceneManager.LoadScene(SceneManager.GetSceneByName(sceneName).buildIndex);
         }
     }
 }
