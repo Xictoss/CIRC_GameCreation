@@ -1,0 +1,17 @@
+{
+    "name": "NomDuJeu.MiniGames.Sample",
+    "rootNamespace": "",
+    "references": [
+        "GUID:ff719176925fd2a4dbb27b9fa1e438b9",
+        "GUID:7f6fdd18b438ff245b7f869ddfb77b44"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
