@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
+using CIRC.Core.Progression.Core;
+using CIRC.Core.Scriptables.Core;
 using LTX.ChanneledProperties;
-using NomDuJeu.Progression.Core;
-using NomDuJeu.Scriptables.Core;
 using UnityEngine;
 
-namespace NomDuJeu.Core
+namespace CIRC.Core
 {
     public static class GameController
     {

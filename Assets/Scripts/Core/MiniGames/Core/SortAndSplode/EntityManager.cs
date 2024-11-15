@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using CIRC.Core.Inputs.SortAndSplode;
 using LTX.Tools;
-using NomDuJeu.Core;
-using NomDuJeu.Inputs.SortAndSplode;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace NomDuJeu.MiniGames.Core.SortAndSplode
+namespace CIRC.Core.MiniGames.Core.SortAndSplode
 {
     public class EntityManager : MonoBehaviour
     {

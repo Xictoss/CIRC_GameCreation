@@ -1,6 +1,6 @@
-using NomDuJeu.MiniGames.Core.Core.MiniGames.Core.Interfaces;
+using CIRC.Core.MiniGames.Core.Interfaces;
 
-namespace NomDuJeu.MiniGames.Core
+namespace CIRC.Core.MiniGames.Core
 {
     public abstract class MiniGame<T> : IMiniGame 
         where T : IMiniGameContext

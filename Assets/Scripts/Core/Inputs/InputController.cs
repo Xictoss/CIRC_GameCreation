@@ -1,12 +1,11 @@
 using System.Collections.Generic;
 using LTX.Singletons;
-using NomDuJeu.Core;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-namespace NomDuJeu.Inputs.Core
+namespace CIRC.Core.Inputs
 {
     public class InputController : MonoSingleton<InputController>
     {

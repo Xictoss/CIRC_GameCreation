@@ -1,10 +1,9 @@
 using System;
 using LTX.Singletons;
-using NomDuJeu.Inputs.Core;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace NomDuJeu.Inputs.SortAndSplode
+namespace CIRC.Core.Inputs.SortAndSplode
 {
     public class SortAndSplodeInputController : MonoSingleton<SortAndSplodeInputController>
     {

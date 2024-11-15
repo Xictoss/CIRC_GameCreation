@@ -1,9 +1,8 @@
-using NomDuJeu.Core;
-using NomDuJeu.Scriptables.Core;
+using CIRC.Core.Scriptables.Core;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace NomDuJeu.UIBadgeDisplay.Core
+namespace CIRC.Core.UIBadgeDisplay
 {
     public class BadgesDisplay : MonoBehaviour
     {

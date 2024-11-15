@@ -1,6 +1,6 @@
-using NomDuJeu.MiniGames.Core.Core.MiniGames.Core.Interfaces;
+using CIRC.Core.MiniGames.Core.Interfaces;
 
-namespace NomDuJeu.Core.MiniGames.Sample.SortAndSplode
+namespace CIRC.Core.MiniGames.Sample.SortAndSplodeMiniGame
 {
     public struct SortAndSplodeContext : IMiniGameContext
     {

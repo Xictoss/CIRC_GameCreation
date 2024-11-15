@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace NomDuJeu.Scriptables.Core
+namespace CIRC.Core.Scriptables.Core
 {
     [CreateAssetMenu(fileName = "NewBadgeScriptable", menuName = "BadgeScriptable", order = 0)]
     public class BadgeScriptable : SaveScriptable

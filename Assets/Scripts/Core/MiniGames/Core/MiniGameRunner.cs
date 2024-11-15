@@ -1,6 +1,6 @@
-using NomDuJeu.MiniGames.Core.Core.MiniGames.Core.Interfaces;
+using CIRC.Core.MiniGames.Core.Interfaces;
 
-namespace NomDuJeu.MiniGames.Core.Core.MiniGames
+namespace CIRC.Core.MiniGames.Core
 {
     public sealed class MiniGameRunner<T> : IMiniGameRunner 
         where T : IMiniGameContext

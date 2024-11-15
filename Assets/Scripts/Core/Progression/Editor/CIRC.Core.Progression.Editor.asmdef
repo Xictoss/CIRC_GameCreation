@@ -1,9 +1,11 @@
 {
-    "name": "NomDuJeu.Progression.Core",
-    "rootNamespace": "NomDuJeu.Progression.Core",
+    "name": "CIRC.Core.Progression.Editor",
+    "rootNamespace": "CIRC.Core.Progression.Editor",
     "references": [],
     "includePlatforms": [],
-    "excludePlatforms": [],
+    "excludePlatforms": [
+        "Editor"
+    ],
     "allowUnsafeCode": false,
     "overrideReferences": false,
     "precompiledReferences": [],

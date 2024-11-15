@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
+using CIRC.Core.MiniGames.Core.Interfaces;
 using LTX.Singletons;
 using LTX.Tools;
-using NomDuJeu.MiniGames.Core.Core.MiniGames.Core.Interfaces;
 
-namespace NomDuJeu.MiniGames.Core.Core.MiniGames.Core
+namespace CIRC.Core.MiniGames.Core
 {
     public class MiniGameManager : MonoSingleton<MiniGameManager>
     {

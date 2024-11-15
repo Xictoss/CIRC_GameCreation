@@ -1,7 +1,7 @@
-using NomDuJeu.Progression.Core;
+using CIRC.Core.Progression.Core;
 using UnityEngine;
 
-namespace NomDuJeu.Scriptables.Core
+namespace CIRC.Core.Scriptables.Core
 {
     public class SaveScriptable : ScriptableObject
     {

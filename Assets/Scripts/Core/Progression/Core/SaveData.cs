@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Data.SqlTypes;
 using UnityEngine;
 
-namespace NomDuJeu.Progression.Core
+namespace CIRC.Core.Progression.Core
 {
     [System.Serializable]
     public struct SaveData

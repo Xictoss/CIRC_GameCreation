@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace NomDuJeu.Core
+namespace CIRC.Core
 {
     public static class StaticFunctions
     {

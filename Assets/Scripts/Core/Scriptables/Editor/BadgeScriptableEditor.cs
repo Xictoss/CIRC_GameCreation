@@ -1,8 +1,8 @@
-using NomDuJeu.Scriptables.Core;
+using CIRC.Core.Scriptables.Core;
 using UnityEditor;
 using UnityEngine;
 
-namespace NomDuJeu.Scriptables.Editor
+namespace CIRC.Core.Scriptables.Editor
 {
     [CanEditMultipleObjects]
     [CustomEditor(typeof(BadgeScriptable))]

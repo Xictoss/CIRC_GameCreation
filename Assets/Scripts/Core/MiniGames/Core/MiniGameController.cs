@@ -1,9 +1,8 @@
+using CIRC.Core.Scriptables.Core;
 using LTX.Singletons;
-using NomDuJeu.Scriptables.Core;
 using UnityEngine;
-using NomDuJeu.Core;
 
-namespace NomDuJeu.MiniGames.Core
+namespace CIRC.Core.MiniGames.Core
 {
     public class MiniGameController : MonoSingleton<MiniGameController>
     {

@@ -1,7 +1,7 @@
 using System;
 using JetBrains.Annotations;
 
-namespace NomDuJeu.Progression.Core
+namespace CIRC.Core.Progression.Core
 {
     [System.Serializable]
     public struct SaveElement : IEquatable<SaveElement>

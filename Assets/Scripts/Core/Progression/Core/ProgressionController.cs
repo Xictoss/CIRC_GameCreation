@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace NomDuJeu.Progression.Core
+namespace CIRC.Core.Progression.Core
 {
     public static class ProgressionController
     {

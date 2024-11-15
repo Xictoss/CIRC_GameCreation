@@ -1,4 +1,4 @@
-namespace NomDuJeu.MiniGames.Core.Core.MiniGames.Core.Interfaces
+namespace CIRC.Core.MiniGames.Core.Interfaces
 {
     public interface IMiniGameContext
     {

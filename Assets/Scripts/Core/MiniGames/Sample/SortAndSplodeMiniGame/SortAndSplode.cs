@@ -1,11 +1,9 @@
-using NomDuJeu.Core.MiniGames.Sample.SortAndSplode;
-using NomDuJeu.MiniGames.Core;
+using CIRC.Core.MiniGames.Core;
 
-namespace NomDuJeu.Core.MiniGames.Sample.SortAndSplode
+namespace CIRC.Core.MiniGames.Sample.SortAndSplodeMiniGame
 {
     public class SortAndSplode : MiniGame<SortAndSplodeContext>
     {
-
         public SortAndSplode()
         {
             

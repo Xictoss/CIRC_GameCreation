@@ -1,8 +1,8 @@
-using NomDuJeu.MiniGames.Core.Core.MiniGames.Core;
-using NomDuJeu.MiniGames.Core.Core.MiniGames.Core.Interfaces;
+using CIRC.Core.MiniGames.Core;
+using CIRC.Core.MiniGames.Core.Interfaces;
 using UnityEngine;
 
-namespace NomDuJeu.Core.MiniGames.Sample.SortAndSplode
+namespace CIRC.Core.MiniGames.Sample.SortAndSplodeMiniGame
 {
     public class SortAndSplodeHandler : MonoBehaviour, IMiniGameHandler<SortAndSplodeContext>
     {

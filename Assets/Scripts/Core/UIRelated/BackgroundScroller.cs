@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace NomDuJeu.Core
+namespace CIRC.Core.UIRelated
 {
     public class BackgroundScroller : MonoBehaviour
     {
