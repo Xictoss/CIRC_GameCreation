@@ -96,9 +96,9 @@ namespace NomDuJeu.Core
 	        //	new NativeShare().AddFile( filePath ).AddTarget( "com.whatsapp" ).Share();
         }
 
-        public void OpenScene(string sceneName)
+        public void OpenScene(int sceneIndex)
         {
-            sceneName.LoadScene();
+            sceneIndex.LoadScene();
         }
 
         public void OpenURL()
@@ -108,7 +108,12 @@ namespace NomDuJeu.Core
 
         public void QuitGame()
         {
-            Application.Quit();
+            GameController.QuitGame();
+        }
+
+        public void ResetProgress()
+        {
+            GameController.DeleteProgress();
         }
     }
 }

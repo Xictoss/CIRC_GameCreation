@@ -16,20 +16,7 @@ namespace NomDuJeu.UIBadgeDisplay.Core
 
         private void OnEnable()
         {
-            GameController.GameSaved += RefreshUI;
-        }
-        private void OnDisable()
-        {
-            GameController.GameSaved -= RefreshUI;
-        }
-
-        private void Awake()
-        {
-            _badgesData = Resources.LoadAll<BadgeScriptable>("SaveScriptables/Badges");
-        }
-
-        private void Start()
-        {
+            GameController.LoadPlayerProgressFromPlayerPrefs();
             RefreshUI();
         }
 
@@ -37,16 +24,24 @@ namespace NomDuJeu.UIBadgeDisplay.Core
         {
             Debug.Log("Refreshing UI");
             
-            for (int i = 0; i < _badgesDisplay.Length; i++)
+            _badgesData = Resources.LoadAll<BadgeScriptable>("SaveScriptables/Badges");
+            
+            SetAllLocked();
+            
+            for (int i = 0; i < _badgesData.Length; i++)
             {
                 if (_badgesData[i].ScriptableSaveElement.IsComplete)
                 {
                     _badgesDisplay[i].sprite = _badgesData[i].BadgeDisplayImage;
-                    _toggles[i].isOn = true;
-                    continue;
                 }
-                
-                _badgesDisplay[i].sprite = _badgeNotCompleted;
+            }
+        }
+
+        private void SetAllLocked()
+        {
+            foreach (Image badge in _badgesDisplay)
+            {
+                badge.sprite = _badgeNotCompleted;
             }
         }
 

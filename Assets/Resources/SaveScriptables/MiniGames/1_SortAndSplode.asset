@@ -16,4 +16,4 @@ MonoBehaviour:
     GuidID: bac3d6b7e721de14e892f4f9bbd62f82
     IsComplete: 0
   MiniGameName: 1_SortAndSplode
-  MiniGameBadge: {fileID: 11400000, guid: 6ef9072bd11d861419f8368bf6f9535d, type: 2}
+  MiniGameBadge: {fileID: 11400000, guid: a819733acd949784086af850b11bf283, type: 2}
