@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScriptableSaveElement:
     GuidID: 4f4a2698de624314481a7cdcd30bf749
-    IsComplete: 1
+    IsComplete: 0
   BadgeName: 3_BadgeGold
   BadgeDisplayImage: {fileID: 21300000, guid: ed9da05140c5ce94db368f44624506a6, type: 3}

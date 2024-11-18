@@ -56,7 +56,7 @@ namespace CIRC.Core
         
         public static void LoadPlayerProgressFromPlayerPrefs()
         {
-            //Debug.Log("Loading player progress");
+            Debug.Log("Loading player progress");
             
             SaveData playerProgressData = ProgressionController.LoadProgressDataFromPlayerPrefs();
             //SaveData playerProgressData = ProgressionController.LoadProgressData();
@@ -87,6 +87,14 @@ namespace CIRC.Core
             {
                 gameSaveElement.ScriptableSaveElement.IsComplete = false;
             }
+            
+            SavePlayerProgressToPlayerPrefs();
+        }
+
+        public static void QuitGame()
+        {
+            SavePlayerProgressToPlayerPrefs();
+            Application.Quit();
         }
 
         private static List<SaveScriptable> LoadGameProgressElements()
