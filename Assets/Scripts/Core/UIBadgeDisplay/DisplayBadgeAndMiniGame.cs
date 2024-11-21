@@ -9,7 +9,7 @@ namespace CIRC.Core.UIBadgeDisplay
         [SerializeField] private Image _badgeDisplay;
         
         [SerializeField] private Sprite _badgeNotCompleted;
-        private MiniGameScriptable _miniGameData;
+        private MiniGameData _miniGameData;
 
         private void OnEnable()
         {
@@ -22,7 +22,7 @@ namespace CIRC.Core.UIBadgeDisplay
 
         private void Awake()
         {
-            _miniGameData = Resources.Load<MiniGameScriptable>("SaveScriptables/MiniGames/1_SortAndSplode");
+            _miniGameData = Resources.Load<MiniGameData>("SaveScriptables/MiniGames/1_SortAndSplode");
         }
 
         private void Start()

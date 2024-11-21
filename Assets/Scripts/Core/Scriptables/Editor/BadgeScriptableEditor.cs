@@ -5,7 +5,7 @@ using UnityEngine;
 namespace CIRC.Core.Scriptables.Editor
 {
     [CanEditMultipleObjects]
-    [CustomEditor(typeof(BadgeScriptable))]
+    [CustomEditor(typeof(BadgeData))]
     public class BadgeScriptableEditor : UnityEditor.Editor
     {
         private SaveScriptable _saveScriptable;

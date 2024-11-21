@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using CIRC.Core.MiniGames.Core.Interfaces;
 using LTX.Singletons;
 using LTX.Tools;
+using UnityEngine;
 
 namespace CIRC.Core.MiniGames.Core
 {
@@ -44,7 +45,7 @@ namespace CIRC.Core.MiniGames.Core
             miniGameRunners.Add(miniGameRunner);
             miniGameRunner.Begin();
             
-            OnMiniGameStarted?.Invoke(runner);
+            OnMiniGameStarted?.Invoke(miniGameRunner);
         }
         
         public void StopMiniGame(IMiniGame miniGame, bool isSuccess)
@@ -53,7 +54,7 @@ namespace CIRC.Core.MiniGames.Core
             {
                 runner.End(isSuccess);
                 miniGameRunners.Remove(runner);
-            
+                
                 OnMiniGameStopped?.Invoke(runner);
             }
         }
