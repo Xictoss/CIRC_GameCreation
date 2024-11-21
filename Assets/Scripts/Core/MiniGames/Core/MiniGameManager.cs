@@ -14,6 +14,8 @@ namespace CIRC.Core.MiniGames.Core
 
         private List<IMiniGameRunner> miniGameRunners;
         private DynamicBuffer<IMiniGameRunner> miniGameRunnersBuffer;
+        
+        public IMiniGameRunner currentMiniGame { get; private set; }
 
         protected override void Awake()
         {
@@ -44,7 +46,8 @@ namespace CIRC.Core.MiniGames.Core
             
             miniGameRunners.Add(miniGameRunner);
             miniGameRunner.Begin();
-            
+
+            currentMiniGame = miniGameRunner;
             OnMiniGameStarted?.Invoke(miniGameRunner);
         }
         
@@ -54,7 +57,8 @@ namespace CIRC.Core.MiniGames.Core
             {
                 runner.End(isSuccess);
                 miniGameRunners.Remove(runner);
-                
+
+                currentMiniGame = null;
                 OnMiniGameStopped?.Invoke(runner);
             }
         }
