@@ -2,7 +2,7 @@ using CIRC.Core.Inputs;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace CIRC.Core.MiniGames.Core.SortAndSplode
+namespace CIRC.Core.MiniGames.Sample.SortAndSplodeMiniGame
 {
     public class Entity : MonoBehaviour
     {

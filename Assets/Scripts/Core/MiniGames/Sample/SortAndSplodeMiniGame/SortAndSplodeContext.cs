@@ -1,9 +1,12 @@
 using CIRC.Core.MiniGames.Core.Interfaces;
+using CIRC.Core.Scriptables.Core;
 
 namespace CIRC.Core.MiniGames.Sample.SortAndSplodeMiniGame
 {
     public struct SortAndSplodeContext : IMiniGameContext
     {
-        public string Name;
+        public MiniGameData MiniGameData;
+        public SortAndSplodeSpawner Spawner;
+        public EntityManager EntityManager;
     }
 }

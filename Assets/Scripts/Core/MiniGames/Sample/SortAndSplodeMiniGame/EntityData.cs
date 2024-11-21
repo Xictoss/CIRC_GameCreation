@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace CIRC.Core.MiniGames.Core.SortAndSplode
+namespace CIRC.Core.MiniGames.Sample.SortAndSplodeMiniGame
 {
     [CreateAssetMenu(fileName = "NewEntityData", menuName = "EntityScriptable", order = 0)]
     public class EntityData : ScriptableObject

@@ -5,7 +5,7 @@ using UnityEngine;
 namespace CIRC.Core.Scriptables.Editor
 {
     [CanEditMultipleObjects]
-    [CustomEditor(typeof(MiniGameScriptable))]
+    [CustomEditor(typeof(MiniGameData))]
     public class MiniGameScriptableEditor : UnityEditor.Editor
     {
         private SaveScriptable saveScriptable;

@@ -9,7 +9,7 @@ namespace CIRC.Core.UIBadgeDisplay
         [SerializeField] private Image[] _badgesDisplay;
         
         [SerializeField] private Sprite _badgeNotCompleted;
-        private BadgeScriptable[] _badgesData;
+        private BadgeData[] _badgesData;
 
         [SerializeField] private Toggle[] _toggles;
 
@@ -23,7 +23,7 @@ namespace CIRC.Core.UIBadgeDisplay
         {
             Debug.Log("Refreshing UI");
             
-            _badgesData = Resources.LoadAll<BadgeScriptable>("SaveScriptables/Badges");
+            _badgesData = Resources.LoadAll<BadgeData>("SaveScriptables/Badges");
             
             SetAllLocked();
             

@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 5577413588913977967}
   - component: {fileID: 7953755701946526902}
   - component: {fileID: 8538357708861292475}
-  - component: {fileID: 8985871060885474850}
+  - component: {fileID: -1291676816251346919}
   m_Layer: 5
   m_Name: BadEntity
   m_TagString: MiniGameEntity
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8985871060885474850
+--- !u!114 &-1291676816251346919
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,9 +161,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5786358227290772059}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33b0c6912cb44a97bc6f3d21b9c2a58a, type: 3}
+  m_Script: {fileID: 11500000, guid: 9842f4ab808e4dab86e4c0cf12838350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <EntityData>k__BackingField: {fileID: 11400000, guid: 8db25365b6fc7694a92e796864852c39, type: 2}
+  <EntityData>k__BackingField: {fileID: 11400000, guid: 5ba82fb36ccdbe34a915c9eedf5ec859, type: 2}
   <RectTransform>k__BackingField: {fileID: 5577413588913977967}
   _image: {fileID: 8538357708861292475}
