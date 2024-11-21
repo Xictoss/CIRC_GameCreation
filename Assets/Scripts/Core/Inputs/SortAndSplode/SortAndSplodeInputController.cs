@@ -1,7 +1,6 @@
 using System;
 using LTX.Singletons;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace CIRC.Core.Inputs.SortAndSplode
 {
@@ -17,13 +16,31 @@ namespace CIRC.Core.Inputs.SortAndSplode
         private bool _isDragging;
         private GameObject _selectedUIElement;
 
-        public void GetTouchInput(InputAction.CallbackContext context)
+        private void OnEnable()
+        {
+            InputController.Instance.OnClickInput += GetTouchInput;
+        }
+        
+        private void OnDisable()
+        {
+            InputController.Instance.OnClickInput -= GetTouchInput;
+        }
+        
+        public void GetTouchInput(bool inputState)
         {
             _selectedUIElement = InputController.Instance.RaycastToUI();
             
-            if (context.performed) EnterClick();
-            if (context.canceled && _isDragging) ReleaseClick();
+            switch (inputState)
+            {
+                case true:
+                    EnterClick();
+                    break;
+                case false when _isDragging:
+                    ReleaseClick();
+                    break;
+            }
         }
+        
 
         #region Click State
 
