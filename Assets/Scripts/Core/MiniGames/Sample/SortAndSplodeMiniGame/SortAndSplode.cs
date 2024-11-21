@@ -21,10 +21,12 @@ namespace CIRC.Core.MiniGames.Sample.SortAndSplodeMiniGame
 
         public override void End(ref SortAndSplodeContext context, bool isSuccess)
         {
-            context.MiniGameData.ScriptableSaveElement.IsComplete = true;
-            context.MiniGameData.MiniGameBadge.ScriptableSaveElement.IsComplete = true;
-            GameController.SavePlayerProgressToPlayerPrefs();
-            
+            if (isSuccess)
+            {
+                context.MiniGameData.ScriptableSaveElement.IsComplete = true;
+                context.MiniGameData.MiniGameBadge.ScriptableSaveElement.IsComplete = true;
+                GameController.SavePlayerProgressToPlayerPrefs();
+            }
             1.LoadScene();
         }
     }

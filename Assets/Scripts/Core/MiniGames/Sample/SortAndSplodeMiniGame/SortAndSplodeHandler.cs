@@ -1,6 +1,7 @@
 using CIRC.Core.MiniGames.Core;
 using CIRC.Core.MiniGames.Core.Interfaces;
 using CIRC.Core.Scriptables.Core;
+using LTX.ChanneledProperties;
 using UnityEngine;
 
 namespace CIRC.Core.MiniGames.Sample.SortAndSplodeMiniGame
@@ -16,11 +17,13 @@ namespace CIRC.Core.MiniGames.Sample.SortAndSplodeMiniGame
         private void OnEnable()
         {
             spawner.OnEntitySpawned += entityManager.AddEntity;
+            GameController.TimeScale.AddPriority(this, PriorityTags.High, 1f);
         }
 
         private void OnDisable()
         {
             spawner.OnEntitySpawned -= entityManager.AddEntity;
+            GameController.TimeScale.RemovePriority(this);
         }
 
         private void Start()

@@ -11,8 +11,7 @@ namespace CIRC.Core
     {
         #region PrioritisedProperties
 
-        public static PrioritisedProperty<bool> CursorVisibility { get; private set; }
-        public static PrioritisedProperty<CursorLockMode> CursorLockMode { get; private set; }
+        public static PrioritisedProperty<float> TimeScale { get; private set; }
 
         #endregion
 
@@ -24,7 +23,7 @@ namespace CIRC.Core
             Application.wantsToQuit += UnLoad;
             Application.targetFrameRate = 60;
             
-            SetupCursor();
+            SetupTimeScale();
             LoadPlayerProgressFromPlayerPrefs();
         }
 
@@ -113,25 +112,18 @@ namespace CIRC.Core
         
         #endregion
 
-        #region Exemple Use Of Prioritised Properties
+        #region Prioritised Properties
 
-        private static void SetupCursor()
+        private static void SetupTimeScale()
         {
-            CursorVisibility = new PrioritisedProperty<bool>(true);
-            CursorLockMode = new PrioritisedProperty<CursorLockMode>(UnityEngine.CursorLockMode.None);
-
-            CursorVisibility.AddOnValueChangeCallback(UpdateCursorVisibility, true);
-            CursorLockMode.AddOnValueChangeCallback(UpdateCursorLockMode, true);
+            TimeScale = new PrioritisedProperty<float>(1f);
+            
+            TimeScale.AddOnValueChangeCallback(UpdateTimeScale, true);
         }
 
-        private static void UpdateCursorLockMode(CursorLockMode lockMode)
+        private static void UpdateTimeScale(float value)
         {
-            Cursor.lockState = lockMode;
-        }
-
-        private static void UpdateCursorVisibility(bool isVisible)
-        {
-            Cursor.visible = isVisible;
+            Time.timeScale = value;
         }
 
         #endregion
