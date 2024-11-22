@@ -44,15 +44,15 @@ namespace CIRC.Core.MenuSystem
             Debug.LogError("Menu not found.");
         }
 
-        public IMenu GetMenu(string menuName)
+        public bool TryGetMenu(string menuName, out IMenu typedMenu)
         {
-            if (menus.TryGetValue(menuName, out IMenu typedMenu))
+            if (menus.TryGetValue(menuName, out typedMenu))
             {
-                return typedMenu;
+                return true;
             }
 
             Debug.LogError("Menu not found.");
-            return default;
+            return false;
         }
 
         public void CloseCurrentMenu()

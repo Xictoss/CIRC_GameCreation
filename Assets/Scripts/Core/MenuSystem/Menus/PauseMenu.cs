@@ -11,13 +11,11 @@ namespace CIRC.Core.MenuSystem.Menus
         private void OnEnable()
         {
             _miniGameRunner = MiniGameManager.Instance.currentMiniGame;
-            GameController.TimeScale.AddPriority(this, PriorityTags.None, 0f);
-            GameController.TimeScale.ChangeChannelPriority(this, PriorityTags.Highest);
+            GameController.TimeScale.AddPriority(this, PriorityTags.Highest, 0f);
         }   
 
         private void OnDisable()
         {
-            GameController.TimeScale.ChangeChannelPriority(this, PriorityTags.None);
             GameController.TimeScale.RemovePriority(this);
         }
         
