@@ -15,7 +15,7 @@ namespace CIRC.Core.MiniGames.Sample.SortAndSplodeMiniGame
 
         public override bool Refresh(ref SortAndSplodeContext context)
         {
-            return context.Spawner.SpawnCount == context.Spawner.EntitiesToSpawn 
+            return context.Spawner.Remainings == 0 
                    && context.EntityManager.SpawnedEntities.Count == 0;
         }
 

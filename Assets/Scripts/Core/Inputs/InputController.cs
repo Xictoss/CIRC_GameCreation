@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using LTX.Singletons;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -101,26 +100,6 @@ namespace CIRC.Core.Inputs
             Ray ray = Camera.main!.ScreenPointToRay(ScreenTouchPosition);
             RaycastHit2D raycastHit = Physics2D.Raycast(ray.origin, ray.direction, 100f, LayerMask.GetMask(layerMaskName));
             return raycastHit;
-        }
-        
-        public GameObject RaycastToUI()
-        {
-            _pointerEventData = new PointerEventData(_eventSystem)
-            {
-                position = Pointer.current.position.ReadValue()
-            };
-
-            List<RaycastResult> results = new List<RaycastResult>();
-            _graphicRaycaster.Raycast(_pointerEventData, results);
-            
-            foreach (var result in results)
-            {
-                if (result.gameObject.layer == LayerMask.NameToLayer("Ignore Raycast")) continue;
-                
-                return result.gameObject;
-            }
-
-            return null;
         }
     }
 }

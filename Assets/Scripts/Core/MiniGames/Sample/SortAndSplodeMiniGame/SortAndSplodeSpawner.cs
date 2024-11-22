@@ -13,13 +13,14 @@ namespace CIRC.Core.MiniGames.Sample.SortAndSplodeMiniGame
         [SerializeField] private Entity[] _entityTypes;
         [SerializeField] private RectTransform _spawnArea;
         
-        public int SpawnCount { get; private set; }
+        public int Remainings { get; private set; }
         public event Action<Entity> OnEntitySpawned;
         
         private IEnumerator Start() //Spawns the Entities
         {
-            SpawnCount = 0;
-            while (SpawnCount < EntitiesToSpawn)
+            Remainings = EntitiesToSpawn;
+            
+            for (int i = EntitiesToSpawn; i > 0; i--)
             {
                 Vector2 spawnPosition = _spawnArea.GetRandomPositionWithinRectTransform();
                 
@@ -31,7 +32,7 @@ namespace CIRC.Core.MiniGames.Sample.SortAndSplodeMiniGame
                 
                 OnEntitySpawned?.Invoke(entity);
 
-                SpawnCount++;
+                Remainings--;
                 yield return new WaitForSeconds(_spawnTimeout);
             }
         }
