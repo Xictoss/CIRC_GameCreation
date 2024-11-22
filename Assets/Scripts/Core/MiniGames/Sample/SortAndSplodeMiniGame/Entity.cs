@@ -1,17 +1,19 @@
-using CIRC.Core.Inputs;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace CIRC.Core.MiniGames.Sample.SortAndSplodeMiniGame
 {
-    public class Entity : MonoBehaviour
+    public class Entity : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
     {
         [Header("Entity Data")]
         [field : SerializeField] public EntityData EntityData { get; private set; }
         
         [Header("Move Data")]
         internal RectTransform MoveArea;
-        internal bool IsDragged;
+        internal EntityManager manager;
+        private bool IsDragged;
         private Vector2 targetPosition;
         
         [Header("References")]
@@ -26,11 +28,7 @@ namespace CIRC.Core.MiniGames.Sample.SortAndSplodeMiniGame
         
         public void Refresh()
         {
-            if (IsDragged)
-            {
-                transform.position = InputController.Instance.ScreenTouchPosition;
-            }
-            else
+            if (!IsDragged)
             {
                 MoveEntity();
             }
@@ -43,13 +41,46 @@ namespace CIRC.Core.MiniGames.Sample.SortAndSplodeMiniGame
 
         private void MoveEntity()
         {
-            if (Vector2.Distance(targetPosition, RectTransform.anchoredPosition) <= 10f)
+            if ((targetPosition - RectTransform.anchoredPosition).sqrMagnitude <= 10f)
             {
                 SetNewTargetPosition();
             }
             
             Vector2 direction = (targetPosition - RectTransform.anchoredPosition).normalized;
             RectTransform.anchoredPosition += direction * (EntityData.Speed * Time.deltaTime);
+        }
+
+        public void OnDrag(PointerEventData eventData)
+        {
+            RectTransform.position += (Vector3)eventData.delta;;
+        }
+
+        public void OnBeginDrag(PointerEventData eventData)
+        {
+            IsDragged = true;
+        }
+
+        public void OnEndDrag(PointerEventData eventData)
+        {
+            IsDragged = false;
+            List<RaycastResult> results = new List<RaycastResult>();
+            EventSystem.current.RaycastAll(eventData, results);
+
+            foreach (RaycastResult result in results)
+            {
+                if (IsValidEndZone(result.gameObject))
+                {
+                    manager.RemoveEntity(this);
+                    Destroy(gameObject);
+                    return;
+                }
+            }
+        }
+        
+        private bool IsValidEndZone(GameObject endZone)
+        {
+            return (endZone.CompareTag("MiniGameZone1") && EntityData.Good) || 
+                   (endZone.CompareTag("MiniGameZone2") && !EntityData.Good);
         }
     }
 }
