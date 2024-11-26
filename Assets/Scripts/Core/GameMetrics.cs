@@ -30,5 +30,7 @@ namespace CIRC.Core
         
         [field: SerializeField, Scene, BoxGroup("Scenes/MiniGames")]
         public int SortAndSplodeScene { get; private set; }
+        [field: SerializeField, Scene, BoxGroup("Scenes/MiniGames")]
+        public int RunAndDrinkScene { get; private set; }
     }
 }

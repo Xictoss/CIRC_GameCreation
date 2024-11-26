@@ -12,3 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0229dcce44a48669489e6dfd7202af5, type: 3}
   m_Name: GameMetrics
   m_EditorClassIdentifier: 
+  <MainMenuScene>k__BackingField: 0
+  <PlageScene>k__BackingField: 1
+  <MaisonScene>k__BackingField: 0
+  <ParcScene>k__BackingField: 0
+  <LotissementScene>k__BackingField: 0
+  <EntrepriseScene>k__BackingField: 0
+  <VilleScene>k__BackingField: 0
+  <StadeUniversitaireScene>k__BackingField: 0
+  <CliniqueScene>k__BackingField: 0
+  <SortAndSplodeScene>k__BackingField: 2
