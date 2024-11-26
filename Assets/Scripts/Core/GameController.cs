@@ -9,6 +9,20 @@ namespace CIRC.Core
 {
     public static class GameController
     {
+        public static Logger Logger { get; private set; }
+        public static SceneController SceneController { get; private set; }
+        private static GameMetrics gameMetrics;
+        public static GameMetrics Metrics
+        {
+            get
+            {
+                if (gameMetrics == null)
+                    gameMetrics = Resources.Load<GameMetrics>("GameMetrics");
+
+                return gameMetrics;
+            }
+        }
+        
         #region PrioritisedProperties
 
         public static PrioritisedProperty<float> TimeScale { get; private set; }
