@@ -49,8 +49,8 @@ namespace CIRC.Core.MiniGames.Sample.RunAndDrink
         {
             if (isClicked || hitCoolDown)return;
             
-            Bounds bounds1 = RectTransformToScreenSpace(transformAnimal);
-            Bounds bounds2 = RectTransformToScreenSpace(transformZone);
+            Bounds bounds1 = transformAnimal.RectTransformToScreenSpace();
+            Bounds bounds2 = transformZone.RectTransformToScreenSpace();
             
             if (bounds1.Intersects(bounds2))
             {
@@ -67,16 +67,7 @@ namespace CIRC.Core.MiniGames.Sample.RunAndDrink
             
         }
         
-        private static Bounds RectTransformToScreenSpace(RectTransform rectTransform)
-        {
-            Vector3[] corners = new Vector3[4];
-            rectTransform.GetWorldCorners(corners);
-
-            Vector3 position = (corners[0] + corners[2]) / 2;
-            Vector3 size = corners[2] - corners[0];
-
-            return new Bounds(position, size);
-        }
+        
 
         private IEnumerator HitCoolDown()
         {

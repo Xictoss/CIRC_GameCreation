@@ -46,7 +46,7 @@ namespace CIRC.Core.UIBadgeDisplay
         public void PlayGame()
         {
             
-            1.LoadScene();
+            //1.LoadScene();
         }
         
         public void SaveGameData()

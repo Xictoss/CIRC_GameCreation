@@ -74,7 +74,7 @@ namespace NomDuJeu.Core
 
         public void OpenScene(int sceneIndex)
         {
-            sceneIndex.LoadScene();
+            //sceneIndex.LoadScene();
         }
 
         public void OpenURL()
