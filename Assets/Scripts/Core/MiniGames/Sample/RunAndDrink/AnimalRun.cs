@@ -25,6 +25,7 @@ namespace CIRC.Core.MiniGames.Sample.RunAndDrink
         private void Start()
         {
             radius = Screen.currentResolution.width * 0.25f;
+            transformZone.position += Vector3.down * radius;
         }
 
         private void Update()
