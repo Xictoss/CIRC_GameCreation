@@ -31,16 +31,15 @@ namespace CIRC.Core
             return Vector3.zero;
         }
         
-        public static void LoadScene(this int sceneIndex)
+        public static Bounds RectTransformToScreenSpace(this RectTransform rectTransform)
         {
-            //Debug.Log("Load Scene : " + sceneIndex);
-            SceneManager.LoadScene(sceneIndex);
-        }
-        
-        public static void LoadScene(this string sceneName)
-        {
-            //Debug.Log("Load Scene : " + sceneIndex);
-            SceneManager.LoadScene(SceneManager.GetSceneByName(sceneName).buildIndex);
+            Vector3[] corners = new Vector3[4];
+            rectTransform.GetWorldCorners(corners);
+
+            Vector3 position = (corners[0] + corners[2]) / 2;
+            Vector3 size = corners[2] - corners[0];
+
+            return new Bounds(position, size);
         }
         
         public static IEnumerator TakeScreenshotAndShare(this bool hasScreen)
