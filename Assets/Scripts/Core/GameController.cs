@@ -36,6 +36,9 @@ namespace CIRC.Core
         {
             Application.wantsToQuit += UnLoad;
             Application.targetFrameRate = 60;
+
+            SceneController = new SceneController();
+            Logger = new Logger();
             
             SetupTimeScale();
             LoadPlayerProgressFromPlayerPrefs();
