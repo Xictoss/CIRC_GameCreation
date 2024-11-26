@@ -21,8 +21,8 @@ MonoBehaviour:
   <VilleScene>k__BackingField: 0
   <StadeUniversitaireScene>k__BackingField: 0
   <CliniqueScene>k__BackingField: 0
-  <SortAndSplodeScene>k__BackingField: 2
-  <RunAndDrinkScene>k__BackingField: 0
-  <SortAndSplode_SpawnNumber>k__BackingField: 0
-  <SortAndSplode_SpawnCooldown>k__BackingField: 0
-  <RunAndDrink_DrinksNumber>k__BackingField: 0
+  <SortAndSplodeScene>k__BackingField: 3
+  <RunAndDrinkScene>k__BackingField: 2
+  <SortAndSplode_SpawnNumber>k__BackingField: 10
+  <SortAndSplode_SpawnCooldown>k__BackingField: 0.75
+  <RunAndDrink_DrinksNumber>k__BackingField: 3

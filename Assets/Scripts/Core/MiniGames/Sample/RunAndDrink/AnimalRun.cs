@@ -20,10 +20,12 @@ namespace CIRC.Core.MiniGames.Sample.RunAndDrink
         private bool hitCoolDown;
         private float timer;
 
-        public int RemainingDrinks { get; private set; } = 3;
+        public int RemainingDrinks { get; private set; }
 
         private void Start()
         {
+            RemainingDrinks = GameController.Metrics.RunAndDrink_DrinksNumber;
+            
             radius = Screen.currentResolution.width * 0.3f;
             transformZone.position += Vector3.down * radius;
         }

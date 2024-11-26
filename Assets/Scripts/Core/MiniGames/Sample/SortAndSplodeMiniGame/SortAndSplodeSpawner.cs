@@ -8,8 +8,6 @@ namespace CIRC.Core.MiniGames.Sample.SortAndSplodeMiniGame
     public class SortAndSplodeSpawner : MonoBehaviour
     {
         [Header("Spawn Entity Data")]
-        [field: SerializeField] public int EntitiesToSpawn { get; private set; } = 10;
-        [SerializeField] private float _spawnTimeout = 1;
         [SerializeField] private Entity[] _entityTypes;
         [SerializeField] private RectTransform _spawnArea;
         
@@ -18,9 +16,9 @@ namespace CIRC.Core.MiniGames.Sample.SortAndSplodeMiniGame
         
         private IEnumerator Start() //Spawns the Entities
         {
-            Remainings = EntitiesToSpawn;
+            Remainings = GameController.Metrics.SortAndSplode_SpawnNumber;
             
-            for (int i = EntitiesToSpawn; i > 0; i--)
+            for (int i = GameController.Metrics.SortAndSplode_SpawnNumber; i > 0; i--)
             {
                 Vector2 spawnPosition = _spawnArea.GetRandomPositionWithinRectTransform();
                 
@@ -33,7 +31,7 @@ namespace CIRC.Core.MiniGames.Sample.SortAndSplodeMiniGame
                 OnEntitySpawned?.Invoke(entity);
 
                 Remainings--;
-                yield return new WaitForSeconds(_spawnTimeout);
+                yield return new WaitForSeconds(GameController.Metrics.SortAndSplode_SpawnCooldown);
             }
         }
     }

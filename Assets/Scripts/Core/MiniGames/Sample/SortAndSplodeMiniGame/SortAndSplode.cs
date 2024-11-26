@@ -27,7 +27,7 @@ namespace CIRC.Core.MiniGames.Sample.SortAndSplodeMiniGame
                 context.MiniGameData.MiniGameBadge.ScriptableSaveElement.IsComplete = true;
                 GameController.SavePlayerProgressToPlayerPrefs();
             }
-            1.LoadScene();
+            GameController.SceneController.LoadScene(GameController.Metrics.PlageScene);
         }
     }
 }
