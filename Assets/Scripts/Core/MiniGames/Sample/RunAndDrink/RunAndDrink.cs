@@ -1,7 +1,4 @@
-﻿using System.Runtime.Remoting.Contexts;
-using CIRC.Core.MiniGames.Core;
-using CIRC.Core.MiniGames.Sample.SortAndSplodeMiniGame;
-using UnityEngine;
+﻿using CIRC.Core.MiniGames.Core;
 
 namespace CIRC.Core.MiniGames.Sample.RunAndDrink
 {
@@ -13,9 +10,7 @@ namespace CIRC.Core.MiniGames.Sample.RunAndDrink
 
         public override bool Refresh(ref RunAndDrinkContext context)
         {
-            
             return context.remainingDrinks <= 0;
-            
         }
 
         public override void End(ref RunAndDrinkContext context, bool isSuccess)
@@ -26,7 +21,7 @@ namespace CIRC.Core.MiniGames.Sample.RunAndDrink
                 context.miniGameData.MiniGameBadge.ScriptableSaveElement.IsComplete = true;
                 GameController.SavePlayerProgressToPlayerPrefs();
             }
-            GameController.SceneController.LoadScene(GameController.Metrics.MainMenuScene);
+            GameController.SceneController.LoadScene(GameController.Metrics.PlageScene);
         }
     }
 }

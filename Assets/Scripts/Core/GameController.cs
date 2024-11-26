@@ -16,7 +16,7 @@ namespace CIRC.Core
         {
             get
             {
-                if (gameMetrics == null)
+                if (!gameMetrics)
                     gameMetrics = Resources.Load<GameMetrics>("GameMetrics");
 
                 return gameMetrics;

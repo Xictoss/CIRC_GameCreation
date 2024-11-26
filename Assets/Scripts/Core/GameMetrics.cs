@@ -36,7 +36,7 @@ namespace CIRC.Core
         [field: SerializeField, Foldout("MiniGames/SortAndSplode")]
         public int SortAndSplode_SpawnNumber { get; private set; }
         [field: SerializeField, Foldout("MiniGames/SortAndSplode")]
-        public int SortAndSplode_SpawnCooldown { get; private set; }
+        public float SortAndSplode_SpawnCooldown { get; private set; }
         
         [field: SerializeField, Foldout("MiniGames/RunAndDrink")]
         public int RunAndDrink_DrinksNumber { get; private set; }

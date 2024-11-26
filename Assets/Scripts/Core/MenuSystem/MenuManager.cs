@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using CIRC.Core.MenuSystem.Interfaces;
 using CIRC.Core.MenuSystem.Menus;
 using LTX.Singletons;
+using NaughtyAttributes;
 using UnityEngine;
 
 namespace CIRC.Core.MenuSystem
@@ -60,10 +61,10 @@ namespace CIRC.Core.MenuSystem
             currentMenu?.Close();
             currentMenu = null;
         }
-
+        
         public void ChangeScene(int sceneIndex)
         {
-            sceneIndex.LoadScene();
+            GameController.SceneController.LoadScene(sceneIndex);
         }
     }
 }
