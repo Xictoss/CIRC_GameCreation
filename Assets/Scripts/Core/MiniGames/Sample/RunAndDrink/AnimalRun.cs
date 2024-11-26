@@ -66,9 +66,6 @@ namespace CIRC.Core.MiniGames.Sample.RunAndDrink
             }
             
         }
-        
-        
-
         private IEnumerator HitCoolDown()
         {
             yield return new WaitForSeconds(1f);

@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 
 namespace CIRC.Core
 {
-    public static class StaticFunctions
+    public static partial class StaticFunctions
     {
         public static Vector2 GetRandomPositionWithinRectTransform(this RectTransform imageRectTransform)
         {
-            float randomX = Random.Range(0f, 1f);
-            float randomY = Random.Range(0f, 1f);
+            float randomX = Random.value;
+            float randomY = Random.value;
             
             float imageWidth = imageRectTransform.rect.width;
             float imageHeight = imageRectTransform.rect.height;
@@ -40,6 +40,13 @@ namespace CIRC.Core
             Vector3 size = corners[2] - corners[0];
 
             return new Bounds(position, size);
+        }
+
+        private static readonly Vector3[] corners = new Vector3[4];
+        public static Bounds RectTransformToWorldBounds(this RectTransform rectTransform)
+        {
+            rectTransform.GetWorldCorners(corners);
+            return GeometryUtility.CalculateBounds(corners, Matrix4x4.identity);
         }
         
         public static IEnumerator TakeScreenshotAndShare(this bool hasScreen)

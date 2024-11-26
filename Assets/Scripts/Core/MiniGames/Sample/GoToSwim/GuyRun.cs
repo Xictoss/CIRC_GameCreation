@@ -11,17 +11,21 @@ namespace CIRC.Core.MiniGames.Sample.GoToSwim
         [Header("Mouvement")]
         [SerializeField] private RectTransform guyTransform;
         [SerializeField] private RectTransform goalTransform;
+        
 
 
         public void OnPointerClick(PointerEventData eventData)
         {
 
-            Bounds bounds1 = guyTransform.RectTransformToScreenSpace();
-            Bounds bounds2 = goalTransform.RectTransformToScreenSpace();
+            Vector3 GoalCenter = guyTransform.position;
+            
+            Bounds bounds2 = goalTransform.RectTransformToWorldBounds();
+            
             guyTransform.DOMove(new Vector3(guyTransform.position.x + 50, guyTransform.position.y, 0), 1);
-
-            if (bounds1.Intersects(bounds2))
+            
+            if (bounds2.Contains(GoalCenter))
             {
+                Debug.Log("eee");
                 IsArrived = true;
             }
             
