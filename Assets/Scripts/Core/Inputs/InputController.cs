@@ -28,10 +28,6 @@ namespace CIRC.Core.Inputs
         
         public Vector3 WorldTouchPosition { get; private set; }
         public Vector3 ScreenTouchPosition { get; private set; }
-        
-        private PointerEventData _pointerEventData;
-        [SerializeField] private GraphicRaycaster _graphicRaycaster;
-        [SerializeField] private EventSystem _eventSystem;
 
         public void GetTouchPositionInput(InputAction.CallbackContext context)
         {
