@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace CIRC.Core.MiniGames.Sample.SortAndSplodeMiniGame
 {
-    [CreateAssetMenu(fileName = "NewEntityData", menuName = "EntityScriptable", order = 0)]
+    [CreateAssetMenu(fileName = "NewEntityData", menuName = "CIRC/SortAndSplode/EntityScriptable", order = 0)]
     public class EntityData : ScriptableObject
     {
         public float Speed;
