@@ -12,7 +12,9 @@ namespace CIRC.Core.MiniGames.Sample.RunAndDrink
 
         public override bool Refresh(ref RunAndDrinkContext context)
         {
-            return context.remainingDrinks == 0;
+            
+            return context.remainingDrinks <= 0;
+            
         }
 
         public override void End(ref RunAndDrinkContext context, bool isSuccess)
@@ -23,6 +25,7 @@ namespace CIRC.Core.MiniGames.Sample.RunAndDrink
                 context.miniGameData.MiniGameBadge.ScriptableSaveElement.IsComplete = true;
                 GameController.SavePlayerProgressToPlayerPrefs();
             }
+            GameController.SceneController.LoadScene(GameController.Metrics.MainMenuScene);
         }
     }
 }
