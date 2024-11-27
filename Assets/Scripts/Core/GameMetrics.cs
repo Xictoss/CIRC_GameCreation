@@ -4,7 +4,7 @@ using UnityEngine;
 namespace CIRC.Core
 {
     [CreateAssetMenu(fileName = "GameMetrics", menuName = "CIRC/GameMetrics")]
-    public class GameMetrics : ScriptableObject
+    public partial class GameMetrics : ScriptableObject
     {
         public static GameMetrics Global => GameController.Metrics;
         
