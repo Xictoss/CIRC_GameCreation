@@ -7,29 +7,21 @@ namespace CIRC.Core.MiniGames.Sample.Core.MiniGames.Sample.PipePuzzle
 {
     public class RotatingPiece : MonoBehaviour, IPointerClickHandler
     {
-        [field : SerializeField] public PieceState PieceState { get; private set; }
-        [field : SerializeField] public PieceState WantedState { get; private set; }
-        [SerializeField] private RectTransform rt;
-        [SerializeField] private float turnCooldown;
-
-        private int stateIndex;
+        [Header("PieceState")]
+        [field: SerializeField] public PieceState PieceState { get; private set; }
+        [field: SerializeField] public PieceState WantedState { get; private set; }
+        private int logicalIndex;
         
-        private bool canTurn;
-        private float  currentTimer;
+        [Header("Rect")]
+        [SerializeField] private RectTransform rt;
+        
+        [Header("Cooldown")]
+        [SerializeField] private float turnCooldown;
+        private bool canTurn = true;
 
-        private void Update()
+        private void Start()
         {
-            if (!canTurn)
-            {
-                currentTimer += Time.deltaTime;
-                if (currentTimer >= turnCooldown)
-                {
-                    currentTimer = 0;
-                    canTurn = true;
-                    Debug.Log($"{(PieceState)(1 << stateIndex)} => {PieceState}");
-                    PieceState = (PieceState)(1 << stateIndex);
-                }
-            }
+            logicalIndex = GetIndexFromPieceState(PieceState);
         }
 
         public void OnPointerClick(PointerEventData eventData)
@@ -40,27 +32,60 @@ namespace CIRC.Core.MiniGames.Sample.Core.MiniGames.Sample.PipePuzzle
             RotatePiece();
         }
         
-        public void CalculateState()
+        private void CalculateState()
         {
-            stateIndex = (int)PieceState;
-            stateIndex++;
-            if (stateIndex == 5) stateIndex = 1;
+            logicalIndex = (logicalIndex + 1) % 4; // Cycle through 0 to 3
+        }
+
+        private PieceState GetPieceStateFromIndex(int index)
+        {
+            switch (index)
+            {
+                case 0: return PieceState.up;
+                case 1: return PieceState.right;
+                case 2: return PieceState.down;
+                case 3: return PieceState.left;
+                
+                default: return PieceState.up;
+            }
+        }
+        
+        private int GetIndexFromPieceState(PieceState pieceState)
+        {
+            switch (pieceState)
+            {
+                case PieceState.up: return 0;
+                case PieceState.right: return 1;
+                case PieceState.down: return 2;
+                case PieceState.left: return 3;
+                
+                default: return 0;
+            }
         }
 
         private void RotatePiece()
         {
-            rt.DORotate(new Vector3(0, 0, rt.rotation.z + 90f * stateIndex), turnCooldown);
             canTurn = false;
+            float targetRotation = rt.rotation.eulerAngles.z - 90f;
+            
+            Sequence rotationSequence = DOTween.Sequence();
+            rotationSequence.Append(rt.DORotate(new Vector3(0, 0, Mathf.FloorToInt(targetRotation)), turnCooldown))
+                            .OnComplete(() =>
+                            {
+                                PieceState = GetPieceStateFromIndex(logicalIndex);
+                                canTurn = true;
+                            });
+            rotationSequence.Play();
         }
     }
 
     [Flags]
     public enum PieceState
     {
-        up = 1,
-        left = 2,
-        down = 3,
-        right = 4,
+        up = 1 << 0,    // 1
+        right = 1 << 1, // 2
+        down = 1 << 2,  // 4
+        left = 1 << 3,  // 8
         
         Horizontal = right | left,
         Vertical = up | down
