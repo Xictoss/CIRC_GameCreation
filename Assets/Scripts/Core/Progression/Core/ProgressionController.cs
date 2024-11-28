@@ -28,7 +28,7 @@ namespace CIRC.Core.Progression.Core
 
         public static void SaveProgressDataToPlayerPrefs(SaveData saveData)
         {
-            string json = JsonUtility.ToJson(saveData, true);
+            string json = JsonUtility.ToJson(saveData, false);
             
             PlayerPrefs.SetString("PlayerProgressSave", json);
         }

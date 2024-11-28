@@ -15,11 +15,14 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScenes/MiniGames/RunAndDrink.unity
     guid: 47552c85dbc78b540ac51b5181857b5b
   - enabled: 1
-    path: Assets/Scripts/Core/MiniGames/Sample/SortAndSplodeMiniGame/SortAndSplodeSample.unity
+    path: Assets/Scenes/MainScenes/MiniGames/SortAndSplodeSample.unity
     guid: b557b8478166e08428be7521af19e10d
   - enabled: 1
     path: Assets/Scenes/MainScenes/MiniGames/GoToSwim.unity
     guid: 31c0e57efbe73474ca93483796b188df
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MiniGames/PipePuzzle.unity
+    guid: 81c2ded4a0e67ab479b1bbbd638e8060
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 46661899d2991954fb32fdca03a8b7e5, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: f120053cde1ae38408022f418871162c, type: 2}
