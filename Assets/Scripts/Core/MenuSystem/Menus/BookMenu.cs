@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace CIRC.Core.MenuSystem.Menus
 {
-    public class BookMenu : BaseMenu
+    public class BookMenu
     {
         [SerializeField] private Image[] _badgesDisplay;
         
