@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace CIRC.Core.MenuSystem.Menus
 {
-    public class SettingsMenu : BaseMenu
+    public class SettingsMenu : MonoBehaviour
     {
         public void ShareGame()
         {

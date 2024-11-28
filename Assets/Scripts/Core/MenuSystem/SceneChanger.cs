@@ -5,8 +5,7 @@ namespace CIRC.Core.MenuSystem
 {
     public class SceneChanger : MonoBehaviour
     {
-        [Scene]
-        [SerializeField] private int sceneIndex;
+        [SerializeField, Scene] private int sceneIndex;
 
         public void ChangeScene()
         {

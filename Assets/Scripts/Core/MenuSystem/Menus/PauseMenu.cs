@@ -1,10 +1,11 @@
 using CIRC.Core.MiniGames.Core;
 using CIRC.Core.MiniGames.Core.Interfaces;
 using LTX.ChanneledProperties;
+using UnityEngine;
 
 namespace CIRC.Core.MenuSystem.Menus
 {
-    public class PauseMenu : BaseMenu
+    public class PauseMenu : MonoBehaviour
     {
         private IMiniGameRunner _miniGameRunner;
 
