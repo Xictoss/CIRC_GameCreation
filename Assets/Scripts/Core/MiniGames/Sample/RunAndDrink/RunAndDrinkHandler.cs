@@ -5,7 +5,6 @@ using CIRC.Core.Scriptables.Core;
 using LTX.ChanneledProperties;
 using UnityEngine;
 
-
 namespace CIRC.Core.MiniGames.Sample.RunAndDrink
 {
     public class RunAndDrinkHandler : MonoBehaviour, IMiniGameHandler<RunAndDrinkContext>

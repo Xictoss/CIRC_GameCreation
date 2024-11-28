@@ -1,5 +1,5 @@
-﻿using CIRC.Core.MiniGames.Core;
-using CIRC.Core.MiniGames.Sample.RunAndDrink;
+﻿using CIRC.Core.Controllers;
+using CIRC.Core.MiniGames.Core;
 
 namespace CIRC.Core.MiniGames.Sample.GoToSwim
 {

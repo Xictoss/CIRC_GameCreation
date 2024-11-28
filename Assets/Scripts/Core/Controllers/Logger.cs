@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace CIRC.Core
+namespace CIRC.Core.Controllers
 {
     public class Logger : ILogSource
     {

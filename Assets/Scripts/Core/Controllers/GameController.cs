@@ -5,7 +5,7 @@ using CIRC.Core.Scriptables.Core;
 using LTX.ChanneledProperties;
 using UnityEngine;
 
-namespace CIRC.Core
+namespace CIRC.Core.Controllers
 {
     public static class GameController
     {

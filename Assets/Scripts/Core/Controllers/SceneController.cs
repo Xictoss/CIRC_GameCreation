@@ -1,6 +1,6 @@
 using UnityEngine.SceneManagement;
 
-namespace CIRC.Core
+namespace CIRC.Core.Controllers
 {
     public class SceneController
     {

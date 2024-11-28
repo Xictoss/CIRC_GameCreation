@@ -1,4 +1,5 @@
 using CIRC.Core;
+using CIRC.Core.Controllers;
 using CIRC.Core.MiniGames.Core;
 using CIRC.Core.MiniGames.Core.Interfaces;
 using LTX.ChanneledProperties;

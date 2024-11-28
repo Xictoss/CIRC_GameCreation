@@ -7,8 +7,5 @@ namespace CIRC.Core.MiniGames.Sample.RunAndDrink
     {
         public MiniGameData miniGameData;
         public int remainingDrinks;
-        
     }
-    
-    
 }
