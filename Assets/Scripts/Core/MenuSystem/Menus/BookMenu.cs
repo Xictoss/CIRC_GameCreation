@@ -28,9 +28,9 @@ namespace CIRC.Core.MenuSystem.Menus
             
             for (int i = 0; i < _badgesData.Length; i++)
             {
-                if (_badgesData[i].ScriptableSaveElement.IsComplete)
+                if (_badgesData[i].saveElement.isComplete)
                 {
-                    _badgesDisplay[i].sprite = _badgesData[i].BadgeDisplayImage;
+                    _badgesDisplay[i].sprite = _badgesData[i].displayImage;
                 }
             }
         }

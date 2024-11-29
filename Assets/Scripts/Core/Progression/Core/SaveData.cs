@@ -32,13 +32,13 @@ namespace CIRC.Core.Progression.Core
 
         public void SetPlayerCompleted(string guidID)
         {
-            SaveElement element = PlayerProgression.Find(e => e.GuidID == guidID);
+            SaveElement element = PlayerProgression.Find(e => e.guidID == guidID);
             SetPlayerCompleted(element);
         }
 
         public void SetPlayerCompleted(SaveElement element)
         {
-            element.IsComplete = true;
+            element.isComplete = true;
             Write(element);
         }
     }

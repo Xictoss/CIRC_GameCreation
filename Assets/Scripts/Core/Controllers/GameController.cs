@@ -61,7 +61,7 @@ namespace CIRC.Core.Controllers
             
             foreach (SaveScriptable progressElement in gameProgressElements)
             {
-                dataToSave.Write(progressElement.ScriptableSaveElement);
+                dataToSave.Write(progressElement.saveElement);
             }
 
             ProgressionController.SaveProgressDataToPlayerPrefs(dataToSave);
@@ -83,14 +83,14 @@ namespace CIRC.Core.Controllers
             {
                 foreach (SaveScriptable gameSaveElement in gameProgressElements)
                 {
-                    if (playerSaveElement.GuidID == gameSaveElement.ScriptableSaveElement.GuidID)
+                    if (playerSaveElement.guidID == gameSaveElement.saveElement.guidID)
                     {
                         if (playerProgressData.SaveVersion == "0")
                         {
-                            gameSaveElement.ScriptableSaveElement.IsComplete = false;
+                            gameSaveElement.saveElement.isComplete = false;
                             continue;
                         }
-                        gameSaveElement.ScriptableSaveElement.IsComplete = playerSaveElement.IsComplete;
+                        gameSaveElement.saveElement.isComplete = playerSaveElement.isComplete;
                     }
                 }
             }
@@ -101,7 +101,7 @@ namespace CIRC.Core.Controllers
             List<SaveScriptable> gameProgressElements = LoadGameProgressElements();
             foreach (SaveScriptable gameSaveElement in gameProgressElements)
             {
-                gameSaveElement.ScriptableSaveElement.IsComplete = false;
+                gameSaveElement.saveElement.isComplete = false;
             }
             
             SavePlayerProgressToPlayerPrefs();

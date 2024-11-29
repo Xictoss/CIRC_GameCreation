@@ -1,25 +1,32 @@
 using System;
-using JetBrains.Annotations;
+using DG.DemiEditor;
+using UnityEditor;
 
 namespace CIRC.Core.Progression.Core
 {
     [System.Serializable]
     public struct SaveElement : IEquatable<SaveElement>
     {
-        public string GuidID;
-        public bool IsComplete;
+        public string guidID;
+        public bool isComplete;
 
         public SaveElement(string guidID)
         {
-            GuidID = guidID;
-            IsComplete = false;
+            this.guidID = guidID;
+            isComplete = false;
+        }
+        
+        public void SetNewGuid()
+        {
+            if (!guidID.IsNullOrEmpty()) return;
+            guidID = GUID.Generate().ToString();
         }
 
         #region Equals Override
 
         public bool Equals(SaveElement other)
         {
-            return GuidID == other.GuidID;
+            return guidID == other.guidID;
         }
 
         public override bool Equals(object obj)
@@ -29,7 +36,7 @@ namespace CIRC.Core.Progression.Core
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(GuidID);
+            return HashCode.Combine(guidID);
         }
 
         #endregion

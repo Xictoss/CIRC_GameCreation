@@ -18,8 +18,8 @@ namespace CIRC.Core.MiniGames.Sample.GoToSwim
         {
             if (isSuccess)
             {
-                context.miniGameData.ScriptableSaveElement.IsComplete = true;
-                context.miniGameData.MiniGameBadge.ScriptableSaveElement.IsComplete = true;
+                context.miniGameData.saveElement.isComplete = true;
+                context.miniGameData.badge.saveElement.isComplete = true;
                 GameController.SavePlayerProgressToPlayerPrefs();
             }
             GameController.SceneController.LoadScene(GameController.Metrics.PlageScene);
