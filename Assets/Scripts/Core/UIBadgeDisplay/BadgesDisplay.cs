@@ -30,9 +30,9 @@ namespace CIRC.Core.UIBadgeDisplay
             
             for (int i = 0; i < _badgesData.Length; i++)
             {
-                if (_badgesData[i].ScriptableSaveElement.IsComplete)
+                if (_badgesData[i].saveElement.isComplete)
                 {
-                    _badgesDisplay[i].sprite = _badgesData[i].BadgeDisplayImage;
+                    _badgesDisplay[i].sprite = _badgesData[i].displayImage;
                 }
             }
         }
@@ -47,11 +47,11 @@ namespace CIRC.Core.UIBadgeDisplay
 
         public void ToggleUnlockAchievement(int index)
         {
-            _badgesData[index].ScriptableSaveElement.IsComplete = _toggles[index].isOn;
+            _badgesData[index].saveElement.isComplete = _toggles[index].isOn;
             
             if (_toggles[index].isOn)
             {
-                _badgesDisplay[index].sprite = _badgesData[index].BadgeDisplayImage;
+                _badgesDisplay[index].sprite = _badgesData[index].displayImage;
                 return;
             }
 

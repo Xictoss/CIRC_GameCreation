@@ -35,9 +35,9 @@ namespace CIRC.Core.UIBadgeDisplay
         {
             //Debug.Log("Refreshing UI");
             
-            if (_miniGameData.ScriptableSaveElement.IsComplete)
+            if (_miniGameData.saveElement.isComplete)
             {
-                _badgeDisplay.sprite = _miniGameData.MiniGameBadge.BadgeDisplayImage;
+                _badgeDisplay.sprite = _miniGameData.badge.displayImage;
                 return;
             }
             

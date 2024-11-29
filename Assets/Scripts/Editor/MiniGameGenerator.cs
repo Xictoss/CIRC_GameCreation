@@ -1,24 +1,47 @@
 using System.IO;
+using CIRC.Core.Scriptables.Core;
 using UnityEditor;
 using UnityEngine;
 
 public class MiniGameGenerator : EditorWindow
 {
     private string miniGameName = "NewMiniGame";
+    private GameSubject miniGameSubject;
 
     private void OnGUI()
     {
         GUILayout.Label("Mini-Game Generator", EditorStyles.boldLabel);
 
         miniGameName = EditorGUILayout.TextField("Mini-Game Name", miniGameName);
+        miniGameSubject = (GameSubject)EditorGUILayout.EnumPopup("Mini-Game Subject", miniGameSubject);
 
-        if (GUILayout.Button("Generate Mini-Game Files")) GenerateMiniGameFiles();
+        if (GUILayout.Button("Generate Mini-Game SO")) CreateScriptableObject();
+        if (GUILayout.Button("Generate Mini-Game Scripts")) GenerateMiniGameFiles();
     }
 
     [MenuItem("Tools/Mini-Game Generator")]
     public static void ShowWindow()
     {
         GetWindow<MiniGameGenerator>("Mini-Game Generator");
+    }
+    
+    private void CreateScriptableObject()
+    {
+        // Create a new instance of the ScriptableObject
+        MiniGameData newMiniGameData = CreateInstance<MiniGameData>();
+        newMiniGameData.gameName = miniGameName;
+        newMiniGameData.subject = miniGameSubject;
+
+        // Save it as an asset in the project
+        string path = $"Assets/Resources/SaveScriptables/MiniGames/{miniGameName}.asset";
+        AssetDatabase.CreateAsset(newMiniGameData, path);
+        AssetDatabase.SaveAssets();
+
+        // Focus the Project window on the new asset
+        EditorUtility.FocusProjectWindow();
+        Selection.activeObject = newMiniGameData;
+
+        Debug.Log($"Created ScriptableObject at {path}");
     }
 
     private void GenerateMiniGameFiles()
@@ -76,8 +99,8 @@ namespace CIRC.Core.MiniGames.Sample.{CLASS_NAME}
         {
             if (isSuccess)
             {
-                context.miniGameData.ScriptableSaveElement.IsComplete = true;
-                context.miniGameData.MiniGameBadge.ScriptableSaveElement.IsComplete = true;
+                context.miniGameData.saveElement.isComplete = true;
+                context.miniGameData.badge.saveElement.isComplete = true;
                 GameController.SavePlayerProgressToPlayerPrefs();
             }
 
