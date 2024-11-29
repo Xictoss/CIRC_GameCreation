@@ -14,15 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <MainMenuScene>k__BackingField: 0
   <PlageScene>k__BackingField: 1
-  <MaisonScene>k__BackingField: 0
-  <ParcScene>k__BackingField: 0
-  <LotissementScene>k__BackingField: 0
-  <EntrepriseScene>k__BackingField: 0
-  <VilleScene>k__BackingField: 0
-  <StadeUniversitaireScene>k__BackingField: 0
-  <CliniqueScene>k__BackingField: 0
-  <SortAndSplodeScene>k__BackingField: 3
-  <RunAndDrinkScene>k__BackingField: 2
+  <MaisonScene>k__BackingField: 2
+  <ParcScene>k__BackingField: 3
+  <LotissementScene>k__BackingField: 4
+  <EntrepriseScene>k__BackingField: 5
+  <VilleScene>k__BackingField: 6
+  <StadeUniversitaireScene>k__BackingField: 7
+  <CliniqueScene>k__BackingField: 8
+  <GoToSwim_Scene>k__BackingField: 9
+  <RunAndDrink_Scene>k__BackingField: 10
+  <PipePuzzle_Scene>k__BackingField: 11
+  <BookDrop_Scene>k__BackingField: 12
+  <SortAndSplode_Scene>k__BackingField: 13
   <SortAndSplode_SpawnNumber>k__BackingField: 10
   <SortAndSplode_SpawnCooldown>k__BackingField: 0.75
   <RunAndDrink_DrinksNumber>k__BackingField: 3
