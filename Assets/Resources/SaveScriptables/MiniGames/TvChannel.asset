@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: TvChannel
   m_EditorClassIdentifier: 
   saveElement:
-    guidID: 
+    guidID: d3ee36728a08b7545aa19ad8afc24433
     isComplete: 0
   gameName: TvChannel
   subject: 11
-  badge: {fileID: 0}
+  badge: {fileID: 11400000, guid: 75efd630446d3a94784550b1dd95a94a, type: 2}
