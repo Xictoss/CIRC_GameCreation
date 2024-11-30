@@ -56,7 +56,7 @@ public class MiniGameGenerator : EditorWindow
             return;
         }
 
-        var rootPath = Path.Combine(Application.dataPath, "Scripts/Core/MiniGames/Sample", miniGameName);
+        string rootPath = Path.Combine(Application.dataPath, "Scripts/Core/MiniGames/Sample", miniGameName);
 
         // Create the directory
         if (!Directory.Exists(rootPath)) Directory.CreateDirectory(rootPath);
