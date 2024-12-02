@@ -1,7 +1,8 @@
+using CIRC.Core.Progression.Core.Enums;
 using NaughtyAttributes;
 using UnityEngine;
 
-namespace CIRC.Core.Scriptables.Core
+namespace CIRC.Core.Progression.Core.Data
 {
     [CreateAssetMenu(fileName = "NewMiniGameScriptable", menuName = "CIRC/Save/MiniGameScriptable", order = 0)]
     public class MiniGameData : SaveScriptable
@@ -20,26 +21,5 @@ namespace CIRC.Core.Scriptables.Core
         {
             gameName = name;
         }
-    }
-    
-    [System.Serializable]
-    public enum GameSubject
-    {
-        Alimentation,
-        Hydratation,
-        AlcoolSodas,
-        
-        MedicamentsHormonaux,
-        Depistage,
-        HPV,
-        
-        ExpositionSoleil,
-        Tabagisme,
-        ZoneRadon,
-        RisquesChimique,
-        Allaitement,
-        
-        ActivitePhysique,
-        Surpoids,
     }
 }

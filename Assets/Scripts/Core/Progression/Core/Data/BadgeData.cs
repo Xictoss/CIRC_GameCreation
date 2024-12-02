@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace CIRC.Core.Scriptables.Core
+namespace CIRC.Core.Progression.Core.Data
 {
     [CreateAssetMenu(fileName = "NewBadgeScriptable", menuName = "CIRC/Save/BadgeScriptable", order = 0)]
     public class BadgeData : SaveScriptable

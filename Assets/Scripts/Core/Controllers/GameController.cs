@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using CIRC.Core.Progression.Core;
-using CIRC.Core.Scriptables.Core;
+using CIRC.Core.Progression.Core.Data;
 using LTX.ChanneledProperties;
 using UnityEngine;
 

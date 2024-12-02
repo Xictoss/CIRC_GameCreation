@@ -1,5 +1,5 @@
 using CIRC.Core.MiniGames.Core.Interfaces;
-using CIRC.Core.Scriptables.Core;
+using CIRC.Core.Progression.Core.Data;
 
 namespace CIRC.Core.MiniGames.Sample.SortAndSplodeMiniGame
 {

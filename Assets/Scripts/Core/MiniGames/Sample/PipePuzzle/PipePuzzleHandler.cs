@@ -1,6 +1,6 @@
 using CIRC.Core.MiniGames.Core;
 using CIRC.Core.MiniGames.Core.Interfaces;
-using CIRC.Core.Scriptables.Core;
+using CIRC.Core.Progression.Core.Data;
 using UnityEngine;
 
 namespace CIRC.Core.MiniGames.Sample.Core.MiniGames.Sample.PipePuzzle

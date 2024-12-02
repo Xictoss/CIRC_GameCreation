@@ -1,7 +1,6 @@
-using CIRC.Core.Progression.Core;
 using UnityEngine;
 
-namespace CIRC.Core.Scriptables.Core
+namespace CIRC.Core.Progression.Core.Data
 {
     public class SaveScriptable : ScriptableObject
     {

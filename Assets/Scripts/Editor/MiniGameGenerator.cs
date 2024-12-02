@@ -1,5 +1,6 @@
 using System.IO;
-using CIRC.Core.Scriptables.Core;
+using CIRC.Core.Progression.Core.Data;
+using CIRC.Core.Progression.Core.Enums;
 using UnityEditor;
 using UnityEngine;
 

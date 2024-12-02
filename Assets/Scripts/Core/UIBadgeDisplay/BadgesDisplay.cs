@@ -1,5 +1,5 @@
 using CIRC.Core.Controllers;
-using CIRC.Core.Scriptables.Core;
+using CIRC.Core.Progression.Core.Data;
 using UnityEngine;
 using UnityEngine.UI;
 
