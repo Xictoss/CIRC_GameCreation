@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Data.SqlTypes;
 using UnityEngine;
 
 namespace CIRC.Core.Progression.Core
@@ -8,7 +7,7 @@ namespace CIRC.Core.Progression.Core
     public struct SaveData
     {
         public string SaveVersion;
-        [field : SerializeField] public List<SaveElement> PlayerProgression { get; private set; }
+        [field: SerializeField] public List<SaveElement> PlayerProgression;
 
         public SaveData(string version)
         {
@@ -32,13 +31,13 @@ namespace CIRC.Core.Progression.Core
 
         public void SetPlayerCompleted(string guidID)
         {
-            SaveElement element = PlayerProgression.Find(e => e.guidID == guidID);
+            SaveElement element = PlayerProgression.Find(e => e.GuidID == guidID);
             SetPlayerCompleted(element);
         }
 
         public void SetPlayerCompleted(SaveElement element)
         {
-            element.isComplete = true;
+            element.IsComplete = true;
             Write(element);
         }
     }

@@ -1,9 +1,7 @@
 using System;
 using LTX.Singletons;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
 
 namespace CIRC.Core.Inputs
 {

@@ -18,8 +18,8 @@ namespace CIRC.Core.MiniGames.Sample.BookDrop
         {
             if (isSuccess)
             {
-                context.miniGameData.saveElement.isComplete = true;
-                context.miniGameData.badge.saveElement.isComplete = true;
+                context.miniGameData.SaveElement.IsComplete = true;
+                GameController.SaveData.SetPlayerCompleted(context.miniGameData.SaveElement);
                 GameController.SavePlayerProgressToPlayerPrefs();
             }
 

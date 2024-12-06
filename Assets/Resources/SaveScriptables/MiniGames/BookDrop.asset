@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 597b13824fec4c03acff5d3013678bf3, type: 3}
   m_Name: BookDrop
   m_EditorClassIdentifier: 
-  saveElement:
-    guidID: e82fc519895741e44b7f5c0e3345c867
-    isComplete: 0
-  gameName: BookDrop
-  subject: 0
-  badge: {fileID: 11400000, guid: 6ef9072bd11d861419f8368bf6f9535d, type: 2}
+  SaveElement:
+    GuidID: 0ee5f4699138f5a4f919f2c37713aeff
+    IsComplete: 1
+  <GameName>k__BackingField: BookDrop
+  <Subject>k__BackingField: 0
+  <Badge>k__BackingField: {fileID: 11400000, guid: a819733acd949784086af850b11bf283, type: 2}

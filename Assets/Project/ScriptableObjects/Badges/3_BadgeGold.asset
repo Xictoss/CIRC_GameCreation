@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 964783772963464ca3a70eca161a2ff4, type: 3}
   m_Name: 3_BadgeGold
   m_EditorClassIdentifier: 
-  ScriptableSaveElement:
-    GuidID: 4f4a2698de624314481a7cdcd30bf749
-    IsComplete: 0
-  BadgeName: 3_BadgeGold
-  BadgeDisplayImage: {fileID: 21300000, guid: ed9da05140c5ce94db368f44624506a6, type: 3}
+  saveElement:
+    guidID: 4eb58484433a6e541baad8751769f403
+    isComplete: 0
+  badgeName: 3_BadgeGold
+  displayImage: {fileID: 21300000, guid: ed9da05140c5ce94db368f44624506a6, type: 3}

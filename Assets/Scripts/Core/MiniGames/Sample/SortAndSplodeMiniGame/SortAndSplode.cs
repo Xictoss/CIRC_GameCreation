@@ -1,5 +1,6 @@
 using CIRC.Core.Controllers;
 using CIRC.Core.MiniGames.Core;
+using CIRC.Core.Progression.Core;
 
 namespace CIRC.Core.MiniGames.Sample.SortAndSplodeMiniGame
 {
@@ -24,10 +25,11 @@ namespace CIRC.Core.MiniGames.Sample.SortAndSplodeMiniGame
         {
             if (isSuccess)
             {
-                context.MiniGameData.saveElement.isComplete = true;
-                context.MiniGameData.badge.saveElement.isComplete = true;
+                context.MiniGameData.SaveElement.IsComplete = true;
+                GameController.SaveData.SetPlayerCompleted(context.MiniGameData.SaveElement);
                 GameController.SavePlayerProgressToPlayerPrefs();
             }
+            
             GameController.SceneController.LoadScene(GameController.Metrics.PlageScene);
         }
     }

@@ -1,38 +1,38 @@
-using CIRC.Core.Controllers;
 using CIRC.Core.Progression.Core.Data;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace CIRC.Core.MenuSystem.Menus
+namespace CIRC.Core.UIRelated
 {
-    public class BookMenu
+    public class BadgesDisplay : MonoBehaviour
     {
         [SerializeField] private Image[] _badgesDisplay;
         
         [SerializeField] private Sprite _badgeNotCompleted;
-        private BadgeData[] _badgesData;
-        
+        private MiniGameData[] _miniGameDatas;
+
         private void OnEnable()
         {
-            GameController.LoadPlayerProgressFromPlayerPrefs();
             RefreshUI();
         }
-        
+
         private void RefreshUI()
         {
-            Debug.Log("Refreshing UI");
-            
-            _badgesData = Resources.LoadAll<BadgeData>("SaveScriptables/Badges");
-            
             SetAllLocked();
             
-            for (int i = 0; i < _badgesData.Length; i++)
+            _miniGameDatas = Resources.LoadAll<MiniGameData>("SaveScriptables/MiniGames");
+            int total = 0;
+            
+            for (int i = 0; i < _miniGameDatas.Length; i++)
             {
-                if (_badgesData[i].saveElement.isComplete)
+                if (_miniGameDatas[i].SaveElement.IsComplete)
                 {
-                    _badgesDisplay[i].sprite = _badgesData[i].displayImage;
+                    _badgesDisplay[i].sprite = _miniGameDatas[i].Badge.displayImage;
+                    total++;
                 }
             }
+            
+            Debug.Log($"Mini-games Finished : {total}");
         }
 
         private void SetAllLocked()

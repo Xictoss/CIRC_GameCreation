@@ -4,6 +4,6 @@ namespace CIRC.Core.Progression.Core.Data
 {
     public class SaveScriptable : ScriptableObject
     {
-        public SaveElement saveElement;
+        public SaveElement SaveElement;
     }
 }

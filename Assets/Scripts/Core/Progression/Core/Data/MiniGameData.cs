@@ -1,5 +1,7 @@
 using CIRC.Core.Progression.Core.Enums;
+using DG.DemiEditor;
 using NaughtyAttributes;
+using UnityEditor;
 using UnityEngine;
 
 namespace CIRC.Core.Progression.Core.Data
@@ -7,19 +9,26 @@ namespace CIRC.Core.Progression.Core.Data
     [CreateAssetMenu(fileName = "NewMiniGameScriptable", menuName = "CIRC/Save/MiniGameScriptable", order = 0)]
     public class MiniGameData : SaveScriptable
     {
-        public string gameName;
-        public GameSubject subject;
-        public BadgeData badge;
+        [field : SerializeField] public string GameName { get; private set; }
+        [field : SerializeField] public GameSubject Subject { get; private set; }
+        [field : SerializeField] public BadgeData Badge { get; private set; }
+
+        public void SetName(string newName) => GameName = newName;
+        public void SetSubject(GameSubject sub) => Subject = sub;
+        public void SetBadge(BadgeData badge) => Badge = badge;
         
+#if UNITY_EDITOR
         [Button]
-        public void GenerateGuid()
+        public void SetGuid()
         {
-            saveElement.SetNewGuid();
+            if (!SaveElement.GuidID.IsNullOrEmpty()) return;
+            SaveElement.GuidID = GUID.Generate().ToString();
         }
         [Button]
         public void ResetName()
         {
-            gameName = name;
+            GameName = name;
         }
+#endif
     }
 }

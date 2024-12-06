@@ -1,5 +1,6 @@
 ﻿using CIRC.Core.Controllers;
 using CIRC.Core.MiniGames.Core;
+using CIRC.Core.Progression.Core;
 
 namespace CIRC.Core.MiniGames.Sample.RunAndDrink
 {
@@ -18,10 +19,11 @@ namespace CIRC.Core.MiniGames.Sample.RunAndDrink
         {
             if (isSuccess)
             {
-                context.miniGameData.saveElement.isComplete = true;
-                context.miniGameData.badge.saveElement.isComplete = true;
+                context.miniGameData.SaveElement.IsComplete = true;
+                GameController.SaveData.SetPlayerCompleted(context.miniGameData.SaveElement);
                 GameController.SavePlayerProgressToPlayerPrefs();
             }
+            
             GameController.SceneController.LoadScene(GameController.Metrics.PlageScene);
         }
     }
