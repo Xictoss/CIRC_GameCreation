@@ -99,8 +99,8 @@ namespace CIRC.Core.MiniGames.Sample.{CLASS_NAME}
         {
             if (isSuccess)
             {
-                context.miniGameData.saveElement.isComplete = true;
-                context.miniGameData.badge.saveElement.isComplete = true;
+                context.miniGameData.SaveElement.IsComplete = true;
+                GameController.SaveData.SetPlayerCompleted(context.miniGameData.SaveElement);
                 GameController.SavePlayerProgressToPlayerPrefs();
             }
 
@@ -114,7 +114,7 @@ namespace CIRC.Core.MiniGames.Sample.{CLASS_NAME}
     {
         return @"using CIRC.Core.MiniGames.Core;
 using CIRC.Core.MiniGames.Core.Interfaces;
-using CIRC.Core.Scriptables.Core;
+using CIRC.Core.Progression.Core.Data;
 using UnityEngine;
 
 namespace CIRC.Core.MiniGames.Sample.{CLASS_NAME}
@@ -145,7 +145,7 @@ namespace CIRC.Core.MiniGames.Sample.{CLASS_NAME}
     private string GetGameContextTemplate()
     {
         return @"using CIRC.Core.MiniGames.Core.Interfaces;
-using CIRC.Core.Scriptables.Core;
+using CIRC.Core.Progression.Core.Data;
 
 namespace CIRC.Core.MiniGames.Sample.{CLASS_NAME}
 {
