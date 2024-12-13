@@ -1,10 +1,11 @@
+using System.IO;
 using UnityEngine;
 
 namespace CIRC.Core.Progression.Core
 {
     public static class ProgressionController
     {
-        /*public static void SaveProgressData(SaveData saveData)
+        public static void SaveProgressData(SaveData saveData)
         {
             string json = JsonUtility.ToJson(saveData, true);
 
@@ -24,7 +25,7 @@ namespace CIRC.Core.Progression.Core
             SaveData progressToLoad = JsonUtility.FromJson<SaveData>(jsonData);
             
             return progressToLoad;
-        }*/
+        }
 
         public static void SaveProgressDataToPlayerPrefs(SaveData saveData)
         {
@@ -35,18 +36,17 @@ namespace CIRC.Core.Progression.Core
         
         public static SaveData LoadProgressDataFromPlayerPrefs()
         {
-            SaveData progressToLoad = new SaveData("0");
+            SaveData progressToLoad = new SaveData(Application.version);
             
             try
             {
-                //Debug.Log("Loaded Player Progression");
-                
                 string json = PlayerPrefs.GetString("PlayerProgressSave", "Default");
                 progressToLoad = JsonUtility.FromJson<SaveData>(json);
+                progressToLoad.SaveVersion = Application.version;
             }
             catch
             {
-                //Debug.Log("Loaded Default Save");
+                progressToLoad.SaveVersion = "0";
             }
             
             return progressToLoad;
@@ -55,7 +55,7 @@ namespace CIRC.Core.Progression.Core
         private static string GetSavePathFromDevice()
         {
             #if UNITY_EDITOR
-            return "file://" + Application.persistentDataPath + "/StreamingAssets/";
+            return Application.persistentDataPath + "/StreamingAssets/Save";
             #elif UNITY_ANDROID
             return "jar:file://" + Application.persistentDataPath + "!/assets/";
             #elif UNITY_IOS

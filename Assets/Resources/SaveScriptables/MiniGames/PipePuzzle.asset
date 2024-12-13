@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 597b13824fec4c03acff5d3013678bf3, type: 3}
   m_Name: PipePuzzle
   m_EditorClassIdentifier: 
-  saveElement:
-    guidID: 9f8bf101b5a9f164bbb969e5523aa6b4
-    isComplete: 0
-  gameName: PipePuzzle
-  subject: 0
-  badge: {fileID: 11400000, guid: 75efd630446d3a94784550b1dd95a94a, type: 2}
+  SaveElement:
+    GuidID: 535410d095a84d54c9daf38859a7f118
+    IsComplete: 0
+  <GameName>k__BackingField: PipePuzzle
+  <Subject>k__BackingField: 0
+  <Badge>k__BackingField: {fileID: 11400000, guid: 75efd630446d3a94784550b1dd95a94a, type: 2}

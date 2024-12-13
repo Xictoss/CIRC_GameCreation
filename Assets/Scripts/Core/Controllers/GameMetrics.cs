@@ -1,8 +1,7 @@
-using CIRC.Core.Controllers;
 using NaughtyAttributes;
 using UnityEngine;
 
-namespace CIRC.Core
+namespace CIRC.Core.Controllers
 {
     [CreateAssetMenu(fileName = "GameMetrics", menuName = "CIRC/GameMetrics")]
     public partial class GameMetrics : ScriptableObject

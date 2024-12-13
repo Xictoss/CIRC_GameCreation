@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using CIRC.Core.Progression.Core;
-using CIRC.Core.Scriptables.Core;
+using CIRC.Core.Progression.Core.Data;
 using LTX.ChanneledProperties;
 using UnityEngine;
 
@@ -9,6 +9,7 @@ namespace CIRC.Core.Controllers
 {
     public static class GameController
     {
+        public static SaveData SaveData { get; private set; }
         public static Logger Logger { get; private set; }
         public static SceneController SceneController { get; private set; }
         private static GameMetrics gameMetrics;
@@ -56,16 +57,15 @@ namespace CIRC.Core.Controllers
         {
             Debug.Log("Saving player progress");
             
-            SaveData dataToSave = new SaveData(Application.version);
             List<SaveScriptable> gameProgressElements = LoadGameProgressElements();
             
             foreach (SaveScriptable progressElement in gameProgressElements)
             {
-                dataToSave.Write(progressElement.saveElement);
+                SaveData.Write(progressElement.SaveElement);
             }
 
-            ProgressionController.SaveProgressDataToPlayerPrefs(dataToSave);
-            //ProgressionController.SaveProgressData(dataToSave);
+            ProgressionController.SaveProgressDataToPlayerPrefs(SaveData);
+            ProgressionController.SaveProgressData(SaveData);
             
             GameSaved?.Invoke();
         }
@@ -74,23 +74,24 @@ namespace CIRC.Core.Controllers
         {
             Debug.Log("Loading player progress");
             
-            SaveData playerProgressData = ProgressionController.LoadProgressDataFromPlayerPrefs();
-            //SaveData playerProgressData = ProgressionController.LoadProgressData();
+            SaveData = ProgressionController.LoadProgressDataFromPlayerPrefs();
+            //SaveData = ProgressionController.LoadProgressData();
             
             List<SaveScriptable> gameProgressElements = LoadGameProgressElements();
 
-            foreach (SaveElement playerSaveElement in playerProgressData.PlayerProgression)
+            foreach (SaveElement playerSaveElement in SaveData.PlayerProgression)
             {
                 foreach (SaveScriptable gameSaveElement in gameProgressElements)
                 {
-                    if (playerSaveElement.guidID == gameSaveElement.saveElement.guidID)
+                    if (playerSaveElement.GuidID == gameSaveElement.SaveElement.GuidID)
                     {
-                        if (playerProgressData.SaveVersion == "0")
+                        if (SaveData.SaveVersion == "0")
                         {
-                            gameSaveElement.saveElement.isComplete = false;
+                            gameSaveElement.SaveElement.IsComplete = false;
+                            Debug.LogError("NON");
                             continue;
                         }
-                        gameSaveElement.saveElement.isComplete = playerSaveElement.isComplete;
+                        gameSaveElement.SaveElement.IsComplete = playerSaveElement.IsComplete;
                     }
                 }
             }
@@ -101,7 +102,7 @@ namespace CIRC.Core.Controllers
             List<SaveScriptable> gameProgressElements = LoadGameProgressElements();
             foreach (SaveScriptable gameSaveElement in gameProgressElements)
             {
-                gameSaveElement.saveElement.isComplete = false;
+                gameSaveElement.SaveElement.IsComplete = false;
             }
             
             SavePlayerProgressToPlayerPrefs();

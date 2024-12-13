@@ -1,20 +1,20 @@
 using CIRC.Core.Controllers;
 using CIRC.Core.MiniGames.Core;
 
-namespace CIRC.Core.MiniGames.Sample.BookDrop
+namespace CIRC.Core.MiniGames.Sample.TabagismeMaisonSecouer
 {
-    public class BookDrop : MiniGame<BookDropContext>
+    public class TabagismeMaisonSecouer : MiniGame<TabagismeMaisonSecouerContext>
     {
-        public override void Begin(ref BookDropContext context)
+        public override void Begin(ref TabagismeMaisonSecouerContext context)
         {
         }
 
-        public override bool Refresh(ref BookDropContext context)
+        public override bool Refresh(ref TabagismeMaisonSecouerContext context)
         {
-            return context.isArrived;
+            return false;
         }
 
-        public override void End(ref BookDropContext context, bool isSuccess)
+        public override void End(ref TabagismeMaisonSecouerContext context, bool isSuccess)
         {
             if (isSuccess)
             {

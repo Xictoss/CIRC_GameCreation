@@ -3,27 +3,25 @@ using CIRC.Core.MiniGames.Core.Interfaces;
 using CIRC.Core.Progression.Core.Data;
 using UnityEngine;
 
-namespace CIRC.Core.MiniGames.Sample.BookDrop
+namespace CIRC.Core.MiniGames.Sample.TabagismeMaisonSecouer
 {
-    public class BookDropHandler : MonoBehaviour, IMiniGameHandler<BookDropContext>
+    public class TabagismeMaisonSecouerHandler : MonoBehaviour, IMiniGameHandler<TabagismeMaisonSecouerContext>
     {
         [SerializeField] private MiniGameData miniGameData;
-        [SerializeField] private Book book;
-
-        private BookDrop miniGame;
-
+        
+        private TabagismeMaisonSecouer miniGame;
+        
         private void Start()
         {
-            miniGame = new BookDrop();
+            miniGame = new TabagismeMaisonSecouer();
             MiniGameManager.Instance.StartMiniGame(miniGame, this);
         }
-
-        public BookDropContext GetContext()
+        
+        public TabagismeMaisonSecouerContext GetContext()
         {
-            return new BookDropContext
+            return new TabagismeMaisonSecouerContext
             {
                 miniGameData = miniGameData,
-                isArrived = book.IsArrived,
             };
         }
     }

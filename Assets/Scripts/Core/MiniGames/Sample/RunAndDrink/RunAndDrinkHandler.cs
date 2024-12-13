@@ -1,8 +1,6 @@
-﻿using System;
-using CIRC.Core.MiniGames.Core;
+﻿using CIRC.Core.MiniGames.Core;
 using CIRC.Core.MiniGames.Core.Interfaces;
-using CIRC.Core.Scriptables.Core;
-using LTX.ChanneledProperties;
+using CIRC.Core.Progression.Core.Data;
 using UnityEngine;
 
 namespace CIRC.Core.MiniGames.Sample.RunAndDrink

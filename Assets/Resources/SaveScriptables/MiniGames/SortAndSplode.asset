@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 597b13824fec4c03acff5d3013678bf3, type: 3}
   m_Name: SortAndSplode
   m_EditorClassIdentifier: 
-  saveElement:
-    guidID: 2dc98cc95af41e94e9311301add04f57
-    isComplete: 0
-  gameName: SortAndSplode
-  subject: 0
-  badge: {fileID: 11400000, guid: a819733acd949784086af850b11bf283, type: 2}
+  SaveElement:
+    GuidID: 4410b2aa22275fe4da8f4f96b2a451a0
+    IsComplete: 0
+  <GameName>k__BackingField: SortAndSplode
+  <Subject>k__BackingField: 0
+  <Badge>k__BackingField: {fileID: 11400000, guid: 6ef9072bd11d861419f8368bf6f9535d, type: 2}

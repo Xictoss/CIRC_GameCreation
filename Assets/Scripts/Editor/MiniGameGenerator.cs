@@ -1,5 +1,6 @@
 using System.IO;
-using CIRC.Core.Scriptables.Core;
+using CIRC.Core.Progression.Core.Data;
+using CIRC.Core.Progression.Core.Enums;
 using UnityEditor;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ public class MiniGameGenerator : EditorWindow
 {
     private string miniGameName = "NewMiniGame";
     private GameSubject miniGameSubject;
+    private BadgeData gameBadge;
 
     private void OnGUI()
     {
@@ -14,6 +16,7 @@ public class MiniGameGenerator : EditorWindow
 
         miniGameName = EditorGUILayout.TextField("Mini-Game Name", miniGameName);
         miniGameSubject = (GameSubject)EditorGUILayout.EnumPopup("Mini-Game Subject", miniGameSubject);
+        gameBadge = (BadgeData)EditorGUILayout.ObjectField("Game Badge", gameBadge, typeof(BadgeData), false);
 
         if (GUILayout.Button("Generate Mini-Game SO")) CreateScriptableObject();
         if (GUILayout.Button("Generate Mini-Game Scripts")) GenerateMiniGameFiles();
@@ -29,8 +32,9 @@ public class MiniGameGenerator : EditorWindow
     {
         // Create a new instance of the ScriptableObject
         MiniGameData newMiniGameData = CreateInstance<MiniGameData>();
-        newMiniGameData.gameName = miniGameName;
-        newMiniGameData.subject = miniGameSubject;
+        newMiniGameData.SetName(miniGameName);
+        newMiniGameData.SetSubject(miniGameSubject);
+        newMiniGameData.SetBadge(gameBadge);
 
         // Save it as an asset in the project
         string path = $"Assets/Resources/SaveScriptables/MiniGames/{miniGameName}.asset";

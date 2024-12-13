@@ -1,7 +1,7 @@
 using CIRC.Core.Controllers;
 using CIRC.Core.MiniGames.Core;
 using CIRC.Core.MiniGames.Core.Interfaces;
-using CIRC.Core.Scriptables.Core;
+using CIRC.Core.Progression.Core.Data;
 using LTX.ChanneledProperties;
 using UnityEngine;
 
