@@ -13,16 +13,23 @@ namespace CIRC.Core.Inputs
         [Header("Swipe")]
         private Vector2 startPosition;
         private bool isSwiping = false;
-        private const float swipeThreshold = 50f;
+        [SerializeField] private float swipeThreshold = 50f;
         
         [Header("Double Touch")]
         private float lastTapTime = 0f;
-        private const float doubleTapThreshold = 0.2f;
+        [SerializeField] private float doubleTapThreshold = 0.2f;
+        
+        [Header("Shake Phone")]
+        [SerializeField] private float shakeThreshold = 2.0f;
+        [SerializeField] private float shakeCooldown = 0.5f;
+        private Vector3 lastAcceleration;
+        private float lastShakeTime;
         
         public event Action<bool> OnClickInput;
         public event Action<float> OnLongClickInput;
         public event Action<bool> OnDoubleClickInput;
         public event Action<Vector2> OnSwipeInput;
+        public event Action<bool> OnShakeInput;
         
         public Vector3 WorldTouchPosition { get; private set; }
         public Vector3 ScreenTouchPosition { get; private set; }
@@ -87,6 +94,23 @@ namespace CIRC.Core.Inputs
                 }
                 isSwiping = false;
             }
+        }
+
+        public void GetShakeInput(InputAction.CallbackContext context)
+        {
+            Vector3 currentAcceleration = context.ReadValue<Vector3>();
+            Vector3 accelerationDelta = currentAcceleration - lastAcceleration;
+            
+            if (accelerationDelta.sqrMagnitude > shakeThreshold * shakeThreshold)
+            {
+                if (Time.time - lastShakeTime > shakeCooldown)
+                {
+                    OnShakeInput?.Invoke(true);
+                    lastShakeTime = Time.time;
+                }
+            }
+
+            lastAcceleration = currentAcceleration;
         }
         
         public RaycastHit2D RayCastToWorld(string layerMaskName)
