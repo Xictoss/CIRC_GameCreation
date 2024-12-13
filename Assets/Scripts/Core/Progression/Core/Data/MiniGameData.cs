@@ -1,5 +1,4 @@
 using CIRC.Core.Progression.Core.Enums;
-using DG.DemiEditor;
 using NaughtyAttributes;
 using UnityEditor;
 using UnityEngine;
@@ -21,7 +20,7 @@ namespace CIRC.Core.Progression.Core.Data
         [Button]
         public void SetGuid()
         {
-            if (!SaveElement.GuidID.IsNullOrEmpty()) return;
+            if (SaveElement.GuidID != "") return;
             SaveElement.GuidID = GUID.Generate().ToString();
         }
         [Button]

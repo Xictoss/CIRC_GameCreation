@@ -42,12 +42,12 @@ namespace CIRC.Core.Controllers
             Logger = new Logger();
             
             SetupTimeScale();
-            LoadPlayerProgressFromPlayerPrefs();
+            //LoadPlayerProgressFromPlayerPrefs();
         }
 
         private static bool UnLoad()
         {
-            SavePlayerProgressToPlayerPrefs();
+            //SavePlayerProgressToPlayerPrefs();
             return true;
         }
 
