@@ -1,8 +1,11 @@
+using System;
 using System.IO;
 using CIRC.Core.Progression.Core.Data;
 using CIRC.Core.Progression.Core.Enums;
 using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MiniGameGenerator : EditorWindow
 {
@@ -12,14 +15,21 @@ public class MiniGameGenerator : EditorWindow
 
     private void OnGUI()
     {
-        GUILayout.Label("Mini-Game Generator", EditorStyles.boldLabel);
-
         miniGameName = EditorGUILayout.TextField("Mini-Game Name", miniGameName);
         miniGameSubject = (GameSubject)EditorGUILayout.EnumPopup("Mini-Game Subject", miniGameSubject);
         gameBadge = (BadgeData)EditorGUILayout.ObjectField("Game Badge", gameBadge, typeof(BadgeData), false);
+        
+        if (string.IsNullOrWhiteSpace(miniGameName))
+        {
+            Debug.LogError("Mini-Game name cannot be empty!");
+            return;
+        }
 
+        GUILayout.Space(25);
+        
         if (GUILayout.Button("Generate Mini-Game SO")) CreateScriptableObject();
         if (GUILayout.Button("Generate Mini-Game Scripts")) GenerateMiniGameFiles();
+        if (GUILayout.Button("Generate Mini-Game Scene")) GenerateMiniGameScene();
     }
 
     [MenuItem("Tools/Mini-Game Generator")]
@@ -50,12 +60,6 @@ public class MiniGameGenerator : EditorWindow
 
     private void GenerateMiniGameFiles()
     {
-        if (string.IsNullOrWhiteSpace(miniGameName))
-        {
-            Debug.LogError("Mini-Game name cannot be empty!");
-            return;
-        }
-
         string rootPath = Path.Combine(Application.dataPath, "Scripts/Core/MiniGames/Sample", miniGameName);
 
         // Create the directory
@@ -70,6 +74,35 @@ public class MiniGameGenerator : EditorWindow
         AssetDatabase.Refresh();
 
         Debug.Log($"Mini-Game '{miniGameName}' created successfully!");
+    }
+
+    private void GenerateMiniGameScene()
+    {
+        Scene newScene = EditorSceneManager.NewScene(NewSceneSetup.DefaultGameObjects);
+        newScene.name = "MiniGameScene";
+
+        GameObject miniGameHandlerObject = new GameObject("MiniGame Manager");
+
+        string componentName = $"CIRC.Core.MiniGames.Sample.{miniGameName}.{miniGameName}Handler, CIRC.Core.MiniGames.Sample";
+        Type componentType = Type.GetType(componentName);
+        miniGameHandlerObject.AddComponent(componentType);
+
+        string prefabPath = "Assets/Project/Prefabs/Mini-Game Canvas.prefab";
+        GameObject miniGameCanvas = AssetDatabase.LoadAssetAtPath<GameObject>(prefabPath);
+        GameObject instantiatedCanvas = PrefabUtility.InstantiatePrefab(miniGameCanvas) as GameObject;
+
+        SceneManager.MoveGameObjectToScene(miniGameHandlerObject, newScene);
+        SceneManager.MoveGameObjectToScene(instantiatedCanvas, newScene);
+        
+        string scenePath = $"Assets/Scenes/MainScenes/MiniGames/{miniGameName}.unity";
+        if (File.Exists(scenePath))
+        {
+            Debug.LogWarning("Already a scene with this name");
+            return;
+        }
+        
+        EditorSceneManager.SaveScene(newScene, scenePath);
+        Debug.Log("MiniGame scene created with MiniGameHandler object.");
     }
 
     private void CreateFile(string path, string fileName, string content)
@@ -96,7 +129,7 @@ namespace CIRC.Core.MiniGames.Sample.{CLASS_NAME}
 
         public override bool Refresh(ref {CLASS_NAME}Context context)
         {
-            return ;
+            return false;
         }
 
         public override void End(ref {CLASS_NAME}Context context, bool isSuccess)
