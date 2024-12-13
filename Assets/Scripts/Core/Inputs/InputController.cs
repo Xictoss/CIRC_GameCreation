@@ -11,13 +11,13 @@ namespace CIRC.Core.Inputs
         private float touchStartTime;
         
         [Header("Swipe")]
+        [SerializeField] private float swipeThreshold = 50f;
         private Vector2 startPosition;
         private bool isSwiping = false;
-        [SerializeField] private float swipeThreshold = 50f;
         
         [Header("Double Touch")]
-        private float lastTapTime = 0f;
         [SerializeField] private float doubleTapThreshold = 0.2f;
+        private float lastTapTime = 0f;
         
         [Header("Shake Phone")]
         [SerializeField] private float shakeThreshold = 2.0f;
@@ -29,11 +29,18 @@ namespace CIRC.Core.Inputs
         public event Action<float> OnLongClickInput;
         public event Action<bool> OnDoubleClickInput;
         public event Action<Vector2> OnSwipeInput;
-        public event Action<bool> OnShakeInput;
+        public event Action<Vector3> OnShakeInput;
         
         public Vector3 WorldTouchPosition { get; private set; }
         public Vector3 ScreenTouchPosition { get; private set; }
 
+        protected override void Awake()
+        {
+            base.Awake();
+            
+            InputSystem.EnableDevice(Accelerometer.current);
+        }
+        
         public void GetTouchPositionInput(InputAction.CallbackContext context)
         {
             Vector2 touchInput = context.ReadValue<Vector2>();
@@ -95,21 +102,44 @@ namespace CIRC.Core.Inputs
                 isSwiping = false;
             }
         }
-
-        public void GetShakeInput(InputAction.CallbackContext context)
+        
+        private void OnEnable()
         {
-            Vector3 currentAcceleration = context.ReadValue<Vector3>();
+
+            accelerometerAction = inputActions.actionMaps[0].FindAction("Shake");
+            if (accelerometerAction != null)
+            {
+                accelerometerAction.Enable();
+            }
+            
+            lastAcceleration = Vector3.zero;
+        }
+
+        private void OnDisable()
+        {
+            if (accelerometerAction != null)
+            {
+                accelerometerAction.Disable();
+            }
+        }
+
+        public InputActionAsset inputActions;
+        private InputAction accelerometerAction;
+        private void Update()
+        {
+            Vector3 currentAcceleration = accelerometerAction.ReadValue<Vector3>();
             Vector3 accelerationDelta = currentAcceleration - lastAcceleration;
             
             if (accelerationDelta.sqrMagnitude > shakeThreshold * shakeThreshold)
             {
                 if (Time.time - lastShakeTime > shakeCooldown)
                 {
-                    OnShakeInput?.Invoke(true);
+                    Debug.Log("Shake Detected");
+                    OnShakeInput?.Invoke(accelerationDelta);
                     lastShakeTime = Time.time;
                 }
             }
-
+            
             lastAcceleration = currentAcceleration;
         }
         

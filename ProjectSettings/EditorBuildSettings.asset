@@ -33,16 +33,16 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScenes/Levels/8_CliniqueScene.unity
     guid: 6b47cf3037fd2e540a62feda844e4064
   - enabled: 1
-    path: Assets/Scenes/MainScenes/MiniGames/6_GoToSwim.unity
+    path: Assets/Scenes/MainScenes/MiniGames/ActivitePlageNager.unity
     guid: 31c0e57efbe73474ca93483796b188df
   - enabled: 1
-    path: Assets/Scenes/MainScenes/MiniGames/9_RunAndDrink.unity
+    path: Assets/Scenes/MainScenes/MiniGames/HydrationMaisonGlisser.unity
     guid: 47552c85dbc78b540ac51b5181857b5b
   - enabled: 1
-    path: Assets/Scenes/MainScenes/MiniGames/10_PipePuzzle.unity
+    path: Assets/Scenes/MainScenes/MiniGames/HydrationMaisonTaper.unity
     guid: 81c2ded4a0e67ab479b1bbbd638e8060
   - enabled: 1
-    path: Assets/Scenes/MainScenes/MiniGames/12_BookDrop.unity
+    path: Assets/Scenes/MainScenes/MiniGames/ActiviteMaisonDrag.unity
     guid: 9b2a8c9cf3fa5414c8801bd63484cddb
   - enabled: 1
     path: Assets/Scenes/MainScenes/MiniGames/16-2_SortAndSplodeSample.unity

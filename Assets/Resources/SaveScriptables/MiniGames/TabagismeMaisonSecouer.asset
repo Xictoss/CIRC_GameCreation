@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TabagismeMaisonSecouer
   m_EditorClassIdentifier: 
   SaveElement:
-    GuidID: 
+    GuidID: a2250ad1cd5beb040a8c0151b2459f12
     IsComplete: 0
   <GameName>k__BackingField: TabagismeMaisonSecouer
   <Subject>k__BackingField: 0

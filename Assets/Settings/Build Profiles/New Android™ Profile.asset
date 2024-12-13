@@ -18,10 +18,10 @@ MonoBehaviour:
   m_PlatformId: b9b35072a6f44c2e863f17467ea3dc13
   m_PlatformBuildProfile:
     rid: 7075182628210475009
-  m_OverrideGlobalSceneList: 0
+  m_OverrideGlobalSceneList: 1
   m_Scenes:
   - m_enabled: 1
-    m_path: Assets/Scenes/Lois_Test/BadgesDisplay.unity
+    m_path: Assets/Scenes/MainScenes/MiniGames/TabagismeMaisonSecouer.unity
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
     m_Settings:
@@ -956,7 +956,7 @@ MonoBehaviour:
     - line: '|     tvOS: 1'
     - line: '|   incrementalIl2cppBuild: {}'
     - line: '|   suppressCommonWarnings: 1'
-    - line: '|   allowUnsafeCode: 0'
+    - line: '|   allowUnsafeCode: 1'
     - line: '|   useDeterministicCompilation: 1'
     - line: '|   additionalIl2CppArgs: '
     - line: '|   scriptingRuntimeVersion: 1'
@@ -1083,7 +1083,7 @@ MonoBehaviour:
         m_ExportAsGoogleAndroidProject: 0
         m_DebugSymbolLevel: 1
         m_DebugSymbolFormat: 5
-        m_CurrentDeploymentTargetId: 554f5816
+        m_CurrentDeploymentTargetId: R5CT62JZNTE
         m_BuildType: 1
         m_BuildAppBundle: 0
         m_IPAddressToConnect: 

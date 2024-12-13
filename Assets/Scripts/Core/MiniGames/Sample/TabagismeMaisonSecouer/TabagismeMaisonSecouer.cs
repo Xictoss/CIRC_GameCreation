@@ -1,5 +1,6 @@
 using CIRC.Core.Controllers;
 using CIRC.Core.MiniGames.Core;
+using UnityEngine;
 
 namespace CIRC.Core.MiniGames.Sample.TabagismeMaisonSecouer
 {
@@ -11,11 +12,21 @@ namespace CIRC.Core.MiniGames.Sample.TabagismeMaisonSecouer
 
         public override bool Refresh(ref TabagismeMaisonSecouerContext context)
         {
-            return false;
+            for (int i = 0; i < context.smokes.Length; i++)
+            {
+                if (!context.smokes[i].isCleaned)
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
 
         public override void End(ref TabagismeMaisonSecouerContext context, bool isSuccess)
         {
+            Debug.Log("End Mini Game");
+            
             if (isSuccess)
             {
                 context.miniGameData.SaveElement.IsComplete = true;
