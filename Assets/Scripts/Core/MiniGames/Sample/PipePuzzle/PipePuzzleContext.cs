@@ -5,7 +5,7 @@ namespace CIRC.Core.MiniGames.Sample.Core.MiniGames.Sample.PipePuzzle
 {
     public struct PipePuzzleContext : IMiniGameContext
     {
-        public MiniGameData miniGameData;
+        public MiniGameDataOLD MiniGameDataOld;
         public RotatingPiece[] pipes;
     }
 }

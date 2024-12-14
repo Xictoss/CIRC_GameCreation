@@ -1,20 +1,20 @@
 using CIRC.Core.Controllers;
 using CIRC.Core.MiniGames.Core;
 
-namespace CIRC.Core.MiniGames.Sample.BookDrop
+namespace CIRC.Core.MiniGames.Sample.AlcoolMaisonGlisser
 {
-    public class BookDrop : MiniGame<BookDropContext>
+    public class AlcoolMaisonGlisser : MiniGame<AlcoolMaisonGlisserContext>
     {
-        public override void Begin(ref BookDropContext context)
+        public override void Begin(ref AlcoolMaisonGlisserContext context)
         {
         }
 
-        public override bool Refresh(ref BookDropContext context)
+        public override bool Refresh(ref AlcoolMaisonGlisserContext context)
         {
-            return context.isArrived;
+            return false;
         }
 
-        public override void End(ref BookDropContext context, bool isSuccess)
+        public override void End(ref AlcoolMaisonGlisserContext context, bool isSuccess)
         {
             if (isSuccess)
             {

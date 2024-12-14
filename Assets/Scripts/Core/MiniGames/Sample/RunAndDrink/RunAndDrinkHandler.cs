@@ -2,12 +2,13 @@
 using CIRC.Core.MiniGames.Core.Interfaces;
 using CIRC.Core.Progression.Core.Data;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace CIRC.Core.MiniGames.Sample.RunAndDrink
 {
     public class RunAndDrinkHandler : MonoBehaviour, IMiniGameHandler<RunAndDrinkContext>
     {
-        [SerializeField] private MiniGameData _miniGameData;
+        [FormerlySerializedAs("_miniGameData")] [SerializeField] private MiniGameDataOLD miniGameDataOld;
         [SerializeField] private AnimalRun _animalRun;
 
         private RunAndDrink miniGame;
@@ -21,7 +22,7 @@ namespace CIRC.Core.MiniGames.Sample.RunAndDrink
         {
             return new RunAndDrinkContext
             {
-                miniGameData = _miniGameData,
+                MiniGameDataOld = miniGameDataOld,
                 remainingDrinks = _animalRun.RemainingDrinks,
             };
         }

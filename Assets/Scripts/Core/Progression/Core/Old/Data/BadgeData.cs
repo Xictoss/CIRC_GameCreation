@@ -8,6 +8,7 @@ namespace CIRC.Core.Progression.Core.Data
     {
         public string badgeName;
         public Sprite displayImage;
+        public string description;
         
 #if UNITY_EDITOR
         [Button]

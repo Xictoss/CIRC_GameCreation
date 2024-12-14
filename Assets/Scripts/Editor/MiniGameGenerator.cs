@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using CIRC.Core.Progression.Core.Core.Progression.Core;
 using CIRC.Core.Progression.Core.Data;
 using CIRC.Core.Progression.Core.Enums;
 using UnityEditor;
@@ -41,10 +42,10 @@ public class MiniGameGenerator : EditorWindow
     private void CreateScriptableObject()
     {
         // Create a new instance of the ScriptableObject
-        MiniGameData newMiniGameData = CreateInstance<MiniGameData>();
-        newMiniGameData.SetName(miniGameName);
-        newMiniGameData.SetSubject(miniGameSubject);
-        newMiniGameData.SetBadge(gameBadge);
+        MiniGameDataHolder newMiniGameData = CreateInstance<MiniGameDataHolder>();
+        newMiniGameData.miniGameName = miniGameName;
+        newMiniGameData.gameSubject = miniGameSubject;
+        newMiniGameData.badgeDisplay = gameBadge;
 
         // Save it as an asset in the project
         string path = $"Assets/Resources/SaveScriptables/MiniGames/{miniGameName}.asset";

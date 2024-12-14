@@ -3,7 +3,8 @@
     "rootNamespace": "NomDuJeu.Editor",
     "references": [
         "GUID:13aef4979092d5042935a1e9f6587113",
-        "GUID:cb30df4516b27d04bbf6d95ddc7c27fa"
+        "GUID:cb30df4516b27d04bbf6d95ddc7c27fa",
+        "GUID:b76249ac1647bdd47a4445cdf3fd127a"
     ],
     "includePlatforms": [
         "Editor"

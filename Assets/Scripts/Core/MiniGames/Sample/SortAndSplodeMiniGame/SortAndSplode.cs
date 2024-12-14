@@ -25,9 +25,9 @@ namespace CIRC.Core.MiniGames.Sample.SortAndSplodeMiniGame
         {
             if (isSuccess)
             {
-                context.MiniGameData.SaveElement.IsComplete = true;
-                GameController.SaveData.SetPlayerCompleted(context.MiniGameData.SaveElement);
-                GameController.SavePlayerProgressToPlayerPrefs();
+                context.MiniGameDataOld.SaveElement.IsComplete = true;
+                GameController.SaveData.SetPlayerCompleted(context.MiniGameDataOld.SaveElement);
+                GameController.SavePlayerProgressToPlayerPrefsOLD();
             }
             
             GameController.SceneController.LoadScene(GameController.Metrics.PlageScene);

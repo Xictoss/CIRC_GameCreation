@@ -5,7 +5,7 @@ namespace CIRC.Core.MiniGames.Sample.AlcoolMaisonFrigo
 {
     public struct AlcoolMaisonFrigoContext : IMiniGameContext
     {
-        public MiniGameData miniGameData;
+        public MiniGameDataOLD MiniGameDataOld;
         public AlcoolMaisonFrigoChoose alcoolMaisonFrigoChoose;
     }
 }

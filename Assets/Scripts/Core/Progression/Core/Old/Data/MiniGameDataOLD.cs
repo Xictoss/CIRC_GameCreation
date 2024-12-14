@@ -6,7 +6,7 @@ using UnityEngine;
 namespace CIRC.Core.Progression.Core.Data
 {
     [CreateAssetMenu(fileName = "NewMiniGameScriptable", menuName = "CIRC/Save/MiniGameScriptable", order = 0)]
-    public class MiniGameData : SaveScriptable
+    public class MiniGameDataOLD : SaveScriptable
     {
         [field : SerializeField] public string GameName { get; private set; }
         [field : SerializeField] public GameSubject Subject { get; private set; }
@@ -20,7 +20,7 @@ namespace CIRC.Core.Progression.Core.Data
         [Button]
         public void SetGuid()
         {
-            if (SaveElement.GuidID != "") return;
+            if (string.IsNullOrEmpty(SaveElement.GuidID)) return;
             SaveElement.GuidID = GUID.Generate().ToString();
         }
         [Button]

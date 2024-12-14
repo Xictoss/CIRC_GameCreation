@@ -9,7 +9,7 @@ namespace CIRC.Core.UIRelated
         [SerializeField] private Image[] _badgesDisplay;
         
         [SerializeField] private Sprite _badgeNotCompleted;
-        private MiniGameData[] _miniGameDatas;
+        private MiniGameDataOLD[] _miniGameDatas;
 
         private void OnEnable()
         {
@@ -20,7 +20,7 @@ namespace CIRC.Core.UIRelated
         {
             SetAllLocked();
             
-            _miniGameDatas = Resources.LoadAll<MiniGameData>("SaveScriptables/MiniGames");
+            _miniGameDatas = Resources.LoadAll<MiniGameDataOLD>("SaveScriptables/MiniGames");
             int total = 0;
             
             for (int i = 0; i < _miniGameDatas.Length; i++)

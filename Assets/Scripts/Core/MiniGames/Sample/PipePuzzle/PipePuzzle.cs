@@ -33,9 +33,9 @@ namespace CIRC.Core.MiniGames.Sample.Core.MiniGames.Sample.PipePuzzle
         {
             if (isSuccess)
             {
-                context.miniGameData.SaveElement.IsComplete = true;
-                GameController.SaveData.SetPlayerCompleted(context.miniGameData.SaveElement);
-                GameController.SavePlayerProgressToPlayerPrefs();
+                context.MiniGameDataOld.SaveElement.IsComplete = true;
+                GameController.SaveData.SetPlayerCompleted(context.MiniGameDataOld.SaveElement);
+                GameController.SavePlayerProgressToPlayerPrefsOLD();
             }
             
             GameController.SceneController.LoadScene(GameController.Metrics.PlageScene);

@@ -5,7 +5,7 @@ namespace CIRC.Core.MiniGames.Sample.SortAndSplodeMiniGame
 {
     public struct SortAndSplodeContext : IMiniGameContext
     {
-        public MiniGameData MiniGameData;
+        public MiniGameDataOLD MiniGameDataOld;
         public SortAndSplodeSpawner Spawner;
         public EntityManager EntityManager;
     }

@@ -4,27 +4,25 @@ using CIRC.Core.Progression.Core.Data;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace CIRC.Core.MiniGames.Sample.TabagismeMaisonSecouer
+namespace CIRC.Core.MiniGames.Sample.AlcoolMaisonGlisser
 {
-    public class TabagismeMaisonSecouerHandler : MonoBehaviour, IMiniGameHandler<TabagismeMaisonSecouerContext>
+    public class AlcoolMaisonGlisserHandler : MonoBehaviour, IMiniGameHandler<AlcoolMaisonGlisserContext>
     {
         [FormerlySerializedAs("miniGameData")] [SerializeField] private MiniGameDataOLD miniGameDataOld;
-        [SerializeField] private Smoke[] smokes;
         
-        private TabagismeMaisonSecouer miniGame;
+        private AlcoolMaisonGlisser miniGame;
         
         private void Start()
         {
-            miniGame = new TabagismeMaisonSecouer();
+            miniGame = new AlcoolMaisonGlisser();
             MiniGameManager.Instance.StartMiniGame(miniGame, this);
         }
         
-        public TabagismeMaisonSecouerContext GetContext()
+        public AlcoolMaisonGlisserContext GetContext()
         {
-            return new TabagismeMaisonSecouerContext
+            return new AlcoolMaisonGlisserContext
             {
                 MiniGameDataOld = miniGameDataOld,
-                smokes = smokes,
             };
         }
     }

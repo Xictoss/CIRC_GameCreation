@@ -5,7 +5,7 @@ namespace CIRC.Core.MiniGames.Sample.GoToSwim
 {
     public struct GoToSwimContext : IMiniGameContext
     {
-        public MiniGameData miniGameData;
+        public MiniGameDataOLD MiniGameDataOld;
         public bool isArrived;
     }
 }

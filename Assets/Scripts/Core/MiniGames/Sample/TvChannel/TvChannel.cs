@@ -18,9 +18,9 @@ namespace CIRC.Core.MiniGames.Sample.TvChannel
         {
             if (isSuccess)
             {
-                context.miniGameData.saveElement.isComplete = true;
-                context.miniGameData.badge.saveElement.isComplete = true;
-                GameController.SavePlayerProgressToPlayerPrefs();
+                context.MiniGameDataOld.SaveElement.IsComplete = true;
+                GameController.SaveData.SetPlayerCompleted(context.MiniGameDataOld.SaveElement);
+                GameController.SavePlayerProgressToPlayerPrefsOLD();
             }
 
             GameController.SceneController.LoadScene(GameController.Metrics.PlageScene);

@@ -1,9 +1,9 @@
 using CIRC.Core.MiniGames.Core.Interfaces;
 using CIRC.Core.Progression.Core.Data;
 
-namespace CIRC.Core.MiniGames.Sample.TvChannel
+namespace CIRC.Core.MiniGames.Sample.AlcoolMaisonGlisser
 {
-    public struct TvChannelContext : IMiniGameContext
+    public struct AlcoolMaisonGlisserContext : IMiniGameContext
     {
         public MiniGameDataOLD MiniGameDataOld;
     }
