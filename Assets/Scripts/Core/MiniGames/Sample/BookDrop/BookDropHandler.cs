@@ -7,7 +7,7 @@ namespace CIRC.Core.MiniGames.Sample.BookDrop
 {
     public class BookDropHandler : MonoBehaviour, IMiniGameHandler<BookDropContext>
     {
-        [SerializeField] private MiniGameData miniGameData;
+        [SerializeField] private MiniGameDataHolder miniGameData;
         [SerializeField] private Book book;
 
         private BookDrop miniGame;

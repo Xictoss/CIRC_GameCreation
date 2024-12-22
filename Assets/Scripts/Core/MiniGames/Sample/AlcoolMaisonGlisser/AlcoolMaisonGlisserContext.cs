@@ -5,6 +5,6 @@ namespace CIRC.Core.MiniGames.Sample.AlcoolMaisonGlisser
 {
     public struct AlcoolMaisonGlisserContext : IMiniGameContext
     {
-        public MiniGameData MiniGameData;
+        public MiniGameDataHolder MiniGameData;
     }
 }

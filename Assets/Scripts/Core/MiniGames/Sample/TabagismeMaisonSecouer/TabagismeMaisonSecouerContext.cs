@@ -5,7 +5,7 @@ namespace CIRC.Core.MiniGames.Sample.TabagismeMaisonSecouer
 {
     public struct TabagismeMaisonSecouerContext : IMiniGameContext
     {
-        public MiniGameData MiniGameData;
+        public MiniGameDataHolder MiniGameData;
         public Smoke[] smokes;
     }
 }

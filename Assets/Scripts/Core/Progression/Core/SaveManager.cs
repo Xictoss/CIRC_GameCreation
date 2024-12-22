@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
-using CIRC.Core.Progression.Core.Core.Progression.Core;
 using LTX.Singletons;
 using UnityEngine;
 
@@ -17,7 +17,6 @@ namespace CIRC.Core.Progression.Core
         protected override void Awake()
         {
             base.Awake();
-            
             DontDestroyOnLoad(this);
         }
 
@@ -79,35 +78,79 @@ namespace CIRC.Core.Progression.Core
             else
             {
                 runtimeData = new List<MiniGameData>();
+                
+                MiniGameDataHolder[] miniGameDataHolders = Resources.LoadAll<MiniGameDataHolder>("Games");
+                foreach (MiniGameDataHolder dataHolder in miniGameDataHolders)
+                {
+                    if (runtimeData.All(data => data.MiniGameId != dataHolder.miniGameName))
+                    {
+                        runtimeData.Add(new MiniGameData(dataHolder.miniGameName, false, dataHolder.badgeDisplay, dataHolder.gameSubject));
+                    }
+                }
+            
+                SaveData();
                 Debug.LogWarning("Save file not found. Starting with empty data.");
             }
         }
 
-        public void MarkMiniGameCompleted(string miniGameId, BadgeData badgeDisplay, GameSubject subject)
+        public void MarkMiniGameCompleted(MiniGameDataHolder data)
         {
             for (int i = 0; i < runtimeData.Count; i++)
             {
-                if (runtimeData[i].MiniGameId == miniGameId)
+                if (runtimeData[i].MiniGameId == data.miniGameName)
                 {
-                    runtimeData[i] = new MiniGameData(miniGameId, true, badgeDisplay, subject);
+                    runtimeData[i] = new MiniGameData(data.miniGameName, true, data.badgeDisplay, data.gameSubject);
                     return;
                 }
             }
 
             // If not found, add new entry
-            runtimeData.Add(new MiniGameData(miniGameId, true, badgeDisplay, subject));
+            runtimeData.Add(new MiniGameData(data.miniGameName, true, data.badgeDisplay, data.gameSubject));
         }
 
-        public void MarkMiniGameUncompleted(string miniGameId, BadgeData badgeDisplay, GameSubject subject)
+        public void MarkMiniGameUncompleted(MiniGameDataHolder data)
         {
             for (int i = 0; i < runtimeData.Count; i++)
             {
-                if (runtimeData[i].MiniGameId == miniGameId)
+                if (runtimeData[i].MiniGameId == data.miniGameName)
                 {
-                    runtimeData[i] = new MiniGameData(miniGameId, false, badgeDisplay, subject);
+                    runtimeData[i] = new MiniGameData(data.miniGameName, false, data.badgeDisplay, data.gameSubject);
                     return;
                 }
             }
+            
+            // If not found, add new entry
+            runtimeData.Add(new MiniGameData(data.miniGameName, false, data.badgeDisplay, data.gameSubject));
+        }
+        
+        public void MarkMiniGameStructCompleted(MiniGameData data)
+        {
+            for (int i = 0; i < runtimeData.Count; i++)
+            {
+                if (runtimeData[i].MiniGameId == data.MiniGameId)
+                {
+                    runtimeData[i] = new MiniGameData(data.MiniGameId, true, data.BadgeDisplay, data.GameSubject);
+                    return;
+                }
+            }
+
+            // If not found, add new entry
+            runtimeData.Add(new MiniGameData(data.MiniGameId, true, data.BadgeDisplay, data.GameSubject));
+        }
+
+        public void MarkMiniGameStructUncompleted(MiniGameData data)
+        {
+            for (int i = 0; i < runtimeData.Count; i++)
+            {
+                if (runtimeData[i].MiniGameId == data.MiniGameId)
+                {
+                    runtimeData[i] = new MiniGameData(data.MiniGameId, false, data.BadgeDisplay, data.GameSubject);
+                    return;
+                }
+            }
+            
+            // If not found, add new entry
+            runtimeData.Add(new MiniGameData(data.MiniGameId, false, data.BadgeDisplay, data.GameSubject));
         }
 
         public bool IsMiniGameCompleted(string miniGameId)

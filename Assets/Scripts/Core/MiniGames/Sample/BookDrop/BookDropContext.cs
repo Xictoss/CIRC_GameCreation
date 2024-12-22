@@ -5,7 +5,7 @@ namespace CIRC.Core.MiniGames.Sample.BookDrop
 {
     public struct BookDropContext : IMiniGameContext
     {
-        public MiniGameData MiniGameData;
+        public MiniGameDataHolder MiniGameData;
         public bool isArrived;
     }
 }

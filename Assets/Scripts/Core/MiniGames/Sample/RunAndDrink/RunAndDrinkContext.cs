@@ -5,7 +5,7 @@ namespace CIRC.Core.MiniGames.Sample.RunAndDrink
 {
     public struct RunAndDrinkContext : IMiniGameContext
     {
-        public MiniGameData MiniGameData;
+        public MiniGameDataHolder MiniGameData;
         public int remainingDrinks;
     }
 }

@@ -7,7 +7,7 @@ namespace CIRC.Core.MiniGames.Sample.RunAndDrink
 {
     public class RunAndDrinkHandler : MonoBehaviour, IMiniGameHandler<RunAndDrinkContext>
     {
-        [SerializeField] private MiniGameData miniGameData;
+        [SerializeField] private MiniGameDataHolder miniGameData;
         [SerializeField] private AnimalRun _animalRun;
 
         private RunAndDrink miniGame;

@@ -5,6 +5,6 @@ namespace CIRC.Core.MiniGames.Sample.TvChannel
 {
     public struct TvChannelContext : IMiniGameContext
     {
-        public MiniGameData MiniGameData;
+        public MiniGameDataHolder MiniGameData;
     }
 }

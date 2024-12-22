@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace CIRC.Core.Progression.Core
 {
-    [CreateAssetMenu(menuName = "CIRC/MiniGameDataHolder", fileName = "MiniGameDataHolder")]
+    [CreateAssetMenu(menuName = "CIRC/Progression/MiniGameDataHolder", fileName = "MiniGameDataHolder")]
     public class MiniGameDataHolder : ScriptableObject
     {
         public string miniGameName;

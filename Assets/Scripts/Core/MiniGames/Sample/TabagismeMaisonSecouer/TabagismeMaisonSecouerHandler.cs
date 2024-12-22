@@ -7,7 +7,7 @@ namespace CIRC.Core.MiniGames.Sample.TabagismeMaisonSecouer
 {
     public class TabagismeMaisonSecouerHandler : MonoBehaviour, IMiniGameHandler<TabagismeMaisonSecouerContext>
     {
-        [SerializeField] private MiniGameData miniGameData;
+        [SerializeField] private MiniGameDataHolder miniGameData;
         [SerializeField] private Smoke[] smokes;
         
         private TabagismeMaisonSecouer miniGame;

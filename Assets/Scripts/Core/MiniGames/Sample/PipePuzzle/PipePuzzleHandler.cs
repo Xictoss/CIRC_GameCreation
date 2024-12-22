@@ -7,7 +7,7 @@ namespace CIRC.Core.MiniGames.Sample.Core.MiniGames.Sample.PipePuzzle
 {
     public class PipePuzzleHandler : MonoBehaviour, IMiniGameHandler<PipePuzzleContext>
     {
-        [SerializeField] private MiniGameData miniGameData;
+        [SerializeField] private MiniGameDataHolder miniGameData;
         [SerializeField] private RotatingPiece[] pipes;
         
         private PipePuzzle pipePuzzle;

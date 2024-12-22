@@ -9,7 +9,7 @@ namespace CIRC.Core.MiniGames.Sample.SortAndSplodeMiniGame
 {
     public class SortAndSplodeHandler : MonoBehaviour, IMiniGameHandler<SortAndSplodeContext>
     {
-        [SerializeField] private MiniGameData miniGameData;
+        [SerializeField] private MiniGameDataHolder miniGameData;
         [SerializeField] private SortAndSplodeSpawner spawner;
         [field : SerializeField] public EntityManager entityManager { get; private set; }
 

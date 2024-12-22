@@ -25,11 +25,7 @@ namespace CIRC.Core.MiniGames.Sample.SortAndSplodeMiniGame
         {
             if (isSuccess)
             {
-                SaveManager.Instance.MarkMiniGameCompleted(
-                    context.MiniGameData.MiniGameId,
-                    context.MiniGameData.BadgeDisplay,
-                    context.MiniGameData.GameSubject
-                    );
+                SaveManager.Instance.MarkMiniGameCompleted(context.MiniGameData);
                 SaveManager.Instance.SaveData();
             }
             

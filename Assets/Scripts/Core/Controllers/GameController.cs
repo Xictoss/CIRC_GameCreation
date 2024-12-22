@@ -60,7 +60,7 @@ namespace CIRC.Core.Controllers
             GameSaved?.Invoke();
         }
         
-        public static void LoadProgress()
+        private static void LoadProgress()
         {
             Debug.Log("Loading player progress");
             
@@ -73,11 +73,7 @@ namespace CIRC.Core.Controllers
 
             foreach (MiniGameData element in progress)
             {
-                SaveManager.Instance.MarkMiniGameUncompleted(
-                    element.MiniGameId,
-                    element.BadgeDisplay,
-                    element.GameSubject
-                    );
+                SaveManager.Instance.MarkMiniGameStructUncompleted(element);
             }
             
             SaveProgress();

@@ -7,7 +7,7 @@ namespace CIRC.Core.MiniGames.Sample.GoToSwim
 {
     public class GoToSwimHandler : MonoBehaviour, IMiniGameHandler<GoToSwimContext>
     {
-        [SerializeField] private MiniGameData miniGameDataOld;
+        [SerializeField] private MiniGameDataHolder miniGameDataOld;
         [SerializeField] private GuyRun _guyRun;
         
         private GoToSwim miniGame;

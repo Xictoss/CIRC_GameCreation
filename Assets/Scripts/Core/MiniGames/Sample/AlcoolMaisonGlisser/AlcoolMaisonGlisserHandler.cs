@@ -7,7 +7,7 @@ namespace CIRC.Core.MiniGames.Sample.AlcoolMaisonGlisser
 {
     public class AlcoolMaisonGlisserHandler : MonoBehaviour, IMiniGameHandler<AlcoolMaisonGlisserContext>
     {
-        [SerializeField] private MiniGameData miniGameData;
+        [SerializeField] private MiniGameDataHolder miniGameData;
         
         private AlcoolMaisonGlisser miniGame;
         
