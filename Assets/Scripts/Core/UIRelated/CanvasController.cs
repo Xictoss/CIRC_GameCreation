@@ -90,7 +90,7 @@ namespace NomDuJeu.Core
 
         public void ResetProgress()
         {
-            GameController.DeleteProgressOLD();
+            GameController.DeleteProgress();
         }
     }
 }

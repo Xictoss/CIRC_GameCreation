@@ -1,17 +1,13 @@
 using System;
 using System.Collections.Generic;
 using CIRC.Core.Progression.Core;
-using CIRC.Core.Progression.Core.Core.Progression.Core;
-using CIRC.Core.Progression.Core.Data;
 using LTX.ChanneledProperties;
-using PlasticPipe.PlasticProtocol.Messages;
 using UnityEngine;
 
 namespace CIRC.Core.Controllers
 {
     public static class GameController
     {
-        public static SaveData SaveData { get; private set; }
         public static Logger Logger { get; private set; }
         public static SceneController SceneController { get; private set; }
         private static GameMetrics gameMetrics;
@@ -43,94 +39,16 @@ namespace CIRC.Core.Controllers
             Logger = new Logger();
             
             SetupTimeScale();
-            LoadPlayerProgressFromPlayerPrefsOLD();
+            //LoadPlayerProgressFromPlayerPrefsOLD();
+            LoadProgress();
         }
 
-        private static bool UnLoad()
+        private static void UnLoad()
         {
-            SavePlayerProgressToPlayerPrefsOLD();
-            return true;
+            SaveProgress();
+            //SavePlayerProgressToPlayerPrefsOLD();
         }
 
-        #region Progress Functions OLD
-        
-        public static void SavePlayerProgressToPlayerPrefsOLD()
-        {
-            Debug.Log("Saving player progress");
-            
-            List<SaveScriptable> gameProgressElements = LoadGameProgressElementsOLD();
-            
-            foreach (SaveScriptable progressElement in gameProgressElements)
-            {
-                SaveData.Write(progressElement.SaveElement);
-            }
-
-            ProgressionController.SaveProgressDataToPlayerPrefs(SaveData);
-            ProgressionController.SaveProgressData(SaveData);
-            
-            GameSaved?.Invoke();
-        }
-        
-        public static void LoadPlayerProgressFromPlayerPrefsOLD()
-        {
-            Debug.Log("Loading player progress");
-            
-            SaveData = ProgressionController.LoadProgressDataFromPlayerPrefs();
-            //SaveData = ProgressionController.LoadProgressData();
-            
-            List<SaveScriptable> gameProgressElements = LoadGameProgressElementsOLD();
-
-            foreach (SaveElement playerSaveElement in SaveData.PlayerProgression)
-            {
-                foreach (SaveScriptable gameSaveElement in gameProgressElements)
-                {
-                    if (playerSaveElement.GuidID == gameSaveElement.SaveElement.GuidID)
-                    {
-                        if (SaveData.SaveVersion == "0")
-                        {
-                            gameSaveElement.SaveElement.IsComplete = false;
-                            Debug.LogError("NON");
-                            continue;
-                        }
-                        gameSaveElement.SaveElement.IsComplete = playerSaveElement.IsComplete;
-                    }
-                }
-            }
-        }
-
-        public static void DeleteProgressOLD()
-        {
-            List<SaveScriptable> gameProgressElements = LoadGameProgressElementsOLD();
-            foreach (SaveScriptable gameSaveElement in gameProgressElements)
-            {
-                gameSaveElement.SaveElement.IsComplete = false;
-            }
-            
-            SavePlayerProgressToPlayerPrefsOLD();
-        }
-
-        private static List<SaveScriptable> LoadGameProgressElementsOLD()
-        {
-            List<SaveScriptable> allSaveScriptables = new List<SaveScriptable>();
-            
-            string[] folders = { "SaveScriptables", "SaveScriptables/Badges", "SaveScriptables/MiniGames" };
-            
-            foreach (string folder in folders)
-            {
-                allSaveScriptables.AddRange(Resources.LoadAll<SaveScriptable>(folder));
-            }
-            
-            return allSaveScriptables;
-        }
-        
-        public static void QuitGameOLD()
-        {
-            SavePlayerProgressToPlayerPrefsOLD();
-            Application.Quit();
-        }
-        
-        #endregion
-        
         #region Progress Functions
         
         public static void SaveProgress()
@@ -151,6 +69,17 @@ namespace CIRC.Core.Controllers
 
         public static void DeleteProgress()
         {
+            List<MiniGameData> progress = SaveManager.Instance.GetAllMiniGameData();
+
+            foreach (MiniGameData element in progress)
+            {
+                SaveManager.Instance.MarkMiniGameUncompleted(
+                    element.MiniGameId,
+                    element.BadgeDisplay,
+                    element.GameSubject
+                    );
+            }
+            
             SaveProgress();
         }
         

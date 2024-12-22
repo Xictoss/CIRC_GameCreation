@@ -1,4 +1,4 @@
-using CIRC.Core.Progression.Core.Data;
+using CIRC.Core.Progression.Core;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,7 +9,7 @@ namespace CIRC.Core.UIRelated
         [SerializeField] private Image[] _badgesDisplay;
         
         [SerializeField] private Sprite _badgeNotCompleted;
-        private MiniGameDataOLD[] _miniGameDatas;
+        private MiniGameData[] _miniGameDatas;
 
         private void OnEnable()
         {
@@ -20,14 +20,14 @@ namespace CIRC.Core.UIRelated
         {
             SetAllLocked();
             
-            _miniGameDatas = Resources.LoadAll<MiniGameDataOLD>("SaveScriptables/MiniGames");
+            //_miniGameDatas = Resources.LoadAll<MiniGameData>("SaveScriptables/MiniGames");
             int total = 0;
             
             for (int i = 0; i < _miniGameDatas.Length; i++)
             {
-                if (_miniGameDatas[i].SaveElement.IsComplete)
+                if (_miniGameDatas[i].IsCompleted)
                 {
-                    _badgesDisplay[i].sprite = _miniGameDatas[i].Badge.displayImage;
+                    _badgesDisplay[i].sprite = _miniGameDatas[i].BadgeDisplay.displayImage;
                     total++;
                 }
             }

@@ -1,14 +1,13 @@
 using CIRC.Core.MiniGames.Core;
 using CIRC.Core.MiniGames.Core.Interfaces;
-using CIRC.Core.Progression.Core.Data;
+using CIRC.Core.Progression.Core;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace CIRC.Core.MiniGames.Sample.BookDrop
 {
     public class BookDropHandler : MonoBehaviour, IMiniGameHandler<BookDropContext>
     {
-        [FormerlySerializedAs("miniGameData")] [SerializeField] private MiniGameDataOLD miniGameDataOld;
+        [SerializeField] private MiniGameData miniGameData;
         [SerializeField] private Book book;
 
         private BookDrop miniGame;
@@ -23,7 +22,7 @@ namespace CIRC.Core.MiniGames.Sample.BookDrop
         {
             return new BookDropContext
             {
-                MiniGameDataOld = miniGameDataOld,
+                MiniGameData = miniGameData,
                 isArrived = book.IsArrived,
             };
         }

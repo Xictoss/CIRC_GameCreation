@@ -1,15 +1,13 @@
 ﻿using CIRC.Core.MiniGames.Core;
 using CIRC.Core.MiniGames.Core.Interfaces;
-using CIRC.Core.Progression.Core.Data;
+using CIRC.Core.Progression.Core;
 using UnityEngine;
-using UnityEngine.Serialization;
-
 
 namespace CIRC.Core.MiniGames.Sample.GoToSwim
 {
     public class GoToSwimHandler : MonoBehaviour, IMiniGameHandler<GoToSwimContext>
     {
-        [FormerlySerializedAs("_miniGameData")] [SerializeField] private MiniGameDataOLD miniGameDataOld;
+        [SerializeField] private MiniGameData miniGameDataOld;
         [SerializeField] private GuyRun _guyRun;
         
         private GoToSwim miniGame;
@@ -23,7 +21,7 @@ namespace CIRC.Core.MiniGames.Sample.GoToSwim
         {
             return new GoToSwimContext
             {
-                MiniGameDataOld = miniGameDataOld,
+                MiniGameData = miniGameDataOld,
                 isArrived = _guyRun.IsArrived,
             };
         }

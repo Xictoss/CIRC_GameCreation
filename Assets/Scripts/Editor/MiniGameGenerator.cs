@@ -1,8 +1,7 @@
 using System;
 using System.IO;
+using CIRC.Core.Progression.Core;
 using CIRC.Core.Progression.Core.Core.Progression.Core;
-using CIRC.Core.Progression.Core.Data;
-using CIRC.Core.Progression.Core.Enums;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
@@ -30,6 +29,9 @@ public class MiniGameGenerator : EditorWindow
         
         if (GUILayout.Button("Generate Mini-Game SO")) CreateScriptableObject();
         if (GUILayout.Button("Generate Mini-Game Scripts")) GenerateMiniGameFiles();
+        
+        GUILayout.Space(25);
+        GUILayout.Label("Wait for Compilation of files to generate Scene");
         if (GUILayout.Button("Generate Mini-Game Scene")) GenerateMiniGameScene();
     }
 

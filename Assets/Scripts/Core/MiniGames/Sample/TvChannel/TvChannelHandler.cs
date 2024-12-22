@@ -1,14 +1,13 @@
 using CIRC.Core.MiniGames.Core;
 using CIRC.Core.MiniGames.Core.Interfaces;
-using CIRC.Core.Progression.Core.Data;
+using CIRC.Core.Progression.Core;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace CIRC.Core.MiniGames.Sample.TvChannel
 {
     public class TvChannelHandler : MonoBehaviour, IMiniGameHandler<TvChannelContext>
     {
-        [FormerlySerializedAs("miniGameData")] [SerializeField] private MiniGameDataOLD miniGameDataOld;
+        [SerializeField] private MiniGameData miniGameData;
         
         private TvChannel miniGame;
         
@@ -22,13 +21,13 @@ namespace CIRC.Core.MiniGames.Sample.TvChannel
         {
             return new TvChannelContext
             {
-                MiniGameDataOld = miniGameDataOld,
+                MiniGameData = miniGameData,
             };
         }
 
-        public void Initialize(MiniGameDataOLD miniGameDataOld)
+        public void Initialize(MiniGameData miniGameDataOld)
         {
-            this.miniGameDataOld = miniGameDataOld;
+            this.miniGameData = miniGameDataOld;
         }
     }
 }

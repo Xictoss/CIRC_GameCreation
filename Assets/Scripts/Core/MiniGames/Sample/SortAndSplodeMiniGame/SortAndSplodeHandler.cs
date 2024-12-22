@@ -1,16 +1,15 @@
 using CIRC.Core.Controllers;
 using CIRC.Core.MiniGames.Core;
 using CIRC.Core.MiniGames.Core.Interfaces;
-using CIRC.Core.Progression.Core.Data;
+using CIRC.Core.Progression.Core;
 using LTX.ChanneledProperties;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace CIRC.Core.MiniGames.Sample.SortAndSplodeMiniGame
 {
     public class SortAndSplodeHandler : MonoBehaviour, IMiniGameHandler<SortAndSplodeContext>
     {
-        [FormerlySerializedAs("miniGameData")] [SerializeField] private MiniGameDataOLD miniGameDataOld;
+        [SerializeField] private MiniGameData miniGameData;
         [SerializeField] private SortAndSplodeSpawner spawner;
         [field : SerializeField] public EntityManager entityManager { get; private set; }
 
@@ -38,7 +37,7 @@ namespace CIRC.Core.MiniGames.Sample.SortAndSplodeMiniGame
         {
             return new SortAndSplodeContext
             {
-                MiniGameDataOld = miniGameDataOld,
+                MiniGameData = miniGameData,
                 Spawner = spawner,
                 EntityManager = entityManager,
             };

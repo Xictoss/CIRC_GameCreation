@@ -1,8 +1,7 @@
-using CIRC.Core.Progression.Core.Data;
-using CIRC.Core.Progression.Core.Enums;
+using CIRC.Core.Progression.Core.Core.Progression.Core;
 using UnityEngine;
 
-namespace CIRC.Core.Progression.Core.Core.Progression.Core
+namespace CIRC.Core.Progression.Core
 {
     [CreateAssetMenu(menuName = "CIRC/MiniGameDataHolder", fileName = "MiniGameDataHolder")]
     public class MiniGameDataHolder : ScriptableObject

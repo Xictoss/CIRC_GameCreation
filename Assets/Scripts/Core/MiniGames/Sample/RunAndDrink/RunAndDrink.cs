@@ -19,9 +19,12 @@ namespace CIRC.Core.MiniGames.Sample.RunAndDrink
         {
             if (isSuccess)
             {
-                context.MiniGameDataOld.SaveElement.IsComplete = true;
-                GameController.SaveData.SetPlayerCompleted(context.MiniGameDataOld.SaveElement);
-                GameController.SavePlayerProgressToPlayerPrefsOLD();
+                SaveManager.Instance.MarkMiniGameCompleted(
+                    context.MiniGameData.MiniGameId,
+                    context.MiniGameData.BadgeDisplay,
+                    context.MiniGameData.GameSubject
+                );
+                SaveManager.Instance.SaveData();
             }
             
             GameController.SceneController.LoadScene(GameController.Metrics.PlageScene);

@@ -1,8 +1,7 @@
 using System;
-using CIRC.Core.Progression.Core.Data;
-using CIRC.Core.Progression.Core.Enums;
+using CIRC.Core.Progression.Core.Core.Progression.Core;
 
-namespace CIRC.Core.Progression.Core.Core.Progression.Core
+namespace CIRC.Core.Progression.Core
 {
     [Serializable]
     public struct MiniGameData

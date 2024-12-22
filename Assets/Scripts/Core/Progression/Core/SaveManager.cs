@@ -2,12 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using CIRC.Core.Progression.Core.Data;
-using CIRC.Core.Progression.Core.Enums;
+using CIRC.Core.Progression.Core.Core.Progression.Core;
 using LTX.Singletons;
 using UnityEngine;
 
-namespace CIRC.Core.Progression.Core.Core.Progression.Core
+namespace CIRC.Core.Progression.Core
 {
     public class SaveManager : MonoSingleton<SaveManager>
     {
@@ -91,14 +90,24 @@ namespace CIRC.Core.Progression.Core.Core.Progression.Core
                 if (runtimeData[i].MiniGameId == miniGameId)
                 {
                     runtimeData[i] = new MiniGameData(miniGameId, true, badgeDisplay, subject);
-                    SaveData();
                     return;
                 }
             }
 
             // If not found, add new entry
             runtimeData.Add(new MiniGameData(miniGameId, true, badgeDisplay, subject));
-            SaveData();
+        }
+
+        public void MarkMiniGameUncompleted(string miniGameId, BadgeData badgeDisplay, GameSubject subject)
+        {
+            for (int i = 0; i < runtimeData.Count; i++)
+            {
+                if (runtimeData[i].MiniGameId == miniGameId)
+                {
+                    runtimeData[i] = new MiniGameData(miniGameId, false, badgeDisplay, subject);
+                    return;
+                }
+            }
         }
 
         public bool IsMiniGameCompleted(string miniGameId)

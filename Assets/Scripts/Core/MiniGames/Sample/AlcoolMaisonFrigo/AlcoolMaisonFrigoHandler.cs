@@ -1,14 +1,13 @@
 using CIRC.Core.MiniGames.Core;
 using CIRC.Core.MiniGames.Core.Interfaces;
-using CIRC.Core.Progression.Core.Data;
+using CIRC.Core.Progression.Core;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace CIRC.Core.MiniGames.Sample.AlcoolMaisonFrigo
 {
     public class AlcoolMaisonFrigoHandler : MonoBehaviour, IMiniGameHandler<AlcoolMaisonFrigoContext>
     {
-        [FormerlySerializedAs("miniGameData")] [SerializeField] private MiniGameDataOLD miniGameDataOld;
+        [SerializeField] private MiniGameData miniGameData;
         [SerializeField] private AlcoolMaisonFrigoChoose alcoolMaisonFrigoChoose;
         
         private AlcoolMaisonFrigo miniGame;
@@ -23,7 +22,7 @@ namespace CIRC.Core.MiniGames.Sample.AlcoolMaisonFrigo
         {
             return new AlcoolMaisonFrigoContext
             {
-                MiniGameDataOld = miniGameDataOld,
+                MiniGameData = miniGameData,
                 alcoolMaisonFrigoChoose = alcoolMaisonFrigoChoose
             };
         }

@@ -1,14 +1,13 @@
 using CIRC.Core.MiniGames.Core;
 using CIRC.Core.MiniGames.Core.Interfaces;
-using CIRC.Core.Progression.Core.Data;
+using CIRC.Core.Progression.Core;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace CIRC.Core.MiniGames.Sample.AlcoolMaisonGlisser
 {
     public class AlcoolMaisonGlisserHandler : MonoBehaviour, IMiniGameHandler<AlcoolMaisonGlisserContext>
     {
-        [FormerlySerializedAs("miniGameData")] [SerializeField] private MiniGameDataOLD miniGameDataOld;
+        [SerializeField] private MiniGameData miniGameData;
         
         private AlcoolMaisonGlisser miniGame;
         
@@ -22,7 +21,7 @@ namespace CIRC.Core.MiniGames.Sample.AlcoolMaisonGlisser
         {
             return new AlcoolMaisonGlisserContext
             {
-                MiniGameDataOld = miniGameDataOld,
+                MiniGameData = miniGameData,
             };
         }
     }
