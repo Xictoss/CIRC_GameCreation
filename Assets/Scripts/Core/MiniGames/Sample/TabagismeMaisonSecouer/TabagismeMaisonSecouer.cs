@@ -1,5 +1,6 @@
 using CIRC.Core.Controllers;
 using CIRC.Core.MiniGames.Core;
+using CIRC.Core.Progression.Core;
 using UnityEngine;
 
 namespace CIRC.Core.MiniGames.Sample.TabagismeMaisonSecouer
@@ -29,9 +30,8 @@ namespace CIRC.Core.MiniGames.Sample.TabagismeMaisonSecouer
             
             if (isSuccess)
             {
-                context.miniGameData.SaveElement.IsComplete = true;
-                GameController.SaveData.SetPlayerCompleted(context.miniGameData.SaveElement);
-                GameController.SavePlayerProgressToPlayerPrefs();
+                SaveManager.Instance.MarkMiniGameCompleted(context.MiniGameData);
+                SaveManager.Instance.SaveData();
             }
 
             GameController.SceneController.LoadScene(GameController.Metrics.PlageScene);

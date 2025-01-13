@@ -1,13 +1,13 @@
 using CIRC.Core.MiniGames.Core;
 using CIRC.Core.MiniGames.Core.Interfaces;
-using CIRC.Core.Progression.Core.Data;
+using CIRC.Core.Progression.Core;
 using UnityEngine;
 
 namespace CIRC.Core.MiniGames.Sample.TabagismeMaisonSecouer
 {
     public class TabagismeMaisonSecouerHandler : MonoBehaviour, IMiniGameHandler<TabagismeMaisonSecouerContext>
     {
-        [SerializeField] private MiniGameData miniGameData;
+        [SerializeField] private MiniGameDataHolder miniGameData;
         [SerializeField] private Smoke[] smokes;
         
         private TabagismeMaisonSecouer miniGame;
@@ -22,7 +22,7 @@ namespace CIRC.Core.MiniGames.Sample.TabagismeMaisonSecouer
         {
             return new TabagismeMaisonSecouerContext
             {
-                miniGameData = miniGameData,
+                MiniGameData = miniGameData,
                 smokes = smokes,
             };
         }

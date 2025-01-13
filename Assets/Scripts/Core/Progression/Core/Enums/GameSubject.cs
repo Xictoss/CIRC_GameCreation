@@ -1,23 +1,22 @@
-namespace CIRC.Core.Progression.Core.Enums
+namespace CIRC.Core.Progression.Core
 {
-    [System.Serializable]
     public enum GameSubject
     {
-        Alimentation,
-        Hydratation,
-        AlcoolSodas,
-        
-        MedicamentsHormonaux,
-        Depistage,
-        HPV,
-        
-        ExpositionSoleil,
-        Tabagisme,
-        ZoneRadon,
-        RisquesChimique,
-        Allaitement,
-        
-        ActivitePhysique,
-        Surpoids,
+        Alimentation, 
+        Hydratation, 
+        AlcoolSodas, 
+     
+        MedicamentsHormonaux, 
+        Depistage, 
+        HPV, 
+     
+        ExpositionSoleil, 
+        Tabagisme, 
+        ZoneRadon, 
+        RisquesChimique, 
+        Allaitement, 
+     
+        ActivitePhysique, 
+        Surpoids, 
     }
 }

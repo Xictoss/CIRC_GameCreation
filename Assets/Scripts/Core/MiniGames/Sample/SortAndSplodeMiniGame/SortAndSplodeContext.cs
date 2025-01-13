@@ -1,11 +1,11 @@
 using CIRC.Core.MiniGames.Core.Interfaces;
-using CIRC.Core.Progression.Core.Data;
+using CIRC.Core.Progression.Core;
 
 namespace CIRC.Core.MiniGames.Sample.SortAndSplodeMiniGame
 {
     public struct SortAndSplodeContext : IMiniGameContext
     {
-        public MiniGameData MiniGameData;
+        public MiniGameDataHolder MiniGameData;
         public SortAndSplodeSpawner Spawner;
         public EntityManager EntityManager;
     }

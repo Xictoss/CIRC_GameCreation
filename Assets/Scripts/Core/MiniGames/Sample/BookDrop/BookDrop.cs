@@ -1,5 +1,6 @@
 using CIRC.Core.Controllers;
 using CIRC.Core.MiniGames.Core;
+using CIRC.Core.Progression.Core;
 
 namespace CIRC.Core.MiniGames.Sample.BookDrop
 {
@@ -18,9 +19,8 @@ namespace CIRC.Core.MiniGames.Sample.BookDrop
         {
             if (isSuccess)
             {
-                context.miniGameData.SaveElement.IsComplete = true;
-                GameController.SaveData.SetPlayerCompleted(context.miniGameData.SaveElement);
-                GameController.SavePlayerProgressToPlayerPrefs();
+                SaveManager.Instance.MarkMiniGameCompleted(context.MiniGameData);
+                SaveManager.Instance.SaveData();
             }
 
             GameController.SceneController.LoadScene(GameController.Metrics.PlageScene);

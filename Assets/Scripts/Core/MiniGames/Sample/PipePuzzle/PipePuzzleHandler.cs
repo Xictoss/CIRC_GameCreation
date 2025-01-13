@@ -1,13 +1,13 @@
 using CIRC.Core.MiniGames.Core;
 using CIRC.Core.MiniGames.Core.Interfaces;
-using CIRC.Core.Progression.Core.Data;
+using CIRC.Core.Progression.Core;
 using UnityEngine;
 
 namespace CIRC.Core.MiniGames.Sample.Core.MiniGames.Sample.PipePuzzle
 {
     public class PipePuzzleHandler : MonoBehaviour, IMiniGameHandler<PipePuzzleContext>
     {
-        [SerializeField] private MiniGameData miniGameData;
+        [SerializeField] private MiniGameDataHolder miniGameData;
         [SerializeField] private RotatingPiece[] pipes;
         
         private PipePuzzle pipePuzzle;
@@ -22,7 +22,7 @@ namespace CIRC.Core.MiniGames.Sample.Core.MiniGames.Sample.PipePuzzle
         {
             return new PipePuzzleContext
             {
-                miniGameData = miniGameData,
+                MiniGameData = miniGameData,
                 pipes = pipes,
             };
         }
