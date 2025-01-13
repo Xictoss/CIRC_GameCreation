@@ -105,7 +105,7 @@ namespace CIRC.Core.Progression.Core
             }
 
             // If not found, add new entry
-            runtimeData.Add(new MiniGameData(data.miniGameName, true, data.badgeDisplay, data.gameSubject));
+            //runtimeData.Add(new MiniGameData(data.miniGameName, true, data.badgeDisplay, data.gameSubject));
         }
 
         public void MarkMiniGameUncompleted(MiniGameDataHolder data)

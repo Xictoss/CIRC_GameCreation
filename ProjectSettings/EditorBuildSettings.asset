@@ -47,6 +47,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScenes/MiniGames/16-2_SortAndSplodeSample.unity
     guid: b557b8478166e08428be7521af19e10d
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MiniGames/TabagismeMaisonSecouer.unity
+    guid: 76f23035327c1e9448978270e4a5bee7
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 46661899d2991954fb32fdca03a8b7e5, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: f120053cde1ae38408022f418871162c, type: 2}
