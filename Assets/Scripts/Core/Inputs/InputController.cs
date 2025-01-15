@@ -97,6 +97,7 @@ namespace CIRC.Core.Inputs
                     {
                         Vector2 direction = swipeDelta.normalized;
                         OnSwipeInput?.Invoke(direction);
+                        Debug.Log("swipe");
                     }
                 }
                 isSwiping = false;
@@ -145,7 +146,7 @@ namespace CIRC.Core.Inputs
         
         public RaycastHit2D RayCastToWorld(string layerMaskName)
         {
-            Ray ray = Camera.main!.ScreenPointToRay(ScreenTouchPosition);
+            Ray ray = UnityEngine.Camera.main!.ScreenPointToRay(ScreenTouchPosition);
             RaycastHit2D raycastHit = Physics2D.Raycast(ray.origin, ray.direction, 100f, LayerMask.GetMask(layerMaskName));
             return raycastHit;
         }

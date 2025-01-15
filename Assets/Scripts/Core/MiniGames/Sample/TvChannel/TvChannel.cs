@@ -19,8 +19,8 @@ namespace CIRC.Core.MiniGames.Sample.TvChannel
         {
             if (isSuccess)
             {
-                SaveManager.Instance.MarkMiniGameCompleted(context.MiniGameData);
-                SaveManager.Instance.SaveData();
+                GameController.ProgressionManager.CompleteMiniGame(context.MiniGameData.GUID);
+                GameController.SaveProgress();
             }
 
             GameController.SceneController.LoadScene(GameController.Metrics.PlageScene);

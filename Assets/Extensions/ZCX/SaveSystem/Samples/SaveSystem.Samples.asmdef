@@ -1,11 +1,9 @@
 {
-    "name": "CIRC.Core.Progression.Editor",
-    "rootNamespace": "CIRC.Core.Progression.Editor",
-    "references": [],
+    "name": "SaveSystem.Samples",
+    "rootNamespace": "SaveSystem.Samples",
+    "references": ["GUID:3e712867162a60e44a30faa129258f36"],
     "includePlatforms": [],
-    "excludePlatforms": [
-        "Editor"
-    ],
+    "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
     "precompiledReferences": [],

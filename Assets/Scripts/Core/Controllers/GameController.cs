@@ -1,7 +1,7 @@
 using System;
-using System.Collections.Generic;
 using CIRC.Core.Progression.Core;
 using LTX.ChanneledProperties;
+using SaveSystem.Core;
 using UnityEngine;
 
 namespace CIRC.Core.Controllers
@@ -9,6 +9,7 @@ namespace CIRC.Core.Controllers
     public static class GameController
     {
         public static Logger Logger { get; private set; }
+        public static ProgressionManager ProgressionManager { get; private set; }
         public static SceneController SceneController { get; private set; }
         private static GameMetrics gameMetrics;
         public static GameMetrics Metrics
@@ -38,15 +39,18 @@ namespace CIRC.Core.Controllers
             SceneController = new SceneController();
             Logger = new Logger();
             
+            ProgressionManager = new ProgressionManager();
+            Save.AddListener(ProgressionManager);
+            Save.SetSaveManager(new PlayerPrefsSaveManager());
+            
             SetupTimeScale();
-            //LoadPlayerProgressFromPlayerPrefsOLD();
             LoadProgress();
         }
 
         private static void UnLoad()
         {
             SaveProgress();
-            //SavePlayerProgressToPlayerPrefsOLD();
+            Save.RemoveListener(ProgressionManager);
         }
 
         #region Progress Functions
@@ -54,8 +58,11 @@ namespace CIRC.Core.Controllers
         public static void SaveProgress()
         {
             Debug.Log("Saving player progress");
-            
-            SaveManager.Instance.SaveData();
+
+            Save.Push<GameSave, GameSaveSettings>(new GameSaveSettings()
+            {
+                prefName = "Player"
+            });
             
             GameSaved?.Invoke();
         }
@@ -63,20 +70,10 @@ namespace CIRC.Core.Controllers
         private static void LoadProgress()
         {
             Debug.Log("Loading player progress");
-            
-            SaveManager.Instance.LoadData();
-        }
-
-        public static void DeleteProgress()
-        {
-            List<MiniGameData> progress = SaveManager.Instance.GetAllMiniGameData();
-
-            foreach (MiniGameData element in progress)
+            Save.Pull<GameSave, GameSaveSettings>(out _, new GameSaveSettings()
             {
-                SaveManager.Instance.MarkMiniGameStructUncompleted(element);
-            }
-            
-            SaveProgress();
+                prefName = "Player"
+            });
         }
         
         public static void QuitGame()

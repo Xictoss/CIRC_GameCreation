@@ -1,4 +1,6 @@
+using System;
 using CIRC.Core.Progression.Core.Core.Progression.Core;
+using NaughtyAttributes;
 using UnityEngine;
 
 namespace CIRC.Core.Progression.Core
@@ -9,5 +11,22 @@ namespace CIRC.Core.Progression.Core
         public string miniGameName;
         public GameSubject gameSubject;
         public BadgeData badgeDisplay;
+        [HideInInspector]
+        public string GUID;
+
+        private void Awake()
+        {
+            if (string.IsNullOrEmpty(GUID))
+            {
+                GUID = Guid.NewGuid().ToString();
+                Debug.Log($"New guid : {GUID} for {miniGameName}");
+            }
+        }
+        
+        [Button]
+        private void OnValidate()
+        {
+            Awake();
+        }
     }
 }

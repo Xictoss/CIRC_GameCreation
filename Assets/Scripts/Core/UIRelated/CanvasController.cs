@@ -78,19 +78,19 @@ namespace NomDuJeu.Core
             //sceneIndex.LoadScene();
         }
 
-        public void OpenURL()
+        public void OpenCIRC()
         {
             Application.OpenURL("https://www.iarc.who.int/fr/");
+        }
+
+        public void OpenNewsletter()
+        {
+            Application.OpenURL("https://iarc.us16.list-manage.com/subscribe/?u=c0b11667efc4468c0e8892565&id=787135f357");
         }
 
         public void QuitGame()
         {
             GameController.QuitGame();
-        }
-
-        public void ResetProgress()
-        {
-            GameController.DeleteProgress();
         }
     }
 }
