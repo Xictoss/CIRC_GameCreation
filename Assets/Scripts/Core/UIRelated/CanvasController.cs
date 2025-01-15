@@ -92,10 +92,5 @@ namespace NomDuJeu.Core
         {
             GameController.QuitGame();
         }
-
-        public void ResetProgress()
-        {
-            GameController.DeleteProgress();
-        }
     }
 }

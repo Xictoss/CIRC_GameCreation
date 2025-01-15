@@ -9,7 +9,6 @@ namespace CIRC.Core.UIRelated
         [SerializeField] private Image[] _badgesDisplay;
         
         [SerializeField] private Sprite _badgeNotCompleted;
-        private MiniGameData[] _miniGameDatas;
 
         private void OnEnable()
         {
@@ -23,14 +22,6 @@ namespace CIRC.Core.UIRelated
             //_miniGameDatas = Resources.LoadAll<MiniGameData>("SaveScriptables/MiniGames");
             int total = 0;
             
-            for (int i = 0; i < _miniGameDatas.Length; i++)
-            {
-                if (_miniGameDatas[i].IsCompleted)
-                {
-                    _badgesDisplay[i].sprite = _miniGameDatas[i].BadgeDisplay.displayImage;
-                    total++;
-                }
-            }
             
             Debug.Log($"Mini-games Finished : {total}");
         }

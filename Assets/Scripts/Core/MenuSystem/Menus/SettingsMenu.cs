@@ -19,11 +19,6 @@ namespace CIRC.Core.MenuSystem.Menus
         {
             GameController.QuitGame();
         }
-
-        public void ResetProgress()
-        {
-            GameController.DeleteProgress();
-        }
         
         public void SetVolumeState()
         {

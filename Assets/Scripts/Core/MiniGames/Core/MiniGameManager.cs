@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using CIRC.Core.MiniGames.Core.Interfaces;
 using LTX.Singletons;
 using LTX.Tools;
-using UnityEngine;
 
 namespace CIRC.Core.MiniGames.Core
 {

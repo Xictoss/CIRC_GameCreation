@@ -18,9 +18,9 @@ namespace CIRC.Core
 
         public static Vector3 FromScreenPointToWorldPoint(this Vector3 screenPosition)
         {
-            if (Camera.main)
+            if (UnityEngine.Camera.main)
             {
-                Vector3 worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
+                Vector3 worldPosition = UnityEngine.Camera.main.ScreenToWorldPoint(screenPosition);
                 worldPosition = new Vector3(worldPosition.x, worldPosition.y, 0f);
                 return worldPosition;
             }
