@@ -1,0 +1,21 @@
+{
+    "name": "CIRC.Core.MiniGames.Core",
+    "rootNamespace": "CIRC.Core.MiniGames.Core",
+    "references": [
+        "GUID:6f42ce528ce4a90448281858b0f6cc42",
+        "GUID:7f6fdd18b438ff245b7f869ddfb77b44",
+        "GUID:218d83f778a79c74791573f907cb34c7",
+        "GUID:fe1b45415d9d9ec49a8b56a12c44c605",
+        "GUID:8b2ad7dbf31c5174bbf04522b10839e6",
+        "GUID:13aef4979092d5042935a1e9f6587113"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,20 @@
+{
+    "name": "CIRC.Core.Controllers",
+    "rootNamespace": "CIRC.Core.Controllers",
+    "references": [
+        "GUID:c08e6420a9402a248878197da69c4d9a",
+        "GUID:776d03a35f1b52c4a9aed9f56d7b4229",
+        "GUID:7f6fdd18b438ff245b7f869ddfb77b44",
+        "GUID:b76249ac1647bdd47a4445cdf3fd127a",
+        "GUID:3e712867162a60e44a30faa129258f36"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

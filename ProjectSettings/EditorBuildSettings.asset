@@ -6,11 +6,54 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Lois_Test/ZircliX.unity
-    guid: 77de1baaa8e29044d88d826b4dec1edf
+    path: Assets/Scenes/MainScenes/MainMenu.unity
+    guid: 5a7482f936737ce478c44ba6194d8bba
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/Levels/1_PlageScene.unity
+    guid: d32585711773aa74aa160bd8e04e4c14
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/Levels/2_MaisonScene.unity
+    guid: f80b0e6dfd16ab04e91f88e81ab4189d
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/Levels/3_ParcScene.unity
+    guid: f07f8c1d778ef70458d1e7bd6fa75068
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/Levels/4_LotissementScene.unity
+    guid: 1bb59939e1338c74d8af03e66fdd3839
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/Levels/5_EntrepriseScene.unity
+    guid: 302766442c6b1164dacba20848a91cd1
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/Levels/6_VilleScene.unity
+    guid: ff5f0a10577364446a22986cddf07f7d
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/Levels/7_StadeScene.unity
+    guid: 822cd96448fa04a46b6ef81badd63599
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/Levels/8_CliniqueScene.unity
+    guid: 6b47cf3037fd2e540a62feda844e4064
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MiniGames/ActivitePlageNager.unity
+    guid: 31c0e57efbe73474ca93483796b188df
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MiniGames/HydrationMaisonGlisser.unity
+    guid: 47552c85dbc78b540ac51b5181857b5b
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MiniGames/HydrationMaisonTaper.unity
+    guid: 81c2ded4a0e67ab479b1bbbd638e8060
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MiniGames/ActiviteMaisonDrag.unity
+    guid: 9b2a8c9cf3fa5414c8801bd63484cddb
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MiniGames/16-2_SortAndSplodeSample.unity
+    guid: b557b8478166e08428be7521af19e10d
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MiniGames/TabagismeMaisonSecouer.unity
+    guid: 76f23035327c1e9448978270e4a5bee7
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 46661899d2991954fb32fdca03a8b7e5, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: f120053cde1ae38408022f418871162c, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 9571c19b02cc7ad4d8e80a3f319ebacf, type: 2}
+    com.unity.input.settings: {fileID: 11400000, guid: b590cab584072b94a94bbb2d79c8fe47, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: ef207f88e1fbaa64f9cf29d5526dd1c2, type: 3}
   m_UseUCBPForAssetBundles: 0
