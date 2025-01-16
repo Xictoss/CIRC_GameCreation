@@ -1,7 +1,6 @@
 using System;
 using System.IO;
-using CIRC.Core.Progression.Core;
-using CIRC.Core.Progression.Core.Core.Progression.Core;
+using CIRC.Progression;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
