@@ -2,7 +2,6 @@
     "name": "CIRC.MiniGames.Core",
     "rootNamespace": "CIRC.MiniGames.Core",
     "references": [
-        "GUID:6f42ce528ce4a90448281858b0f6cc42",
         "GUID:7f6fdd18b438ff245b7f869ddfb77b44",
         "GUID:218d83f778a79c74791573f907cb34c7"
     ],
