@@ -16,11 +16,11 @@ namespace CIRC
             return localPosition;
         }
 
-        public static Vector3 FromScreenPointToWorldPoint(this Vector3 screenPosition)
+        public static Vector3 FromScreenPointToWorldPoint(Vector3 screenPosition)
         {
-            if (UnityEngine.Camera.main)
+            if (Camera.main)
             {
-                Vector3 worldPosition = UnityEngine.Camera.main.ScreenToWorldPoint(screenPosition);
+                Vector3 worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
                 worldPosition = new Vector3(worldPosition.x, worldPosition.y, 0f);
                 return worldPosition;
             }

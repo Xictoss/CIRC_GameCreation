@@ -25,7 +25,8 @@ namespace CIRC.Inputs
         private Vector3 lastAcceleration;
         private float lastShakeTime;
         
-        public event Action<bool> OnClickInput;
+        public event Action<InputAction.CallbackContext> OnPrimaryClickInput;
+        public event Action<InputAction.CallbackContext> OnSecondClickInput;
         public event Action<float> OnLongClickInput;
         public event Action<bool> OnDoubleClickInput;
         public event Action<Vector2> OnSwipeInput;
@@ -33,6 +34,9 @@ namespace CIRC.Inputs
         
         public Vector3 WorldTouchPosition { get; private set; }
         public Vector3 ScreenTouchPosition { get; private set; }
+        
+        public Vector3 SecondWorldTouchPosition { get; private set; }
+        public Vector3 SecondScreenTouchPosition { get; private set; }
 
         protected override void Awake()
         {
@@ -45,12 +49,19 @@ namespace CIRC.Inputs
         {
             Vector2 touchInput = context.ReadValue<Vector2>();
             ScreenTouchPosition = new Vector3(touchInput.x, touchInput.y, 0f);
-            WorldTouchPosition = ScreenTouchPosition.FromScreenPointToWorldPoint();
+            WorldTouchPosition = StaticFunctions.FromScreenPointToWorldPoint(ScreenTouchPosition);
+        }
+        
+        public void GetSecondTouchPositionInput(InputAction.CallbackContext context)
+        {
+            Vector2 touchInput = context.ReadValue<Vector2>();
+            SecondScreenTouchPosition = new Vector3(touchInput.x, touchInput.y, 0f);
+            SecondWorldTouchPosition = StaticFunctions.FromScreenPointToWorldPoint(ScreenTouchPosition);
         }
         
         public void GetTouchInput(InputAction.CallbackContext context)
         {
-            OnClickInput?.Invoke(context.performed);
+            OnPrimaryClickInput?.Invoke(context);
             
             if (context.started)
             {
@@ -60,6 +71,11 @@ namespace CIRC.Inputs
             {
                 OnLongClickInput?.Invoke(Time.time - touchStartTime);
             }
+        }
+        
+        public void GetSecondTouchInput(InputAction.CallbackContext context)
+        {
+            OnSecondClickInput?.Invoke(context);
         }
         
         public void GetDoubleTouchInput(InputAction.CallbackContext context)
@@ -88,26 +104,14 @@ namespace CIRC.Inputs
             }
             else if (context.canceled)
             {
-                if (isSwiping)
-                {
-                    Vector2 endPosition = ScreenTouchPosition;
-                    Vector2 swipeDelta = endPosition - startPosition;
-
-                    if (swipeDelta.magnitude > swipeThreshold)
-                    {
-                        Vector2 direction = swipeDelta.normalized;
-                        OnSwipeInput?.Invoke(direction);
-                        Debug.Log("swipe");
-                    }
-                }
                 isSwiping = false;
             }
         }
         
         private void OnEnable()
         {
-
             accelerometerAction = inputActions.actionMaps[0].FindAction("Shake");
+            
             if (accelerometerAction != null)
             {
                 accelerometerAction.Enable();
@@ -127,6 +131,31 @@ namespace CIRC.Inputs
         public InputActionAsset inputActions;
         private InputAction accelerometerAction;
         private void Update()
+        {
+            AccelerometerInput();
+            Swipe();
+        }
+
+        private void Swipe()
+        {
+            if (isSwiping)
+            {
+                Vector2 endPosition = ScreenTouchPosition;
+                Vector2 swipeDelta = endPosition - startPosition;
+
+                if (swipeDelta.magnitude > swipeThreshold)
+                {
+                    Vector2 direction = swipeDelta.normalized;
+                    OnSwipeInput?.Invoke(direction);
+                }
+            }
+            else
+            {
+                OnSwipeInput?.Invoke(Vector2.zero);
+            }
+        }
+
+        private void AccelerometerInput()
         {
             Vector3 currentAcceleration = accelerometerAction.ReadValue<Vector3>();
             Vector3 accelerationDelta = currentAcceleration - lastAcceleration;
