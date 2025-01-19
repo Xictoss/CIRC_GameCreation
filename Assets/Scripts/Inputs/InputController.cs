@@ -33,10 +33,10 @@ namespace CIRC.Inputs
         public event Action<Vector3> OnShakeInput;
         
         public Vector3 WorldTouchPosition { get; private set; }
-        public Vector3 ScreenTouchPosition { get; private set; }
+        public Vector2 ScreenTouchPosition { get; private set; }
         
         public Vector3 SecondWorldTouchPosition { get; private set; }
-        public Vector3 SecondScreenTouchPosition { get; private set; }
+        public Vector2 SecondScreenTouchPosition { get; private set; }
 
         protected override void Awake()
         {
@@ -48,15 +48,15 @@ namespace CIRC.Inputs
         public void GetTouchPositionInput(InputAction.CallbackContext context)
         {
             Vector2 touchInput = context.ReadValue<Vector2>();
-            ScreenTouchPosition = new Vector3(touchInput.x, touchInput.y, 0f);
+            ScreenTouchPosition = touchInput;
             WorldTouchPosition = StaticFunctions.FromScreenPointToWorldPoint(ScreenTouchPosition);
         }
         
         public void GetSecondTouchPositionInput(InputAction.CallbackContext context)
         {
             Vector2 touchInput = context.ReadValue<Vector2>();
-            SecondScreenTouchPosition = new Vector3(touchInput.x, touchInput.y, 0f);
-            SecondWorldTouchPosition = StaticFunctions.FromScreenPointToWorldPoint(ScreenTouchPosition);
+            SecondScreenTouchPosition = touchInput;
+            SecondWorldTouchPosition = StaticFunctions.FromScreenPointToWorldPoint(SecondScreenTouchPosition);
         }
         
         public void GetTouchInput(InputAction.CallbackContext context)
@@ -171,13 +171,6 @@ namespace CIRC.Inputs
             }
             
             lastAcceleration = currentAcceleration;
-        }
-        
-        public RaycastHit2D RayCastToWorld(string layerMaskName)
-        {
-            Ray ray = UnityEngine.Camera.main!.ScreenPointToRay(ScreenTouchPosition);
-            RaycastHit2D raycastHit = Physics2D.Raycast(ray.origin, ray.direction, 100f, LayerMask.GetMask(layerMaskName));
-            return raycastHit;
         }
     }
 }

@@ -128,7 +128,7 @@
                 {
                     "name": "",
                     "id": "b9aca77d-ed3c-43d9-9dfc-daf199ac57a8",
-                    "path": "<Touchscreen>/touch0/position",
+                    "path": "<Touchscreen>/touch1/position",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
