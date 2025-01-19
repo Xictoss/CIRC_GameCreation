@@ -34,7 +34,7 @@ public class MiniGameGenerator : EditorWindow
         if (GUILayout.Button("Generate Mini-Game Scene")) GenerateMiniGameScene();
     }
 
-    [MenuItem("Tools/Mini-Game Generator")]
+    [MenuItem("Tools/ZCX/Mini-Game Generator")]
     public static void ShowWindow()
     {
         GetWindow<MiniGameGenerator>("Mini-Game Generator");
@@ -49,7 +49,7 @@ public class MiniGameGenerator : EditorWindow
         newMiniGameData.badgeDisplay = gameBadge;
 
         // Save it as an asset in the project
-        string path = $"Assets/Resources/SaveScriptables/MiniGames/{miniGameName}.asset";
+        string path = $"Assets/Resources/Games/{miniGameName}.asset";
         AssetDatabase.CreateAsset(newMiniGameData, path);
         AssetDatabase.SaveAssets();
 
@@ -62,7 +62,7 @@ public class MiniGameGenerator : EditorWindow
 
     private void GenerateMiniGameFiles()
     {
-        string rootPath = Path.Combine(Application.dataPath, "Scripts/Core/MiniGames/Sample", miniGameName);
+        string rootPath = Path.Combine(Application.dataPath, "Scripts/MiniGames/Sample", miniGameName);
 
         // Create the directory
         if (!Directory.Exists(rootPath)) Directory.CreateDirectory(rootPath);
@@ -118,10 +118,11 @@ public class MiniGameGenerator : EditorWindow
 
     private string GetGameControllerTemplate()
     {
-        return @"using CIRC.Core.Controllers;
-using CIRC.Core.MiniGames.Core;
+        return @"
+using CIRC.Controllers;
+using CIRC.MiniGames.Core;
 
-namespace CIRC.Core.MiniGames.Sample.{CLASS_NAME}
+namespace CIRC.MiniGames.Sample
 {
     public class {CLASS_NAME} : MiniGame<{CLASS_NAME}Context>
     {
@@ -138,9 +139,8 @@ namespace CIRC.Core.MiniGames.Sample.{CLASS_NAME}
         {
             if (isSuccess)
             {
-                context.miniGameData.SaveElement.IsComplete = true;
-                GameController.SaveData.SetPlayerCompleted(context.miniGameData.SaveElement);
-                GameController.SavePlayerProgressToPlayerPrefs();
+                GameController.ProgressionManager.CompleteMiniGame(context.miniGameData.GUID);
+                GameController.SaveProgress();
             }
 
             GameController.SceneController.LoadScene(GameController.Metrics.PlageScene);
@@ -151,16 +151,17 @@ namespace CIRC.Core.MiniGames.Sample.{CLASS_NAME}
 
     private string GetGameHandlerTemplate()
     {
-        return @"using CIRC.Core.MiniGames.Core;
-using CIRC.Core.MiniGames.Core.Interfaces;
-using CIRC.Core.Progression.Core.Data;
+        return @"
+using CIRC.MiniGames.Core;
+using CIRC.MiniGames.Core.Interfaces;
+using CIRC.Progression;
 using UnityEngine;
 
-namespace CIRC.Core.MiniGames.Sample.{CLASS_NAME}
+namespace CIRC.MiniGames.Sample
 {
     public class {CLASS_NAME}Handler : MonoBehaviour, IMiniGameHandler<{CLASS_NAME}Context>
     {
-        [SerializeField] private MiniGameData miniGameData;
+        [SerializeField] private MiniGameDataHolder miniGameData;
         
         private {CLASS_NAME} miniGame;
         
@@ -183,14 +184,15 @@ namespace CIRC.Core.MiniGames.Sample.{CLASS_NAME}
 
     private string GetGameContextTemplate()
     {
-        return @"using CIRC.Core.MiniGames.Core.Interfaces;
-using CIRC.Core.Progression.Core.Data;
+        return @"
+using CIRC.MiniGames.Core.Interfaces;
+using CIRC.Progression;
 
-namespace CIRC.Core.MiniGames.Sample.{CLASS_NAME}
+namespace CIRC.MiniGames.Sample
 {
     public struct {CLASS_NAME}Context : IMiniGameContext
     {
-        public MiniGameData miniGameData;
+        public MiniGameDataHolder miniGameData;
     }
 }".Replace("{CLASS_NAME}", miniGameName);
     }
