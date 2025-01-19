@@ -11,7 +11,7 @@ namespace CIRC.MiniGames.Sample
 
         public override bool Refresh(ref TvChannelContext context)
         {
-            return false;
+            return context.IsArrived;
         }
 
         public override void End(ref TvChannelContext context, bool isSuccess)
