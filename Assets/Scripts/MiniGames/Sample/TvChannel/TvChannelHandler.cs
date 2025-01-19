@@ -8,6 +8,7 @@ namespace CIRC.MiniGames.Sample
     public class TvChannelHandler : MonoBehaviour, IMiniGameHandler<TvChannelContext>
     {
         [SerializeField] private MiniGameDataHolder miniGameData;
+        [SerializeField] private TV tv;
         
         private TvChannel miniGame;
         
@@ -22,12 +23,8 @@ namespace CIRC.MiniGames.Sample
             return new TvChannelContext
             {
                 MiniGameData = miniGameData,
+                IsArrived = tv.IsArrived,
             };
-        }
-
-        public void Initialize(MiniGameDataHolder miniGameData)
-        {
-            this.miniGameData = miniGameData;
         }
     }
 }
