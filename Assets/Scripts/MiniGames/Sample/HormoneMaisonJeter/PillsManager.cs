@@ -40,8 +40,6 @@ namespace CIRC.MiniGames.Sample
 
         private void OnPillsEnd(Pills pills)
         {
-            Debug.Log("Receive Event");
-
             pillsDict[pills].listPills.color = Color.red;
             
             endPills.Add(pills);
