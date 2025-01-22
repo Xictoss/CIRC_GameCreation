@@ -1,4 +1,5 @@
 using CIRC.Inputs;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
@@ -14,7 +15,7 @@ namespace CIRC.Player
         [Header("Drag Parameters")]
         [SerializeField, Range(0, 1)] private float dragSmoothSpeed;
         [SerializeField] private Vector2 minMaxX, minMaxY;
-        private bool isDragging;
+        private InputAction.CallbackContext dragContext;
         
         [Header("Zoom Parameters")]
         [SerializeField, Range(0, 1)] private float zoomSmoothSpeed;
@@ -43,7 +44,6 @@ namespace CIRC.Player
         {
             if (context.started) origin = GetPrimaryWorldPosition;
 
-            isDragging = context.started || context.performed;
             primaryTouch = context.started || context.performed;
         }
         
@@ -65,21 +65,24 @@ namespace CIRC.Player
             if (TwoTouch) return;
 
             //Calculate
-            if (isDragging) 
+            if (primaryTouch) 
             {
                 if (isZooming) 
                 {
                     origin = GetPrimaryWorldPosition;
-                    isZooming = false;
                 }
-                difference = GetPrimaryWorldPosition - camHolder.transform.localPosition;
+                
+                difference = origin - camHolder.transform.localPosition;
             }
             
-            //Move
+            //Move | way n°1
             camHolder.transform.localPosition = Vector3.Lerp(
                 camHolder.transform.localPosition, 
                 origin - difference, 
-                1 - Mathf.Exp(- dragSmoothSpeed));
+                dragSmoothSpeed);
+          
+            //Move | way n°2
+            //camHolder.transform.DOLocalMove(origin - difference, dragSmoothSpeed);
             
             //Clamp
             camHolder.transform.localPosition = new Vector3(
@@ -110,7 +113,7 @@ namespace CIRC.Player
                     cam.orthographicSize = Mathf.Lerp(
                         cam.orthographicSize,
                         cam.orthographicSize - deltaDistance,
-                        1 - Mathf.Exp(- zoomSmoothSpeed));
+                        zoomSmoothSpeed);
                     
                     // Clamp zoom 
                     cam.orthographicSize = Mathf.Clamp(
