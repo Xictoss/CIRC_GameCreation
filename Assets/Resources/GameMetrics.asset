@@ -26,6 +26,12 @@ MonoBehaviour:
   <PipePuzzle_Scene>k__BackingField: 11
   <BookDrop_Scene>k__BackingField: 12
   <SortAndSplode_Scene>k__BackingField: 13
+  <MiniGamePopUpMenu>k__BackingField: MiniGamePopUpMenu
+  <BooksMenu>k__BackingField: BooksMenu
+  <LevelsMenu>k__BackingField: LevelsMenu
+  <MiniGamesMenu>k__BackingField: MiniGamesMenu
+  <SettingsMenu>k__BackingField: SettingsMenu
+  <PauseMenu>k__BackingField: PauseMenu
   <SortAndSplode_SpawnNumber>k__BackingField: 10
   <SortAndSplode_SpawnCooldown>k__BackingField: 0.75
   <RunAndDrink_DrinksNumber>k__BackingField: 3

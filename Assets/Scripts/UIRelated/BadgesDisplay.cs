@@ -1,3 +1,4 @@
+using CIRC.Controllers;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +9,8 @@ namespace CIRC.UIRelated
         [SerializeField] private Image[] _badgesDisplay;
         
         [SerializeField] private Sprite _badgeNotCompleted;
-
+        [SerializeField] private Sprite _badgeCompleted;
+        
         private void OnEnable()
         {
             RefreshUI();
@@ -16,20 +18,21 @@ namespace CIRC.UIRelated
 
         private void RefreshUI()
         {
-            SetAllLocked();
-            
-            //_miniGameDatas = Resources.LoadAll<MiniGameData>("SaveScriptables/MiniGames");
-            int total = 0;
-            
-            
-            Debug.Log($"Mini-games Finished : {total}");
-        }
-
-        private void SetAllLocked()
-        {
-            foreach (Image badge in _badgesDisplay)
+            int index = 0;
+            foreach (var kvp in GameController.ProgressionManager.miniGameStatus)
             {
-                badge.sprite = _badgeNotCompleted;
+                Image badge = _badgesDisplay[index];
+                
+                if (kvp.Value) //MiniGame completed
+                {
+                    badge.sprite = _badgeCompleted;
+                }
+                else
+                {
+                    badge.sprite = _badgeNotCompleted;
+                }
+                
+                index++;
             }
         }
     }

@@ -4,10 +4,14 @@ using CIRC.MiniGames.Core.Interfaces;
 using LTX.ChanneledProperties;
 using UnityEngine;
 
-namespace CIRC.MenuSystem.Menus
+namespace CIRC.MenuSystem
 {
-    public class PauseMenu : MonoBehaviour
+    public class PauseMenu : BaseMenu
     {
+        public override string MenuName => GameController.Metrics.PauseMenu;
+        public override MenuPriority Priority => MenuPriority.High;
+        public override GameObject Object => gameObject;
+        
         private IMiniGameRunner _miniGameRunner;
 
         private void OnEnable()
@@ -24,6 +28,16 @@ namespace CIRC.MenuSystem.Menus
         public void LeaveMiniGame()
         {
             MiniGameManager.Instance.StopMiniGame(_miniGameRunner.MiniGame, false);
+        }
+
+        public override void OpenMenu()
+        {
+            gameObject.SetActive(true);
+        }
+
+        public override void CloseMenu()
+        {
+            gameObject.SetActive(false);
         }
     }
 }

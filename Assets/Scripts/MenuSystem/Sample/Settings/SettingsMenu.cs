@@ -1,10 +1,9 @@
 using CIRC.Controllers;
 using UnityEngine;
-using CIRC;
 
-namespace CIRC.MenuSystem.Menus
+namespace CIRC.MenuSystem
 {
-    public class SettingsMenu : MonoBehaviour
+    public class SettingsMenu : BaseMenu
     {
         public void ShareGame()
         {
@@ -25,5 +24,19 @@ namespace CIRC.MenuSystem.Menus
         {
             
         }
+
+        public override void OpenMenu()
+        {
+            gameObject.SetActive(true);
+        }
+
+        public override void CloseMenu()
+        {
+            gameObject.SetActive(false);
+        }
+
+        public override string MenuName => GameController.Metrics.SettingsMenu;
+        public override MenuPriority Priority => MenuPriority.Medium;
+        public override GameObject Object => gameObject;
     }
 }

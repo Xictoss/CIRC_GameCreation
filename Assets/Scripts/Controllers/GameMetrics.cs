@@ -50,6 +50,23 @@ namespace CIRC.Controllers
         #endregion
         
         #endregion
+
+        #region Menu Names
+
+        [field: SerializeField, Foldout("Menu Names")]
+        public string MiniGamePopUpMenu { get; private set; }
+        [field: SerializeField, Foldout("Menu Names")]
+        public string BooksMenu { get; private set; }
+        [field: SerializeField, Foldout("Menu Names")]
+        public string LevelsMenu { get; private set; }
+        [field: SerializeField, Foldout("Menu Names")]
+        public string MiniGamesMenu { get; private set; }
+        [field: SerializeField, Foldout("Menu Names")]
+        public string SettingsMenu { get; private set; }
+        [field: SerializeField, Foldout("Menu Names")]
+        public string PauseMenu { get; private set; }
+
+        #endregion
         
         [field: SerializeField, Foldout("MiniGames/SortAndSplode")]
         public int SortAndSplode_SpawnNumber { get; private set; }

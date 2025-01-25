@@ -7,7 +7,7 @@ namespace CIRC.Progression
     public class ProgressionManager : ISaveListener<GameSave>
     {
         public int Priority => 1;
-        private Dictionary<string, bool> miniGameStatus = new Dictionary<string, bool>();
+        public Dictionary<string, bool> miniGameStatus { get; private set; } = new Dictionary<string, bool>();
         
         public void Write(ref GameSave saveFile)
         {
