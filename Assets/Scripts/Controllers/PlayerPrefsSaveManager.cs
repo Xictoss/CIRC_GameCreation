@@ -30,7 +30,7 @@ namespace CIRC.Controllers
         {
             if (settings is GameSaveSettings saveSettings)
             {
-                string json = JsonUtility.ToJson(save);
+                string json = JsonUtility.ToJson(save, true);
                 PlayerPrefs.SetString(saveSettings.prefName, json);
             }
 

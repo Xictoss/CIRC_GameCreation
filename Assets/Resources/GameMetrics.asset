@@ -21,11 +21,20 @@ MonoBehaviour:
   <VilleScene>k__BackingField: 6
   <StadeUniversitaireScene>k__BackingField: 7
   <CliniqueScene>k__BackingField: 8
-  <GoToSwim_Scene>k__BackingField: 9
-  <RunAndDrink_Scene>k__BackingField: 10
-  <PipePuzzle_Scene>k__BackingField: 11
-  <BookDrop_Scene>k__BackingField: 12
-  <SortAndSplode_Scene>k__BackingField: 13
+  <ActivitePlageNager>k__BackingField: 9
+  <AlccolPlageCocktail>k__BackingField: 10
+  <HydratationMaisonLabyrinthe>k__BackingField: 18
+  <HydratationMaisonCanalisation>k__BackingField: 17
+  <TabagismeMaisonSecouer>k__BackingField: 19
+  <ActiviteMaisonMagazine>k__BackingField: 11
+  <ActiviteMaisonTele>k__BackingField: 12
+  <AlcoolMaisonFrigo>k__BackingField: 14
+  <AlcoolMaisonBoisson>k__BackingField: 13
+  <HormoneMaisonJeter>k__BackingField: 16
+  <AlimentationMaisonRadio>k__BackingField: 15
+  <ChimiqueEntrepriseTaper>k__BackingField: 21
+  <ActiviteEntrepriseDrag>k__BackingField: 20
+  <VaccinationEntrepriseDrag>k__BackingField: 22
   <MiniGamePopUpMenu>k__BackingField: MiniGamePopUpMenu
   <BooksMenu>k__BackingField: BooksMenu
   <LevelsMenu>k__BackingField: LevelsMenu
