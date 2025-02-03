@@ -3,7 +3,7 @@ using CIRC.MiniGames.Core;
 
 namespace CIRC.MiniGames.Sample
 {
-    public class AlccolPlageCocktail : MiniGame<ActiviteMaisonMagazineContext>
+    public class ActiviteMaisonMagazine : MiniGame<ActiviteMaisonMagazineContext>
     {
         public override void Begin(ref ActiviteMaisonMagazineContext context)
         {

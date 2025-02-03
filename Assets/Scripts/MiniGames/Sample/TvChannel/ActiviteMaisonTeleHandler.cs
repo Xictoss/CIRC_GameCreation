@@ -5,25 +5,25 @@ using UnityEngine;
 
 namespace CIRC.MiniGames.Sample
 {
-    public class AlccolPlageCocktailHandler : MonoBehaviour, IMiniGameHandler<ActiviteMaisonMagazineContext>
+    public class ActiviteMaisonTeleHandler : MonoBehaviour, IMiniGameHandler<ActiviteMaisonTeleContext>
     {
         [SerializeField] private MiniGameDataHolder miniGameData;
-        [SerializeField] private Water water;
-
-        private ActiviteMaisonMagazine miniGame;
-
+        [SerializeField] private TV tv;
+        
+        private ActiviteMaisonTele miniGame;
+        
         private void Start()
         {
-            miniGame = new ActiviteMaisonMagazine();
+            miniGame = new ActiviteMaisonTele();
             MiniGameManager.Instance.StartMiniGame(miniGame, this);
         }
-
-        public ActiviteMaisonMagazineContext GetContext()
+        
+        public ActiviteMaisonTeleContext GetContext()
         {
-            return new ActiviteMaisonMagazineContext
+            return new ActiviteMaisonTeleContext
             {
                 MiniGameData = miniGameData,
-                isArrived = water.IsArrived,
+                IsArrived = tv.IsArrived,
             };
         }
     }

@@ -5,10 +5,10 @@ using UnityEngine;
 
 namespace CIRC.MiniGames.Sample
 {
-    public class AlccolPlageCocktailHandler : MonoBehaviour, IMiniGameHandler<ActiviteMaisonMagazineContext>
+    public class ActiviteMaisonMagazineHandler : MonoBehaviour, IMiniGameHandler<ActiviteMaisonMagazineContext>
     {
         [SerializeField] private MiniGameDataHolder miniGameData;
-        [SerializeField] private Water water;
+        [SerializeField] private Book book;
 
         private ActiviteMaisonMagazine miniGame;
 
@@ -23,7 +23,7 @@ namespace CIRC.MiniGames.Sample
             return new ActiviteMaisonMagazineContext
             {
                 MiniGameData = miniGameData,
-                isArrived = water.IsArrived,
+                isArrived = book.IsArrived,
             };
         }
     }
