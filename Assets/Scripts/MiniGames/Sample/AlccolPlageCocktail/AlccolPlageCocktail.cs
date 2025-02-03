@@ -3,18 +3,18 @@ using CIRC.MiniGames.Core;
 
 namespace CIRC.MiniGames.Sample
 {
-    public class AlccolPlageCocktail : MiniGame<BookDropContext>
+    public class AlccolPlageCocktail : MiniGame<ActiviteMaisonMagazineContext>
     {
-        public override void Begin(ref BookDropContext context)
+        public override void Begin(ref ActiviteMaisonMagazineContext context)
         {
         }
 
-        public override bool Refresh(ref BookDropContext context)
+        public override bool Refresh(ref ActiviteMaisonMagazineContext context)
         {
             return context.isArrived;
         }
 
-        public override void End(ref BookDropContext context, bool isSuccess)
+        public override void End(ref ActiviteMaisonMagazineContext context, bool isSuccess)
         {
             if (isSuccess)
             {

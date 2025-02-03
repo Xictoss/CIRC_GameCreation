@@ -1,5 +1,4 @@
 using System;
-using NaughtyAttributes;
 using UnityEngine;
 
 namespace CIRC.Progression
@@ -10,7 +9,7 @@ namespace CIRC.Progression
         public string miniGameName;
         public GameSubject gameSubject;
         public BadgeData badgeDisplay;
-        [HideInInspector]
+        
         public string GUID;
 
         private void Awake()
@@ -20,12 +19,6 @@ namespace CIRC.Progression
                 GUID = Guid.NewGuid().ToString();
                 Debug.Log($"New guid : {GUID} for {miniGameName}");
             }
-        }
-        
-        [Button]
-        private void OnValidate()
-        {
-            Awake();
         }
     }
 }

@@ -12,12 +12,30 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SecTouchPosition",
+                    "type": "PassThrough",
+                    "id": "2767caa0-f8fe-4c8d-859e-b6d06c9e4975",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Touch",
                     "type": "Button",
                     "id": "e8446b6d-1e9a-4f19-b5a0-fc12e2652071",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SecondTouch",
+                    "type": "Button",
+                    "id": "d39195c9-29e9-4c47-aed4-604a0839126c",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -44,8 +62,8 @@
                 {
                     "name": "Shake",
                     "type": "Value",
-                    "id": "5564630a-203c-4b8a-b401-98f7796193dd",
-                    "expectedControlType": "Vector3",
+                    "id": "d2757f23-251d-46b7-aa97-5d9662d1e3ff",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -55,7 +73,7 @@
                 {
                     "name": "",
                     "id": "c211d2d3-b97c-423a-9d3a-90f6ffd4cadb",
-                    "path": "<Touchscreen>/primaryTouch/position",
+                    "path": "<Touchscreen>/touch0/position",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -66,11 +84,22 @@
                 {
                     "name": "",
                     "id": "6271f67c-3ced-4d66-80b8-45245d1909f0",
-                    "path": "<Touchscreen>/Press",
+                    "path": "<Touchscreen>/touch0/press",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Touch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "69c9e8ce-7bfa-45a4-902b-b4ca900f4e4d",
+                    "path": "<Touchscreen>/touch1/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SecondTouch",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -98,7 +127,18 @@
                 },
                 {
                     "name": "",
-                    "id": "fc23ce1b-a3be-4208-a2bf-2a50db8ee9ab",
+                    "id": "b9aca77d-ed3c-43d9-9dfc-daf199ac57a8",
+                    "path": "<Touchscreen>/touch1/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SecTouchPosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3b7f606c-b83a-401f-b480-cbeb2a9cf257",
                     "path": "<Accelerometer>/acceleration",
                     "interactions": "",
                     "processors": "",

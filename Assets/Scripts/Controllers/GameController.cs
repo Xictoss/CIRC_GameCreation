@@ -23,12 +23,6 @@ namespace CIRC.Controllers
             }
         }
         
-        #region PrioritisedProperties
-
-        public static PrioritisedProperty<float> TimeScale { get; private set; }
-
-        #endregion
-
         public static event Action GameSaved;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
@@ -58,7 +52,6 @@ namespace CIRC.Controllers
         public static void SaveProgress()
         {
             Debug.Log("Saving player progress");
-
             Save.Push<GameSave, GameSaveSettings>(new GameSaveSettings()
             {
                 prefName = "Player"
@@ -78,7 +71,6 @@ namespace CIRC.Controllers
         
         public static void QuitGame()
         {
-            SaveProgress();
             UnLoad();
             Application.Quit();
         }
@@ -87,6 +79,8 @@ namespace CIRC.Controllers
 
         #region Prioritised Properties
 
+        public static PrioritisedProperty<float> TimeScale { get; private set; }
+        
         private static void SetupTimeScale()
         {
             TimeScale = new PrioritisedProperty<float>(1f);

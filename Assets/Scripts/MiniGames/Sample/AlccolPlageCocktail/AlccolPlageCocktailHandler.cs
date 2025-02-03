@@ -5,22 +5,22 @@ using UnityEngine;
 
 namespace CIRC.MiniGames.Sample
 {
-    public class AlccolPlageCocktailHandler : MonoBehaviour, IMiniGameHandler<BookDropContext>
+    public class AlccolPlageCocktailHandler : MonoBehaviour, IMiniGameHandler<ActiviteMaisonMagazineContext>
     {
         [SerializeField] private MiniGameDataHolder miniGameData;
         [SerializeField] private Water water;
 
-        private BookDrop miniGame;
+        private ActiviteMaisonMagazine miniGame;
 
         private void Start()
         {
-            miniGame = new BookDrop();
+            miniGame = new ActiviteMaisonMagazine();
             MiniGameManager.Instance.StartMiniGame(miniGame, this);
         }
 
-        public BookDropContext GetContext()
+        public ActiviteMaisonMagazineContext GetContext()
         {
-            return new BookDropContext
+            return new ActiviteMaisonMagazineContext
             {
                 MiniGameData = miniGameData,
                 isArrived = water.IsArrived,

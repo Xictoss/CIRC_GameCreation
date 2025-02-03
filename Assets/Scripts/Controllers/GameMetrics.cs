@@ -12,8 +12,6 @@ namespace CIRC.Controllers
         
         [field: SerializeField, Scene, Foldout("Scenes")]
         public int MainMenuScene { get; private set; }
-
-        #region LevelScenes
         
         [field: SerializeField, Scene, Foldout("Scenes/Levels")]
         public int PlageScene { get; private set; }
@@ -32,22 +30,36 @@ namespace CIRC.Controllers
         [field: SerializeField, Scene, Foldout("Scenes/Levels")]
         public int CliniqueScene { get; private set; }
         
-        #endregion
-
-        #region MiniGameScenes
+        [field: SerializeField, Scene, Foldout("Scenes/MiniGames")]
+        public int ActivitePlageNager { get; private set; }
+        [field: SerializeField, Scene, Foldout("Scenes/MiniGames")]
+        public int AlccolPlageCocktail { get; private set; }
         
         [field: SerializeField, Scene, Foldout("Scenes/MiniGames")]
-        public int GoToSwim_Scene { get; private set; }
+        public int HydratationMaisonLabyrinthe { get; private set; }
         [field: SerializeField, Scene, Foldout("Scenes/MiniGames")]
-        public int RunAndDrink_Scene { get; private set; }
+        public int HydratationMaisonCanalisation { get; private set; }
         [field: SerializeField, Scene, Foldout("Scenes/MiniGames")]
-        public int PipePuzzle_Scene { get; private set; }
+        public int TabagismeMaisonSecouer { get; private set; }
         [field: SerializeField, Scene, Foldout("Scenes/MiniGames")]
-        public int BookDrop_Scene { get; private set; }
+        public int ActiviteMaisonMagazine { get; private set; }
         [field: SerializeField, Scene, Foldout("Scenes/MiniGames")]
-        public int SortAndSplode_Scene { get; private set; }
+        public int ActiviteMaisonTele { get; private set; }
+        [field: SerializeField, Scene, Foldout("Scenes/MiniGames")]
+        public int AlcoolMaisonFrigo { get; private set; }
+        [field: SerializeField, Scene, Foldout("Scenes/MiniGames")]
+        public int AlcoolMaisonBoisson { get; private set; }
+        [field: SerializeField, Scene, Foldout("Scenes/MiniGames")]
+        public int HormoneMaisonJeter { get; private set; }
+        [field: SerializeField, Scene, Foldout("Scenes/MiniGames")]
+        public int AlimentationMaisonRadio { get; private set; }
         
-        #endregion
+        [field: SerializeField, Scene, Foldout("Scenes/MiniGames")]
+        public int ChimiqueEntrepriseTaper { get; private set; }
+        [field: SerializeField, Scene, Foldout("Scenes/MiniGames")]
+        public int ActiviteEntrepriseDrag { get; private set; }
+        [field: SerializeField, Scene, Foldout("Scenes/MiniGames")]
+        public int VaccinationEntrepriseDrag { get; private set; }
         
         #endregion
 
