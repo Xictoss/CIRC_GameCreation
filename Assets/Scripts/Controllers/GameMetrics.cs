@@ -30,11 +30,13 @@ namespace CIRC.Controllers
         [field: SerializeField, Scene, Foldout("Scenes/Levels")]
         public int CliniqueScene { get; private set; }
         
+        //Plage
         [field: SerializeField, Scene, Foldout("Scenes/MiniGames")]
         public int ActivitePlageNager { get; private set; }
         [field: SerializeField, Scene, Foldout("Scenes/MiniGames")]
         public int AlccolPlageCocktail { get; private set; }
         
+        //Maison
         [field: SerializeField, Scene, Foldout("Scenes/MiniGames")]
         public int HydratationMaisonLabyrinthe { get; private set; }
         [field: SerializeField, Scene, Foldout("Scenes/MiniGames")]
@@ -54,6 +56,7 @@ namespace CIRC.Controllers
         [field: SerializeField, Scene, Foldout("Scenes/MiniGames")]
         public int AlimentationMaisonRadio { get; private set; }
         
+        //Entreprise
         [field: SerializeField, Scene, Foldout("Scenes/MiniGames")]
         public int ChimiqueEntrepriseTaper { get; private set; }
         [field: SerializeField, Scene, Foldout("Scenes/MiniGames")]

@@ -1,8 +1,6 @@
 using CIRC.Inputs;
-using DG.Tweening;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 
 namespace CIRC.Player
 {
@@ -13,18 +11,23 @@ namespace CIRC.Player
         [SerializeField] private Transform camHolder;
         
         [Header("Drag Parameters")]
-        [SerializeField, Range(0, 1)] private float dragSmoothSpeed;
-        [SerializeField] private Vector2 minMaxX, minMaxY;
-        private InputAction.CallbackContext dragContext;
+        [SerializeField, Range(0.01f, 0.5f)] private float dragSmoothTime = 0.1f;
+        [SerializeField] private Vector2 horizontalLimits = new(-10, 10);
+        [SerializeField] private Vector2 verticalLimits = new(-10, 10);
         
         [Header("Zoom Parameters")]
-        [SerializeField, Range(0, 1)] private float zoomSmoothSpeed;
-        [SerializeField] private Vector2 zoomMinMax;
-        private bool isZooming;
-        private float previousDistance;
+        [SerializeField, Range(0.01f, 1f)] private float zoomSensitivity = 0.1f;
+        [SerializeField, Range(0.01f, 0.5f)] private float zoomSmoothTime = 0.1f;
+        [SerializeField] private Vector2 zoomLimits = new(5, 20);
+        [SerializeField] private float minPinchDistance = 50f;
+        private Vector2 firstTouchPreviousPos;
+        private Vector2 secondTouchPreviousPos;
 
-        private Vector3 origin, difference;
-        private bool primaryTouch, secondaryTouch;
+        private Vector3 dragOrigin;
+        private Vector3 velocity = Vector3.zero;
+        private float zoomVelocity;
+        private bool isDragging;
+        private bool isZooming;
         
         private void OnEnable()
         {
@@ -38,96 +41,88 @@ namespace CIRC.Player
             InputController.Instance.OnSecondClickInput -= GetSecondaryClick;
         }
 
-        private Vector3 GetPrimaryWorldPosition => InputController.Instance.WorldTouchPosition;
-        private Vector2 GetPrimaryScreenPosition => InputController.Instance.ScreenTouchPosition;
+        private Vector3 GetWorldTouchPosition => InputController.Instance.WorldTouchPosition;
         private void GetPrimaryClick(InputAction.CallbackContext context)
         {
-            if (context.started) origin = GetPrimaryWorldPosition;
-
-            primaryTouch = context.started || context.performed;
+            if (context.started)
+            {
+                dragOrigin = GetWorldTouchPosition;
+                isDragging = true;
+            }
+            else if (context.canceled)
+            {
+                isDragging = false;
+            }
         }
         
         private Vector3 GetSecondaryWorldPosition => InputController.Instance.SecondWorldTouchPosition;
-        private Vector2 GetSecondaryScreenPosition => InputController.Instance.SecondScreenTouchPosition;
         private void GetSecondaryClick(InputAction.CallbackContext context)
         {
-            secondaryTouch = context.started || context.performed;
+            isZooming = context.started || context.performed;
         }
 
-        private void LateUpdate()
+        private void Update()
         {
-            HandleDrag();
-            HandleZooming();
-        }
-
-        private void HandleDrag()
-        {
-            if (TwoTouch) return;
-
-            //Calculate
-            if (primaryTouch) 
+            if (isZooming)
             {
-                if (isZooming) 
-                {
-                    origin = GetPrimaryWorldPosition;
-                }
-                
-                difference = origin - camHolder.transform.localPosition;
+                HandleZooming();
             }
-            
-            //Move | way n°1
-            camHolder.transform.localPosition = Vector3.Lerp(
-                camHolder.transform.localPosition, 
-                origin - difference, 
-                dragSmoothSpeed);
-          
-            //Move | way n°2
-            //camHolder.transform.DOLocalMove(origin - difference, dragSmoothSpeed);
+            else if (isDragging)
+            {
+                HandleCameraDrag();
+            }
+        }
+
+        private void HandleCameraDrag()
+        {
+            Vector3 currentPosition = GetWorldTouchPosition;
+            Vector3 difference = dragOrigin - currentPosition;
+            Vector3 targetPosition = camHolder.position + difference;
+
+            // Smooth damping movement
+            camHolder.position = Vector3.SmoothDamp(
+                camHolder.position,
+                targetPosition,
+                ref velocity,
+                dragSmoothTime);
             
             //Clamp
             camHolder.transform.localPosition = new Vector3(
-                Mathf.Clamp(camHolder.transform.localPosition.x, minMaxX.x, minMaxX.y),
-                Mathf.Clamp(camHolder.transform.localPosition.y, minMaxY.x, minMaxY.y),
+                Mathf.Clamp(camHolder.transform.localPosition.x, horizontalLimits.x, horizontalLimits.y),
+                Mathf.Clamp(camHolder.transform.localPosition.y, verticalLimits.x, verticalLimits.y),
                 0f);
         }
 
-        private bool TwoTouch => primaryTouch && secondaryTouch;
         private void HandleZooming()
         {
-            if (TwoTouch)
-            {
-                //Calculate Distance
-                float currentDistance = Vector3.Distance(GetPrimaryWorldPosition, GetSecondaryWorldPosition);
-                
-                if (!isZooming)
-                {
-                    previousDistance = currentDistance;
-                    isZooming = true;
-                }
-                else
-                {
-                    // Calculate zoom factor 
-                    float deltaDistance = currentDistance - previousDistance;
-                    
-                    // Lerp Zoom
-                    cam.orthographicSize = Mathf.Lerp(
-                        cam.orthographicSize,
-                        cam.orthographicSize - deltaDistance,
-                        zoomSmoothSpeed);
-                    
-                    // Clamp zoom 
-                    cam.orthographicSize = Mathf.Clamp(
-                        cam.orthographicSize,
-                        zoomMinMax.x,  
-                        zoomMinMax.y);
+            if (!isZooming) return;
 
-                    previousDistance = currentDistance;
-                }
-            }
-            else
+            // Calculate distances
+            float previousDistance = Vector2.Distance(firstTouchPreviousPos, secondTouchPreviousPos);
+            float currentDistance = Vector2.Distance(GetWorldTouchPosition, GetSecondaryWorldPosition);
+
+            // Only zoom if fingers moved beyond minimum threshold
+            if (Mathf.Abs(currentDistance - previousDistance) > minPinchDistance)
             {
-                isZooming = false;
+                float zoomDelta = (currentDistance - previousDistance) * zoomSensitivity;
+                ApplyZoom(zoomDelta);
             }
+
+            // Store positions for next frame
+            firstTouchPreviousPos = GetWorldTouchPosition;
+            secondTouchPreviousPos = GetSecondaryWorldPosition;
+        }
+
+        private void ApplyZoom(float zoomDelta)
+        {
+            float targetSize = cam.orthographicSize - zoomDelta;
+            
+            cam.orthographicSize = Mathf.SmoothDamp(
+                cam.orthographicSize,
+                Mathf.Clamp(targetSize, zoomLimits.x, zoomLimits.y),
+                ref zoomVelocity,
+                zoomSmoothTime
+            );
         }
     }
 }

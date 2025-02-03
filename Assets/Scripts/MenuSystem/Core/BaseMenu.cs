@@ -4,11 +4,18 @@ namespace CIRC.MenuSystem
 {
     public abstract class BaseMenu : MonoBehaviour, MenuAttributes
     {
-        public abstract void OpenMenu();
-        public abstract void CloseMenu();
+        public virtual void OpenMenu()
+        {
+            gameObject.SetActive(true);
+        }
+
+        public virtual void CloseMenu()
+        {
+            gameObject.SetActive(false);
+        }
         
-        public abstract MenuPriority Priority { get; }
+        public virtual MenuPriority Priority => MenuPriority.Medium;
         public abstract string MenuName { get; }
-        public abstract GameObject Object { get; }
+        public virtual GameObject Object => gameObject;
     }
 }
