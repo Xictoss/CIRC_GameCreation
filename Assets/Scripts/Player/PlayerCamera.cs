@@ -14,6 +14,7 @@ namespace CIRC.Player
         [SerializeField, Range(0.01f, 0.5f)] private float dragSmoothTime = 0.1f;
         [SerializeField] private Vector2 horizontalLimits = new(-10, 10);
         [SerializeField] private Vector2 verticalLimits = new(-10, 10);
+        private Vector3 previousPrimaryClick;
         
         [Header("Zoom Parameters")]
         [SerializeField, Range(0.01f, 1f)] private float zoomSensitivity = 0.1f;
@@ -41,12 +42,13 @@ namespace CIRC.Player
             InputController.Instance.OnSecondClickInput -= GetSecondaryClick;
         }
 
-        private Vector3 GetWorldTouchPosition => InputController.Instance.WorldTouchPosition;
+        private Vector3 GetWorldTouchPosition => InputController.Instance.ScreenTouchPosition;
         private void GetPrimaryClick(InputAction.CallbackContext context)
         {
-            if (context.started)
+            if (context.started || context.performed)
             {
                 dragOrigin = GetWorldTouchPosition;
+                previousPrimaryClick = dragOrigin;
                 isDragging = true;
             }
             else if (context.canceled)
@@ -55,7 +57,7 @@ namespace CIRC.Player
             }
         }
         
-        private Vector3 GetSecondaryWorldPosition => InputController.Instance.SecondWorldTouchPosition;
+        private Vector3 GetSecondaryWorldPosition => InputController.Instance.SecondScreenTouchPosition;
         private void GetSecondaryClick(InputAction.CallbackContext context)
         {
             isZooming = context.started || context.performed;
@@ -76,21 +78,22 @@ namespace CIRC.Player
         private void HandleCameraDrag()
         {
             Vector3 currentPosition = GetWorldTouchPosition;
-            Vector3 difference = dragOrigin - currentPosition;
-            Vector3 targetPosition = camHolder.position + difference;
-
+            Vector3 delta = currentPosition - previousPrimaryClick;
+            
             // Smooth damping movement
-            camHolder.position = Vector3.SmoothDamp(
-                camHolder.position,
-                targetPosition,
+            camHolder.localPosition = Vector3.SmoothDamp(
+                camHolder.localPosition,
+                camHolder.localPosition - delta,
                 ref velocity,
                 dragSmoothTime);
             
             //Clamp
-            camHolder.transform.localPosition = new Vector3(
-                Mathf.Clamp(camHolder.transform.localPosition.x, horizontalLimits.x, horizontalLimits.y),
-                Mathf.Clamp(camHolder.transform.localPosition.y, verticalLimits.x, verticalLimits.y),
+            camHolder.localPosition = new Vector3(
+                Mathf.Clamp(camHolder.localPosition.x, horizontalLimits.x, horizontalLimits.y),
+                Mathf.Clamp(camHolder.localPosition.y, verticalLimits.x, verticalLimits.y),
                 0f);
+
+            previousPrimaryClick = currentPosition;
         }
 
         private void HandleZooming()
