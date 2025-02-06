@@ -36,7 +36,7 @@ namespace CIRC.MenuSystem
             for (int i = 0; i < newMenus.Length; i++)
             {
                 bool success = TryAddMenu(newMenus[i].MenuName, newMenus[i]);
-                if (success) Debug.Log($"Added Menu : {newMenus[i].MenuName}");
+                //if (success) Debug.Log($"Added Menu : {newMenus[i].MenuName}");
             }
         }
 
