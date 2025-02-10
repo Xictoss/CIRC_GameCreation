@@ -44,3 +44,4 @@ MonoBehaviour:
   <SortAndSplode_SpawnNumber>k__BackingField: 10
   <SortAndSplode_SpawnCooldown>k__BackingField: 0.75
   <RunAndDrink_DrinksNumber>k__BackingField: 3
+  <APN_GuySpeed>k__BackingField: 0

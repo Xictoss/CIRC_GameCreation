@@ -83,6 +83,8 @@ namespace CIRC.Controllers
 
         #endregion
         
+        #region MiniGameMetrics
+        
         [field: SerializeField, Foldout("MiniGames/SortAndSplode")]
         public int SortAndSplode_SpawnNumber { get; private set; }
         [field: SerializeField, Foldout("MiniGames/SortAndSplode")]
@@ -93,5 +95,8 @@ namespace CIRC.Controllers
         
         [field: SerializeField, Foldout("MiniGames/ActivitePlageNager")]
         public int APN_GuySpeed { get; private set; }
+        
+        #endregion MiniGameMetrics
+
     }
 }
