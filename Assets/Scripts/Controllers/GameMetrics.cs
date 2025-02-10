@@ -90,5 +90,8 @@ namespace CIRC.Controllers
         
         [field: SerializeField, Foldout("MiniGames/RunAndDrink")]
         public int RunAndDrink_DrinksNumber { get; private set; }
+        
+        [field: SerializeField, Foldout("MiniGames/ActivitePlageNager")]
+        public int APN_GuySpeed { get; private set; }
     }
 }
