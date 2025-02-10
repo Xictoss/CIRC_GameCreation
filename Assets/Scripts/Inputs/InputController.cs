@@ -25,6 +25,8 @@ namespace CIRC.Inputs
         private Vector3 lastAcceleration;
         private float lastShakeTime;
         
+        
+        public PlayerInputActions PlayerInputActions { get; private set; }
         public event Action<InputAction.CallbackContext> OnPrimaryClickInput;
         public event Action<InputAction.CallbackContext> OnSecondClickInput;
         public event Action<float> OnLongClickInput;
@@ -42,8 +44,34 @@ namespace CIRC.Inputs
         {
             base.Awake();
             
-            InputSystem.EnableDevice(Accelerometer.current);
+            PlayerInputActions = new PlayerInputActions();
+            if (Accelerometer.current != null) InputSystem.EnableDevice(Accelerometer.current);
         }
+        
+        private void OnEnable()
+        {
+            PlayerInputActions.Enable();
+            
+            lastAcceleration = Vector3.zero;
+        }
+
+        private void OnDisable()
+        {
+            PlayerInputActions.Disable();
+        }
+
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+            PlayerInputActions.Dispose();
+        }
+        
+        private void Update()
+        {
+            AccelerometerInput();
+            Swipe();
+        }
+
         
         public void GetTouchPositionInput(InputAction.CallbackContext context)
         {
@@ -107,35 +135,6 @@ namespace CIRC.Inputs
                 isSwiping = false;
             }
         }
-        
-        private void OnEnable()
-        {
-            accelerometerAction = inputActions.actionMaps[0].FindAction("Shake");
-            
-            if (accelerometerAction != null)
-            {
-                accelerometerAction.Enable();
-            }
-            
-            lastAcceleration = Vector3.zero;
-        }
-
-        private void OnDisable()
-        {
-            if (accelerometerAction != null)
-            {
-                accelerometerAction.Disable();
-            }
-        }
-
-        public InputActionAsset inputActions;
-        private InputAction accelerometerAction;
-        private void Update()
-        {
-            AccelerometerInput();
-            Swipe();
-        }
-
         private void Swipe()
         {
             if (isSwiping)
@@ -157,7 +156,7 @@ namespace CIRC.Inputs
 
         private void AccelerometerInput()
         {
-            Vector3 currentAcceleration = accelerometerAction.ReadValue<Vector3>();
+            Vector3 currentAcceleration = PlayerInputActions.TouchScreen.Shake.ReadValue<Vector3>();
             Vector3 accelerationDelta = currentAcceleration - lastAcceleration;
             
             if (accelerationDelta.sqrMagnitude > shakeThreshold * shakeThreshold)

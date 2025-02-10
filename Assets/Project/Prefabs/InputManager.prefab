@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5191306192493621446}
-  - component: {fileID: 2452714447077347334}
   - component: {fileID: 8706219651401053049}
   m_Layer: 0
   m_Name: InputManager
@@ -33,104 +32,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2452714447077347334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3680666080146687763}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: ef207f88e1fbaa64f9cf29d5526dd1c2, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8706219651401053049}
-        m_TargetAssemblyTypeName: NomDuJeu.Core.InputController, NomDuJeu.Inputs.Core
-        m_MethodName: GetTouchPositionInput
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 3d65121a-76ee-4422-91c3-e9786cc21335
-    m_ActionName: TouchScreen/TouchPosition
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8706219651401053049}
-        m_TargetAssemblyTypeName: CIRC.Core.Inputs.InputController, CIRC.Core.Inputs
-        m_MethodName: GetTouchInput
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: e8446b6d-1e9a-4f19-b5a0-fc12e2652071
-    m_ActionName: 'TouchScreen/Touch[/Device Simulator Touchscreen/press]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8706219651401053049}
-        m_TargetAssemblyTypeName: CIRC.Core.Inputs.InputController, CIRC.Core.Inputs
-        m_MethodName: GetDoubleTouchInput
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: b7c2abbe-c6f8-4dcc-b681-8f81989f4e26
-    m_ActionName: 'TouchScreen/DoubleTouch[/Device Simulator Touchscreen/press]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8706219651401053049}
-        m_TargetAssemblyTypeName: CIRC.Core.Inputs.InputController, CIRC.Core.Inputs
-        m_MethodName: GetSwipeInput
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 7a51eba8-49ee-439d-a1b9-f54d5815625a
-    m_ActionName: 'TouchScreen/Swipe[/Device Simulator Touchscreen/press]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 5564630a-203c-4b8a-b401-98f7796193dd
-    m_ActionName: TouchScreen/Shake
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: TouchScreen
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!114 &8706219651401053049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,4 +48,3 @@ MonoBehaviour:
   doubleTapThreshold: 0.2
   shakeThreshold: 2
   shakeCooldown: 0.5
-  inputActions: {fileID: -944628639613478452, guid: ef207f88e1fbaa64f9cf29d5526dd1c2, type: 3}

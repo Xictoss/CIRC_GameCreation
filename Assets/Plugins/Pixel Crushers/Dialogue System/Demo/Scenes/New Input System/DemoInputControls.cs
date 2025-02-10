@@ -31,7 +31,7 @@ public partial class @DemoInputControls: IInputActionCollection2, IDisposable
                     ""name"": ""Horizontal"",
                     ""type"": ""Button"",
                     ""id"": ""ef3929c6-b315-4851-8f3e-ae170992d312"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
