@@ -40,12 +40,12 @@ namespace CIRC.Inputs
                 },
                 {
                     ""name"": ""SecTouchPosition"",
-                    ""type"": ""PassThrough"",
+                    ""type"": ""Value"",
                     ""id"": ""2767caa0-f8fe-4c8d-859e-b6d06c9e4975"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""Touch"",
