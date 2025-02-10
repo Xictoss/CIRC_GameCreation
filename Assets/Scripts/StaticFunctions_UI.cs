@@ -4,6 +4,21 @@ namespace CIRC
 {
     public partial class StaticFunctions
     {
+        private static Camera cam;
+
+        private static Camera Cam
+        {
+            get
+            {
+                if (cam == null)
+                {
+                    cam = Camera.main;
+                }
+
+                return cam;
+            }
+        }
+        
         public static Vector2 GetRandomPositionWithinRectTransform(this RectTransform imageRectTransform)
         {
             float randomX = Random.value;
@@ -18,14 +33,26 @@ namespace CIRC
 
         public static Vector3 FromScreenPointToWorldPoint(Vector3 screenPosition)
         {
-            if (Camera.main)
+            Ray ray = Cam.ScreenPointToRay(screenPosition);
+            /*
+            if (Physics.Raycast(ray, out RaycastHit hit))
             {
-                Vector3 worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
-                worldPosition = new Vector3(worldPosition.x, worldPosition.y, 0f);
-                return worldPosition;
+                return hit.point;
+            }
+            */
+
+            Plane defaultPlane = GetDefaultPlane();
+            if (defaultPlane.Raycast(ray, out float enter))
+            {
+                return ray.GetPoint(enter);
             }
             
             return Vector3.zero;
+        }
+
+        private static Plane GetDefaultPlane()
+        {
+            return new Plane(Vector3.up, Vector3.zero);
         }
         
         public static Bounds RectTransformToScreenSpace(this RectTransform rectTransform)

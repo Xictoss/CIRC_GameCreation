@@ -1,4 +1,5 @@
 using CIRC.Inputs;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,126 +7,116 @@ namespace CIRC.Player
 {
     public class PlayerCamera : MonoBehaviour
     {
+        private static InputController InputController => InputController.Instance;
+
         [Header("References")]
-        [SerializeField] private Camera cam;
-        [SerializeField] private Transform camHolder;
+        [SerializeField] private Transform cameraTarget;
+        [SerializeField] private CinemachineRecomposer recomposer;
         
-        [Header("Drag Parameters")]
-        [SerializeField, Range(0.01f, 0.5f)] private float dragSmoothTime = 0.1f;
-        [SerializeField] private Vector2 horizontalLimits = new(-10, 10);
-        [SerializeField] private Vector2 verticalLimits = new(-10, 10);
-        private Vector3 previousPrimaryClick;
-        
-        [Header("Zoom Parameters")]
-        [SerializeField, Range(0.01f, 1f)] private float zoomSensitivity = 0.1f;
-        [SerializeField, Range(0.01f, 0.5f)] private float zoomSmoothTime = 0.1f;
-        [SerializeField] private Vector2 zoomLimits = new(5, 20);
-        [SerializeField] private float minPinchDistance = 50f;
-        private Vector2 firstTouchPreviousPos;
-        private Vector2 secondTouchPreviousPos;
+        [Header("Drag Parameters")] 
+        [SerializeField] private Bounds cameraMoveRange;
+        [SerializeField] private float smoothClampSpeed = 15f;
+        private Vector3 targetSwipePos;
 
-        private Vector3 dragOrigin;
-        private Vector3 velocity = Vector3.zero;
-        private float zoomVelocity;
-        private bool isDragging;
-        private bool isZooming;
-        
-        private void OnEnable()
-        {
-            InputController.Instance.OnPrimaryClickInput += GetPrimaryClick;
-            InputController.Instance.OnSecondClickInput += GetSecondaryClick;
-        }
-        
-        private void OnDisable()
-        {
-            InputController.Instance.OnPrimaryClickInput -= GetPrimaryClick;
-            InputController.Instance.OnSecondClickInput -= GetSecondaryClick;
-        }
-
-        private Vector3 GetWorldTouchPosition => InputController.Instance.ScreenTouchPosition;
-        private void GetPrimaryClick(InputAction.CallbackContext context)
-        {
-            if (context.started || context.performed)
-            {
-                dragOrigin = GetWorldTouchPosition;
-                previousPrimaryClick = dragOrigin;
-                isDragging = true;
-            }
-            else if (context.canceled)
-            {
-                isDragging = false;
-            }
-        }
-        
-        private Vector3 GetSecondaryWorldPosition => InputController.Instance.SecondScreenTouchPosition;
-        private void GetSecondaryClick(InputAction.CallbackContext context)
-        {
-            isZooming = context.started || context.performed;
-        }
+        [Header("Zoom Parameters")] 
+        [SerializeField] private Vector2 zoomClamp = new Vector2(0.2f, 2);
+        [SerializeField] private float smoothZoomSpeed = 15f;
+        [SerializeField] private float zoomSensitivity = 0.1f;
+        [SerializeField] private float zoomMoveSpeed = 0.3f;
+        private float previousDistance, currentDistance;
+        private bool secondTouch;
+        private InputAction primaryTouch, secondaryTouch;
+        private Vector3 zoomMiddlePoint;
 
         private void Update()
         {
-            if (isZooming)
+            MoveCamera();
+            ClampCamera();
+
+            CalculateZoomInputs();
+            ZoomCamera();
+        }
+
+        private void ClampCamera()
+        {
+            if (!cameraMoveRange.Contains(cameraTarget.position))
             {
-                HandleZooming();
-            }
-            else if (isDragging)
-            {
-                HandleCameraDrag();
+                Vector3 clampedPosition = new Vector3(
+                    Mathf.Clamp(cameraTarget.position.x, cameraMoveRange.min.x, cameraMoveRange.max.x),
+                    cameraTarget.position.y,
+                    Mathf.Clamp(cameraTarget.position.z, cameraMoveRange.min.z, cameraMoveRange.max.z)
+                );
+
+                cameraTarget.position = Vector3.Lerp(cameraTarget.position, clampedPosition, smoothClampSpeed * Time.deltaTime);
             }
         }
 
-        private void HandleCameraDrag()
+        private void MoveCamera()
         {
-            Vector3 currentPosition = GetWorldTouchPosition;
-            Vector3 delta = currentPosition - previousPrimaryClick;
+            if (secondTouch) return;
             
-            // Smooth damping movement
-            camHolder.localPosition = Vector3.SmoothDamp(
-                camHolder.localPosition,
-                camHolder.localPosition - delta,
-                ref velocity,
-                dragSmoothTime);
-            
-            //Clamp
-            camHolder.localPosition = new Vector3(
-                Mathf.Clamp(camHolder.localPosition.x, horizontalLimits.x, horizontalLimits.y),
-                Mathf.Clamp(camHolder.localPosition.y, verticalLimits.x, verticalLimits.y),
-                0f);
+            Vector2 delta = InputController.PlayerInputActions.TouchScreen.Swipe.ReadValue<Vector2>();
+            Vector2 centerScreen = new Vector2(Screen.width * .5f, Screen.height * .5f);
 
-            previousPrimaryClick = currentPosition;
+            Vector3 centerPos = StaticFunctions.FromScreenPointToWorldPoint(centerScreen);
+            Vector3 offsetPos = StaticFunctions.FromScreenPointToWorldPoint(centerScreen + delta);
+
+            Vector3 worldDelta = offsetPos - centerPos;
+            worldDelta.y = 0;
+            
+            cameraTarget.Translate(-worldDelta);
         }
 
-        private void HandleZooming()
+        private void CalculateZoomInputs()
         {
-            if (!isZooming) return;
+            primaryTouch = InputController.PlayerInputActions.TouchScreen.TouchPosition;
+            secondaryTouch = InputController.PlayerInputActions.TouchScreen.SecTouchPosition;
+            
+           InputAction secTouch = InputController.PlayerInputActions.TouchScreen.SecondTouch;
 
-            // Calculate distances
-            float previousDistance = Vector2.Distance(firstTouchPreviousPos, secondTouchPreviousPos);
-            float currentDistance = Vector2.Distance(GetWorldTouchPosition, GetSecondaryWorldPosition);
-
-            // Only zoom if fingers moved beyond minimum threshold
-            if (Mathf.Abs(currentDistance - previousDistance) > minPinchDistance)
+            if (secTouch.phase == InputActionPhase.Performed)
             {
-                float zoomDelta = (currentDistance - previousDistance) * zoomSensitivity;
-                ApplyZoom(zoomDelta);
+                if (!secondTouch)
+                {
+                    previousDistance = Vector2.Distance(
+                        primaryTouch.ReadValue<Vector2>(),
+                        secondaryTouch.ReadValue<Vector2>()
+                    );
+                    
+                    Vector2 zoomScreen = (primaryTouch.ReadValue<Vector2>() + secondaryTouch.ReadValue<Vector2>()) * 0.5f;
+                    zoomMiddlePoint = StaticFunctions.FromScreenPointToWorldPoint(zoomScreen);
+                }
+                
+                secondTouch = true;
             }
-
-            // Store positions for next frame
-            firstTouchPreviousPos = GetWorldTouchPosition;
-            secondTouchPreviousPos = GetSecondaryWorldPosition;
+            else if (secTouch.phase is InputActionPhase.Canceled or InputActionPhase.Waiting)
+            {
+                secondTouch = false;
+            }
         }
-
-        private void ApplyZoom(float zoomDelta)
+        
+        private void ZoomCamera()
         {
-            float targetSize = cam.orthographicSize - zoomDelta;
-            
-            cam.orthographicSize = Mathf.SmoothDamp(
-                cam.orthographicSize,
-                Mathf.Clamp(targetSize, zoomLimits.x, zoomLimits.y),
-                ref zoomVelocity,
-                zoomSmoothTime
-            );
+            if (secondTouch)
+            {
+                currentDistance = Vector2.Distance(
+                    primaryTouch.ReadValue<Vector2>(), 
+                    secondaryTouch.ReadValue<Vector2>()
+                    );
+
+                float deltaDistance = currentDistance - previousDistance;
+                float newZoomScale = recomposer.ZoomScale - deltaDistance * Time.deltaTime * zoomSensitivity;
+                newZoomScale = Mathf.Clamp(newZoomScale, zoomClamp.x, zoomClamp.y);
+                
+                recomposer.ZoomScale = Mathf.Lerp(
+                    recomposer.ZoomScale, 
+                    newZoomScale, 
+                    smoothZoomSpeed * Time.deltaTime); 
+                
+                cameraTarget.position = Vector3.Lerp(cameraTarget.position, zoomMiddlePoint, zoomMoveSpeed);
+
+                previousDistance = currentDistance;
+            }
         }
     }
 }
