@@ -71,6 +71,8 @@ namespace CIRC.Controllers
         [field: SerializeField, Foldout("Menu Names")]
         public string MiniGamePopUpMenu { get; private set; }
         [field: SerializeField, Foldout("Menu Names")]
+        public string MiniGameReward { get; private set; }
+        [field: SerializeField, Foldout("Menu Names")]
         public string BooksMenu { get; private set; }
         [field: SerializeField, Foldout("Menu Names")]
         public string LevelsMenu { get; private set; }

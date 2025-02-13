@@ -1,4 +1,3 @@
-using System;
 using CIRC.CameraScripts;
 using CIRC.Progression;
 using LTX.ChanneledProperties;
@@ -12,6 +11,7 @@ namespace CIRC.Controllers
         public static Logger Logger { get; private set; }
         public static ProgressionManager ProgressionManager { get; private set; }
         public static CameraController CameraController { get; private set; }
+        public static MiniGameRegister MiniGameRegister { get; private set; }
         public static SceneController SceneController { get; private set; }
         private static GameMetrics gameMetrics;
         public static GameMetrics Metrics
@@ -25,8 +25,6 @@ namespace CIRC.Controllers
             }
         }
         
-        public static event Action GameSaved;
-
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         private static void Load()
         {
@@ -34,7 +32,8 @@ namespace CIRC.Controllers
 
             SceneController = new SceneController();
             Logger = new Logger();
-            
+
+            MiniGameRegister = new MiniGameRegister();
             CameraController = new CameraController();
             
             ProgressionManager = new ProgressionManager();
@@ -60,8 +59,6 @@ namespace CIRC.Controllers
             {
                 prefName = "Player"
             });
-            
-            GameSaved?.Invoke();
         }
         
         private static void LoadProgress()

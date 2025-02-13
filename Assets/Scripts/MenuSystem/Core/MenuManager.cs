@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using CIRC.Controllers;
 using DG.Tweening;
 using LTX.Singletons;
 using UnityEngine;
@@ -38,6 +39,20 @@ namespace CIRC.MenuSystem
             {
                 bool success = TryAddMenu(newMenus[i].MenuName, newMenus[i]);
                 //if (success) Debug.Log($"Added Menu : {newMenus[i].MenuName}");
+            }
+
+            if (GameController.SceneController.previousScene == default)
+            {
+                return;
+            }
+            if (GameController.SceneController.previousScene.StartsWith("Assets/Scenes/MainScenes/MiniGames"))
+            {
+                TryOpenMenu(GameMetrics.Global.MiniGameReward, new MenuContext()
+                {
+                    title = GameController.MiniGameRegister.currentMiniGame.miniGameName,
+                    desc = "Melekoum"
+                });
+                Debug.Log("Previous scene is in the MiniGames folder.");
             }
         }
 

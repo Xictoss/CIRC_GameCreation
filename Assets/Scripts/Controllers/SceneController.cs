@@ -6,11 +6,11 @@ namespace CIRC.Controllers
     {
         public SceneController Global => GameController.SceneController;
 
-        public Scene previousScene { get; private set; } 
+        public string previousScene { get; private set; } 
         
         public void LoadScene(int sceneIndex)
         {
-            previousScene = SceneManager.GetActiveScene();
+            previousScene = SceneManager.GetActiveScene().path;
             SceneManager.LoadScene(sceneIndex);
         }
     }

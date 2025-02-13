@@ -50,6 +50,7 @@ namespace CIRC.Animals
             };
             
             MenuManager.Instance.TryOpenMenu(GameController.Metrics.MiniGamePopUpMenu, ctx);
+            GameController.MiniGameRegister.SetCurrentMiniGame(data);
             canClick = true;
         }
     }
