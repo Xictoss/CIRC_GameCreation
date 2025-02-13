@@ -1,16 +1,22 @@
+using System;
+using CIRC.Controllers;
 using CIRC.Inputs;
+using CIRC.MenuSystem;
+using DG.Tweening;
+using LTX.Singletons;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
-namespace CIRC.Player
+namespace CIRC.CameraScripts
 {
-    public class PlayerCamera : MonoBehaviour
+    public class PlayerCamera : MonoSingleton<PlayerCamera>
     {
         private static InputController InputController => InputController.Instance;
 
         [Header("References")]
-        [SerializeField] private Transform cameraTarget;
+        [field: SerializeField] public Transform cameraTarget { get; private set; }
         [SerializeField] private CinemachineRecomposer recomposer;
         
         [Header("Drag Parameters")] 
@@ -28,13 +34,48 @@ namespace CIRC.Player
         private InputAction primaryTouch, secondaryTouch;
         private Vector3 zoomMiddlePoint;
 
+        public void FocusToPoint(Vector3 point, float zoomPoint, float speed, AnimationCurve curve)
+        {
+            cameraTarget.DOMove(point, speed).SetEase(curve);
+            
+            DOTween.To(
+                () => recomposer.ZoomScale,
+                x => recomposer.ZoomScale = x,
+                zoomPoint,
+                speed)
+                .SetEase(curve);
+        }
+
+        private void OnEnable()
+        {
+            SceneManager.sceneLoaded += SceneManagerOnsceneLoaded;
+        }
+        
+        private void OnDisable()
+        {
+            SceneManager.sceneLoaded -= SceneManagerOnsceneLoaded;
+        }
+
+        private void SceneManagerOnsceneLoaded(Scene arg0, LoadSceneMode arg1)
+        {
+            if (CameraController.Global.CameraState.cameraPosition == Vector3.zero) return;
+            
+            cameraTarget.position = CameraController.Global.CameraState.cameraPosition;
+            recomposer.ZoomScale = CameraController.Global.CameraState.cameraZoom;
+        }
+
         private void Update()
         {
-            MoveCamera();
-            ClampCamera();
+            if (MenuManager.Instance.currentMenu == null)
+            {
+                MoveCamera();
+                ClampCamera();
 
-            CalculateZoomInputs();
-            ZoomCamera();
+                CalculateZoomInputs();
+                ZoomCamera();
+                
+                GameController.CameraController.SetCameraState(cameraTarget.position, recomposer.ZoomScale);
+            }
         }
 
         private void ClampCamera()

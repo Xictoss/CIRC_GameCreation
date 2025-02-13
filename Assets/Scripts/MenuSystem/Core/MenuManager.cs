@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using DG.Tweening;
 using LTX.Singletons;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,7 +9,7 @@ namespace CIRC.MenuSystem
     public class MenuManager : MonoSingleton<MenuManager>
     {
         private Dictionary<string, BaseMenu> menus;
-        private BaseMenu currentMenu;
+        public BaseMenu currentMenu { get; private set; }
 
         protected override void Awake()
         {
@@ -47,7 +48,7 @@ namespace CIRC.MenuSystem
             return menus.TryAdd(menuName, menu);
         }
 
-        public bool TryOpenMenu(string menuName)
+        public bool TryOpenMenu(string menuName, MenuContext menuContext)
         {
             bool menu = menus.TryGetValue(menuName, out BaseMenu menuObject);
 
@@ -56,7 +57,7 @@ namespace CIRC.MenuSystem
                 if (currentMenu == null)
                 {
                     currentMenu = menuObject;
-                    currentMenu.OpenMenu();
+                    currentMenu.OpenMenu(menuContext);
                     return true;
                 }
 
@@ -71,7 +72,7 @@ namespace CIRC.MenuSystem
                 {
                     currentMenu.CloseMenu();
                     currentMenu = menuObject;
-                    currentMenu.OpenMenu();
+                    currentMenu.OpenMenu(menuContext);
                     return true;
                 }
 

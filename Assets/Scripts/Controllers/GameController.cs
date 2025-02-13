@@ -1,4 +1,5 @@
 using System;
+using CIRC.CameraScripts;
 using CIRC.Progression;
 using LTX.ChanneledProperties;
 using SaveSystem.Core;
@@ -10,6 +11,7 @@ namespace CIRC.Controllers
     {
         public static Logger Logger { get; private set; }
         public static ProgressionManager ProgressionManager { get; private set; }
+        public static CameraController CameraController { get; private set; }
         public static SceneController SceneController { get; private set; }
         private static GameMetrics gameMetrics;
         public static GameMetrics Metrics
@@ -32,6 +34,8 @@ namespace CIRC.Controllers
 
             SceneController = new SceneController();
             Logger = new Logger();
+            
+            CameraController = new CameraController();
             
             ProgressionManager = new ProgressionManager();
             Save.AddListener(ProgressionManager);

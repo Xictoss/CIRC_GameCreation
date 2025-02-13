@@ -30,7 +30,7 @@ namespace CIRC.MenuSystem
             MiniGameManager.Instance.StopMiniGame(_miniGameRunner.MiniGame, false);
         }
 
-        public override void OpenMenu()
+        public override void OpenMenu(MenuContext ctx)
         {
             gameObject.SetActive(true);
         }
