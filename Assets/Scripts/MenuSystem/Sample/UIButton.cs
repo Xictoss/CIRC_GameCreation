@@ -11,7 +11,7 @@ namespace CIRC.MenuSystem
         
         public void OpenMenu(string menuName)
         {
-            MenuManager.Instance.TryOpenMenu(menuName);
+            MenuManager.Instance.TryOpenMenu(menuName, default, 0f);
         }
     }
 }

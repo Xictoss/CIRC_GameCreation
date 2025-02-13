@@ -1,11 +1,13 @@
 using CIRC.Inputs;
+using DG.Tweening;
+using LTX.Singletons;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace CIRC.Player
 {
-    public class PlayerCamera : MonoBehaviour
+    public class PlayerCamera : MonoSingleton<PlayerCamera>
     {
         private static InputController InputController => InputController.Instance;
 
@@ -28,6 +30,18 @@ namespace CIRC.Player
         private InputAction primaryTouch, secondaryTouch;
         private Vector3 zoomMiddlePoint;
 
+        public void FocusToPoint(Vector3 point, float zoomPoint, float speed, AnimationCurve curve)
+        {
+            cameraTarget.DOMove(point, speed).SetEase(curve);
+            
+            DOTween.To(
+                () => recomposer.ZoomScale,
+                x => recomposer.ZoomScale = x,
+                zoomPoint,
+                speed)
+                .SetEase(curve);
+        }
+        
         private void Update()
         {
             MoveCamera();

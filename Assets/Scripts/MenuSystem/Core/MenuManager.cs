@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using DG.Tweening;
 using LTX.Singletons;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -47,31 +48,23 @@ namespace CIRC.MenuSystem
             return menus.TryAdd(menuName, menu);
         }
 
-        public bool TryOpenMenu(string menuName)
+        public bool TryOpenMenu(string menuName, MenuContext menuContext, float shakeForce)
         {
             bool menu = menus.TryGetValue(menuName, out BaseMenu menuObject);
 
             if (menu)
             {
-                if (currentMenu == null)
-                {
-                    currentMenu = menuObject;
-                    currentMenu.OpenMenu();
-                    return true;
-                }
-
-                if (currentMenu == menuObject)
+                if (currentMenu != null && (currentMenu == menuObject || menuObject.Priority >= currentMenu.Priority))
                 {
                     currentMenu.CloseMenu();
                     currentMenu = null;
-                    return true;
                 }
-                
-                if (menuObject.Priority >= currentMenu.Priority)
+
+                if (currentMenu == null || menuObject.Priority >= currentMenu.Priority)
                 {
-                    currentMenu.CloseMenu();
                     currentMenu = menuObject;
-                    currentMenu.OpenMenu();
+                    currentMenu.OpenMenu(menuContext);
+                    currentMenu.transform.DOShakeScale(0.5f, shakeForce, 5);
                     return true;
                 }
 

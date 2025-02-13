@@ -1,12 +1,18 @@
 using CIRC.Controllers;
+using TMPro;
 using UnityEngine;
 
 namespace CIRC.MenuSystem.MiniGamePopUp
 {
     public class MiniGamePopUpMenu : BaseMenu
     {
-        public override void OpenMenu()
+        [SerializeField] private TMP_Text title, desc;
+        
+        public override void OpenMenu(MenuContext ctx)
         {
+            title.text = ctx.title;
+            desc.text = ctx.desc;
+            
             gameObject.SetActive(true);
         }
 

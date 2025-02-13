@@ -5,7 +5,7 @@ namespace CIRC.MenuSystem
 {
     public class MiniGamesMenu : BaseMenu
     {
-        public override void OpenMenu()
+        public override void OpenMenu(MenuContext ctx)
         {
             gameObject.SetActive(true);
         }

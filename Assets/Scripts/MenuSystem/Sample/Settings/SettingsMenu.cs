@@ -25,7 +25,7 @@ namespace CIRC.MenuSystem
             
         }
 
-        public override void OpenMenu()
+        public override void OpenMenu(MenuContext ctx)
         {
             gameObject.SetActive(true);
         }

@@ -4,7 +4,7 @@ namespace CIRC.MenuSystem
 {
     public abstract class BaseMenu : MonoBehaviour, MenuAttributes
     {
-        public virtual void OpenMenu()
+        public virtual void OpenMenu(MenuContext ctx)
         {
             gameObject.SetActive(true);
         }
