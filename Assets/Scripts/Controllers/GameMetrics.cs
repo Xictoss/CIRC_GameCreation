@@ -96,6 +96,10 @@ namespace CIRC.Controllers
         [field: SerializeField, Foldout("MiniGames/ActivitePlageNager")]
         public int APN_GuySpeed { get; private set; }
         
+        [field: SerializeField, Foldout("MiniGames/HydratationPlageTourner")]
+        
+        public float HPT_fillSpeed { get; private set; }
+        
         #endregion MiniGameMetrics
 
     }
