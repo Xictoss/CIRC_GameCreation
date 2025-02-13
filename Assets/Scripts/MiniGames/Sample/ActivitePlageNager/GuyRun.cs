@@ -1,4 +1,6 @@
-﻿using DG.Tweening;
+﻿using System;
+using CIRC.Controllers;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -11,9 +13,10 @@ namespace CIRC.MiniGames.Sample
         [Header("Mouvement")]
         [SerializeField] private RectTransform guyTransform;
         [SerializeField] private RectTransform goalTransform;
+
+        public int GuySpeed => GameMetrics.Global.APN_GuySpeed;
         
-
-
+        
         public void OnPointerClick(PointerEventData eventData)
         {
 
@@ -21,7 +24,7 @@ namespace CIRC.MiniGames.Sample
             
             Bounds bounds2 = goalTransform.RectTransformToWorldBounds();
             
-            guyTransform.DOMove(new Vector3(guyTransform.position.x + 50, guyTransform.position.y, 0), 1);
+            guyTransform.DOMove(new Vector3(guyTransform.position.x + GuySpeed, guyTransform.position.y, 0), 1);
             
             if (bounds2.Contains(GoalCenter))
             {
