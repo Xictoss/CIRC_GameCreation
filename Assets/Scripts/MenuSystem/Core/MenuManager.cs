@@ -9,7 +9,7 @@ namespace CIRC.MenuSystem
     public class MenuManager : MonoSingleton<MenuManager>
     {
         private Dictionary<string, BaseMenu> menus;
-        private BaseMenu currentMenu;
+        public BaseMenu currentMenu { get; private set; }
 
         protected override void Awake()
         {
@@ -48,23 +48,31 @@ namespace CIRC.MenuSystem
             return menus.TryAdd(menuName, menu);
         }
 
-        public bool TryOpenMenu(string menuName, MenuContext menuContext, float shakeForce)
+        public bool TryOpenMenu(string menuName, MenuContext menuContext)
         {
             bool menu = menus.TryGetValue(menuName, out BaseMenu menuObject);
 
             if (menu)
             {
-                if (currentMenu != null && (currentMenu == menuObject || menuObject.Priority >= currentMenu.Priority))
-                {
-                    currentMenu.CloseMenu();
-                    currentMenu = null;
-                }
-
-                if (currentMenu == null || menuObject.Priority >= currentMenu.Priority)
+                if (currentMenu == null)
                 {
                     currentMenu = menuObject;
                     currentMenu.OpenMenu(menuContext);
-                    currentMenu.transform.DOShakeScale(0.5f, shakeForce, 5);
+                    return true;
+                }
+
+                if (currentMenu == menuObject)
+                {
+                    currentMenu.CloseMenu();
+                    currentMenu = null;
+                    return true;
+                }
+                
+                if (menuObject.Priority >= currentMenu.Priority)
+                {
+                    currentMenu.CloseMenu();
+                    currentMenu = menuObject;
+                    currentMenu.OpenMenu(menuContext);
                     return true;
                 }
 

@@ -1,7 +1,7 @@
 using System.Collections;
+using CIRC.CameraScripts;
 using CIRC.Controllers;
 using CIRC.MenuSystem;
-using CIRC.Player;
 using CIRC.Progression;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -12,12 +12,25 @@ namespace CIRC.Animals
     {
         [SerializeField] private MiniGameDataHolder data;
         [SerializeField] private AnimationCurve curve;
+        private bool canClick = true;
         
         public void OnPointerClick(PointerEventData eventData)
         {
-            float speed = 1;
+            if (!canClick) return;
             
-            PlayerCamera.Instance.FocusToPoint(transform.position + new Vector3(0, 2, 0), 0.15f, speed, curve);
+            canClick = false;
+            float speed = 1;
+
+            if (Vector3.Distance(PlayerCamera.Instance.cameraTarget.position,
+                    transform.position + new Vector3(0, 2, 0)) <= 0.1f)
+            {
+                OpenMenu();
+                return;
+            }
+            else
+            {
+                PlayerCamera.Instance.FocusToPoint(transform.position + new Vector3(0, 2, 0), 0.15f, speed, curve);
+            }
             
             StartCoroutine(OpenMenuAfterDelay(speed));
         }
@@ -36,7 +49,8 @@ namespace CIRC.Animals
                 desc = data.miniGameDesc
             };
             
-            MenuManager.Instance.TryOpenMenu(GameController.Metrics.MiniGamePopUpMenu, ctx, 0.1f);
+            MenuManager.Instance.TryOpenMenu(GameController.Metrics.MiniGamePopUpMenu, ctx);
+            canClick = true;
         }
     }
 }

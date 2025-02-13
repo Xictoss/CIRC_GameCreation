@@ -1,4 +1,4 @@
-using CIRC.Player;
+using CIRC.CameraScripts;
 using UnityEditor;
 using UnityEditor.IMGUI.Controls;
 using UnityEngine;
