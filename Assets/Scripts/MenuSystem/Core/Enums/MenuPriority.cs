@@ -4,9 +4,13 @@ namespace CIRC.MenuSystem
     {
         None = -1,
         
-        Low = 1,
-        Medium = 5,
-        High = 10,
-        Ultra = 50,
+        VeryLow = 10,
+        Low = 20,
+        Medium = 30,
+        High = 40,
+        VeryHigh = 50,
+        Ultra = 60,
+        
+        AbsoluteCinema = 100,
     }
 }

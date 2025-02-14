@@ -58,15 +58,15 @@ namespace CIRC.CameraScripts
 
         private void SceneManagerOnsceneLoaded(Scene arg0, LoadSceneMode arg1)
         {
-            if (CameraController.Global.CameraState.cameraPosition == Vector3.zero) return;
+            if (CameraController.Global.CameraAttributes.cameraPosition == Vector3.zero) return;
             
-            cameraTarget.position = CameraController.Global.CameraState.cameraPosition;
-            recomposer.ZoomScale = CameraController.Global.CameraState.cameraZoom;
+            cameraTarget.position = CameraController.Global.CameraAttributes.cameraPosition;
+            recomposer.ZoomScale = CameraController.Global.CameraAttributes.cameraZoom;
         }
 
         private void Update()
         {
-            if (MenuManager.Instance.currentMenu == null)
+            if (MenuManager.Instance.currentMenu == null && !UIBlocker.Instance.IsPointerOverUI())
             {
                 MoveCamera();
                 ClampCamera();
