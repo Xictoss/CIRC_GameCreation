@@ -16,7 +16,7 @@ namespace CIRC.MenuSystem
         }
 
         public override string MenuName => GameController.Metrics.MiniGamesMenu;
-        public override MenuPriority Priority => MenuPriority.High;
+        public override MenuPriority Priority => MenuPriority.Medium;
         public override GameObject Object => gameObject;
     }
 }

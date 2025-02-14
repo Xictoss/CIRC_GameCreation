@@ -1,8 +1,10 @@
+using System.Collections.Generic;
 using CIRC.CameraScripts;
 using CIRC.Progression;
 using LTX.ChanneledProperties;
 using SaveSystem.Core;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace CIRC.Controllers
 {
@@ -34,6 +36,7 @@ namespace CIRC.Controllers
             Logger = new Logger();
 
             MiniGameRegister = new MiniGameRegister();
+            SceneManager.sceneLoaded += MiniGameRegister.OnSceneChanged;
             CameraController = new CameraController();
             
             ProgressionManager = new ProgressionManager();
@@ -70,6 +73,16 @@ namespace CIRC.Controllers
             });
         }
         
+        public static void ResetProgression()
+        {
+            foreach (KeyValuePair<string, bool> game in ProgressionManager.miniGameStatus)
+            {
+                ProgressionManager.ResetMiniGame(game.Key);
+            }
+            
+            SaveProgress();
+        }
+        
         public static void QuitGame()
         {
             UnLoad();
@@ -95,5 +108,6 @@ namespace CIRC.Controllers
         }
 
         #endregion
+
     }
 }

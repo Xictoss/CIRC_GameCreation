@@ -36,6 +36,7 @@ MonoBehaviour:
   <ActiviteEntrepriseDrag>k__BackingField: 20
   <VaccinationEntrepriseDrag>k__BackingField: 22
   <MiniGamePopUpMenu>k__BackingField: MiniGamePopUpMenu
+  <MiniGameReward>k__BackingField: MiniGameReward
   <BooksMenu>k__BackingField: BooksMenu
   <LevelsMenu>k__BackingField: LevelsMenu
   <MiniGamesMenu>k__BackingField: MiniGamesMenu
