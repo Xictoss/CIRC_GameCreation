@@ -4,7 +4,7 @@ namespace CIRC.MenuSystem
 {
     public interface MenuAttributes
     {
-        public MenuPriority Priority { get; }
+        public PriorityScale PriorityScale { get; }
         public GameObject Object { get; }
     }
 }

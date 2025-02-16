@@ -1,11 +1,12 @@
 using CIRC.MenuSystem;
 using CIRC.Progression;
+using CIRC.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace CIRC.Controllers
 {
-    public class MiniGameRegister
+    public class MiniGameRegister : ILoadScene
     {
         public static MiniGameRegister Global => GameController.MiniGameRegister;
 
@@ -17,8 +18,8 @@ namespace CIRC.Controllers
             currentMiniGame = data;
             WasCompleted = GameController.ProgressionManager.miniGameStatus[data.GUID];
         }
-
-        public void OnSceneChanged(Scene scene, LoadSceneMode loadSceneMode)
+        
+        public void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
         {
             if (GameController.SceneController.previousScene == default) return;
             if (!GameController.SceneController.previousScene.StartsWith("Assets/Scenes/MainScenes/MiniGames")) return;

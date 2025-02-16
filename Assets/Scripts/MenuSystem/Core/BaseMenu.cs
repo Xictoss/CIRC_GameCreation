@@ -14,7 +14,7 @@ namespace CIRC.MenuSystem
             gameObject.SetActive(false);
         }
         
-        public virtual MenuPriority Priority => MenuPriority.Medium;
+        public virtual PriorityScale PriorityScale => PriorityScale.Medium;
         public abstract string MenuName { get; }
         public virtual GameObject Object => gameObject;
     }

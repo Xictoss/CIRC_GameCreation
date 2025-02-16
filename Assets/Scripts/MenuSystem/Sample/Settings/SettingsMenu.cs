@@ -36,7 +36,7 @@ namespace CIRC.MenuSystem
         }
 
         public override string MenuName => GameController.Metrics.SettingsMenu;
-        public override MenuPriority Priority => MenuPriority.Ultra;
+        public override PriorityScale PriorityScale => PriorityScale.Ultra;
         public override GameObject Object => gameObject;
     }
 }

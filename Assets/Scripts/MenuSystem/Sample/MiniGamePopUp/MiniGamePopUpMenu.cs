@@ -36,7 +36,7 @@ namespace CIRC.MenuSystem.MiniGamePopUp
         }
 
         public override string MenuName => GameController.Metrics.MiniGamePopUpMenu;
-        public override MenuPriority Priority => MenuPriority.High;
+        public override PriorityScale PriorityScale => PriorityScale.High;
         public override GameObject Object => gameObject;
     }
 }
