@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 namespace CIRC.MenuSystem
 {
-    public class MenuManager : MonoSingleton<MenuManager>, ILoadScene
+    public class MenuManager : MonoSingleton<MenuManager>
     {
         private Dictionary<string, BaseMenu> menus;
         [SerializeField] private BaseMenu[] serializedMenus;
@@ -20,15 +20,8 @@ namespace CIRC.MenuSystem
             menus = new Dictionary<string, BaseMenu>();
             foreach (BaseMenu menu in serializedMenus)
             {
-                menus.TryAdd(menu.MenuName, menu);
+                TryAddMenu(menu.MenuName, menu);
             }
-            
-            //GameController.SceneController.SubToSceneChange(this, PriorityScale.VeryHigh);
-        }
-
-        public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-        {
-
         }
 
         public bool TryAddMenu(string menuName, BaseMenu menu)

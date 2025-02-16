@@ -9,7 +9,7 @@ namespace CIRC.SceneManagement
     public class SceneController
     {
         public SceneController Global => GameController.SceneController;
-        public string previousScene { get; private set; }
+        public string previousScene { get; private set; } = "";
         private SortedList<PriorityScale, ILoadScene> subbedClasses = new SortedList<PriorityScale, ILoadScene>();
         
         public void LoadScene(int sceneIndex)
@@ -29,12 +29,20 @@ namespace CIRC.SceneManagement
                 Debug.Log($"Class {classToSub} already exists in the list");
             }
         }
+
+        public void RemoveSubbedClass(PriorityScale priority)
+        {
+            if (subbedClasses.ContainsKey(priority))
+            {
+                subbedClasses.Remove(priority);
+            }
+        }
         
-        public void OnSceneChanged(Scene scene, LoadSceneMode loadSceneMode)
+        public void OnSceneChanged(Scene currentScene, Scene nextScene)
         {
             foreach (ILoadScene subbedClass in subbedClasses.Values.Reverse())
             {
-                subbedClass.OnSceneLoaded(scene, loadSceneMode);
+                subbedClass.OnSceneLoaded(previousScene, nextScene);
             }
         }
     }
