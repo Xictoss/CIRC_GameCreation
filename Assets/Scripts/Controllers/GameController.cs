@@ -34,7 +34,7 @@ namespace CIRC.Controllers
             Application.targetFrameRate = 60;
 
             SceneController = new SceneController();
-            SceneManager.sceneLoaded += SceneController.OnSceneChanged;
+            SceneManager.activeSceneChanged += SceneController.OnSceneChanged;
             
             Logger = new Logger();
 
@@ -55,7 +55,7 @@ namespace CIRC.Controllers
         {
             //SaveProgress();
             Save.RemoveListener(ProgressionManager);
-            SceneManager.sceneLoaded -= SceneController.OnSceneChanged;
+            SceneManager.activeSceneChanged -= SceneController.OnSceneChanged;
         }
 
         #region Progress Functions
@@ -80,9 +80,10 @@ namespace CIRC.Controllers
         
         public static void ResetProgression()
         {
-            foreach (KeyValuePair<string, bool> game in ProgressionManager.miniGameStatus)
+            List<string> buffer = new List<string>(ProgressionManager.miniGameStatus.Keys);
+            foreach (string id in buffer)
             {
-                ProgressionManager.ResetMiniGame(game.Key);
+                ProgressionManager.ResetMiniGame(id);
             }
             
             SaveProgress();

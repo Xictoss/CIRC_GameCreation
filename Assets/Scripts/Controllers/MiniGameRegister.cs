@@ -19,10 +19,9 @@ namespace CIRC.Controllers
             WasCompleted = GameController.ProgressionManager.miniGameStatus[data.GUID];
         }
         
-        public void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
+        public void OnSceneLoaded(string previousScene, Scene currentScene)
         {
-            if (GameController.SceneController.previousScene == default) return;
-            if (!GameController.SceneController.previousScene.StartsWith("Assets/Scenes/MainScenes/MiniGames")) return;
+            if (!previousScene.StartsWith("Assets/Scenes/MainScenes/MiniGames")) return;
             if (WasCompleted) return;
             
             bool success = MenuManager.Instance.TryOpenMenu(GameMetrics.Global.MiniGameReward, new MenuContext()

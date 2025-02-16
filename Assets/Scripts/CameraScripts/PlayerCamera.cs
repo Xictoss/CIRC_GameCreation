@@ -50,13 +50,18 @@ namespace CIRC.CameraScripts
         {
             base.Awake();
             
-            GameController.SceneController.SubToSceneChange(this, PriorityScale.Medium);
+            GameController.SceneController.SubToSceneChange(this, PriorityScale.Medium - 1);
             CameraController.Global.CameraState = CameraState.Free;
         }
 
-        public void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
+        private void OnDisable()
         {
-            if (CameraController.Global.CameraAttributes.cameraPosition == Vector3.zero) return;
+            GameController.SceneController.RemoveSubbedClass(PriorityScale.Medium - 1);
+        }
+
+        public void OnSceneLoaded(string previousScene, Scene currentScene)
+        {
+            if (!previousScene.StartsWith("Assets/Scenes/MainScenes/MiniGames")) return;
             
             cameraTarget.position = CameraController.Global.CameraAttributes.cameraPosition;
             recomposer.ZoomScale = CameraController.Global.CameraAttributes.cameraZoom;
