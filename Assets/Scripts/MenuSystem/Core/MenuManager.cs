@@ -1,43 +1,34 @@
 using System.Collections.Generic;
+using CIRC.Controllers;
+using CIRC.SceneManagement;
 using LTX.Singletons;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace CIRC.MenuSystem
 {
-    public class MenuManager : MonoSingleton<MenuManager>
+    public class MenuManager : MonoSingleton<MenuManager>, ILoadScene
     {
         private Dictionary<string, BaseMenu> menus;
+        [SerializeField] private BaseMenu[] serializedMenus;
         public BaseMenu currentMenu { get; private set; }
 
         protected override void Awake()
         {
             base.Awake();
-            if (MenuManager.Instance != this) Destroy(this);
             
             menus = new Dictionary<string, BaseMenu>();
-
-            DontDestroyOnLoad(this);
-            SceneManager.sceneLoaded += OnSceneLoaded;
-        }
-
-        protected override void OnDestroy()
-        {
-            base.OnDestroy();
-            SceneManager.sceneLoaded -= OnSceneLoaded;
-        }
-
-        private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-        {
-            menus.Clear();
-            currentMenu = null;
-
-            BaseMenu[] newMenus = FindObjectsByType<BaseMenu>(FindObjectsInactive.Include, FindObjectsSortMode.None);
-            for (int i = 0; i < newMenus.Length; i++)
+            foreach (BaseMenu menu in serializedMenus)
             {
-                bool success = TryAddMenu(newMenus[i].MenuName, newMenus[i]);
-                //if (success) Debug.Log($"Added Menu : {newMenus[i].MenuName}");
+                menus.TryAdd(menu.MenuName, menu);
             }
+            
+            //GameController.SceneController.SubToSceneChange(this, PriorityScale.VeryHigh);
+        }
+
+        public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+        {
+
         }
 
         public bool TryAddMenu(string menuName, BaseMenu menu)
@@ -67,7 +58,7 @@ namespace CIRC.MenuSystem
                     return true;
                 }
                 
-                if (menuObject.Priority >= currentMenu.Priority)
+                if (menuObject.PriorityScale >= currentMenu.PriorityScale)
                 {
                     currentMenu.CloseMenu();
                     currentMenu = menuObject;

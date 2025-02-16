@@ -1,6 +1,6 @@
-namespace CIRC.MenuSystem
+namespace CIRC
 {
-    public enum MenuPriority
+    public enum PriorityScale
     {
         None = -1,
         
