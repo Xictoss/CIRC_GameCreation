@@ -26,8 +26,8 @@ namespace CIRC.Controllers
             
             bool success = MenuManager.Instance.TryOpenMenu(GameMetrics.Global.MiniGameReward, new MenuContext()
             {
-                title = currentMiniGame.miniGameName,
-                desc = currentMiniGame.miniGameDesc,
+                endDesc = currentMiniGame.endDesc,
+                endExplication = currentMiniGame.endExplication,
             });
         }
     }

@@ -14,7 +14,7 @@ namespace CIRC.MenuSystem
 #if UNITY_EDITOR  
         [Dropdown(nameof(GetSceneReferences))]
 #endif
-        private SceneReference sceneIndex;
+        protected SceneReference sceneIndex;
 
 #if UNITY_EDITOR  
         private DropdownList<SceneReference> GetSceneReferences()
@@ -40,7 +40,7 @@ namespace CIRC.MenuSystem
         }
 #endif
 
-        public void ChangeScene()
+        public virtual void ChangeScene()
         {
             GameController.SceneController.LoadScene(sceneIndex);
         }

@@ -1,4 +1,3 @@
-using System;
 using DevLocker.Utils;
 using UnityEngine;
 
@@ -8,11 +7,18 @@ namespace CIRC.Progression
     public class MiniGameDataHolder : ScriptableObject
     {
         public string miniGameName;
+        [Space(20)]
         public string miniGameDesc;
         public string miniGameTitle;
+
+        [Space(20)] 
+        public string endDesc;
+        public string endExplication;
         
+        [Space(20)]
         public SceneReference scene;
         
+        [Space(20)]
         public GameSubject gameSubject;
         public BadgeData badgeDisplay;
         
