@@ -14,12 +14,12 @@ namespace CIRC.MiniGames.Sample
         
         public void OnGreatChoice()
         {
-            goodButton.DOShakePosition(2).OnComplete(() => Finished = true);
+            goodButton.DOShakePosition(2, 2f, 100).OnComplete(() => Finished = true);
         }
 
         public void OnBadChoice()
         {
-            badButton.DOShakePosition(2);
+            badButton.DOShakePosition(2, 2f, 100);
         }
 
         
