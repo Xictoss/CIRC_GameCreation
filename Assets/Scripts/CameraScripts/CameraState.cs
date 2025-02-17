@@ -1,11 +1,9 @@
-using UnityEngine;
-
 namespace CIRC.CameraScripts
 {
-    [System.Serializable]
-    public struct CameraState
+    public enum CameraState
     {
-        public Vector3 cameraPosition;
-        public float cameraZoom;
+        Free,
+        Locked,
+        Limited,
     }
 }

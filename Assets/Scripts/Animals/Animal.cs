@@ -11,7 +11,7 @@ namespace CIRC.Animals
         {
             while (true)
             {
-                yield return new WaitForSeconds(AnimalData.dialogCooldown);
+                yield return new WaitForSeconds(AnimalData.dialogCooldown + AnimalData.dialogDuration);
                 
                 DialogsManager.Instance.SpawnDialog(AnimalData, transform.position);
             }

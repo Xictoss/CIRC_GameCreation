@@ -13,6 +13,12 @@ MonoBehaviour:
   m_Name: HydratationPlageTourner
   m_EditorClassIdentifier: 
   miniGameName: HydratationPlageTourner
+  miniGameDesc: 
+  miniGameTitle: 
+  scene:
+    m_SceneAsset: {fileID: 102900000, guid: 3f1583d9096956d429ab062f9841dbfa, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/1_Plage/HydratationPlageTourner.unity
   gameSubject: 1
   badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
   GUID: 156fbc13-41b4-42f8-974b-aea9e7e785a7

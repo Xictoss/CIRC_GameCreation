@@ -1,3 +1,5 @@
+using DevLocker.Utils;
+
 namespace CIRC.MenuSystem
 {
     [System.Serializable]
@@ -5,5 +7,7 @@ namespace CIRC.MenuSystem
     {
         public string title;
         public string desc;
+
+        public SceneReference scene;
     }
 }

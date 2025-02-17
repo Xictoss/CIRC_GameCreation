@@ -15,9 +15,9 @@ namespace CIRC.MenuSystem
             Application.OpenURL("https://www.iarc.who.int/fr/");
         }
         
-        public void QuitGame()
+        public void ResetProgression()
         {
-            GameController.QuitGame();
+            GameController.ResetProgression();
         }
         
         public void SetVolumeState()
@@ -36,7 +36,7 @@ namespace CIRC.MenuSystem
         }
 
         public override string MenuName => GameController.Metrics.SettingsMenu;
-        public override MenuPriority Priority => MenuPriority.Medium;
+        public override PriorityScale PriorityScale => PriorityScale.Ultra;
         public override GameObject Object => gameObject;
     }
 }

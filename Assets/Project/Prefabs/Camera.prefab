@@ -108,8 +108,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 1
-  m_RequiresOpaqueTextureOption: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
   m_Cameras: []
   m_RendererIndex: -1
@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d14498aab8794ce18157fb80ce27119f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraTarget: {fileID: 957244981168410337}
+  <cameraTarget>k__BackingField: {fileID: 957244981168410337}
   recomposer: {fileID: 1961166080959673473}
   cameraMoveRange:
     m_Center: {x: -2.3727913, y: 1.5114594, z: 0.8317518}
@@ -274,7 +274,7 @@ MonoBehaviour:
   zoomClamp: {x: 0.2, y: 2}
   smoothZoomSpeed: 15
   zoomSensitivity: 0.15
-  zoomMoveSpeed: 0.01
+  zoomMoveSpeed: 0.08
 --- !u!1 &8857024159358838571
 GameObject:
   m_ObjectHideFlags: 0

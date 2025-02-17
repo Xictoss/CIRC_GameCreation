@@ -8,21 +8,21 @@
       "hash": "8a8fa5a9659a6d63f196391c71e06c4286c8acd7"
     },
     "com.ltx.channeled-properties": {
-      "version": "1.0.0",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://helteix-verdaccio.euvtgm.easypanel.host"
-    },
-    "com.ltx.singletons": {
       "version": "1.0.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://helteix-verdaccio.euvtgm.easypanel.host"
     },
-    "com.ltx.tools": {
+    "com.ltx.singletons": {
       "version": "1.0.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://helteix-verdaccio.euvtgm.easypanel.host"
+    },
+    "com.ltx.tools": {
+      "version": "1.0.7",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -168,13 +168,6 @@
       },
       "url": "https://packages.unity.com"
     },
-    "com.unity.collab-proxy": {
-      "version": "2.5.2",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
     "com.unity.collections": {
       "version": "2.5.1",
       "depth": 2,
@@ -304,14 +297,6 @@
         "com.unity.modules.androidjni": "1.0.0"
       },
       "url": "https://packages.unity.com"
-    },
-    "com.unity.multiplayer.center": {
-      "version": "1.0.0",
-      "depth": 0,
-      "source": "builtin",
-      "dependencies": {
-        "com.unity.modules.uielements": "1.0.0"
-      }
     },
     "com.unity.nuget.mono-cecil": {
       "version": "1.11.4",
@@ -475,22 +460,19 @@
         "com.unity.modules.imgui": "1.0.0"
       }
     },
-    "com.unity.visualscripting": {
-      "version": "1.9.4",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.ugui": "1.0.0",
-        "com.unity.modules.jsonserialize": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
-    },
     "com.wooshii.hierarchydecorator": {
       "version": "https://github.com/WooshiiDev/HierarchyDecorator.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
       "hash": "2590c6a14a7230b8571383c379124c32d0712090"
+    },
+    "devlocker.utils.scenereference": {
+      "version": "https://github.com/NibbleByte/UnitySceneReference.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "15017717beccf5b901e0e4af9e12e8bcfad1e70c"
     },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",

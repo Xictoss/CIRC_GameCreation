@@ -13,6 +13,12 @@ MonoBehaviour:
   m_Name: AlcoolMaisonBoisson
   m_EditorClassIdentifier: 
   miniGameName: AlcoolMaisonBoisson
+  miniGameDesc: 
+  miniGameTitle: 
+  scene:
+    m_SceneAsset: {fileID: 102900000, guid: cccafd9d03692db46a6025b989014cc0, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/2_Maison/AlcoolMaisonBoisson.unity
   gameSubject: 2
   badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
   GUID: c83b58eb-d9d0-469e-b93c-fb0440cbe0ef

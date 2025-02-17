@@ -1,7 +1,7 @@
-using System;
 using CIRC.Controllers;
 using CIRC.Inputs;
 using CIRC.MenuSystem;
+using CIRC.SceneManagement;
 using DG.Tweening;
 using LTX.Singletons;
 using Unity.Cinemachine;
@@ -11,7 +11,7 @@ using UnityEngine.SceneManagement;
 
 namespace CIRC.CameraScripts
 {
-    public class PlayerCamera : MonoSingleton<PlayerCamera>
+    public class PlayerCamera : MonoSingleton<PlayerCamera>, ILoadScene
     {
         private static InputController InputController => InputController.Instance;
 
@@ -46,27 +46,33 @@ namespace CIRC.CameraScripts
                 .SetEase(curve);
         }
 
-        private void OnEnable()
+        protected override void Awake()
         {
-            SceneManager.sceneLoaded += SceneManagerOnsceneLoaded;
-        }
-        
-        private void OnDisable()
-        {
-            SceneManager.sceneLoaded -= SceneManagerOnsceneLoaded;
+            base.Awake();
+            
+            GameController.SceneController.SubToSceneChange(this, PriorityScale.Medium - 1);
+            CameraController.Global.CameraState = CameraState.Free;
         }
 
-        private void SceneManagerOnsceneLoaded(Scene arg0, LoadSceneMode arg1)
+        private void OnDisable()
         {
-            if (CameraController.Global.CameraState.cameraPosition == Vector3.zero) return;
+            GameController.SceneController.RemoveSubbedClass(PriorityScale.Medium - 1);
+        }
+
+        public void OnSceneLoaded(string previousScene, Scene currentScene)
+        {
+            if (!previousScene.StartsWith("Assets/Scenes/MainScenes/MiniGames")) return;
             
-            cameraTarget.position = CameraController.Global.CameraState.cameraPosition;
-            recomposer.ZoomScale = CameraController.Global.CameraState.cameraZoom;
+            cameraTarget.position = CameraController.Global.CameraAttributes.cameraPosition;
+            recomposer.ZoomScale = CameraController.Global.CameraAttributes.cameraZoom;
         }
 
         private void Update()
         {
-            if (MenuManager.Instance.currentMenu == null)
+            bool canMove = MenuManager.Instance.currentMenu == null
+                           && !UIBlocker.Instance.IsPointerOverUI()
+                           && CameraController.Global.CameraState == CameraState.Free;
+            if (canMove)
             {
                 MoveCamera();
                 ClampCamera();
@@ -74,7 +80,7 @@ namespace CIRC.CameraScripts
                 CalculateZoomInputs();
                 ZoomCamera();
                 
-                GameController.CameraController.SetCameraState(cameraTarget.position, recomposer.ZoomScale);
+                GameController.CameraController.SetCameraAttributes(cameraTarget.position, recomposer.ZoomScale);
             }
         }
 

@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using CIRC.CameraScripts;
 using CIRC.Controllers;
 using CIRC.MenuSystem;
@@ -8,13 +9,14 @@ using UnityEngine.EventSystems;
 
 namespace CIRC.Animals
 {
-    public class HelpAnimal : MonoBehaviour, IPointerClickHandler
+    public class HelpAnimal : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
     {
         [SerializeField] private MiniGameDataHolder data;
         [SerializeField] private AnimationCurve curve;
         private bool canClick = true;
+        private Vector2 downPos;
         
-        public void OnPointerClick(PointerEventData eventData)
+        private void ClickOnAnimal()
         {
             if (!canClick) return;
             
@@ -33,6 +35,7 @@ namespace CIRC.Animals
             }
             
             StartCoroutine(OpenMenuAfterDelay(speed));
+            
         }
 
         private IEnumerator OpenMenuAfterDelay(float delay)
@@ -46,12 +49,26 @@ namespace CIRC.Animals
             MenuContext ctx = new MenuContext()
             {
                 title = data.miniGameTitle,
-                desc = data.miniGameDesc
+                desc = data.miniGameDesc,
+                scene =  data.scene
             };
             
             MenuManager.Instance.TryOpenMenu(GameController.Metrics.MiniGamePopUpMenu, ctx);
             GameController.MiniGameRegister.SetCurrentMiniGame(data);
             canClick = true;
+        }
+        
+        public void OnPointerDown(PointerEventData eventData)
+        {
+            downPos = eventData.position;
+        }
+
+        public void OnPointerUp(PointerEventData eventData)
+        {
+            if (Vector2.Distance(downPos, eventData.position) < 10)
+            {
+                ClickOnAnimal();
+            }
         }
     }
 }

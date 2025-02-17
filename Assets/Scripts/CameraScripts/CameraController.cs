@@ -6,11 +6,12 @@ namespace CIRC.CameraScripts
     public class CameraController
     {
         public static CameraController Global => GameController.CameraController;
-        public CameraState CameraState { get; private set; }
+        public CameraAttributes CameraAttributes { get; private set; }
+        public CameraState CameraState;
 
-        public void SetCameraState(Vector3 pos, float zoom)
+        public void SetCameraAttributes(Vector3 pos, float zoom)
         {
-            CameraState = new CameraState()
+            CameraAttributes = new CameraAttributes()
             {
                 cameraPosition = pos,
                 cameraZoom = zoom,

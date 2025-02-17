@@ -9,7 +9,7 @@ namespace CIRC.MenuSystem
     public class PauseMenu : BaseMenu
     {
         public override string MenuName => GameController.Metrics.PauseMenu;
-        public override MenuPriority Priority => MenuPriority.High;
+        public override PriorityScale PriorityScale => PriorityScale.AbsoluteCinema;
         public override GameObject Object => gameObject;
         
         private IMiniGameRunner _miniGameRunner;

@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainScenes/MainMenu.unity
-    guid: 5a7482f936737ce478c44ba6194d8bba
-  - enabled: 1
     path: Assets/Scenes/MainScenes/Levels/1_PlageScene.unity
     guid: d32585711773aa74aa160bd8e04e4c14
   - enabled: 1
@@ -74,6 +71,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScenes/MiniGames/5_Entreprise/VaccinationEntrepriseDrag.unity
     guid: fec09a1193f977b41924054aaff30285
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MiniGames/1_Plage/AlimentationPlageChips.unity
+    guid: a9cc9f2100ce5ee4cb18f09b453c2db9
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MiniGames/1_Plage/HydratationPlageTourner.unity
+    guid: 3f1583d9096956d429ab062f9841dbfa
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MiniGames/1_Plage/TabagismePlageCigarette.unity
+    guid: 09ef5d522f9bd454c98b0731e7d80c19
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MainMenu.unity
+    guid: 5a7482f936737ce478c44ba6194d8bba
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 46661899d2991954fb32fdca03a8b7e5, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: f120053cde1ae38408022f418871162c, type: 2}
