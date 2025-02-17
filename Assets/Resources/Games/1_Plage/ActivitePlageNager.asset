@@ -13,6 +13,12 @@ MonoBehaviour:
   m_Name: ActivitePlageNager
   m_EditorClassIdentifier: 
   miniGameName: ActivitePlageNager
+  miniGameDesc: 
+  miniGameTitle: 
+  scene:
+    m_SceneAsset: {fileID: 102900000, guid: 31c0e57efbe73474ca93483796b188df, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/1_Plage/ActivitePlageNager.unity
   gameSubject: 11
   badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
   GUID: 0b0d4e71-b6ee-4478-b4cf-7f7bce704083

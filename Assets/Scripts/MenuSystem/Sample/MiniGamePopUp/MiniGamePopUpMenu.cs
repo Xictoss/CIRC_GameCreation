@@ -2,22 +2,29 @@ using CIRC.Controllers;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace CIRC.MenuSystem.MiniGamePopUp
 {
     public class MiniGamePopUpMenu : BaseMenu
     {
         [SerializeField] private TMP_Text title, desc;
+        [SerializeField] private Button button;
 
         [Space(10f)]
         [SerializeField] private float shakeForce;
 
+        private MenuContext context;
         private Tween currentTween;
         
         public override void OpenMenu(MenuContext ctx)
         {
-            title.text = ctx.title;
-            desc.text = ctx.desc;
+            context = ctx;
+            
+            title.text = context.title;
+            desc.text = context.desc;
+
+            button.onClick.AddListener(OnButtonClick);
             
             gameObject.SetActive(true);
             
@@ -32,7 +39,14 @@ namespace CIRC.MenuSystem.MiniGamePopUp
 
         public override void CloseMenu()
         {
+            button.onClick.RemoveListener(OnButtonClick);
+            
             gameObject.SetActive(false);
+        }
+
+        private void OnButtonClick()
+        {
+            GameController.SceneController.LoadScene(context.scene);
         }
 
         public override string MenuName => GameController.Metrics.MiniGamePopUpMenu;

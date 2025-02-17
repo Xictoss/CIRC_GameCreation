@@ -13,6 +13,12 @@ MonoBehaviour:
   m_Name: HydratationMaisonLabyrinthe
   m_EditorClassIdentifier: 
   miniGameName: HydratationMaisonLabyrinthe
+  miniGameDesc: 
+  miniGameTitle: 
+  scene:
+    m_SceneAsset: {fileID: 102900000, guid: b4997b5e0c8500d4cb4ce2f056333684, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/2_Maison/HydratationMaisonLabyrinthe.unity
   gameSubject: 1
   badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
   GUID: b97d00bd-4597-436c-8082-4b165b42ecdb

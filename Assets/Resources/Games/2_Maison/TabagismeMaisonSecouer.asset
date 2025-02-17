@@ -13,6 +13,12 @@ MonoBehaviour:
   m_Name: TabagismeMaisonSecouer
   m_EditorClassIdentifier: 
   miniGameName: TabagismeMaisonSecouer
+  miniGameDesc: 
+  miniGameTitle: 
+  scene:
+    m_SceneAsset: {fileID: 102900000, guid: 76f23035327c1e9448978270e4a5bee7, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/2_Maison/TabagismeMaisonSecouer.unity
   gameSubject: 7
   badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
   GUID: 538aa4e0-e538-49ff-9464-61aea5735fee

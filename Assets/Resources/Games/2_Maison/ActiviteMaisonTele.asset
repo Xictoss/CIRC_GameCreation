@@ -13,6 +13,12 @@ MonoBehaviour:
   m_Name: ActiviteMaisonTele
   m_EditorClassIdentifier: 
   miniGameName: ActiviteMaisonTele
+  miniGameDesc: 
+  miniGameTitle: 
+  scene:
+    m_SceneAsset: {fileID: 102900000, guid: c3dda087302d50347a3f7289a85ba551, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/2_Maison/ActiviteMaisonTele.unity
   gameSubject: 11
   badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
   GUID: 0eb9e8b1-3a9b-424c-ae79-eb3e415d7955

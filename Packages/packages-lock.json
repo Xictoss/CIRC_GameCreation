@@ -492,6 +492,13 @@
       "dependencies": {},
       "hash": "2590c6a14a7230b8571383c379124c32d0712090"
     },
+    "devlocker.utils.scenereference": {
+      "version": "https://github.com/NibbleByte/UnitySceneReference.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "15017717beccf5b901e0e4af9e12e8bcfad1e70c"
+    },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
       "depth": 0,

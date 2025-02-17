@@ -13,6 +13,12 @@ MonoBehaviour:
   m_Name: AlimentationPlageChips
   m_EditorClassIdentifier: 
   miniGameName: AlimentationPlageChips
+  miniGameDesc: 
+  miniGameTitle: 
+  scene:
+    m_SceneAsset: {fileID: 102900000, guid: a9cc9f2100ce5ee4cb18f09b453c2db9, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/1_Plage/AlimentationPlageChips.unity
   gameSubject: 0
   badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
   GUID: 32199c82-2e43-44c3-a389-ee5805e2bb62

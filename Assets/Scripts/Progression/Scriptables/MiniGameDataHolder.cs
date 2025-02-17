@@ -1,4 +1,5 @@
 using System;
+using DevLocker.Utils;
 using UnityEngine;
 
 namespace CIRC.Progression
@@ -9,6 +10,9 @@ namespace CIRC.Progression
         public string miniGameName;
         public string miniGameDesc;
         public string miniGameTitle;
+        
+        public SceneReference scene;
+        
         public GameSubject gameSubject;
         public BadgeData badgeDisplay;
         

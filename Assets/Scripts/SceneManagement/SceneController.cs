@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using CIRC.Controllers;
+using DevLocker.Utils;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -16,6 +17,18 @@ namespace CIRC.SceneManagement
         {
             previousScene = SceneManager.GetActiveScene().path;
             SceneManager.LoadScene(sceneIndex);
+        }
+        
+        public void LoadScene(string sceneName)
+        {
+            previousScene = SceneManager.GetActiveScene().path;
+            SceneManager.LoadScene(sceneName);
+        }
+        
+        public void LoadScene(SceneReference scene)
+        {
+            previousScene = SceneManager.GetActiveScene().path;
+            SceneManager.LoadScene(scene.BuildIndex);
         }
 
         public void SubToSceneChange(ILoadScene classToSub, PriorityScale priority)

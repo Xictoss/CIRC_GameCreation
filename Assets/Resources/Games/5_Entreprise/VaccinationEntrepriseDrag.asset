@@ -13,6 +13,12 @@ MonoBehaviour:
   m_Name: VaccinationEntrepriseDrag
   m_EditorClassIdentifier: 
   miniGameName: VaccinationEntrepriseDrag
+  miniGameDesc: 
+  miniGameTitle: 
+  scene:
+    m_SceneAsset: {fileID: 102900000, guid: fec09a1193f977b41924054aaff30285, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/5_Entreprise/VaccinationEntrepriseDrag.unity
   gameSubject: 5
   badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
   GUID: 08ab4f76-7c2d-49e1-a254-74e68b953592

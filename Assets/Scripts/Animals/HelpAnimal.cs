@@ -49,7 +49,8 @@ namespace CIRC.Animals
             MenuContext ctx = new MenuContext()
             {
                 title = data.miniGameTitle,
-                desc = data.miniGameDesc
+                desc = data.miniGameDesc,
+                scene =  data.scene
             };
             
             MenuManager.Instance.TryOpenMenu(GameController.Metrics.MiniGamePopUpMenu, ctx);

@@ -13,6 +13,12 @@ MonoBehaviour:
   m_Name: ActiviteMaisonMagazine
   m_EditorClassIdentifier: 
   miniGameName: ActiviteMaisonMagazine
+  miniGameDesc: 
+  miniGameTitle: 
+  scene:
+    m_SceneAsset: {fileID: 102900000, guid: 7e7c84ce9c2ee5c499e97f8d12bd8d6e, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/2_Maison/ActiviteMaisonMagazine.unity
   gameSubject: 11
   badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
   GUID: a1b184d8-d8de-4e4b-b428-510079f14178

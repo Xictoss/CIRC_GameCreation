@@ -13,6 +13,12 @@ MonoBehaviour:
   m_Name: HormoneMaisonJeter
   m_EditorClassIdentifier: 
   miniGameName: HormoneMaisonJeter
+  miniGameDesc: 
+  miniGameTitle: 
+  scene:
+    m_SceneAsset: {fileID: 102900000, guid: 930dd37035bcbd6418ab5e05cfff00ca, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/2_Maison/HormoneMaisonJeter.unity
   gameSubject: 3
   badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
   GUID: be8f8882-e8ee-4d08-ac66-ad0ef50095d5

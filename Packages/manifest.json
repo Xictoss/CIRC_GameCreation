@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "devlocker.utils.scenereference": "https://github.com/NibbleByte/UnitySceneReference.git#upm",
     "com.dbrizov.naughtyattributes": "https://github.com/dbrizov/NaughtyAttributes.git#upm",
     "com.ltx.channeled-properties": "1.0.0",
     "com.ltx.singletons": "1.0.1",
