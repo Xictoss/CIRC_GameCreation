@@ -7,7 +7,7 @@ namespace CIRC.MenuSystem.MiniGameReward
 {
     public class MiniGameReward : BaseMenu
     {
-        [SerializeField] private TMP_Text title, desc;
+        [SerializeField] private TMP_Text endDesc, endExplication;
 
         [Space(10f)]
         [SerializeField] private float shakeForce;
@@ -16,8 +16,8 @@ namespace CIRC.MenuSystem.MiniGameReward
         
         public override void OpenMenu(MenuContext ctx)
         {
-            title.text = ctx.title;
-            desc.text = ctx.desc;
+            endDesc.text = ctx.endDesc;
+            endExplication.text = ctx.endExplication;
             
             gameObject.SetActive(true);
             
