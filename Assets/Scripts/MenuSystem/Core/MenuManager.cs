@@ -22,7 +22,10 @@ namespace CIRC.MenuSystem
             foreach (BaseMenu menu in serializedMenus)
             {
                 TryAddMenu(menu.MenuName, menu);
+                menu.Object.SetActive(false);
             }
+
+            currentMenu = null;
         }
 
         public bool TryAddMenu(string menuName, BaseMenu menu)
