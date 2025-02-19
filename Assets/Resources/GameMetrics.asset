@@ -128,3 +128,4 @@ MonoBehaviour:
   <RunAndDrink_DrinksNumber>k__BackingField: 3
   <APN_GuySpeed>k__BackingField: 0
   <HPT_fillSpeed>k__BackingField: 0.2
+  <ALT_GuyToMotivateSpeed>k__BackingField: 100
