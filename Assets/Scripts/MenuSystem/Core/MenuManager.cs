@@ -1,9 +1,7 @@
+using System;
 using System.Collections.Generic;
-using CIRC.Controllers;
-using CIRC.SceneManagement;
 using LTX.Singletons;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace CIRC.MenuSystem
 {
@@ -12,6 +10,9 @@ namespace CIRC.MenuSystem
         private Dictionary<string, BaseMenu> menus;
         [SerializeField] private BaseMenu[] serializedMenus;
         public BaseMenu currentMenu { get; private set; }
+
+        public event Action<BaseMenu> OnMenuOpen;
+        public event Action OnMenuClose;
 
         protected override void Awake()
         {
@@ -41,6 +42,7 @@ namespace CIRC.MenuSystem
                 {
                     currentMenu = menuObject;
                     currentMenu.OpenMenu(menuContext);
+                    OnMenuOpen?.Invoke(menuObject);
                     return true;
                 }
 
@@ -56,6 +58,7 @@ namespace CIRC.MenuSystem
                     currentMenu.CloseMenu();
                     currentMenu = menuObject;
                     currentMenu.OpenMenu(menuContext);
+                    OnMenuOpen?.Invoke(menuObject);
                     return true;
                 }
 
@@ -75,6 +78,7 @@ namespace CIRC.MenuSystem
             {
                 currentMenu.CloseMenu();
                 currentMenu = null;
+                OnMenuClose?.Invoke();
                 return true;
             }
             else
