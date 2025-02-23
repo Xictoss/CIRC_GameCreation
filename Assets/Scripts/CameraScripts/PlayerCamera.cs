@@ -1,3 +1,4 @@
+using CIRC.Collections;
 using CIRC.Controllers;
 using CIRC.Inputs;
 using CIRC.MenuSystem;
@@ -50,13 +51,13 @@ namespace CIRC.CameraScripts
         {
             base.Awake();
             
-            GameController.SceneController.SubToSceneChange(this, PriorityScale.Medium - 1);
+            GameController.SceneController.SubToSceneChange(this, PriorityScale.High);
             CameraController.Global.CameraState = CameraState.Free;
         }
 
         private void OnDisable()
         {
-            GameController.SceneController.RemoveSubbedClass(PriorityScale.Medium - 1);
+            GameController.SceneController.RemoveSubbedClass(this);
         }
 
         public void OnSceneLoaded(string previousScene, Scene currentScene)

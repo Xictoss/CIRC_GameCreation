@@ -9,6 +9,7 @@ namespace CIRC.MenuSystem
     {
         private Dictionary<string, BaseMenu> menus;
         [SerializeField] private BaseMenu[] serializedMenus;
+        [field : SerializeField]
         public BaseMenu currentMenu { get; private set; }
 
         public event Action<BaseMenu> OnMenuOpen;

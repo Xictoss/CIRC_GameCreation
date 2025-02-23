@@ -1,3 +1,4 @@
+using CIRC.Collections;
 using CIRC.Controllers;
 using DevLocker.Utils;
 using UnityEngine;
@@ -30,7 +31,7 @@ namespace CIRC.MenuSystem
         public void PlayLevel()
         {
             MenuManager.Instance.TryCloseMenu(MenuName);
-            GameController.SceneController.LoadScene(levelScenes[currentLevel].SceneName);
+            GameController.SceneController.LoadScene(levelScenes[currentLevel]);
         }
         
         public override void OpenMenu(MenuContext ctx)

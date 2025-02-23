@@ -1,5 +1,4 @@
-using System.Collections.Generic;
-using System.Linq;
+using CIRC.Collections;
 using CIRC.Controllers;
 using DevLocker.Utils;
 using UnityEngine;
@@ -11,7 +10,7 @@ namespace CIRC.SceneManagement
     {
         public SceneController Global => GameController.SceneController;
         public string previousScene { get; private set; } = "";
-        private SortedList<PriorityScale, ILoadScene> subbedClasses = new SortedList<PriorityScale, ILoadScene>();
+        private ValueSortedList<ILoadScene, PriorityScale> subbedClasses = new ValueSortedList<ILoadScene, PriorityScale>();
         
         public void LoadScene(int sceneIndex)
         {
@@ -33,7 +32,7 @@ namespace CIRC.SceneManagement
 
         public void SubToSceneChange(ILoadScene classToSub, PriorityScale priority)
         {
-            if (subbedClasses.TryAdd(priority, classToSub))
+            if (subbedClasses.TryAdd(classToSub, priority))
             {
                 Debug.Log($"Added {classToSub} to List with a priority of {(int)priority}");
             }
@@ -43,18 +42,19 @@ namespace CIRC.SceneManagement
             }
         }
 
-        public void RemoveSubbedClass(PriorityScale priority)
+        public void RemoveSubbedClass(ILoadScene obj)
         {
-            if (subbedClasses.ContainsKey(priority))
+            if (subbedClasses.ContainsKey(obj))
             {
-                subbedClasses.Remove(priority);
+                subbedClasses.TryRemove(obj);
             }
         }
         
         public void OnSceneChanged(Scene currentScene, Scene nextScene)
         {
-            foreach (ILoadScene subbedClass in subbedClasses.Values.Reverse())
+            foreach (ILoadScene subbedClass in subbedClasses.GetKeys())
             {
+                Debug.Log(subbedClass);
                 subbedClass.OnSceneLoaded(previousScene, nextScene);
             }
         }
