@@ -13,7 +13,8 @@ namespace CIRC.Collections
             if (!ContainsKey(key))
             {
                 _list.Add(new KeyValuePair<TKey, TValue>(key, value));
-                _list.OrderByDescending(kvp => kvp.Value);
+                var sorted = _list.OrderByDescending(kvp => kvp.Value);
+                _list = sorted.ToList();
                 return true;
             }
 
