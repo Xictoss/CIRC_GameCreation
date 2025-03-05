@@ -11,6 +11,7 @@ namespace CIRC.MenuSystem
         [SerializeField] private BaseMenu[] serializedMenus;
         [field : SerializeField]
         public BaseMenu currentMenu { get; private set; }
+        public Stack<BaseMenu> openedMenus { get; private set; }
 
         public event Action<BaseMenu> OnMenuOpen;
         public event Action OnMenuClose;
@@ -20,13 +21,17 @@ namespace CIRC.MenuSystem
             base.Awake();
             
             menus = new Dictionary<string, BaseMenu>();
+            openedMenus = new Stack<BaseMenu>();
             foreach (BaseMenu menu in serializedMenus)
             {
                 TryAddMenu(menu.MenuName, menu);
                 menu.Object.SetActive(false);
+                
+               // Debug.Log($"Menu : {menu.MenuName} added");
             }
 
             currentMenu = null;
+            openedMenus.Clear();
         }
 
         public bool TryAddMenu(string menuName, BaseMenu menu)
@@ -42,36 +47,23 @@ namespace CIRC.MenuSystem
 
             if (menu)
             {
-                if (currentMenu == null)
-                {
-                    currentMenu = menuObject;
-                    currentMenu.OpenMenu(menuContext);
-                    OnMenuOpen?.Invoke(menuObject);
-                    return true;
-                }
-
                 if (currentMenu == menuObject)
                 {
                     currentMenu.CloseMenu();
                     currentMenu = null;
-                    return true;
                 }
-                
-                if (menuObject.PriorityScale >= currentMenu.PriorityScale)
+                else
                 {
-                    currentMenu.CloseMenu();
                     currentMenu = menuObject;
+                    openedMenus.Push(currentMenu);
                     currentMenu.OpenMenu(menuContext);
                     OnMenuOpen?.Invoke(menuObject);
-                    return true;
                 }
 
-                return false;
+                return true;
             }
-            else
-            {
-                return false;
-            }
+
+            return false;
         }
 
         public bool TryCloseMenu(string menuName)
@@ -81,7 +73,16 @@ namespace CIRC.MenuSystem
             if (menu && menuObject == currentMenu)
             {
                 currentMenu.CloseMenu();
-                currentMenu = null;
+                openedMenus.Pop();
+                
+                if (openedMenus.Count == 0)
+                {
+                    currentMenu = null;
+                }
+                else
+                {
+                    currentMenu = openedMenus.Peek();
+                }
                 OnMenuClose?.Invoke();
                 return true;
             }

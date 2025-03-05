@@ -6,5 +6,8 @@ namespace CIRC.Progression
     public class BadgeData : ScriptableObject
     {
         public Sprite displayImage;
+
+        public string badgeName;
+        public string badgeDesc;
     }
 }

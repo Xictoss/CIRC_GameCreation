@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: BadgeData
   m_EditorClassIdentifier: 
   displayImage: {fileID: 21300000, guid: be20b6c812175d143be0b4592202a224, type: 3}
+  badgeName: Saviour
+  badgeDesc: You obtained this badge thanks to your bravery and boldness
