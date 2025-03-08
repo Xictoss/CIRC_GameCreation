@@ -116,6 +116,7 @@ MonoBehaviour:
     m_SceneAsset: {fileID: 102900000, guid: fec09a1193f977b41924054aaff30285, type: 3}
     m_IsDirty: 0
     m_ScenePath: Assets/Scenes/MainScenes/MiniGames/5_Entreprise/VaccinationEntrepriseDrag.unity
+  <BadgeDisplayer>k__BackingField: BadgeDisplayer
   <MiniGamePopUpMenu>k__BackingField: MiniGamePopUpMenu
   <MiniGameReward>k__BackingField: MiniGameReward
   <BooksMenu>k__BackingField: BooksMenu

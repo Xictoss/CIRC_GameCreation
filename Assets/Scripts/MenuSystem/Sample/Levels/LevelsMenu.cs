@@ -1,5 +1,7 @@
+using CIRC.Collections;
 using CIRC.Controllers;
 using DevLocker.Utils;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +14,10 @@ namespace CIRC.MenuSystem
         [SerializeField] private Image[] selectedLevels;
         [SerializeField] private Image levelImage;
         private int currentLevel;
+        
+        [Space(10f)]
+        [SerializeField] private float shakeForce, shakeDuration;
+        private Tween currentTween;
 
         private Color colorOn => new Color(255, 255, 255, 1);
         private Color colorOff => new Color(255, 255, 255, 0);
@@ -30,7 +36,7 @@ namespace CIRC.MenuSystem
         public void PlayLevel()
         {
             MenuManager.Instance.TryCloseMenu(MenuName);
-            GameController.SceneController.LoadScene(levelScenes[currentLevel].SceneName);
+            GameController.SceneController.LoadScene(levelScenes[currentLevel]);
         }
         
         public override void OpenMenu(MenuContext ctx)
@@ -40,7 +46,15 @@ namespace CIRC.MenuSystem
                 selectedLevels[i].color = colorOff;
             }
             SwitchLevel(0);
+            
             gameObject.SetActive(true);
+            if (currentTween == null)
+            {
+                currentTween = transform.DOShakeScale(shakeDuration, shakeForce, 10).OnComplete(() =>
+                {
+                    currentTween = null;
+                });
+            }
         }
 
         public override void CloseMenu()

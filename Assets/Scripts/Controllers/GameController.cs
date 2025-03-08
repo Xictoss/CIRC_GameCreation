@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using CIRC.CameraScripts;
+using CIRC.Collections;
 using CIRC.Progression;
 using CIRC.SceneManagement;
 using LTX.ChanneledProperties;

@@ -1,3 +1,4 @@
+using CIRC.Collections;
 using DG.Tweening;
 using UnityEngine;
 
@@ -16,6 +17,8 @@ namespace CIRC.MenuSystem
 
         private void OnDisable()
         {
+            if (!MenuManager.HasInstance) return;
+            
             MenuManager.Instance.OnMenuClose -= MenuClose;
             MenuManager.Instance.OnMenuOpen -= MenuOpen;
         }

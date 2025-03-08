@@ -1,4 +1,4 @@
-namespace CIRC
+namespace CIRC.Collections
 {
     public enum PriorityScale
     {

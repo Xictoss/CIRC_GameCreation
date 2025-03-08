@@ -15,10 +15,12 @@ MonoBehaviour:
   miniGameName: AlcoolLotissementTaper
   miniGameDesc: 
   miniGameTitle: 
+  endDesc: 
+  endExplication: 
   scene:
-    m_SceneAsset: {fileID: 0}
+    m_SceneAsset: {fileID: 102900000, guid: d2ce1a190709eb4408e3359773eb57ef, type: 3}
     m_IsDirty: 0
-    m_ScenePath: 
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/AlcoolLotissementTaper.unity
   gameSubject: 2
   badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
   GUID: e01795aa-bc57-4c8d-9a9f-ea0cb2e42184

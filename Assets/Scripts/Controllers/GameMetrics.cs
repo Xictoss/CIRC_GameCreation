@@ -74,7 +74,9 @@ namespace CIRC.Controllers
         #endregion
 
         #region Menu Names
-
+        
+        [field: SerializeField, Foldout("Menu Names")]
+        public string BadgeDisplayer { get; private set; }
         [field: SerializeField, Foldout("Menu Names")]
         public string MiniGamePopUpMenu { get; private set; }
         [field: SerializeField, Foldout("Menu Names")]

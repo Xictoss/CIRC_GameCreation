@@ -1,4 +1,5 @@
 using DevLocker.Utils;
+using UnityEngine;
 
 namespace CIRC.MenuSystem
 {
@@ -7,6 +8,7 @@ namespace CIRC.MenuSystem
     {
         public string title;
         public string desc;
+        public Sprite image;
 
         public string endDesc;
         public string endExplication;
