@@ -3,15 +3,17 @@ using CIRC.Controllers;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace CIRC.MenuSystem.MiniGameReward
 {
     public class MiniGameReward : BaseMenu
     {
         [SerializeField] private TMP_Text endDesc, endExplication;
+        [SerializeField] private Image display;
 
         [Space(10f)]
-        [SerializeField] private float shakeForce;
+        [SerializeField] private float shakeForce, shakeDuration;
 
         private Tween currentTween;
         
@@ -19,12 +21,13 @@ namespace CIRC.MenuSystem.MiniGameReward
         {
             endDesc.text = ctx.endDesc;
             endExplication.text = ctx.endExplication;
+            display.sprite = ctx.image;
             
             gameObject.SetActive(true);
             
             if (currentTween == null)
             {
-                currentTween = transform.DOShakeScale(0.5f, shakeForce, 10).OnComplete(() =>
+                currentTween = transform.DOShakeScale(shakeDuration, shakeForce, 10).OnComplete(() =>
                 {
                     currentTween = null;
                 });

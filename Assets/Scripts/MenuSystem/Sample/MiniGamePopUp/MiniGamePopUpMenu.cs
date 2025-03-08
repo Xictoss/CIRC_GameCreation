@@ -13,7 +13,7 @@ namespace CIRC.MenuSystem.MiniGamePopUp
         [SerializeField] private Button button;
 
         [Space(10f)]
-        [SerializeField] private float shakeForce;
+        [SerializeField] private float shakeForce, shakeDuration;
 
         private MenuContext context;
         private Tween currentTween;
@@ -31,7 +31,7 @@ namespace CIRC.MenuSystem.MiniGamePopUp
             
             if (currentTween == null)
             {
-                currentTween = transform.DOShakeScale(0.5f, shakeForce, 10).OnComplete(() =>
+                currentTween = transform.DOShakeScale(shakeDuration, shakeForce, 10).OnComplete(() =>
                 {
                     currentTween = null;
                 });

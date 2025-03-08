@@ -11,7 +11,7 @@ namespace CIRC.Animals
 
         public void SpawnDialog(AnimalData data, Vector3 position)
         {
-            Dialog dialog = Instantiate(dialogPrefab, position + new Vector3(0, 2.6f, 0), Quaternion.identity);
+            Dialog dialog = Instantiate(dialogPrefab, position + new Vector3(0, 2.75f, 0), Quaternion.identity);
 
             int index = Random.Range(0, data.animalDialogs.Length);
             dialog.Initialize(data, index);
