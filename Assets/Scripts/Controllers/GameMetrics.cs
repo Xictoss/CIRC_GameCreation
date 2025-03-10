@@ -111,7 +111,6 @@ namespace CIRC.Controllers
         public float HPT_fillSpeed { get; private set; }
         
         [field: SerializeField, Foldout("MiniGames/ActiviteLotissementTaper")]
-        
         public float ALT_GuyToMotivateSpeed { get; private set; }
 
         #endregion MiniGameMetrics
