@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 964783772963464ca3a70eca161a2ff4, type: 3}
-  m_Name: 1_BadgeBronze
+  m_Script: {fileID: 11500000, guid: 38011b574a494a3cb71f20d88664afdd, type: 3}
+  m_Name: Badge_ActivitePhysiqueFinal
   m_EditorClassIdentifier: 
-  saveElement:
-    guidID: c09cb190f633d2643864185f84fab6c0
-    isComplete: 1
-  badgeName: 1_BadgeBronze
-  displayImage: {fileID: 21300000, guid: d5c5fa68468517d4cb71e6509e972b29, type: 3}
+  displayImage: {fileID: 21300000, guid: 4f4a9173bae75014db217bade6aef63f, type: 3}
+  badgeName: Saviour
+  badgeDesc: You obtained this badge thanks to your bravery and boldness

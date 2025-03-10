@@ -2,13 +2,22 @@ using CIRC.Controllers;
 using CIRC.MenuSystem;
 using CIRC.Progression;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace CIRC.UIRelated
 {
     public class BadgeButton : MonoBehaviour
     {
-        [SerializeField] private BadgeData data;
+        private BadgeData data;
+        [SerializeField] private Button button;
 
+        public void Sync(bool completed, Sprite sprite, BadgeData data)
+        {
+            button.image.sprite = sprite;
+            button.interactable = completed;
+            this.data = data;
+        }
+        
         public void OpenBadge()
         {
             MenuContext context = new MenuContext()

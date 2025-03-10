@@ -15,10 +15,12 @@ MonoBehaviour:
   miniGameName: ChimiqueEntrepriseTaper
   miniGameDesc: 
   miniGameTitle: 
+  endDesc: 
+  endExplication: 
   scene:
     m_SceneAsset: {fileID: 102900000, guid: f0e86b78fac79cb4db960b4b6b7abae3, type: 3}
     m_IsDirty: 0
     m_ScenePath: Assets/Scenes/MainScenes/MiniGames/5_Entreprise/ChimiqueEntrepriseTaper.unity
   gameSubject: 9
-  badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
+  badgeDisplay: {fileID: 11400000, guid: acb6ae9204cc37946ab77c50a1a40541, type: 2}
   GUID: 67b03d81-1d31-4f44-802d-1a9edce0d885

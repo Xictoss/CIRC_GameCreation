@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using CIRC.Controllers;
+using CIRC.Progression;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,11 +8,11 @@ namespace CIRC.UIRelated
 {
     public class BadgesDisplay : MonoBehaviour
     {
-        [SerializeField] private Image[] _badgesDisplay;
+        [SerializeField] private BadgeButton[] badgesButton;
         
         [SerializeField] private Sprite _badgeNotCompleted;
-        [SerializeField] private Sprite _badgeCompleted;
-        
+        [SerializeField] private BadgeData[] badges;
+
         private void OnEnable()
         {
             RefreshUI();
@@ -18,21 +20,37 @@ namespace CIRC.UIRelated
 
         private void RefreshUI()
         {
-            int index = 0;
-            foreach (var kvp in GameController.ProgressionManager.miniGameStatus)
+            Dictionary<string, bool> progressionManagerMiniGameStatus = GameController.ProgressionManager.miniGameStatus;
+            MiniGameDataHolder[] miniGameDataHolders = GameController.MiniGamesObserver.miniGames;
+            
+            
+            for (int i = 0; i < badgesButton.Length; i++)
             {
-                Image badge = _badgesDisplay[index];
-                
-                if (kvp.Value) //MiniGame completed
+                BadgeButton badgeButton = badgesButton[i];
+                BadgeData badge = badges[i];
+
+                bool hadComplete = false;
+                foreach ((string key, bool value) in progressionManagerMiniGameStatus)
                 {
-                    badge.sprite = _badgeCompleted;
+                    if (!value) continue;
+                    
+                    for (int index = 0; index < miniGameDataHolders.Length; index++)
+                    {
+                        MiniGameDataHolder data = miniGameDataHolders[index];
+
+                        if (data.GUID == key && badge.subject == data.gameSubject)
+                        {
+                            hadComplete = true;
+                            break;
+                        }
+                    }
+
+                    if (hadComplete) break;
                 }
-                else
-                {
-                    badge.sprite = _badgeNotCompleted;
-                }
-                
-                index++;
+
+                Sprite sprite = hadComplete ? badge.displayImage : _badgeNotCompleted;
+                badgeButton.Sync(hadComplete, sprite, badge);
+                Debug.Log("do sync");
             }
         }
     }

@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38011b574a494a3cb71f20d88664afdd, type: 3}
-  m_Name: BadgeData
+  m_Name: Badge_HormonesFinal
   m_EditorClassIdentifier: 
-  displayImage: {fileID: 21300000, guid: be20b6c812175d143be0b4592202a224, type: 3}
+  displayImage: {fileID: 21300000, guid: c2e62cf1b0734184fa9656b03b1b4ffa, type: 3}
+  subject: 3
   badgeName: Saviour
   badgeDesc: You obtained this badge thanks to your bravery and boldness

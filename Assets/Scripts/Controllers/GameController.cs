@@ -13,6 +13,7 @@ namespace CIRC.Controllers
     public static class GameController
     {
         public static Logger Logger { get; private set; }
+        public static MiniGamesObserver MiniGamesObserver { get; private set; }
         public static ProgressionManager ProgressionManager { get; private set; }
         public static CameraController CameraController { get; private set; }
         public static MiniGameRegister MiniGameRegister { get; private set; }
@@ -43,6 +44,8 @@ namespace CIRC.Controllers
             SceneController.SubToSceneChange(MiniGameRegister, PriorityScale.Medium);
             
             CameraController = new CameraController();
+
+            MiniGamesObserver = new MiniGamesObserver();
             
             ProgressionManager = new ProgressionManager();
             Save.AddListener(ProgressionManager);

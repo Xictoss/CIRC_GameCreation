@@ -1,12 +1,16 @@
+using System;
 using CIRC.Collections;
 using CIRC.Controllers;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace CIRC.MenuSystem
 {
     public class SettingsMenu : BaseMenu
     {
+        [SerializeField] private Button soundButton, musicButton;
+        [SerializeField] private Sprite[] buttonSprites;
         [Space(10f)]
         [SerializeField] private float shakeForce, shakeDuration;
         private Tween currentTween;
@@ -16,9 +20,16 @@ namespace CIRC.MenuSystem
             StartCoroutine(StaticFunctions.TakeScreenshotAndShare(false));
         }
         
-        public void OpenURL()
+        public void OpenURL(bool newsLetter)
         {
-            Application.OpenURL("https://www.iarc.who.int/fr/");
+            if (newsLetter)
+            {
+                Application.OpenURL("https://www.iarc.who.int/fr/");
+            }
+            else
+            {
+                Application.OpenURL("https://www.iarc.who.int/fr/");
+            }
         }
         
         public void ResetProgression()
@@ -26,9 +37,16 @@ namespace CIRC.MenuSystem
             GameController.ResetProgression();
         }
         
-        public void SetVolumeState()
+        public void SetVolumeState(bool sourceIndex)
         {
+            AudioSource source = sourceIndex ? SoundManager.Instance.audioSource : SoundManager.Instance.musicSource;
+            Button button = sourceIndex ? soundButton : musicButton;
             
+            int currentIndex = Array.IndexOf(buttonSprites, button.image.sprite);
+            int nextIndex = (currentIndex + 1) % 3;
+
+            button.image.sprite = buttonSprites[nextIndex];
+            source.volume = Mathf.Clamp01(0.5f * nextIndex);
         }
 
         public override void OpenMenu(MenuContext ctx)
