@@ -15,7 +15,7 @@ MonoBehaviour:
   miniGameName: ActiviteEntrepriseDrag
   miniGameDesc: "Aider Fanphan \xE0 coller des affiches sur des activit\xE9s physiques
     \xE0 faire au sein de l'entreprise."
-  miniGameTitle: Affichez les toutes
+  miniGameTitle: Au secours
   endDesc: Bravo !
   endExplication: "Tu as r\xE9ussi \xE0 aider Phanfan !"
   scene:

@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using CIRC.Collections;
 using DG.Tweening;
 using UnityEngine;
@@ -21,6 +23,13 @@ namespace CIRC.MenuSystem
             
             MenuManager.Instance.OnMenuClose -= MenuClose;
             MenuManager.Instance.OnMenuOpen -= MenuOpen;
+        }
+
+        //EXPENSIVE ?
+        private IEnumerator Start()
+        {
+            yield return new WaitForSeconds(1f);
+            MenuClose();
         }
 
         private bool IsPriorityHigher(PriorityScale menuPriority)
@@ -57,14 +66,5 @@ namespace CIRC.MenuSystem
             menu.DOMove(target.position, moveDuration)
                 .SetEase(Ease.InOutCirc);
         }
-    }
-
-    [System.Serializable]
-    public struct MenuMoveLink
-    {
-        public Transform menuTransform;
-        public Transform targetTransformOn;
-        public Transform targetTransformOff;
-        public float moveDuration;
     }
 }

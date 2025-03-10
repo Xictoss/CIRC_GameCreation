@@ -2,6 +2,7 @@ using System;
 using CIRC.Collections;
 using CIRC.Controllers;
 using DG.Tweening;
+using I2.Loc;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,8 +10,10 @@ namespace CIRC.MenuSystem
 {
     public class SettingsMenu : BaseMenu
     {
+        [Header("Sounds")]
         [SerializeField] private Button soundButton, musicButton;
         [SerializeField] private Sprite[] buttonSprites;
+        
         [Space(10f)]
         [SerializeField] private float shakeForce, shakeDuration;
         private Tween currentTween;
@@ -35,6 +38,20 @@ namespace CIRC.MenuSystem
         public void ResetProgression()
         {
             GameController.ResetProgression();
+        }
+
+        public void SetLanguage(bool french)
+        {
+            if (french)
+            {
+                LocalizationManager.SetLanguageAndCode("French", "fr");
+                LocalizationManager.CurrentLanguage = "French";
+            }
+            else
+            {
+                LocalizationManager.SetLanguageAndCode("English", "en");
+                LocalizationManager.CurrentLanguage = "English";
+            }
         }
         
         public void SetVolumeState(bool sourceIndex)
