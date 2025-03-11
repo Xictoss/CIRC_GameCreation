@@ -22,7 +22,6 @@ namespace CIRC.Controllers
         public void OnSceneLoaded(string previousScene, Scene currentScene)
         {
             if (!previousScene.StartsWith("Assets/Scenes/MainScenes/MiniGames")) return;
-            if (WasCompleted) return;
             
             bool success = MenuManager.Instance.TryOpenMenu(GameMetrics.Global.MiniGameReward, new MenuContext()
             {

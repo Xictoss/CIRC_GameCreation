@@ -283,6 +283,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3957731912851144907, guid: 30ff2f2313b91be47917b0e3b14af89d, type: 3}
+      propertyPath: m_text
+      value: Jouer
+      objectReference: {fileID: 0}
     - target: {fileID: 4047943421378109087, guid: 30ff2f2313b91be47917b0e3b14af89d, type: 3}
       propertyPath: localize
       value: 
@@ -330,6 +334,10 @@ PrefabInstance:
     - target: {fileID: 5826402419691512956, guid: 30ff2f2313b91be47917b0e3b14af89d, type: 3}
       propertyPath: m_text
       value: Categories
+      objectReference: {fileID: 0}
+    - target: {fileID: 6027312952877213889, guid: 30ff2f2313b91be47917b0e3b14af89d, type: 3}
+      propertyPath: m_text
+      value: Mini-Jeux
       objectReference: {fileID: 0}
     - target: {fileID: 6145056301544744983, guid: 30ff2f2313b91be47917b0e3b14af89d, type: 3}
       propertyPath: levelName
