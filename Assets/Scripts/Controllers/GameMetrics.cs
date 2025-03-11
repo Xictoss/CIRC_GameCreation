@@ -73,6 +73,13 @@ namespace CIRC.Controllers
         
         #endregion
 
+        #region SceneNames
+
+        [field: SerializeField, Foldout("Scene Names")]
+        public string[] SceneNames { get; private set; }
+        
+        #endregion
+
         #region Menu Names
         
         [field: SerializeField, Foldout("Menu Names")]

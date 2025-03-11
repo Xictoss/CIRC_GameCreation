@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AlimentationPlageChips
   m_EditorClassIdentifier: 
   miniGameName: AlimentationPlageChips
-  miniGameDesc: 
+  miniGameDesc: DialogueAvantMiniJeuAlimentationPlageChips
   miniGameTitle: 
   endDesc: 
   endExplication: 

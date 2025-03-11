@@ -1,9 +1,14 @@
 ﻿Key,Type,Desc,English,French
 About,Text,,About,A propos
+Alchool,Text,,Alchool,Alcool
 Audio,Text,,Audio,Son
 Back,Text,,Back,Retour
 Badge,Text,,Badge,Badge
+Categories,Text,,Categories,Catégories
+Chemicals,Text,,Chemicals,Produits Chimiques
+Clinique,Text,,Clinic,Clinique
 Credits,Text,,Credits,Crédits
+Diagnosis,Text,,Diagnosis,Dépistage
 DialogueAvantMiniJeuActiviteEntrepriseDrag,Text,DialogueAvantMiniJeuActiviteEntrepriseDrag,It takes little to be happy; you just need the essentials and some advertising posters,"Il en faut peut pour être heureux, il faut se contenter du nécéssaire et des affiches publicitaires"
 DialogueAvantMiniJeuActiviteLotissementDrag,Text,DialogueAvantMiniJeuActiviteLotissementDrag,"Friendship, respect, street sports","Amitié, respect, sport de rue"
 DialogueAvantMiniJeuActiviteLotissementTaper,Text,DialogueAvantMiniJeuActiviteLotissementTaper,Why not go for a little run?,Pourquoi pas un peu de footing
@@ -55,6 +60,7 @@ DialogueAvantMiniJeuVaccinationVilleDrag,Text,DialogueAvantMiniJeuVaccinationVil
 DialogueAvantMiniJeuZoneLotissementTaper,Text,DialogueAvantMiniJeuZoneLotissementTaper,Wubba lubba dub dub!,Wubba lubba dub dub !
 Effects,Text,,Effects,Effets
 English,Text,,English,Anglais
+Entreprise,Text,,Factory,Entreprise
 ExplicationECACActivitéPhysique,Text,ExplicationECACActivitéPhysique,Be physically active in your daily life. Avoid sitting for long periods.,Soyez physiquement actif/ve dans votre vie quotidienne. Evitez de rester assis/e trop longtemps.
 ExplicationECACAlcool,Text,ExplicationECACAlcool,"Limit your consumption of alcohol—of any kind. To reduce your cancer risk, it's best not to drink alcohol at all.","Limitez votre consommation –de tout type– d’alcool. Pour réduire votre risque de cancer, il est préférable de ne pas boire du tout d’alcool."
 ExplicationECACAlimentationDéséquilibrée,Text,ExplicationECACAlimentationDéséquilibrée,"Adopt a healthy diet: Eat plenty of whole grains, legumes, vegetables, and fruits. Limit the consumption of high-calorie foods (rich in sugar or fats) and avoid sugary drinks. Avoid eating processed meats; limit red meat and high-salt foods.","Adoptez une alimentation saine :  Consommez beaucoup de céréales complètes, de légumes secs, de légumes et de fruits. Limitez la consommation d’aliments très caloriques (riches en sucre ou en matières grasses) et évitez les boissons sucrées. Evitez de manger de la viande transformée (préparations carnées); limitez la viande rouge et les aliments riches en sel."
@@ -118,18 +124,28 @@ ExplicationEnEntréeDeMiniJeuVaccinationEntrepriseDrag,Text,ExplicationEnEntrée
 ExplicationEnEntréeDeMiniJeuVaccinationVilleDrag,Text,ExplicationEnEntréeDeMiniJeuVaccinationVilleDrag,Place the bandage on the spot where Carotte got vaccinated,Pose le pansement sur l'endroit où s'est fait vacciner Carotte
 ExplicationEnEntréeDeMiniJeuZoneLotissementTaper,Text,ExplicationEnEntréeDeMiniJeuZoneLotissementTaper,Help Dante with the radon detector by tapping on the molecules to make them disappear,Aide Dante avec le détecteur de radon en tapant sur les molécules pour les faire disparaitre
 French,Text,,French,Français
+HormonalMedicine,Text,,Hormonal Medicine,Médicaments Hormonaux
+Hydratation,Text,,Hydratation,Hydratation
 Languages,Text,,Languages,Langues
 Levels,Text,,Levels,Niveaux
+Lotissement,Text,,Neighborhood,Lotissement
 Main Menu,Text,Main Menu,Main Menu,Menu Principal
+Maison,Text,,House,Maison
 Mini-Game,Text,,Mini-Games,Mini-Jeux
 Musics,Text,,Musics,Musiques
 Newsletter,Text,,Newsletter,Newsletter
+Nutrition,Text,,Nutrition,Alimentation
 Other,Text,,Other,Autre
+PhysicalActivity,Text,,Physical Activity,Activitée Physique
 Plage,Text,,Beach,Plage
 Play,Text,,Play,Jouer
 Player data,Text,,Player Data,Données
 Settings,Text,Settings,Settings,Options
 Share,Text,,Share,Partager
+Smoking,Text,,Smoking,Tabagisme
 Success,Text,,Success,Succès
+SunExposition,Text,,Sun Exposition,Exposition au soleil
 Title,Text,,Title,Titre
+Vaccination,Text,,Vaccination,Vaccination
+Ville,Text,,City,Ville
 Visit,Text,,Visit,Visite

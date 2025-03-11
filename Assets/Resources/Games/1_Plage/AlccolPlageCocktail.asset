@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AlccolPlageCocktail
   m_EditorClassIdentifier: 
   miniGameName: AlccolPlageCocktail
-  miniGameDesc: 
+  miniGameDesc: DialogueAvantMiniJeuAlccolPlageCocktail
   miniGameTitle: 
   endDesc: 
   endExplication: 

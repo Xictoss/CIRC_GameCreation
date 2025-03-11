@@ -326,13 +326,97 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6924165668923522085, guid: 3ad3326ed5bda184987a5d1570f91828, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1863719351056556376}
+    - targetCorrespondingSourceObject: {fileID: 3709168665942416945, guid: 3ad3326ed5bda184987a5d1570f91828, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6040172834926832444}
+    - targetCorrespondingSourceObject: {fileID: 4145587344180381455, guid: 3ad3326ed5bda184987a5d1570f91828, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5157424086305727889}
   m_SourcePrefab: {fileID: 100100000, guid: 3ad3326ed5bda184987a5d1570f91828, type: 3}
+--- !u!1 &1496156588817510577 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4145587344180381455, guid: 3ad3326ed5bda184987a5d1570f91828, type: 3}
+  m_PrefabInstance: {fileID: 3263842835822671806}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5157424086305727889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496156588817510577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: CIRC.Controllers.SoundManager, CIRC
+          m_MethodName: PlayUISound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!1 &2176051141235190159 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3709168665942416945, guid: 3ad3326ed5bda184987a5d1570f91828, type: 3}
+  m_PrefabInstance: {fileID: 3263842835822671806}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6040172834926832444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2176051141235190159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 344445a89b4f74a0e9a0a766903df87e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mTerm: Title
+  mTermSecondary: 
+  PrimaryTermModifier: 0
+  SecondaryTermModifier: 0
+  TermPrefix: 
+  TermSuffix: 
+  LocalizeOnAwake: 1
+  IgnoreRTL: 0
+  MaxCharactersInRTL: 0
+  IgnoreNumbersInRTL: 1
+  CorrectAlignmentForRTL: 1
+  AddSpacesToJoinedLanguages: 0
+  AllowLocalizedParameters: 1
+  AllowParameters: 1
+  TranslatedObjects: []
+  LocalizeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  AlwaysForceLocalize: 0
+  LocalizeCallBack:
+    Target: {fileID: 0}
+    MethodName: 
+  mGUI_ShowReferences: 0
+  mGUI_ShowTems: 1
+  mGUI_ShowCallback: 0
+  mLocalizeTarget: {fileID: 0}
+  mLocalizeTargetName: I2.Loc.LocalizeTarget_TextMeshPro_UGUI
 --- !u!114 &4828998944880126733 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7948698520376646835, guid: 3ad3326ed5bda184987a5d1570f91828, type: 3}
   m_PrefabInstance: {fileID: 3263842835822671806}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2176051141235190159}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}

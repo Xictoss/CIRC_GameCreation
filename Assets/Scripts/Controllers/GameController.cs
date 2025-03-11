@@ -66,7 +66,7 @@ namespace CIRC.Controllers
         
         public static void SaveProgress()
         {
-            Debug.Log("Saving player progress");
+            //Debug.Log("Saving player progress");
             Save.Push<GameSave, GameSaveSettings>(new GameSaveSettings()
             {
                 prefName = "Player"
@@ -75,7 +75,7 @@ namespace CIRC.Controllers
         
         private static void LoadProgress()
         {
-            Debug.Log("Loading player progress");
+            //Debug.Log("Loading player progress");
             Save.Pull<GameSave, GameSaveSettings>(out _, new GameSaveSettings()
             {
                 prefName = "Player"

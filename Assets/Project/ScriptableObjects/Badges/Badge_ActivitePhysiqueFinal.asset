@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Badge_ActivitePhysiqueFinal
   m_EditorClassIdentifier: 
   displayImage: {fileID: 21300000, guid: 4f4a9173bae75014db217bade6aef63f, type: 3}
-  badgeName: Saviour
-  badgeDesc: You obtained this badge thanks to your bravery and boldness
+  subject: 0
+  badgeName: PhysicalActivity
+  badgeDesc: "ExplicationECACActivit\xE9Physique"

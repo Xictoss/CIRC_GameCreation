@@ -1,6 +1,7 @@
 using CIRC.Collections;
 using CIRC.Controllers;
 using DG.Tweening;
+using I2.Loc;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +12,7 @@ namespace CIRC.MenuSystem.MiniGamePopUp
     {
         [SerializeField] private TMP_Text title, desc;
         [SerializeField] private Button button;
+        [SerializeField] private Localize localize;
 
         [Space(10f)]
         [SerializeField] private float shakeForce, shakeDuration;
@@ -22,8 +24,10 @@ namespace CIRC.MenuSystem.MiniGamePopUp
         {
             context = ctx;
             
-            title.text = context.title;
+            //title.text = context.title;
             desc.text = context.desc;
+            
+            localize.SetTerm(desc.text);
 
             button.onClick.AddListener(OnButtonClick);
             

@@ -34,7 +34,7 @@ namespace CIRC.SceneManagement
         {
             if (subbedClasses.TryAdd(classToSub, priority))
             {
-                Debug.Log($"Added {classToSub} to List with a priority of {(int)priority}");
+                //Debug.Log($"Added {classToSub} to List with a priority of {(int)priority}");
             }
             else
             {
@@ -54,7 +54,7 @@ namespace CIRC.SceneManagement
         {
             foreach (ILoadScene subbedClass in subbedClasses.GetKeys())
             {
-                Debug.Log(subbedClass);
+                //Debug.Log(subbedClass);
                 subbedClass.OnSceneLoaded(previousScene, nextScene);
             }
         }

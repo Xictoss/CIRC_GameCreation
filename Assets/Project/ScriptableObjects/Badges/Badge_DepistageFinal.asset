@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayImage: {fileID: 21300000, guid: 2f4fab634ff4d5246ab74f30e86302fb, type: 3}
   subject: 2
-  badgeName: Saviour
-  badgeDesc: You obtained this badge thanks to your bravery and boldness
+  badgeName: Diagnosis
+  badgeDesc: "ExplicationECACProgrammesDeD\xE9pistages"

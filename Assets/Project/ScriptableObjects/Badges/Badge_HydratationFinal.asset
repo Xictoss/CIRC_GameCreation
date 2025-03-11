@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayImage: {fileID: 21300000, guid: 246e340a988b59a4c815f667a22e0277, type: 3}
   subject: 4
-  badgeName: Saviour
-  badgeDesc: You obtained this badge thanks to your bravery and boldness
+  badgeName: Hydratation
+  badgeDesc: ExplicationECACHydratation

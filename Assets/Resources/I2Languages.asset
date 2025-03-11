@@ -1171,6 +1171,134 @@ MonoBehaviour:
       - Visite
       Flags: 0000
       Languages_Touch: []
+    - Term: Maison
+      TermType: 0
+      Description: 
+      Languages:
+      - House
+      - Maison
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Lotissement
+      TermType: 0
+      Description: 
+      Languages:
+      - Neighborhood
+      - Lotissement
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Entreprise
+      TermType: 0
+      Description: 
+      Languages:
+      - Factory
+      - Entreprise
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ville
+      TermType: 0
+      Description: 
+      Languages:
+      - City
+      - Ville
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Clinique
+      TermType: 0
+      Description: 
+      Languages:
+      - Clinic
+      - Clinique
+      Flags: 0000
+      Languages_Touch: []
+    - Term: PhysicalActivity
+      TermType: 0
+      Description: 
+      Languages:
+      - Physical Activity
+      - "Activit\xE9e Physique"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Alchool
+      TermType: 0
+      Description: 
+      Languages:
+      - Alchool
+      - Alcool
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Diagnosis
+      TermType: 0
+      Description: 
+      Languages:
+      - Diagnosis
+      - "D\xE9pistage"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: HormonalMedicine
+      TermType: 0
+      Description: 
+      Languages:
+      - Hormonal Medicine
+      - "M\xE9dicaments Hormonaux"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Hydratation
+      TermType: 0
+      Description: 
+      Languages:
+      - Hydratation
+      - Hydratation
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Nutrition
+      TermType: 0
+      Description: 
+      Languages:
+      - Nutrition
+      - Alimentation
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Chemicals
+      TermType: 0
+      Description: 
+      Languages:
+      - Chemicals
+      - Produits Chimiques
+      Flags: 0000
+      Languages_Touch: []
+    - Term: SunExposition
+      TermType: 0
+      Description: 
+      Languages:
+      - Sun Exposition
+      - Exposition au soleil
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Smoking
+      TermType: 0
+      Description: 
+      Languages:
+      - Smoking
+      - Tabagisme
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Vaccination
+      TermType: 0
+      Description: 
+      Languages:
+      - Vaccination
+      - Vaccination
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Categories
+      TermType: 0
+      Description: 
+      Languages:
+      - Categories
+      - "Cat\xE9gories"
+      Flags: 0000
+      Languages_Touch: []
     CaseInsensitiveTerms: 0
     OnMissingTranslation: 1
     mTerm_AppName: 

@@ -28,6 +28,7 @@ namespace CIRC.Controllers
             {
                 endDesc = currentMiniGame.endDesc,
                 endExplication = currentMiniGame.endExplication,
+                image = currentMiniGame.badgeDisplay.displayImage,
             });
         }
     }

@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: ExpositionPlageParasol
   m_EditorClassIdentifier: 
   miniGameName: ExpositionPlageParasol
-  miniGameDesc: 
+  miniGameDesc: DialogueAvantMiniJeuExpositionPlageParasol
   miniGameTitle: 
   endDesc: 
   endExplication: 
   scene:
-    m_SceneAsset: {fileID: 0}
+    m_SceneAsset: {fileID: 102900000, guid: 41593ee9e92ec4e4cbe4159effb18b8f, type: 3}
     m_IsDirty: 0
-    m_ScenePath: 
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/1_Plage/ExpositionPlageParasol.unity
   gameSubject: 6
   badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
   GUID: f8384141-cc74-4c57-8a21-b023e1e178d1

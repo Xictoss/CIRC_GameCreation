@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: ActivitePlageNager
   m_EditorClassIdentifier: 
   miniGameName: ActivitePlageNager
-  miniGameDesc: 
+  miniGameDesc: DialogueAvantMiniJeuActivitePlageNager
   miniGameTitle: 
+  endDesc: 
+  endExplication: 
   scene:
     m_SceneAsset: {fileID: 102900000, guid: 31c0e57efbe73474ca93483796b188df, type: 3}
     m_IsDirty: 0

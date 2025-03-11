@@ -1,3 +1,4 @@
+using I2.Loc;
 using TMPro;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ namespace CIRC.Animals
     {
         [field: SerializeField] public TMP_Text title { get; private set; }
         [field: SerializeField] public TMP_Text content { get; private set; }
+        [field: SerializeField] public Localize localize { get; private set; }
 
         private AnimalData data;
         
@@ -15,6 +17,8 @@ namespace CIRC.Animals
             this.data = data;
             title.text = data.animalName;
             content.text = data.animalDialogs[dialogIndex];
+            
+            localize.SetTerm(content.text);
             
             Invoke(nameof(EndDialog), data.dialogDuration);
         }

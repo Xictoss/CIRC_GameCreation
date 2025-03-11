@@ -1,6 +1,7 @@
 using CIRC.Collections;
 using CIRC.Controllers;
 using DG.Tweening;
+using I2.Loc;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +12,7 @@ namespace CIRC.MenuSystem.MiniGameReward
     {
         [SerializeField] private TMP_Text endDesc, endExplication;
         [SerializeField] private Image display;
+        [SerializeField] private Localize localize;
 
         [Space(10f)]
         [SerializeField] private float shakeForce, shakeDuration;
@@ -22,6 +24,8 @@ namespace CIRC.MenuSystem.MiniGameReward
             endDesc.text = ctx.endDesc;
             endExplication.text = ctx.endExplication;
             display.sprite = ctx.image;
+            
+            localize.SetTerm(endExplication.text);
             
             gameObject.SetActive(true);
             

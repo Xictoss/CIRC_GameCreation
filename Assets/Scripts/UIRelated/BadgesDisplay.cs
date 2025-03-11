@@ -50,7 +50,7 @@ namespace CIRC.UIRelated
 
                 Sprite sprite = hadComplete ? badge.displayImage : _badgeNotCompleted;
                 badgeButton.Sync(hadComplete, sprite, badge);
-                Debug.Log("do sync");
+                //Debug.Log("do sync");
             }
         }
     }
