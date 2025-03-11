@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ExpositionPlageParasol
   m_EditorClassIdentifier: 
   miniGameName: ExpositionPlageParasol
-  miniGameDesc: DialogueAvantMiniJeuExpositionPlageParasol
+  miniGameDesc: 
   miniGameTitle: 
   endDesc: 
   endExplication: 

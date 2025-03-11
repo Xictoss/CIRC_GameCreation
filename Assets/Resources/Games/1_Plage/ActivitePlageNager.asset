@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ActivitePlageNager
   m_EditorClassIdentifier: 
   miniGameName: ActivitePlageNager
-  miniGameDesc: DialogueAvantMiniJeuActivitePlageNager
+  miniGameDesc: 
   miniGameTitle: 
   endDesc: 
   endExplication: 

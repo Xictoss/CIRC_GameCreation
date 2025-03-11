@@ -20,7 +20,7 @@ MonoBehaviour:
   scene:
     m_SceneAsset: {fileID: 102900000, guid: d6b7c27dfdd5da949b400eac3d9a433a, type: 3}
     m_IsDirty: 0
-    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/ZoneLotissementTaper.unity
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/4_Lotissement/ZoneLotissementTaper.unity
   gameSubject: 8
   badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
   GUID: beeae481-074b-428d-aece-2623811965d8

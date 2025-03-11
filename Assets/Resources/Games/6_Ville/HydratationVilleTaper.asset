@@ -18,9 +18,9 @@ MonoBehaviour:
   endDesc: 
   endExplication: 
   scene:
-    m_SceneAsset: {fileID: 0}
+    m_SceneAsset: {fileID: 102900000, guid: 29904fbb5f89a06479f76464df4487b7, type: 3}
     m_IsDirty: 0
-    m_ScenePath: 
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/6_Ville/HydratationVilleTaper.unity
   gameSubject: 1
   badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
   GUID: 55a030cb-6040-450d-98f5-dee583ab1349
