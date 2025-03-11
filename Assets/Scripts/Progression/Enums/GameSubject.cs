@@ -2,21 +2,15 @@ namespace CIRC.Progression
 {
     public enum GameSubject
     {
-        Alimentation, 
-        Hydratation, 
-        AlcoolSodas, 
-     
-        MedicamentsHormonaux, 
-        Depistage, 
-        HPV, 
-     
-        ExpositionSoleil, 
-        Tabagisme, 
-        ZoneRadon, 
-        RisquesChimique, 
-        Allaitement, 
-     
         ActivitePhysique, 
-        Surpoids, 
+        AlcoolSodas, 
+        Depistage, 
+        MedicamentsHormonaux, 
+        Hydratation, 
+        Alimentation, 
+        ZoneRadon, 
+        ExpositionSoleil, 
+        Tabagisme,
+        Vaccination,
     }
 }

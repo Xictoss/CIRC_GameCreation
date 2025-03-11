@@ -15,10 +15,12 @@ MonoBehaviour:
   miniGameName: TabagismePlageCigarette
   miniGameDesc: 
   miniGameTitle: 
+  endDesc: 
+  endExplication: 
   scene:
     m_SceneAsset: {fileID: 102900000, guid: 09ef5d522f9bd454c98b0731e7d80c19, type: 3}
     m_IsDirty: 0
     m_ScenePath: Assets/Scenes/MainScenes/MiniGames/1_Plage/TabagismePlageCigarette.unity
   gameSubject: 7
-  badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
+  badgeDisplay: {fileID: 11400000, guid: f13253da6c2bcbd4184e9ed4558e4687, type: 2}
   GUID: 3172c271-b839-4694-b0b2-bc39fbf88bbd

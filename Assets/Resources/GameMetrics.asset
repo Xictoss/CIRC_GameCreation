@@ -30,24 +30,24 @@ MonoBehaviour:
     m_ScenePath: Assets/Scenes/MainScenes/Levels/3_ParcScene.unity
   <LotissementScene>k__BackingField:
     m_SceneAsset: {fileID: 102900000, guid: 1bb59939e1338c74d8af03e66fdd3839, type: 3}
-    m_IsDirty: 0
-    m_ScenePath: Assets/Scenes/MainScenes/Levels/4_LotissementScene.unity
+    m_IsDirty: 1
+    m_ScenePath: Assets/Scenes/MainScenes/Levels/3_LotissementScene.unity
   <EntrepriseScene>k__BackingField:
     m_SceneAsset: {fileID: 102900000, guid: 302766442c6b1164dacba20848a91cd1, type: 3}
-    m_IsDirty: 0
-    m_ScenePath: Assets/Scenes/MainScenes/Levels/5_EntrepriseScene.unity
+    m_IsDirty: 1
+    m_ScenePath: Assets/Scenes/MainScenes/Levels/4_EntrepriseScene.unity
   <VilleScene>k__BackingField:
     m_SceneAsset: {fileID: 102900000, guid: ff5f0a10577364446a22986cddf07f7d, type: 3}
-    m_IsDirty: 0
-    m_ScenePath: Assets/Scenes/MainScenes/Levels/6_VilleScene.unity
+    m_IsDirty: 1
+    m_ScenePath: Assets/Scenes/MainScenes/Levels/5_VilleScene.unity
   <StadeUniversitaireScene>k__BackingField:
     m_SceneAsset: {fileID: 102900000, guid: 822cd96448fa04a46b6ef81badd63599, type: 3}
     m_IsDirty: 0
     m_ScenePath: Assets/Scenes/MainScenes/Levels/7_StadeScene.unity
   <CliniqueScene>k__BackingField:
     m_SceneAsset: {fileID: 102900000, guid: 6b47cf3037fd2e540a62feda844e4064, type: 3}
-    m_IsDirty: 0
-    m_ScenePath: Assets/Scenes/MainScenes/Levels/8_CliniqueScene.unity
+    m_IsDirty: 1
+    m_ScenePath: Assets/Scenes/MainScenes/Levels/6_CliniqueScene.unity
   <ActivitePlageNager>k__BackingField:
     m_SceneAsset: {fileID: 102900000, guid: 31c0e57efbe73474ca93483796b188df, type: 3}
     m_IsDirty: 0
@@ -116,6 +116,13 @@ MonoBehaviour:
     m_SceneAsset: {fileID: 102900000, guid: fec09a1193f977b41924054aaff30285, type: 3}
     m_IsDirty: 0
     m_ScenePath: Assets/Scenes/MainScenes/MiniGames/5_Entreprise/VaccinationEntrepriseDrag.unity
+  <SceneNames>k__BackingField:
+  - Plage
+  - Maison
+  - Lotissement
+  - Entreprise
+  - Ville
+  - Clinique
   <BadgeDisplayer>k__BackingField: BadgeDisplayer
   <MiniGamePopUpMenu>k__BackingField: MiniGamePopUpMenu
   <MiniGameReward>k__BackingField: MiniGameReward

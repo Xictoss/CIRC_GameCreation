@@ -13,6 +13,7 @@ namespace CIRC.Controllers
     public static class GameController
     {
         public static Logger Logger { get; private set; }
+        public static MiniGamesObserver MiniGamesObserver { get; private set; }
         public static ProgressionManager ProgressionManager { get; private set; }
         public static CameraController CameraController { get; private set; }
         public static MiniGameRegister MiniGameRegister { get; private set; }
@@ -43,6 +44,8 @@ namespace CIRC.Controllers
             SceneController.SubToSceneChange(MiniGameRegister, PriorityScale.Medium);
             
             CameraController = new CameraController();
+
+            MiniGamesObserver = new MiniGamesObserver();
             
             ProgressionManager = new ProgressionManager();
             Save.AddListener(ProgressionManager);
@@ -63,7 +66,7 @@ namespace CIRC.Controllers
         
         public static void SaveProgress()
         {
-            Debug.Log("Saving player progress");
+            //Debug.Log("Saving player progress");
             Save.Push<GameSave, GameSaveSettings>(new GameSaveSettings()
             {
                 prefName = "Player"
@@ -72,7 +75,7 @@ namespace CIRC.Controllers
         
         private static void LoadProgress()
         {
-            Debug.Log("Loading player progress");
+            //Debug.Log("Loading player progress");
             Save.Pull<GameSave, GameSaveSettings>(out _, new GameSaveSettings()
             {
                 prefName = "Player"

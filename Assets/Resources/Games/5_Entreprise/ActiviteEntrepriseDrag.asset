@@ -13,15 +13,14 @@ MonoBehaviour:
   m_Name: ActiviteEntrepriseDrag
   m_EditorClassIdentifier: 
   miniGameName: ActiviteEntrepriseDrag
-  miniGameDesc: "Aider Fanphan \xE0 coller des affiches sur des activit\xE9s physiques
-    \xE0 faire au sein de l'entreprise."
-  miniGameTitle: Affichez les toutes
+  miniGameDesc: "ExplicationEnEntr\xE9eDeMiniJeuActiviteEntrepriseDrag"
+  miniGameTitle: Au secours
   endDesc: Bravo !
-  endExplication: "Tu as r\xE9ussi \xE0 aider Phanfan !"
+  endExplication: "ExplicationECACActivit\xE9Physique"
   scene:
     m_SceneAsset: {fileID: 102900000, guid: 5758faee6f77e9747989a9c5d1cb00b0, type: 3}
     m_IsDirty: 0
     m_ScenePath: Assets/Scenes/MainScenes/MiniGames/5_Entreprise/ActiviteEntrepriseDrag.unity
-  gameSubject: 11
+  gameSubject: 0
   badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
   GUID: 03c3e588-b212-4dc5-a905-aa9469e7e346

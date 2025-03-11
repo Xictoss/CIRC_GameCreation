@@ -17,6 +17,1056 @@ MonoBehaviour:
     UserAgreesToHaveItInsideThePluginsFolder: 0
     GoogleLiveSyncIsUptoDate: 1
     mTerms:
+    - Term: About
+      TermType: 0
+      Description: 
+      Languages:
+      - About
+      - A propos
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Audio
+      TermType: 0
+      Description: 
+      Languages:
+      - Audio
+      - Son
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Back
+      TermType: 0
+      Description: 
+      Languages:
+      - Back
+      - Retour
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Badge
+      TermType: 0
+      Description: 
+      Languages:
+      - Badge
+      - Badge
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Credits
+      TermType: 0
+      Description: 
+      Languages:
+      - Credits
+      - "Cr\xE9dits"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuActiviteEntrepriseDrag
+      TermType: 0
+      Description: DialogueAvantMiniJeuActiviteEntrepriseDrag
+      Languages:
+      - It takes little to be happy; you just need the essentials and some advertising
+        posters
+      - "Il en faut peut pour \xEAtre heureux, il faut se contenter du n\xE9c\xE9ssaire
+        et des affiches publicitaires"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuActiviteLotissementDrag
+      TermType: 0
+      Description: DialogueAvantMiniJeuActiviteLotissementDrag
+      Languages:
+      - Friendship, respect, street sports
+      - "Amiti\xE9, respect, sport de rue"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuActiviteLotissementTaper
+      TermType: 0
+      Description: DialogueAvantMiniJeuActiviteLotissementTaper
+      Languages:
+      - Why not go for a little run?
+      - Pourquoi pas un peu de footing
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuActiviteMaisonMagazine
+      TermType: 0
+      Description: DialogueAvantMiniJeuActiviteMaisonMagazine
+      Languages:
+      - "There\u2019s really nothing good here"
+      - Il n'y a vraiment rien de bien ici
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuActiviteMaisonTele
+      TermType: 0
+      Description: DialogueAvantMiniJeuActiviteMaisonTele
+      Languages:
+      - Which channel should I watch?
+      - Quelle chaine vais je bien pouvoir regarder
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuActivitePlageNager
+      TermType: 0
+      Description: DialogueAvantMiniJeuActivitePlageNager
+      Languages:
+      - I'm bored on this white sand
+      - Je m'ennuie sur ce sable blanc
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuActiviteVilleTaper
+      TermType: 0
+      Description: DialogueAvantMiniJeuActiviteVilleTaper
+      Languages:
+      - "Life isn\u2019t about being stronger or faster, it\u2019s about holding
+        on"
+      - "La vie, c'est pas \xEAtre plus fort ou plus rapide, c'est tenir le coup"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuAlccolPlageCocktail
+      TermType: 0
+      Description: DialogueAvantMiniJeuAlccolPlageCocktail
+      Languages:
+      - My throat is all dry
+      - "J'ai la gorge toute s\xE8che"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuAlcoolEntrepriseTaper
+      TermType: 0
+      Description: DialogueAvantMiniJeuAlcoolEntrepriseTaper
+      Languages:
+      - We can always make an effort
+      - On peut toujours faire des efforts
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuAlcoolLotissementTaper
+      TermType: 0
+      Description: DialogueAvantMiniJeuAlcoolLotissementTaper
+      Languages:
+      - What should I drink today?
+      - Que vais je bien boire aujourd'hui
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuAlcoolMaisonBoisson
+      TermType: 0
+      Description: DialogueAvantMiniJeuAlcoolMaisonBoisson
+      Languages:
+      - Good juice is much better than soda
+      - Du bon jus, c'est bien meilleur que du soda
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuAlcoolMaisonFrigo
+      TermType: 0
+      Description: DialogueAvantMiniJeuAlcoolMaisonFrigo
+      Languages:
+      - "I\u2019m thirsty, but I\u2019ll go for water"
+      - J'ai soif, mais ce sera de l'eau pour moi
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuAlimentatioEntrepriseGlisser
+      TermType: 0
+      Description: DialogueAvantMiniJeuAlimentatioEntrepriseGlisser
+      Languages:
+      - It's a matter of willpower, not logic
+      - "C'est une question de volont\xE9 et non de logique"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuAlimentationCliniqueDrag
+      TermType: 0
+      Description: DialogueAvantMiniJeuAlimentationCliniqueDrag
+      Languages:
+      - What should I eat?
+      - Que vais je bien manger ?
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuAlimentationEntrepriseTaper
+      TermType: 0
+      Description: DialogueAvantMiniJeuAlimentationEntrepriseTaper
+      Languages:
+      - I have a choice, but I'm still undecided
+      - "J'ai le choix mais je suis quand m\xEAme ind\xE9cise"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuAlimentationLotissementSecouer
+      TermType: 0
+      Description: DialogueAvantMiniJeuAlimentationLotissementSecouer
+      Languages:
+      - A bit of salad, and the meal will be perfect
+      - Un peu de salade et le repas sera parfait
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuAlimentationMaisonRadio
+      TermType: 0
+      Description: DialogueAvantMiniJeuAlimentationMaisonRadio
+      Languages:
+      - "Burgers here, cakes there\u2014nothing but junk food"
+      - "Des burgers par \xE7i, des gateaux par l\xE0, que de la mauvaise nouriture"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuAlimentationPlageChips
+      TermType: 0
+      Description: DialogueAvantMiniJeuAlimentationPlageChips
+      Languages:
+      - Hmmmmm chips
+      - Hmmmmm des chips
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuAlimentationVilleGlisser
+      TermType: 0
+      Description: DialogueAvantMiniJeuAlimentationVilleGlisser
+      Languages:
+      - Complicated, but not impossible for someone like me
+      - "Compliqu\xE9 mais pas infaisable pour quelqu'un comme moi"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuAllaitementCliniqueTaper
+      TermType: 0
+      Description: DialogueAvantMiniJeuAllaitementCliniqueTaper
+      Languages:
+      - "Doctor, what\u2019s the best way to feed my child?"
+      - Docteur qu'elle est le mieux pour nourrir mon enfant
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuChimiqueEntrepriseTaper
+      TermType: 0
+      Description: DialogueAvantMiniJeuChimiqueEntrepriseTaper
+      Languages:
+      - Nothing good seems to be on the horizon
+      - "Rien de bien ne s'anonce \xE0 l'horizon"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuDepistageEntrepriseTaper
+      TermType: 0
+      Description: DialogueAvantMiniJeuDepistageEntrepriseTaper
+      Languages:
+      - "The choice is complicated, I\u2019d even say a real dilemma"
+      - "Le choix est compliqu\xE9 et je dirais m\xEAme corn\xE9lien"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuExpositionLotissementGlisser
+      TermType: 0
+      Description: DialogueAvantMiniJeuExpositionLotissementGlisser
+      Languages:
+      - Phew, the sun is really strong today. What can I use to protect myself?
+      - "Pfiou, le soleil tape fort aujourd'hui. Avec quoi puis-je me prot\xE9ger
+        ?"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuExpositionPlageCreme
+      TermType: 0
+      Description: DialogueAvantMiniJeuExpositionPlageCreme
+      Languages:
+      - "I didn\u2019t know I could take this color"
+      - Je ne savais pas que je pouvais prendre cette couleur
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuExpositionPlageParasol
+      TermType: 0
+      Description: DialogueAvantMiniJeuExpositionPlageParasol
+      Languages:
+      - Zzzzzz ouch Zzzzzzz ouch Zzzzzzzz
+      - Zzzzzz ouille Zzzzzzz ouille Zzzzzzzz
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuExpositionVilleDrag
+      TermType: 0
+      Description: DialogueAvantMiniJeuExpositionVilleDrag
+      Languages:
+      - The sun is blazing today, what to do, what to do...
+      - Le soleil tape aujourd'hui, que faire, que faire
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuHormoneMaisonJeter
+      TermType: 0
+      Description: DialogueAvantMiniJeuHormoneMaisonJeter
+      Languages:
+      - "I don\u2019t know what to do with all these hormonal medications"
+      - "Je ne sais pas quoi faire de tout ces m\xE9dicaments hormonaux"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuHydratationCliniqueDrag
+      TermType: 0
+      Description: DialogueAvantMiniJeuHydratationCliniqueDrag
+      Languages:
+      - I'm thirstier than I've ever been
+      - J'ai soif comme jamais je n'eu soif
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuHydratationMaisonCanalisation
+      TermType: 0
+      Description: DialogueAvantMiniJeuHydratationMaisonCanalisation
+      Languages:
+      - "But why isn\u2019t the sink working?"
+      - "Mais pourquoi l'\xE9vier ne t'il fonctionne pas"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuHydratationMaisonLabyrinthe
+      TermType: 0
+      Description: DialogueAvantMiniJeuHydratationMaisonLabyrinthe
+      Languages:
+      - Don't forget to stay hydrated
+      - N'oublie pas de t'hydrater
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuHydratationPlageTourner
+      TermType: 0
+      Description: DialogueAvantMiniJeuHydratationPlageTourner
+      Languages:
+      - It's hot today
+      - Il fait chaud aujourd'hui
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuHydratationVilleTaper
+      TermType: 0
+      Description: DialogueAvantMiniJeuHydratationVilleTaper
+      Languages:
+      - The choice is vast, but my answer will be unique
+      - "Le choix est vaste mais ma r\xE9ponse sera unique"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuHydrationPlagePomper
+      TermType: 0
+      Description: DialogueAvantMiniJeuHydrationPlagePomper
+      Languages:
+      - I'M THIRSTY
+      - J'AI SOIF
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuLimiterCliniqueDrag
+      TermType: 0
+      Description: DialogueAvantMiniJeuLimiterCliniqueDrag
+      Languages:
+      - So, what would be best for my treatment?
+      - Du coups pour mon traitement qu'est ce qui serait le mieux
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuProgrammesLotissementDrag
+      TermType: 0
+      Description: DialogueAvantMiniJeuProgrammesLotissementDrag
+      Languages:
+      - Information on screening? That will always be useful!
+      - "Des information sur le d\xE9pistage ? Cela sera toujours utile !"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuProgrammesVilleTaper
+      TermType: 0
+      Description: DialogueAvantMiniJeuProgrammesVilleTaper
+      Languages:
+      - "I won\u2019t be distracted by anything\u2014except maybe a butterfly"
+      - "Je ne serai distrait par rien, \xE0 part par un papillon"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuSurpoidsCliniqueTaper
+      TermType: 0
+      Description: DialogueAvantMiniJeuSurpoidsCliniqueTaper
+      Languages:
+      - Doctor, what can I do to be better physically? Because little jars of honey
+        are the best
+      - "Docteur que puis je faire \xEAtre mieu physiquement, car les petits pots
+        de miel sont les meilleurs"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuTabagismeCliniqueSecouer
+      TermType: 0
+      Description: DialogueAvantMiniJeuTabagismeCliniqueSecouer
+      Languages:
+      - This smoke... something tells me it's toxic
+      - "Cette fum\xE9e, quelque chose me dit quel est nocive"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuTabagismeCliniqueTaper
+      TermType: 0
+      Description: DialogueAvantMiniJeuTabagismeCliniqueTaper
+      Languages:
+      - What's up, doc? What does the radio say?
+      - Quoi de neuf docteur, que dit la radio ?
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuTabagismeEntrepriseAppuyer
+      TermType: 0
+      Description: DialogueAvantMiniJeuTabagismeEntrepriseAppuyer
+      Languages:
+      - I'm feeling a bit cramped here
+      - "Je me sens un peu \xE0 l'\xE9troit l\xE0"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuTabagismeLotissementDrag
+      TermType: 0
+      Description: DialogueAvantMiniJeuTabagismeLotissementDrag
+      Languages:
+      - Putting up posters is my job
+      - Coller des affiches c'est mon job
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuTabagismeMaisonSecouer
+      TermType: 0
+      Description: DialogueAvantMiniJeuTabagismeMaisonSecouer
+      Languages:
+      - Cough Cough Where is this smoke coming from?
+      - "Tousse* Tousse* mais d'o\xF9 vient cette fum\xE9e"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuTabagismePlageCigarette
+      TermType: 0
+      Description: DialogueAvantMiniJeuTabagismePlageCigarette
+      Languages:
+      - But what is this mysterious object?
+      - Mais qu'elle est donc ce misterieux objet
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuTabagismeVilleDrag
+      TermType: 0
+      Description: DialogueAvantMiniJeuTabagismeVilleDrag
+      Languages:
+      - "Hopefully, this apple isn\u2019t poisoned"
+      - "En esp\xE8rant qu'elle ne soit pas empoison\xE9e cette pomme"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuTabagismeVilleGlisser
+      TermType: 0
+      Description: DialogueAvantMiniJeuTabagismeVilleGlisser
+      Languages:
+      - "Sometimes life doesn\u2019t give us a choice, and sometimes life is right"
+      - Des fois la vie ne nous laisse pas le choix et des fois la vie a raison
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuVaccinationCliniqueDrag
+      TermType: 0
+      Description: DialogueAvantMiniJeuVaccinationCliniqueDrag
+      Languages:
+      - We can't always be brave, but we can always be kind
+      - "On ne peut pas toujours \xEAtre courageux, mais on peut toujours \xEAtre
+        gentil"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuVaccinationEntrepriseDrag
+      TermType: 0
+      Description: DialogueAvantMiniJeuVaccinationEntrepriseDrag
+      Languages:
+      - A small injection for humanity, but a great relief for me
+      - "Une petite piqure pour l'humanit\xE9 mais un grand soulagement pour moi"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuVaccinationVilleDrag
+      TermType: 0
+      Description: DialogueAvantMiniJeuVaccinationVilleDrag
+      Languages:
+      - Ouch, the injection hurts
+      - "A\xEFe, la piq\xFBre fait mal"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DialogueAvantMiniJeuZoneLotissementTaper
+      TermType: 0
+      Description: DialogueAvantMiniJeuZoneLotissementTaper
+      Languages:
+      - Wubba lubba dub dub!
+      - Wubba lubba dub dub !
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Effects
+      TermType: 0
+      Description: 
+      Languages:
+      - Effects
+      - Effets
+      Flags: 0000
+      Languages_Touch: []
+    - Term: English
+      TermType: 0
+      Description: 
+      Languages:
+      - English
+      - Anglais
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationECACActivit\xE9Physique"
+      TermType: 0
+      Description: "ExplicationECACActivit\xE9Physique"
+      Languages:
+      - Be physically active in your daily life. Avoid sitting for long periods.
+      - Soyez physiquement actif/ve dans votre vie quotidienne. Evitez de rester
+        assis/e trop longtemps.
+      Flags: 0000
+      Languages_Touch: []
+    - Term: ExplicationECACAlcool
+      TermType: 0
+      Description: ExplicationECACAlcool
+      Languages:
+      - "Limit your consumption of alcohol\u2014of any kind. To reduce your cancer
+        risk, it's best not to drink alcohol at all."
+      - "Limitez votre consommation \u2013de tout type\u2013 d\u2019alcool. Pour
+        r\xE9duire votre risque de cancer, il est pr\xE9f\xE9rable de ne pas boire
+        du tout d\u2019alcool."
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationECACAlimentationD\xE9s\xE9quilibr\xE9e"
+      TermType: 0
+      Description: "ExplicationECACAlimentationD\xE9s\xE9quilibr\xE9e"
+      Languages:
+      - 'Adopt a healthy diet: Eat plenty of whole grains, legumes, vegetables, and
+        fruits. Limit the consumption of high-calorie foods (rich in sugar or fats)
+        and avoid sugary drinks. Avoid eating processed meats; limit red meat and
+        high-salt foods.'
+      - "Adoptez une alimentation saine :  Consommez beaucoup de c\xE9r\xE9ales compl\xE8tes,
+        de l\xE9gumes secs, de l\xE9gumes et de fruits. Limitez la consommation d\u2019aliments
+        tr\xE8s caloriques (riches en sucre ou en mati\xE8res grasses) et \xE9vitez
+        les boissons sucr\xE9es. Evitez de manger de la viande transform\xE9e (pr\xE9parations
+        carn\xE9es); limitez la viande rouge et les aliments riches en sel."
+      Flags: 0000
+      Languages_Touch: []
+    - Term: ExplicationECACAllaitementMaternel
+      TermType: 0
+      Description: 'ExplicationECACAllaitementMaternel '
+      Languages:
+      - 'For women: Breastfeeding reduces your cancer risk. If possible, breastfeed
+        your child(ren). Hormone replacement therapy (HRT) increases the risk of
+        developing certain cancers. Limit these treatments.'
+      - "Pour les femmes :  Allaiter r\xE9duit votre risque de cancer. Si possible,
+        allaitez votre (vos) enfant(s). Les traitements hormonaux substitutifs de
+        la m\xE9nopause (THS) augmentent le risque de d\xE9velopper certains cancers.
+        Limitez ces traitements."
+      Flags: 0000
+      Languages_Touch: []
+    - Term: ExplicationECACExpositionAuSoleil
+      TermType: 0
+      Description: ExplicationECACExpositionAuSoleil
+      Languages:
+      - Avoid excessive sun exposure, especially for children. Use sunscreen. Do
+        not use tanning devices.
+      - "Evitez une exposition excessive au soleil, surtout chez les enfants. Utilisez
+        une protection solaire. N\u2019utilisez pas d\u2019appareils de bronzage."
+      Flags: 0000
+      Languages_Touch: []
+    - Term: ExplicationECACHydratation
+      TermType: 0
+      Description: ExplicationECACHydratation
+      Languages:
+      - Maintaining adequate hydration is essential to help eliminate toxins from
+        the body.
+      - "Maintenir une hydratation ad\xE9quate est essentiel pour favoriser l'\xE9limination
+        des toxines du corps."
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationECACLimiterUtilisationDeM\xE9dicamentsHormonaux"
+      TermType: 0
+      Description: "ExplicationECACLimiterUtilisationDeM\xE9dicamentsHormonaux"
+      Languages:
+      - 'For women: Breastfeeding reduces your cancer risk. If possible, breastfeed
+        your child(ren). Hormone replacement therapy (HRT) increases the risk of
+        developing certain cancers. Limit these treatments.'
+      - "Pour les femmes :  Allaiter r\xE9duit votre risque de cancer. Si possible,
+        allaitez votre (vos) enfant(s). Les traitements hormonaux substitutifs de
+        la m\xE9nopause (THS) augmentent le risque de d\xE9velopper certains cancers.
+        Limitez ces traitements."
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationECACProgrammesDeD\xE9pistages"
+      TermType: 0
+      Description: "ExplicationECACProgrammesDeD\xE9pistages"
+      Languages:
+      - 'Participate in organized screening programs for: Colorectal cancer (men
+        and women); Breast cancer (women); Cervical cancer (women).'
+      - "Participez aux programmes de d\xE9pistage organis\xE9s du :  Cancer colorectal
+        (hommes et femmes); Cancer du sein (femmes); Cancer du col de l\u2019ut\xE9rus
+        (femmes)."
+      Flags: 0000
+      Languages_Touch: []
+    - Term: ExplicationECACRisquesChimiques
+      TermType: 0
+      Description: ExplicationECACRisquesChimiques
+      Languages:
+      - Follow health and safety guidelines in your workplace to protect yourself
+        from carcinogenic substances.
+      - "Suivez les consignes de sant\xE9 et de s\xE9curit\xE9 sur votre lieu de
+        travail, pour vous prot\xE9ger des substances canc\xE9rog\xE8nes."
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationECACSurpoidsOb\xE9sit\xE9"
+      TermType: 0
+      Description: "ExplicationECACSurpoidsOb\xE9sit\xE9"
+      Languages:
+      - Maintain a healthy weight.
+      - Faites en sorte de garder un poids de forme.
+      Flags: 0000
+      Languages_Touch: []
+    - Term: ExplicationECACTabagisme
+      TermType: 0
+      Description: ExplicationECACTabagisme
+      Languages:
+      - Do not smoke. Do not consume tobacco in any form.
+      - Ne fumez pas. Ne consommez pas de tabac, sous quelque forme que ce soit.
+      Flags: 0000
+      Languages_Touch: []
+    - Term: ExplicationECACVaccinationContreLeHPV
+      TermType: 0
+      Description: ExplicationECACVaccinationContreLeHPV
+      Languages:
+      - 'Get your children vaccinated against: Hepatitis B (for newborns); Human
+        papillomavirus (HPV) (for young girls).'
+      - "Faites participer vos enfants aux programmes de vaccination contre :  L\u2019h\xE9patite
+        B (chez les nouveau-n\xE9s); Le virus du papillome humain (VPH) (chez les
+        jeunes filles)."
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationECACZoneExpos\xE9eAuRadon"
+      TermType: 0
+      Description: "ExplicationECACZoneExpos\xE9eAuRadon"
+      Languages:
+      - Find out if you are exposed to high levels of radon gas in your home. If
+        so, take steps to reduce exposure.
+      - "Renseignez-vous pour savoir si vous \xEAtes expos\xE9/e \xE0 des \xE9missions
+        \xE9lev\xE9es de gaz radon \xE0 votre domicile. Si tel est le cas, prenez
+        des mesures pour r\xE9duire ces \xE9missions."
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuActiviteEntrepriseDrag"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuActiviteEntrepriseDrag"
+      Languages:
+      - "Maximus is putting up posters\u2014help by sliding the posters into the
+        empty spaces"
+      - Maximus colle des affiches, aide-le en glissant les affiches dans les zones
+        vides
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuActiviteLotissementDrag"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuActiviteLotissementDrag"
+      Languages:
+      - Place the ball with your finger so Milo, Luce, and Mino can play
+      - "D\xE9pose avec ton doigt le ballon afin que Milo Luce et Mino puissent jouer"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuActiviteLotissementTaper"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuActiviteLotissementTaper"
+      Languages:
+      - Tap on your screen to help Spotty with their run
+      - "Tapotte sur ton \xE9cran pour aider Spotty dans son footing"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuActiviteMaisonMagazine"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuActiviteMaisonMagazine"
+      Languages:
+      - Swipe the magazine to Opaline to encourage them to do some physical activity
+      - "Glisse le magazine avec ton doigt \xE0 Opaline pour lui donner envie de
+        faire une activit\xE9 physique"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuActiviteMaisonTele"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuActiviteMaisonTele"
+      Languages:
+      - "Tap on Opaline\u2019s TV to switch to a more sports-oriented program"
+      - Tapotte sur la TV d'Opaline pour changer de programme pour quelque chose
+        de plus sportif
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuActivitePlageNager"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuActivitePlageNager"
+      Languages:
+      - Tap on your screen to help Splash dive into the water
+      - "Tapotte sur ton \xE9cran pour aider Splash \xE0 se jeter \xE0 l'eau"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuActiviteVilleTaper"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuActiviteVilleTaper"
+      Languages:
+      - Help Noisette move forward with their bike by tapping on the screen
+      - "Aide Noisette \xE0 avancer avec son v\xE9lo en tapotant sur l'\xE9cran"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuAlccolPlageCocktail"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuAlccolPlageCocktail"
+      Languages:
+      - "Mousse is thirsty\u2014slide a bottle of water into their hand"
+      - "Mousse \xE0 soif, glisse-lui une bouteille d'eau dans la main"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuAlcoolEntrepriseTaper"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuAlcoolEntrepriseTaper"
+      Languages:
+      - "Nuage is thirsty\u2014select the right dispenser to help them drink properly"
+      - "Nuage \xE0 soif s\xE9lectionne le bon distributeur pour lui permettre de
+        boire correctement"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuAlcoolLotissementTaper"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuAlcoolLotissementTaper"
+      Languages:
+      - Help Canelle choose their drink by selecting the water bottle
+      - "Aide Canelle \xE0 choisir sa boisson en s\xE9lectionnant la bouteille d'eau"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuAlcoolMaisonBoisson"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuAlcoolMaisonBoisson"
+      Languages:
+      - "Slide Mousse\u2019s glass under the juice to let them drink the best option"
+      - Glisse le verre de Mousse sous le jus de fruit pour lui permettre de boire
+        ce qu'il y a de meilleur
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuAlcoolMaisonFrigo"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuAlcoolMaisonFrigo"
+      Languages:
+      - Select the water bottle to help Pompom stay properly hydrated
+      - "S\xE9lectionne la bouteille d'eau pour permettre \xE0 Pompom de s'hydrater
+        correctement"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuAlimentatioEntrepriseGlisser"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuAlimentatioEntrepriseGlisser"
+      Languages:
+      - Help Diesel prepare a nice dish by choosing the right ingredients
+      - "Aide Diesel \xE0 se pr\xE9parer un bon petit plat en choisissant les bons
+        ingr\xE9dients"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuAlimentationCliniqueDrag"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuAlimentationCliniqueDrag"
+      Languages:
+      - Help Naya sort the good food from the bad food
+      - "Aide Naya \xE0 trier la bonne et la mauvaise nourriture"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuAlimentationEntrepriseTaper"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuAlimentationEntrepriseTaper"
+      Languages:
+      - "Opaline wants to eat well\u2014help her by selecting the organic food from
+        the dispenser"
+      - "Opaline souhaite bien manger, aide-la en s\xE9lectionnant la nourriture
+        bio dans le distributeur"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuAlimentationLotissementSecouer"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuAlimentationLotissementSecouer"
+      Languages:
+      - Shake your phone to help Carotte open their salad bag
+      - "Secoue ton t\xE9l\xE9phone afin d'aider Carotte \xE0 ouvrir son sachet de
+        salade"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuAlimentationMaisonRadio"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuAlimentationMaisonRadio"
+      Languages:
+      - "Tap on C\xE2line\u2019s radio to switch to a more culinary-themed station"
+      - "Tapotte sur la radio de C\xE2line pour changer la cha\xEEne pour quelque
+        chose de plus culinaire"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuAlimentationPlageChips"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuAlimentationPlageChips"
+      Languages:
+      - Stop Pompom from eating unhealthy food by swiping the chips out of their
+        hand
+      - "\xC9vite \xE0 Pompom de manger mal en glissant les chips hors de sa main"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuAlimentationVilleGlisser"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuAlimentationVilleGlisser"
+      Languages:
+      - Help Biscuit with the lock by sliding the key onto it
+      - Aide Biscuit avec le cadenas en glissant la clef sur celui-ci
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuAllaitementCliniqueTaper"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuAllaitementCliniqueTaper"
+      Languages:
+      - Choose the answers to give to Mimi
+      - "Choisissez les r\xE9ponses a donner \xE0 Mimi"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuChimiqueEntrepriseTaper"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuChimiqueEntrepriseTaper"
+      Languages:
+      - Help Pompom repair the air conditioner by pressing on the holes to fix them
+      - "Aide Pompom \xE0 r\xE9parer la climatisation en appuyant sur les trous pour
+        les r\xE9parer"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuDepistageEntrepriseTaper"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuDepistageEntrepriseTaper"
+      Languages:
+      - Help Noisette go get tested by choosing the most welcoming door
+      - "Aide Noisette \xE0 aller se faire d\xE9pister en choisissant la porte la
+        plus accueillante"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuExpositionLotissementGlisser"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuExpositionLotissementGlisser"
+      Languages:
+      - Slide the parasol towards Ronron to protect them from the sun
+      - "Glisse le parasol vers Ronron afin de le prot\xE9ger du soleil"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuExpositionPlageCreme"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuExpositionPlageCreme"
+      Languages:
+      - Spread sunscreen on Everou by sliding your finger across the screen to protect
+        them from sunburn
+      - "\xC9tale de la cr\xE8me solaire \xE0 Everou en glissant ton doigt sur l'\xE9cran,
+        pour lui \xE9viter le coup de soleil"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuExpositionPlageParasol"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuExpositionPlageParasol"
+      Languages:
+      - Keep Saphira from getting sunburned by shaking your device to move the umbrellas
+      - "\xC9vite \xE0 Saphira le coup de soleil en secouant ton appareil pour faire
+        bouger les parasols"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuExpositionVilleDrag"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuExpositionVilleDrag"
+      Languages:
+      - Give Flappy their hat to protect them from the sun
+      - "Donne \xE0 Flappy son chapeau pour le prot\xE9ger du soleil"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuHormoneMaisonJeter"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuHormoneMaisonJeter"
+      Languages:
+      - Help Mimi reduce the use of hormonal medications by sliding them into the
+        bag
+      - "Aide Mimi \xE0 limiter l'utilisation des m\xE9dicaments hormonaux en les
+        glissant dans le sac"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuHydratationCliniqueDrag"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuHydratationCliniqueDrag"
+      Languages:
+      - Give the water bottle to Marius
+      - "Donne la bouteille d'eau \xE0 Marius"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuHydratationMaisonCanalisation"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuHydratationMaisonCanalisation"
+      Languages:
+      - "Spotty\u2019s sink isn\u2019t working\u2014help them fix it by tapping on
+        the pipes to rotate them"
+      - "L'\xE9vier de Spotty ne fonctionne plus, aide le \xE0 le r\xE9parer en tapant
+        sur les tuyaux pour les faire tourner"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuHydratationMaisonLabyrinthe"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuHydratationMaisonLabyrinthe"
+      Languages:
+      - Help Miel stay hydrated by sliding them toward the exit of this maze with
+        your finger
+      - "Aide Miel \xE0 s'hydrater en le glissant avec ton doigt vers la sortie de
+        ce labyrinth"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuHydratationPlageTourner"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuHydratationPlageTourner"
+      Languages:
+      - Help Diesel pull the lever by sliding your finger across the screen
+      - "Aide Diesel \xE0 actionner le levier en faisant glisser ton doigt sur l'\xE9cran"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuHydratationVilleTaper"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuHydratationVilleTaper"
+      Languages:
+      - Help Everou choose their drink by clicking on the drinks to make them spin
+      - "Aide Everou \xE0 choisir sa boisson en cliquant sur les boissons pour les
+        faire tourner"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuHydrationPlagePomper"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuHydrationPlagePomper"
+      Languages:
+      - Velvet needs you to pump water by sliding your finger across the screen
+      - "Velvet a besoin que tu pompes de l'eau en faisant glisser ton doigt sur
+        l'\xE9cran"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuLimiterCliniqueDrag"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuLimiterCliniqueDrag"
+      Languages:
+      - Help Canelle by selecting the right medications
+      - "Aide Canelle en s\xE9lectionnant les bons m\xE9dicaments"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuProgrammesLotissementDrag"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuProgrammesLotissementDrag"
+      Languages:
+      - Help Nuage distribute the information sheets by sliding them to the people
+        in front of the tent
+      - "Aide Nuage \xE0 distribuer les fiches d'information en les glissant aux
+        gens devant la tente"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuProgrammesVilleTaper"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuProgrammesVilleTaper"
+      Languages:
+      - Reassure Naya by sliding the butterfly onto them
+      - Rassure Naya en lui glissant le papillon dessus
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuSurpoidsCliniqueTaper"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuSurpoidsCliniqueTaper"
+      Languages:
+      - Choose the answers to give to Everou
+      - "Choisissez les r\xE9ponses a donner \xE0 Everou"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuTabagismeCliniqueSecouer"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuTabagismeCliniqueSecouer"
+      Languages:
+      - Shake your phone to get rid of the smoke and allow Opaline to breathe
+      - "Secoue ton t\xE9l\xE9phone pour faire partir la fum\xE9e et permettre \xE0
+        Opaline de respirer"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuTabagismeCliniqueTaper"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuTabagismeCliniqueTaper"
+      Languages:
+      - Select the carcinogenic area shown by the X-ray to inform Kuru
+      - "S\xE9lectionne la zone canc\xE9rig\xE8ne que montre la radio pour informer
+        Kuru"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuTabagismeEntrepriseAppuyer"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuTabagismeEntrepriseAppuyer"
+      Languages:
+      - Press and hold your screen to help Blizzard breathe again
+      - "Appuie longtemps sur ton \xE9cran pour permettre \xE0 Blizzard de pouvoir
+        de nouveau respirer"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuTabagismeLotissementDrag"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuTabagismeLotissementDrag"
+      Languages:
+      - Help Miel hang the prevention posters by sliding them towards the empty spaces
+        on the wall
+      - "Aide Miel \xE0 accrocher les affiches de pr\xE9vention en les glissant vers
+        les espaces vides sur le mur"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuTabagismeMaisonSecouer"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuTabagismeMaisonSecouer"
+      Languages:
+      - "Dante is choking\u2014get rid of the smoke by shaking your phone"
+      - "Dante s'\xE9touffe, fait partir cette fum\xE9e en secuant ton t\xE9l\xE9phone"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuTabagismePlageCigarette"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuTabagismePlageCigarette"
+      Languages:
+      - Stop Flappy from smoking by swiping the pack of cigarettes toward the sky
+        with your finger
+      - "\xC9vite \xE0 Flappy de fumer en glissant le paquet de cigarettes vers le
+        ciel avec ton doigt"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuTabagismeVilleDrag"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuTabagismeVilleDrag"
+      Languages:
+      - Give Snooze the apple so they can eat it
+      - "Donne \xE0 Snooze la pomme pour qu'elle puisse la manger"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuTabagismeVilleGlisser"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuTabagismeVilleGlisser"
+      Languages:
+      - "Swipe the pack of cigarettes out of Saphira\u2019s hands"
+      - Fait glisser le paquet cigarette des mains de Saphira
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuVaccinationCliniqueDrag"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuVaccinationCliniqueDrag"
+      Languages:
+      - Place a bandage on the spot where Miel got vaccinated
+      - "Pose un pansement \xE0 l'endroit o\xF9 s'est fait vacciner Miel"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuVaccinationEntrepriseDrag"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuVaccinationEntrepriseDrag"
+      Languages:
+      - "Biscuit just got vaccinated\u2014put a bandage on her so she won\u2019t
+        think about it anymore"
+      - Biscuit vient de se faire vacciner, colle-lui un pansement pour qu'elle n'y
+        pense plus
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuVaccinationVilleDrag"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuVaccinationVilleDrag"
+      Languages:
+      - Place the bandage on the spot where Carotte got vaccinated
+      - "Pose le pansement sur l'endroit o\xF9 s'est fait vacciner Carotte"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: "ExplicationEnEntr\xE9eDeMiniJeuZoneLotissementTaper"
+      TermType: 0
+      Description: "ExplicationEnEntr\xE9eDeMiniJeuZoneLotissementTaper"
+      Languages:
+      - Help Dante with the radon detector by tapping on the molecules to make them
+        disappear
+      - "Aide Dante avec le d\xE9tecteur de radon en tapant sur les mol\xE9cules
+        pour les faire disparaitre"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: French
+      TermType: 0
+      Description: 
+      Languages:
+      - French
+      - "Fran\xE7ais"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Languages
+      TermType: 0
+      Description: 
+      Languages:
+      - Languages
+      - Langues
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Levels
+      TermType: 0
+      Description: 
+      Languages:
+      - Levels
+      - Niveaux
+      Flags: 0000
+      Languages_Touch: []
     - Term: Main Menu
       TermType: 0
       Description: Main Menu
@@ -25,12 +1075,228 @@ MonoBehaviour:
       - Menu Principal
       Flags: 0000
       Languages_Touch: []
-    - Term: Settings
+    - Term: Mini-Game
       TermType: 0
       Description: 
       Languages:
+      - Mini-Games
+      - Mini-Jeux
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Musics
+      TermType: 0
+      Description: 
+      Languages:
+      - Musics
+      - Musiques
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Newsletter
+      TermType: 0
+      Description: 
+      Languages:
+      - Newsletter
+      - Newsletter
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Other
+      TermType: 0
+      Description: 
+      Languages:
+      - Other
+      - Autre
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Plage
+      TermType: 0
+      Description: 
+      Languages:
+      - Beach
+      - Plage
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Play
+      TermType: 0
+      Description: 
+      Languages:
+      - Play
+      - Jouer
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Player data
+      TermType: 0
+      Description: 
+      Languages:
+      - Player Data
+      - "Donn\xE9es"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Settings
+      TermType: 0
+      Description: Settings
+      Languages:
       - Settings
       - Options
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Share
+      TermType: 0
+      Description: 
+      Languages:
+      - Share
+      - Partager
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Success
+      TermType: 0
+      Description: 
+      Languages:
+      - Success
+      - "Succ\xE8s"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Title
+      TermType: 0
+      Description: 
+      Languages:
+      - Title
+      - Titre
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Visit
+      TermType: 0
+      Description: 
+      Languages:
+      - Visit
+      - Visite
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Maison
+      TermType: 0
+      Description: 
+      Languages:
+      - House
+      - Maison
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Lotissement
+      TermType: 0
+      Description: 
+      Languages:
+      - Neighborhood
+      - Lotissement
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Entreprise
+      TermType: 0
+      Description: 
+      Languages:
+      - Factory
+      - Entreprise
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ville
+      TermType: 0
+      Description: 
+      Languages:
+      - City
+      - Ville
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Clinique
+      TermType: 0
+      Description: 
+      Languages:
+      - Clinic
+      - Clinique
+      Flags: 0000
+      Languages_Touch: []
+    - Term: PhysicalActivity
+      TermType: 0
+      Description: 
+      Languages:
+      - Physical Activity
+      - "Activit\xE9e Physique"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Alchool
+      TermType: 0
+      Description: 
+      Languages:
+      - Alchool
+      - Alcool
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Diagnosis
+      TermType: 0
+      Description: 
+      Languages:
+      - Diagnosis
+      - "D\xE9pistage"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: HormonalMedicine
+      TermType: 0
+      Description: 
+      Languages:
+      - Hormonal Medicine
+      - "M\xE9dicaments Hormonaux"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Hydratation
+      TermType: 0
+      Description: 
+      Languages:
+      - Hydratation
+      - Hydratation
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Nutrition
+      TermType: 0
+      Description: 
+      Languages:
+      - Nutrition
+      - Alimentation
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Chemicals
+      TermType: 0
+      Description: 
+      Languages:
+      - Chemicals
+      - Produits Chimiques
+      Flags: 0000
+      Languages_Touch: []
+    - Term: SunExposition
+      TermType: 0
+      Description: 
+      Languages:
+      - Sun Exposition
+      - Exposition au soleil
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Smoking
+      TermType: 0
+      Description: 
+      Languages:
+      - Smoking
+      - Tabagisme
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Vaccination
+      TermType: 0
+      Description: 
+      Languages:
+      - Vaccination
+      - Vaccination
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Categories
+      TermType: 0
+      Description: 
+      Languages:
+      - Categories
+      - "Cat\xE9gories"
       Flags: 0000
       Languages_Touch: []
     CaseInsensitiveTerms: 0
@@ -43,7 +1309,7 @@ MonoBehaviour:
     - Name: French
       Code: fr
       Flags: 0
-    IgnoreDeviceLanguage: 1
+    IgnoreDeviceLanguage: 0
     _AllowUnloadingLanguages: 0
     Google_WebServiceURL: 
     Google_SpreadsheetKey: 
@@ -55,7 +1321,7 @@ MonoBehaviour:
     GoogleUpdateSynchronization: 1
     GoogleUpdateDelay: 0
     Assets: []
-    Spreadsheet_LocalFileName: Resources/Languages.csv
+    Spreadsheet_LocalFileName: Resources/I2Loc Languages - Feuille 1.csv
     Spreadsheet_LocalCSVSeparator: ','
     Spreadsheet_LocalCSVEncoding: utf-8
     Spreadsheet_SpecializationAsRows: 1

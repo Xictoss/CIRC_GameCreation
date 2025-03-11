@@ -1,0 +1,151 @@
+﻿Key,Type,Desc,English,French
+About,Text,,About,A propos
+Alchool,Text,,Alchool,Alcool
+Audio,Text,,Audio,Son
+Back,Text,,Back,Retour
+Badge,Text,,Badge,Badge
+Categories,Text,,Categories,Catégories
+Chemicals,Text,,Chemicals,Produits Chimiques
+Clinique,Text,,Clinic,Clinique
+Credits,Text,,Credits,Crédits
+Diagnosis,Text,,Diagnosis,Dépistage
+DialogueAvantMiniJeuActiviteEntrepriseDrag,Text,DialogueAvantMiniJeuActiviteEntrepriseDrag,It takes little to be happy; you just need the essentials and some advertising posters,"Il en faut peut pour être heureux, il faut se contenter du nécéssaire et des affiches publicitaires"
+DialogueAvantMiniJeuActiviteLotissementDrag,Text,DialogueAvantMiniJeuActiviteLotissementDrag,"Friendship, respect, street sports","Amitié, respect, sport de rue"
+DialogueAvantMiniJeuActiviteLotissementTaper,Text,DialogueAvantMiniJeuActiviteLotissementTaper,Why not go for a little run?,Pourquoi pas un peu de footing
+DialogueAvantMiniJeuActiviteMaisonMagazine,Text,DialogueAvantMiniJeuActiviteMaisonMagazine,There’s really nothing good here,Il n'y a vraiment rien de bien ici
+DialogueAvantMiniJeuActiviteMaisonTele,Text,DialogueAvantMiniJeuActiviteMaisonTele,Which channel should I watch?,Quelle chaine vais je bien pouvoir regarder
+DialogueAvantMiniJeuActivitePlageNager,Text,DialogueAvantMiniJeuActivitePlageNager,I'm bored on this white sand,Je m'ennuie sur ce sable blanc
+DialogueAvantMiniJeuActiviteVilleTaper,Text,DialogueAvantMiniJeuActiviteVilleTaper,"Life isn’t about being stronger or faster, it’s about holding on","La vie, c'est pas être plus fort ou plus rapide, c'est tenir le coup"
+DialogueAvantMiniJeuAlccolPlageCocktail,Text,DialogueAvantMiniJeuAlccolPlageCocktail,My throat is all dry,J'ai la gorge toute sèche
+DialogueAvantMiniJeuAlcoolEntrepriseTaper,Text,DialogueAvantMiniJeuAlcoolEntrepriseTaper,We can always make an effort,On peut toujours faire des efforts
+DialogueAvantMiniJeuAlcoolLotissementTaper,Text,DialogueAvantMiniJeuAlcoolLotissementTaper,What should I drink today?,Que vais je bien boire aujourd'hui
+DialogueAvantMiniJeuAlcoolMaisonBoisson,Text,DialogueAvantMiniJeuAlcoolMaisonBoisson,Good juice is much better than soda,"Du bon jus, c'est bien meilleur que du soda"
+DialogueAvantMiniJeuAlcoolMaisonFrigo,Text,DialogueAvantMiniJeuAlcoolMaisonFrigo,"I’m thirsty, but I’ll go for water","J'ai soif, mais ce sera de l'eau pour moi"
+DialogueAvantMiniJeuAlimentatioEntrepriseGlisser,Text,DialogueAvantMiniJeuAlimentatioEntrepriseGlisser,"It's a matter of willpower, not logic",C'est une question de volonté et non de logique
+DialogueAvantMiniJeuAlimentationCliniqueDrag,Text,DialogueAvantMiniJeuAlimentationCliniqueDrag,What should I eat?,Que vais je bien manger ?
+DialogueAvantMiniJeuAlimentationEntrepriseTaper,Text,DialogueAvantMiniJeuAlimentationEntrepriseTaper,"I have a choice, but I'm still undecided",J'ai le choix mais je suis quand même indécise
+DialogueAvantMiniJeuAlimentationLotissementSecouer,Text,DialogueAvantMiniJeuAlimentationLotissementSecouer,"A bit of salad, and the meal will be perfect",Un peu de salade et le repas sera parfait
+DialogueAvantMiniJeuAlimentationMaisonRadio,Text,DialogueAvantMiniJeuAlimentationMaisonRadio,"Burgers here, cakes there—nothing but junk food","Des burgers par çi, des gateaux par là, que de la mauvaise nouriture"
+DialogueAvantMiniJeuAlimentationPlageChips,Text,DialogueAvantMiniJeuAlimentationPlageChips,Hmmmmm chips,Hmmmmm des chips
+DialogueAvantMiniJeuAlimentationVilleGlisser,Text,DialogueAvantMiniJeuAlimentationVilleGlisser,"Complicated, but not impossible for someone like me",Compliqué mais pas infaisable pour quelqu'un comme moi
+DialogueAvantMiniJeuAllaitementCliniqueTaper,Text,DialogueAvantMiniJeuAllaitementCliniqueTaper,"Doctor, what’s the best way to feed my child?",Docteur qu'elle est le mieux pour nourrir mon enfant
+DialogueAvantMiniJeuChimiqueEntrepriseTaper,Text,DialogueAvantMiniJeuChimiqueEntrepriseTaper,Nothing good seems to be on the horizon,Rien de bien ne s'anonce à l'horizon
+DialogueAvantMiniJeuDepistageEntrepriseTaper,Text,DialogueAvantMiniJeuDepistageEntrepriseTaper,"The choice is complicated, I’d even say a real dilemma",Le choix est compliqué et je dirais même cornélien
+DialogueAvantMiniJeuExpositionLotissementGlisser,Text,DialogueAvantMiniJeuExpositionLotissementGlisser,"Phew, the sun is really strong today. What can I use to protect myself?","Pfiou, le soleil tape fort aujourd'hui. Avec quoi puis-je me protéger ?"
+DialogueAvantMiniJeuExpositionPlageCreme,Text,DialogueAvantMiniJeuExpositionPlageCreme,I didn’t know I could take this color,Je ne savais pas que je pouvais prendre cette couleur
+DialogueAvantMiniJeuExpositionPlageParasol,Text,DialogueAvantMiniJeuExpositionPlageParasol,Zzzzzz ouch Zzzzzzz ouch Zzzzzzzz,Zzzzzz ouille Zzzzzzz ouille Zzzzzzzz
+DialogueAvantMiniJeuExpositionVilleDrag,Text,DialogueAvantMiniJeuExpositionVilleDrag,"The sun is blazing today, what to do, what to do...","Le soleil tape aujourd'hui, que faire, que faire"
+DialogueAvantMiniJeuHormoneMaisonJeter,Text,DialogueAvantMiniJeuHormoneMaisonJeter,I don’t know what to do with all these hormonal medications,Je ne sais pas quoi faire de tout ces médicaments hormonaux
+DialogueAvantMiniJeuHydratationCliniqueDrag,Text,DialogueAvantMiniJeuHydratationCliniqueDrag,I'm thirstier than I've ever been,J'ai soif comme jamais je n'eu soif
+DialogueAvantMiniJeuHydratationMaisonCanalisation,Text,DialogueAvantMiniJeuHydratationMaisonCanalisation,But why isn’t the sink working?,Mais pourquoi l'évier ne t'il fonctionne pas
+DialogueAvantMiniJeuHydratationMaisonLabyrinthe,Text,DialogueAvantMiniJeuHydratationMaisonLabyrinthe,Don't forget to stay hydrated,N'oublie pas de t'hydrater
+DialogueAvantMiniJeuHydratationPlageTourner,Text,DialogueAvantMiniJeuHydratationPlageTourner,It's hot today,Il fait chaud aujourd'hui
+DialogueAvantMiniJeuHydratationVilleTaper,Text,DialogueAvantMiniJeuHydratationVilleTaper,"The choice is vast, but my answer will be unique",Le choix est vaste mais ma réponse sera unique
+DialogueAvantMiniJeuHydrationPlagePomper,Text,DialogueAvantMiniJeuHydrationPlagePomper,I'M THIRSTY,J'AI SOIF
+DialogueAvantMiniJeuLimiterCliniqueDrag,Text,DialogueAvantMiniJeuLimiterCliniqueDrag,"So, what would be best for my treatment?",Du coups pour mon traitement qu'est ce qui serait le mieux
+DialogueAvantMiniJeuProgrammesLotissementDrag,Text,DialogueAvantMiniJeuProgrammesLotissementDrag,Information on screening? That will always be useful!,Des information sur le dépistage ? Cela sera toujours utile !
+DialogueAvantMiniJeuProgrammesVilleTaper,Text,DialogueAvantMiniJeuProgrammesVilleTaper,I won’t be distracted by anything—except maybe a butterfly,"Je ne serai distrait par rien, à part par un papillon"
+DialogueAvantMiniJeuSurpoidsCliniqueTaper,Text,DialogueAvantMiniJeuSurpoidsCliniqueTaper,"Doctor, what can I do to be better physically? Because little jars of honey are the best","Docteur que puis je faire être mieu physiquement, car les petits pots de miel sont les meilleurs"
+DialogueAvantMiniJeuTabagismeCliniqueSecouer,Text,DialogueAvantMiniJeuTabagismeCliniqueSecouer,This smoke... something tells me it's toxic,"Cette fumée, quelque chose me dit quel est nocive"
+DialogueAvantMiniJeuTabagismeCliniqueTaper,Text,DialogueAvantMiniJeuTabagismeCliniqueTaper,"What's up, doc? What does the radio say?","Quoi de neuf docteur, que dit la radio ?"
+DialogueAvantMiniJeuTabagismeEntrepriseAppuyer,Text,DialogueAvantMiniJeuTabagismeEntrepriseAppuyer,I'm feeling a bit cramped here,Je me sens un peu à l'étroit là
+DialogueAvantMiniJeuTabagismeLotissementDrag,Text,DialogueAvantMiniJeuTabagismeLotissementDrag,Putting up posters is my job,Coller des affiches c'est mon job
+DialogueAvantMiniJeuTabagismeMaisonSecouer,Text,DialogueAvantMiniJeuTabagismeMaisonSecouer,Cough Cough Where is this smoke coming from?,Tousse* Tousse* mais d'où vient cette fumée
+DialogueAvantMiniJeuTabagismePlageCigarette,Text,DialogueAvantMiniJeuTabagismePlageCigarette,But what is this mysterious object?,Mais qu'elle est donc ce misterieux objet
+DialogueAvantMiniJeuTabagismeVilleDrag,Text,DialogueAvantMiniJeuTabagismeVilleDrag,"Hopefully, this apple isn’t poisoned",En espèrant qu'elle ne soit pas empoisonée cette pomme
+DialogueAvantMiniJeuTabagismeVilleGlisser,Text,DialogueAvantMiniJeuTabagismeVilleGlisser,"Sometimes life doesn’t give us a choice, and sometimes life is right",Des fois la vie ne nous laisse pas le choix et des fois la vie a raison
+DialogueAvantMiniJeuVaccinationCliniqueDrag,Text,DialogueAvantMiniJeuVaccinationCliniqueDrag,"We can't always be brave, but we can always be kind","On ne peut pas toujours être courageux, mais on peut toujours être gentil"
+DialogueAvantMiniJeuVaccinationEntrepriseDrag,Text,DialogueAvantMiniJeuVaccinationEntrepriseDrag,"A small injection for humanity, but a great relief for me",Une petite piqure pour l'humanité mais un grand soulagement pour moi
+DialogueAvantMiniJeuVaccinationVilleDrag,Text,DialogueAvantMiniJeuVaccinationVilleDrag,"Ouch, the injection hurts","Aïe, la piqûre fait mal"
+DialogueAvantMiniJeuZoneLotissementTaper,Text,DialogueAvantMiniJeuZoneLotissementTaper,Wubba lubba dub dub!,Wubba lubba dub dub !
+Effects,Text,,Effects,Effets
+English,Text,,English,Anglais
+Entreprise,Text,,Factory,Entreprise
+ExplicationECACActivitéPhysique,Text,ExplicationECACActivitéPhysique,Be physically active in your daily life. Avoid sitting for long periods.,Soyez physiquement actif/ve dans votre vie quotidienne. Evitez de rester assis/e trop longtemps.
+ExplicationECACAlcool,Text,ExplicationECACAlcool,"Limit your consumption of alcohol—of any kind. To reduce your cancer risk, it's best not to drink alcohol at all.","Limitez votre consommation –de tout type– d’alcool. Pour réduire votre risque de cancer, il est préférable de ne pas boire du tout d’alcool."
+ExplicationECACAlimentationDéséquilibrée,Text,ExplicationECACAlimentationDéséquilibrée,"Adopt a healthy diet: Eat plenty of whole grains, legumes, vegetables, and fruits. Limit the consumption of high-calorie foods (rich in sugar or fats) and avoid sugary drinks. Avoid eating processed meats; limit red meat and high-salt foods.","Adoptez une alimentation saine :  Consommez beaucoup de céréales complètes, de légumes secs, de légumes et de fruits. Limitez la consommation d’aliments très caloriques (riches en sucre ou en matières grasses) et évitez les boissons sucrées. Evitez de manger de la viande transformée (préparations carnées); limitez la viande rouge et les aliments riches en sel."
+ExplicationECACAllaitementMaternel,Text,ExplicationECACAllaitementMaternel ,"For women: Breastfeeding reduces your cancer risk. If possible, breastfeed your child(ren). Hormone replacement therapy (HRT) increases the risk of developing certain cancers. Limit these treatments.","Pour les femmes :  Allaiter réduit votre risque de cancer. Si possible, allaitez votre (vos) enfant(s). Les traitements hormonaux substitutifs de la ménopause (THS) augmentent le risque de développer certains cancers. Limitez ces traitements."
+ExplicationECACExpositionAuSoleil,Text,ExplicationECACExpositionAuSoleil,"Avoid excessive sun exposure, especially for children. Use sunscreen. Do not use tanning devices.","Evitez une exposition excessive au soleil, surtout chez les enfants. Utilisez une protection solaire. N’utilisez pas d’appareils de bronzage."
+ExplicationECACHydratation,Text,ExplicationECACHydratation,Maintaining adequate hydration is essential to help eliminate toxins from the body.,Maintenir une hydratation adéquate est essentiel pour favoriser l'élimination des toxines du corps.
+ExplicationECACLimiterUtilisationDeMédicamentsHormonaux,Text,ExplicationECACLimiterUtilisationDeMédicamentsHormonaux,"For women: Breastfeeding reduces your cancer risk. If possible, breastfeed your child(ren). Hormone replacement therapy (HRT) increases the risk of developing certain cancers. Limit these treatments.","Pour les femmes :  Allaiter réduit votre risque de cancer. Si possible, allaitez votre (vos) enfant(s). Les traitements hormonaux substitutifs de la ménopause (THS) augmentent le risque de développer certains cancers. Limitez ces traitements."
+ExplicationECACProgrammesDeDépistages,Text,ExplicationECACProgrammesDeDépistages,Participate in organized screening programs for: Colorectal cancer (men and women); Breast cancer (women); Cervical cancer (women).,Participez aux programmes de dépistage organisés du :  Cancer colorectal (hommes et femmes); Cancer du sein (femmes); Cancer du col de l’utérus (femmes).
+ExplicationECACRisquesChimiques,Text,ExplicationECACRisquesChimiques,Follow health and safety guidelines in your workplace to protect yourself from carcinogenic substances.,"Suivez les consignes de santé et de sécurité sur votre lieu de travail, pour vous protéger des substances cancérogènes."
+ExplicationECACSurpoidsObésité,Text,ExplicationECACSurpoidsObésité,Maintain a healthy weight.,Faites en sorte de garder un poids de forme.
+ExplicationECACTabagisme,Text,ExplicationECACTabagisme,Do not smoke. Do not consume tobacco in any form.,"Ne fumez pas. Ne consommez pas de tabac, sous quelque forme que ce soit."
+ExplicationECACVaccinationContreLeHPV,Text,ExplicationECACVaccinationContreLeHPV,Get your children vaccinated against: Hepatitis B (for newborns); Human papillomavirus (HPV) (for young girls).,Faites participer vos enfants aux programmes de vaccination contre :  L’hépatite B (chez les nouveau-nés); Le virus du papillome humain (VPH) (chez les jeunes filles).
+ExplicationECACZoneExposéeAuRadon,Text,ExplicationECACZoneExposéeAuRadon,"Find out if you are exposed to high levels of radon gas in your home. If so, take steps to reduce exposure.","Renseignez-vous pour savoir si vous êtes exposé/e à des émissions élevées de gaz radon à votre domicile. Si tel est le cas, prenez des mesures pour réduire ces émissions."
+ExplicationEnEntréeDeMiniJeuActiviteEntrepriseDrag,Text,ExplicationEnEntréeDeMiniJeuActiviteEntrepriseDrag,Maximus is putting up posters—help by sliding the posters into the empty spaces,"Maximus colle des affiches, aide-le en glissant les affiches dans les zones vides"
+ExplicationEnEntréeDeMiniJeuActiviteLotissementDrag,Text,ExplicationEnEntréeDeMiniJeuActiviteLotissementDrag,"Place the ball with your finger so Milo, Luce, and Mino can play",Dépose avec ton doigt le ballon afin que Milo Luce et Mino puissent jouer
+ExplicationEnEntréeDeMiniJeuActiviteLotissementTaper,Text,ExplicationEnEntréeDeMiniJeuActiviteLotissementTaper,Tap on your screen to help Spotty with their run,Tapotte sur ton écran pour aider Spotty dans son footing
+ExplicationEnEntréeDeMiniJeuActiviteMaisonMagazine,Text,ExplicationEnEntréeDeMiniJeuActiviteMaisonMagazine,Swipe the magazine to Opaline to encourage them to do some physical activity,Glisse le magazine avec ton doigt à Opaline pour lui donner envie de faire une activité physique
+ExplicationEnEntréeDeMiniJeuActiviteMaisonTele,Text,ExplicationEnEntréeDeMiniJeuActiviteMaisonTele,Tap on Opaline’s TV to switch to a more sports-oriented program,Tapotte sur la TV d'Opaline pour changer de programme pour quelque chose de plus sportif
+ExplicationEnEntréeDeMiniJeuActivitePlageNager,Text,ExplicationEnEntréeDeMiniJeuActivitePlageNager,Tap on your screen to help Splash dive into the water,Tapotte sur ton écran pour aider Splash à se jeter à l'eau
+ExplicationEnEntréeDeMiniJeuActiviteVilleTaper,Text,ExplicationEnEntréeDeMiniJeuActiviteVilleTaper,Help Noisette move forward with their bike by tapping on the screen,Aide Noisette à avancer avec son vélo en tapotant sur l'écran
+ExplicationEnEntréeDeMiniJeuAlccolPlageCocktail,Text,ExplicationEnEntréeDeMiniJeuAlccolPlageCocktail,Mousse is thirsty—slide a bottle of water into their hand,"Mousse à soif, glisse-lui une bouteille d'eau dans la main"
+ExplicationEnEntréeDeMiniJeuAlcoolEntrepriseTaper,Text,ExplicationEnEntréeDeMiniJeuAlcoolEntrepriseTaper,Nuage is thirsty—select the right dispenser to help them drink properly,Nuage à soif sélectionne le bon distributeur pour lui permettre de boire correctement
+ExplicationEnEntréeDeMiniJeuAlcoolLotissementTaper,Text,ExplicationEnEntréeDeMiniJeuAlcoolLotissementTaper,Help Canelle choose their drink by selecting the water bottle,Aide Canelle à choisir sa boisson en sélectionnant la bouteille d'eau
+ExplicationEnEntréeDeMiniJeuAlcoolMaisonBoisson,Text,ExplicationEnEntréeDeMiniJeuAlcoolMaisonBoisson,Slide Mousse’s glass under the juice to let them drink the best option,Glisse le verre de Mousse sous le jus de fruit pour lui permettre de boire ce qu'il y a de meilleur
+ExplicationEnEntréeDeMiniJeuAlcoolMaisonFrigo,Text,ExplicationEnEntréeDeMiniJeuAlcoolMaisonFrigo,Select the water bottle to help Pompom stay properly hydrated,Sélectionne la bouteille d'eau pour permettre à Pompom de s'hydrater correctement
+ExplicationEnEntréeDeMiniJeuAlimentatioEntrepriseGlisser,Text,ExplicationEnEntréeDeMiniJeuAlimentatioEntrepriseGlisser,Help Diesel prepare a nice dish by choosing the right ingredients,Aide Diesel à se préparer un bon petit plat en choisissant les bons ingrédients
+ExplicationEnEntréeDeMiniJeuAlimentationCliniqueDrag,Text,ExplicationEnEntréeDeMiniJeuAlimentationCliniqueDrag,Help Naya sort the good food from the bad food,Aide Naya à trier la bonne et la mauvaise nourriture
+ExplicationEnEntréeDeMiniJeuAlimentationEntrepriseTaper,Text,ExplicationEnEntréeDeMiniJeuAlimentationEntrepriseTaper,Opaline wants to eat well—help her by selecting the organic food from the dispenser,"Opaline souhaite bien manger, aide-la en sélectionnant la nourriture bio dans le distributeur"
+ExplicationEnEntréeDeMiniJeuAlimentationLotissementSecouer,Text,ExplicationEnEntréeDeMiniJeuAlimentationLotissementSecouer,Shake your phone to help Carotte open their salad bag,Secoue ton téléphone afin d'aider Carotte à ouvrir son sachet de salade
+ExplicationEnEntréeDeMiniJeuAlimentationMaisonRadio,Text,ExplicationEnEntréeDeMiniJeuAlimentationMaisonRadio,Tap on Câline’s radio to switch to a more culinary-themed station,Tapotte sur la radio de Câline pour changer la chaîne pour quelque chose de plus culinaire
+ExplicationEnEntréeDeMiniJeuAlimentationPlageChips,Text,ExplicationEnEntréeDeMiniJeuAlimentationPlageChips,Stop Pompom from eating unhealthy food by swiping the chips out of their hand,Évite à Pompom de manger mal en glissant les chips hors de sa main
+ExplicationEnEntréeDeMiniJeuAlimentationVilleGlisser,Text,ExplicationEnEntréeDeMiniJeuAlimentationVilleGlisser,Help Biscuit with the lock by sliding the key onto it,Aide Biscuit avec le cadenas en glissant la clef sur celui-ci
+ExplicationEnEntréeDeMiniJeuAllaitementCliniqueTaper,Text,ExplicationEnEntréeDeMiniJeuAllaitementCliniqueTaper,Choose the answers to give to Mimi,Choisissez les réponses a donner à Mimi
+ExplicationEnEntréeDeMiniJeuChimiqueEntrepriseTaper,Text,ExplicationEnEntréeDeMiniJeuChimiqueEntrepriseTaper,Help Pompom repair the air conditioner by pressing on the holes to fix them,Aide Pompom à réparer la climatisation en appuyant sur les trous pour les réparer
+ExplicationEnEntréeDeMiniJeuDepistageEntrepriseTaper,Text,ExplicationEnEntréeDeMiniJeuDepistageEntrepriseTaper,Help Noisette go get tested by choosing the most welcoming door,Aide Noisette à aller se faire dépister en choisissant la porte la plus accueillante
+ExplicationEnEntréeDeMiniJeuExpositionLotissementGlisser,Text,ExplicationEnEntréeDeMiniJeuExpositionLotissementGlisser,Slide the parasol towards Ronron to protect them from the sun,Glisse le parasol vers Ronron afin de le protéger du soleil
+ExplicationEnEntréeDeMiniJeuExpositionPlageCreme,Text,ExplicationEnEntréeDeMiniJeuExpositionPlageCreme,Spread sunscreen on Everou by sliding your finger across the screen to protect them from sunburn,"Étale de la crème solaire à Everou en glissant ton doigt sur l'écran, pour lui éviter le coup de soleil"
+ExplicationEnEntréeDeMiniJeuExpositionPlageParasol,Text,ExplicationEnEntréeDeMiniJeuExpositionPlageParasol,Keep Saphira from getting sunburned by shaking your device to move the umbrellas,Évite à Saphira le coup de soleil en secouant ton appareil pour faire bouger les parasols
+ExplicationEnEntréeDeMiniJeuExpositionVilleDrag,Text,ExplicationEnEntréeDeMiniJeuExpositionVilleDrag,Give Flappy their hat to protect them from the sun,Donne à Flappy son chapeau pour le protéger du soleil
+ExplicationEnEntréeDeMiniJeuHormoneMaisonJeter,Text,ExplicationEnEntréeDeMiniJeuHormoneMaisonJeter,Help Mimi reduce the use of hormonal medications by sliding them into the bag,Aide Mimi à limiter l'utilisation des médicaments hormonaux en les glissant dans le sac
+ExplicationEnEntréeDeMiniJeuHydratationCliniqueDrag,Text,ExplicationEnEntréeDeMiniJeuHydratationCliniqueDrag,Give the water bottle to Marius,Donne la bouteille d'eau à Marius
+ExplicationEnEntréeDeMiniJeuHydratationMaisonCanalisation,Text,ExplicationEnEntréeDeMiniJeuHydratationMaisonCanalisation,Spotty’s sink isn’t working—help them fix it by tapping on the pipes to rotate them,"L'évier de Spotty ne fonctionne plus, aide le à le réparer en tapant sur les tuyaux pour les faire tourner"
+ExplicationEnEntréeDeMiniJeuHydratationMaisonLabyrinthe,Text,ExplicationEnEntréeDeMiniJeuHydratationMaisonLabyrinthe,Help Miel stay hydrated by sliding them toward the exit of this maze with your finger,Aide Miel à s'hydrater en le glissant avec ton doigt vers la sortie de ce labyrinth
+ExplicationEnEntréeDeMiniJeuHydratationPlageTourner,Text,ExplicationEnEntréeDeMiniJeuHydratationPlageTourner,Help Diesel pull the lever by sliding your finger across the screen,Aide Diesel à actionner le levier en faisant glisser ton doigt sur l'écran
+ExplicationEnEntréeDeMiniJeuHydratationVilleTaper,Text,ExplicationEnEntréeDeMiniJeuHydratationVilleTaper,Help Everou choose their drink by clicking on the drinks to make them spin,Aide Everou à choisir sa boisson en cliquant sur les boissons pour les faire tourner
+ExplicationEnEntréeDeMiniJeuHydrationPlagePomper,Text,ExplicationEnEntréeDeMiniJeuHydrationPlagePomper,Velvet needs you to pump water by sliding your finger across the screen,Velvet a besoin que tu pompes de l'eau en faisant glisser ton doigt sur l'écran
+ExplicationEnEntréeDeMiniJeuLimiterCliniqueDrag,Text,ExplicationEnEntréeDeMiniJeuLimiterCliniqueDrag,Help Canelle by selecting the right medications,Aide Canelle en sélectionnant les bons médicaments
+ExplicationEnEntréeDeMiniJeuProgrammesLotissementDrag,Text,ExplicationEnEntréeDeMiniJeuProgrammesLotissementDrag,Help Nuage distribute the information sheets by sliding them to the people in front of the tent,Aide Nuage à distribuer les fiches d'information en les glissant aux gens devant la tente
+ExplicationEnEntréeDeMiniJeuProgrammesVilleTaper,Text,ExplicationEnEntréeDeMiniJeuProgrammesVilleTaper,Reassure Naya by sliding the butterfly onto them,Rassure Naya en lui glissant le papillon dessus
+ExplicationEnEntréeDeMiniJeuSurpoidsCliniqueTaper,Text,ExplicationEnEntréeDeMiniJeuSurpoidsCliniqueTaper,Choose the answers to give to Everou,Choisissez les réponses a donner à Everou
+ExplicationEnEntréeDeMiniJeuTabagismeCliniqueSecouer,Text,ExplicationEnEntréeDeMiniJeuTabagismeCliniqueSecouer,Shake your phone to get rid of the smoke and allow Opaline to breathe,Secoue ton téléphone pour faire partir la fumée et permettre à Opaline de respirer
+ExplicationEnEntréeDeMiniJeuTabagismeCliniqueTaper,Text,ExplicationEnEntréeDeMiniJeuTabagismeCliniqueTaper,Select the carcinogenic area shown by the X-ray to inform Kuru,Sélectionne la zone cancérigène que montre la radio pour informer Kuru
+ExplicationEnEntréeDeMiniJeuTabagismeEntrepriseAppuyer,Text,ExplicationEnEntréeDeMiniJeuTabagismeEntrepriseAppuyer,Press and hold your screen to help Blizzard breathe again,Appuie longtemps sur ton écran pour permettre à Blizzard de pouvoir de nouveau respirer
+ExplicationEnEntréeDeMiniJeuTabagismeLotissementDrag,Text,ExplicationEnEntréeDeMiniJeuTabagismeLotissementDrag,Help Miel hang the prevention posters by sliding them towards the empty spaces on the wall,Aide Miel à accrocher les affiches de prévention en les glissant vers les espaces vides sur le mur
+ExplicationEnEntréeDeMiniJeuTabagismeMaisonSecouer,Text,ExplicationEnEntréeDeMiniJeuTabagismeMaisonSecouer,Dante is choking—get rid of the smoke by shaking your phone,"Dante s'étouffe, fait partir cette fumée en secuant ton téléphone"
+ExplicationEnEntréeDeMiniJeuTabagismePlageCigarette,Text,ExplicationEnEntréeDeMiniJeuTabagismePlageCigarette,Stop Flappy from smoking by swiping the pack of cigarettes toward the sky with your finger,Évite à Flappy de fumer en glissant le paquet de cigarettes vers le ciel avec ton doigt
+ExplicationEnEntréeDeMiniJeuTabagismeVilleDrag,Text,ExplicationEnEntréeDeMiniJeuTabagismeVilleDrag,Give Snooze the apple so they can eat it,Donne à Snooze la pomme pour qu'elle puisse la manger
+ExplicationEnEntréeDeMiniJeuTabagismeVilleGlisser,Text,ExplicationEnEntréeDeMiniJeuTabagismeVilleGlisser,Swipe the pack of cigarettes out of Saphira’s hands,Fait glisser le paquet cigarette des mains de Saphira
+ExplicationEnEntréeDeMiniJeuVaccinationCliniqueDrag,Text,ExplicationEnEntréeDeMiniJeuVaccinationCliniqueDrag,Place a bandage on the spot where Miel got vaccinated,Pose un pansement à l'endroit où s'est fait vacciner Miel
+ExplicationEnEntréeDeMiniJeuVaccinationEntrepriseDrag,Text,ExplicationEnEntréeDeMiniJeuVaccinationEntrepriseDrag,Biscuit just got vaccinated—put a bandage on her so she won’t think about it anymore,"Biscuit vient de se faire vacciner, colle-lui un pansement pour qu'elle n'y pense plus"
+ExplicationEnEntréeDeMiniJeuVaccinationVilleDrag,Text,ExplicationEnEntréeDeMiniJeuVaccinationVilleDrag,Place the bandage on the spot where Carotte got vaccinated,Pose le pansement sur l'endroit où s'est fait vacciner Carotte
+ExplicationEnEntréeDeMiniJeuZoneLotissementTaper,Text,ExplicationEnEntréeDeMiniJeuZoneLotissementTaper,Help Dante with the radon detector by tapping on the molecules to make them disappear,Aide Dante avec le détecteur de radon en tapant sur les molécules pour les faire disparaitre
+French,Text,,French,Français
+HormonalMedicine,Text,,Hormonal Medicine,Médicaments Hormonaux
+Hydratation,Text,,Hydratation,Hydratation
+Languages,Text,,Languages,Langues
+Levels,Text,,Levels,Niveaux
+Lotissement,Text,,Neighborhood,Lotissement
+Main Menu,Text,Main Menu,Main Menu,Menu Principal
+Maison,Text,,House,Maison
+Mini-Game,Text,,Mini-Games,Mini-Jeux
+Musics,Text,,Musics,Musiques
+Newsletter,Text,,Newsletter,Newsletter
+Nutrition,Text,,Nutrition,Alimentation
+Other,Text,,Other,Autre
+PhysicalActivity,Text,,Physical Activity,Activitée Physique
+Plage,Text,,Beach,Plage
+Play,Text,,Play,Jouer
+Player data,Text,,Player Data,Données
+Settings,Text,Settings,Settings,Options
+Share,Text,,Share,Partager
+Smoking,Text,,Smoking,Tabagisme
+Success,Text,,Success,Succès
+SunExposition,Text,,Sun Exposition,Exposition au soleil
+Title,Text,,Title,Titre
+Vaccination,Text,,Vaccination,Vaccination
+Ville,Text,,City,Ville
+Visit,Text,,Visit,Visite

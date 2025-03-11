@@ -1,11 +1,14 @@
 using System.Linq;
+using LTX.Singletons;
 using UnityEngine;
 
 namespace CIRC.Controllers
 {
-    public class SoundManager : MonoBehaviour
+    public class SoundManager : MonoSingleton<SoundManager>
     {
-        [SerializeField] private AudioSource audioSource;
+        [field : SerializeField] public AudioSource audioSource { get; private set; }
+        [field : SerializeField] public AudioSource musicSource { get; private set; }
+        
         [SerializeField] private AudioName[] audioClips;
         
         private void OnEnable()
@@ -23,6 +26,11 @@ namespace CIRC.Controllers
 
         }
 
+        public void PlayUISound()
+        {
+            PlayClip("UI_Click");
+        }
+
         private void PlayClip(string clipName)
         {
             AudioName clipData = audioClips
@@ -30,7 +38,7 @@ namespace CIRC.Controllers
 
             if (clipData.needPitch) audioSource.pitch = Random.Range(0.7f, 1.3f);
             else audioSource.pitch = 1;
-            audioSource.volume = clipData.volume;
+            //audioSource.volume = clipData.volume;
 
             AudioClip clip;
             if (clipData.clips.Length == 1) clip = clipData.clips[0];

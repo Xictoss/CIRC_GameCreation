@@ -1,6 +1,7 @@
 using CIRC.Collections;
 using CIRC.Controllers;
 using DG.Tweening;
+using I2.Loc;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +12,7 @@ namespace CIRC.MenuSystem.BadgeDisplayer
     {
         [SerializeField] private TMP_Text title, desc;
         [SerializeField] private Image display;
+        [SerializeField] private Localize titleLocalize, descLocalize;
 
         [Space(10f)]
         [SerializeField] private float shakeForce, shakeDuration;
@@ -22,6 +24,9 @@ namespace CIRC.MenuSystem.BadgeDisplayer
             title.text = ctx.title;
             desc.text = ctx.desc;
             display.sprite = ctx.image;
+
+            titleLocalize.SetTerm(title.text);
+            descLocalize.SetTerm(desc.text);
             
             gameObject.SetActive(true);
             
