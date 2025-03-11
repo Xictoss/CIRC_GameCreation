@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   miniGameName: ActiviteEntrepriseDrag
   miniGameDesc: "ExplicationEnEntr\xE9eDeMiniJeuActiviteEntrepriseDrag"
-  miniGameTitle: Au secours
+  miniGameTitle: Mini-Game
   endDesc: Bravo !
   endExplication: "ExplicationECACActivit\xE9Physique"
   scene:
