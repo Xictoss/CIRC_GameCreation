@@ -18,9 +18,9 @@ MonoBehaviour:
   endDesc: 
   endExplication: 
   scene:
-    m_SceneAsset: {fileID: 0}
+    m_SceneAsset: {fileID: 102900000, guid: 5b3b1612916bd2f4bbb04174268a87e0, type: 3}
     m_IsDirty: 0
-    m_ScenePath: 
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/5_Entreprise/AlimentationEntrepriseTaper.unity
   gameSubject: 0
   badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
   GUID: 35c77825-8464-4fa7-83b4-6e3f681fc1bb

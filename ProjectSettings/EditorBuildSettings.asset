@@ -86,6 +86,36 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScenes/MiniGames/1_Plage/HydrationPlageTaper.unity
     guid: ded2a45487b02764783ff3865418c2b6
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MiniGames/4_Lotissement/ActiviteLotissementDrag.unity
+    guid: 8a18f1f2bd330a745b1866afffc37b4b
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MiniGames/4_Lotissement/ActiviteLotissementTaper.unity
+    guid: 1ed1df698f7c60e4ea854aff4fe7f6fd
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MiniGames/4_Lotissement/AlcoolLotissementTaper.unity
+    guid: d2ce1a190709eb4408e3359773eb57ef
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MiniGames/4_Lotissement/ZoneLotissementTaper.unity
+    guid: d6b7c27dfdd5da949b400eac3d9a433a
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MiniGames/5_Entreprise/AlcoolEntrepriseTaper.unity
+    guid: 0c2d11edd6348ba48abeefbf473f9749
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MiniGames/5_Entreprise/AlimentationEntrepriseTaper.unity
+    guid: 5b3b1612916bd2f4bbb04174268a87e0
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MiniGames/5_Entreprise/DepistageEntrepriseTaper.unity
+    guid: 589d91b66e2fbbf43b68be749afbf959
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MiniGames/6_Ville/ExpositionVilleDrag.unity
+    guid: f646d39872b8f6143895db13fa884e09
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MiniGames/6_Ville/HydratationVilleTaper.unity
+    guid: 29904fbb5f89a06479f76464df4487b7
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MiniGames/6_Ville/TabagismeVilleDrag.unity
+    guid: d5c42c37911d7f3498118dc8266b46ac
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 46661899d2991954fb32fdca03a8b7e5, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: f120053cde1ae38408022f418871162c, type: 2}

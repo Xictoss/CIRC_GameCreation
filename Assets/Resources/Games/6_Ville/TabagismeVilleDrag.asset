@@ -18,9 +18,9 @@ MonoBehaviour:
   endDesc: 
   endExplication: 
   scene:
-    m_SceneAsset: {fileID: 0}
+    m_SceneAsset: {fileID: 102900000, guid: d5c42c37911d7f3498118dc8266b46ac, type: 3}
     m_IsDirty: 0
-    m_ScenePath: 
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/6_Ville/TabagismeVilleDrag.unity
   gameSubject: 7
   badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
   GUID: 5889e9c4-23b9-4fcf-a04e-01845def26d1

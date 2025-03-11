@@ -18,9 +18,9 @@ MonoBehaviour:
   endDesc: 
   endExplication: 
   scene:
-    m_SceneAsset: {fileID: 0}
+    m_SceneAsset: {fileID: 102900000, guid: 589d91b66e2fbbf43b68be749afbf959, type: 3}
     m_IsDirty: 0
-    m_ScenePath: 
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/5_Entreprise/DepistageEntrepriseTaper.unity
   gameSubject: 4
   badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
   GUID: f68f4137-29ba-4040-b666-76bc2556cac4

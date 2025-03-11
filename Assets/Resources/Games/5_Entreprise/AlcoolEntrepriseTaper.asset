@@ -18,9 +18,9 @@ MonoBehaviour:
   endDesc: 
   endExplication: 
   scene:
-    m_SceneAsset: {fileID: 0}
+    m_SceneAsset: {fileID: 102900000, guid: 0c2d11edd6348ba48abeefbf473f9749, type: 3}
     m_IsDirty: 0
-    m_ScenePath: 
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/5_Entreprise/AlcoolEntrepriseTaper.unity
   gameSubject: 2
   badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
   GUID: 9bdcab8e-d2e7-478d-bb97-ef71528b13ac
