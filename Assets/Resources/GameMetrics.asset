@@ -12,20 +12,128 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0229dcce44a48669489e6dfd7202af5, type: 3}
   m_Name: GameMetrics
   m_EditorClassIdentifier: 
-  <MainMenuScene>k__BackingField: 0
-  <PlageScene>k__BackingField: 1
-  <MaisonScene>k__BackingField: 2
-  <ParcScene>k__BackingField: 3
-  <LotissementScene>k__BackingField: 4
-  <EntrepriseScene>k__BackingField: 5
-  <VilleScene>k__BackingField: 6
-  <StadeUniversitaireScene>k__BackingField: 7
-  <CliniqueScene>k__BackingField: 8
-  <GoToSwim_Scene>k__BackingField: 9
-  <RunAndDrink_Scene>k__BackingField: 10
-  <PipePuzzle_Scene>k__BackingField: 11
-  <BookDrop_Scene>k__BackingField: 12
-  <SortAndSplode_Scene>k__BackingField: 13
+  <MainMenuScene>k__BackingField:
+    m_SceneAsset: {fileID: 102900000, guid: 5a7482f936737ce478c44ba6194d8bba, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/MainMenu.unity
+  <PlageScene>k__BackingField:
+    m_SceneAsset: {fileID: 102900000, guid: d32585711773aa74aa160bd8e04e4c14, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/Levels/1_PlageScene.unity
+  <MaisonScene>k__BackingField:
+    m_SceneAsset: {fileID: 102900000, guid: f80b0e6dfd16ab04e91f88e81ab4189d, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/Levels/2_MaisonScene.unity
+  <ParcScene>k__BackingField:
+    m_SceneAsset: {fileID: 102900000, guid: f07f8c1d778ef70458d1e7bd6fa75068, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/Levels/3_ParcScene.unity
+  <LotissementScene>k__BackingField:
+    m_SceneAsset: {fileID: 102900000, guid: 1bb59939e1338c74d8af03e66fdd3839, type: 3}
+    m_IsDirty: 1
+    m_ScenePath: Assets/Scenes/MainScenes/Levels/3_LotissementScene.unity
+  <EntrepriseScene>k__BackingField:
+    m_SceneAsset: {fileID: 102900000, guid: 302766442c6b1164dacba20848a91cd1, type: 3}
+    m_IsDirty: 1
+    m_ScenePath: Assets/Scenes/MainScenes/Levels/4_EntrepriseScene.unity
+  <VilleScene>k__BackingField:
+    m_SceneAsset: {fileID: 102900000, guid: ff5f0a10577364446a22986cddf07f7d, type: 3}
+    m_IsDirty: 1
+    m_ScenePath: Assets/Scenes/MainScenes/Levels/5_VilleScene.unity
+  <StadeUniversitaireScene>k__BackingField:
+    m_SceneAsset: {fileID: 102900000, guid: 822cd96448fa04a46b6ef81badd63599, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/Levels/7_StadeScene.unity
+  <CliniqueScene>k__BackingField:
+    m_SceneAsset: {fileID: 102900000, guid: 6b47cf3037fd2e540a62feda844e4064, type: 3}
+    m_IsDirty: 1
+    m_ScenePath: Assets/Scenes/MainScenes/Levels/6_CliniqueScene.unity
+  <ActivitePlageNager>k__BackingField:
+    m_SceneAsset: {fileID: 102900000, guid: 31c0e57efbe73474ca93483796b188df, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/1_Plage/ActivitePlageNager.unity
+  <AlccolPlageCocktail>k__BackingField:
+    m_SceneAsset: {fileID: 102900000, guid: 4e8a0eaebf96a9a48842013b8395264c, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/1_Plage/AlccolPlageCocktail.unity
+  <AlimentationPlageChips>k__BackingField:
+    m_SceneAsset: {fileID: 102900000, guid: a9cc9f2100ce5ee4cb18f09b453c2db9, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/1_Plage/AlimentationPlageChips.unity
+  <HydratationPlageTourner>k__BackingField:
+    m_SceneAsset: {fileID: 102900000, guid: 3f1583d9096956d429ab062f9841dbfa, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/1_Plage/HydratationPlageTourner.unity
+  <TabagismePlageCigarette>k__BackingField:
+    m_SceneAsset: {fileID: 102900000, guid: 09ef5d522f9bd454c98b0731e7d80c19, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/1_Plage/TabagismePlageCigarette.unity
+  <HydratationMaisonLabyrinthe>k__BackingField:
+    m_SceneAsset: {fileID: 102900000, guid: b4997b5e0c8500d4cb4ce2f056333684, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/2_Maison/HydratationMaisonLabyrinthe.unity
+  <HydratationMaisonCanalisation>k__BackingField:
+    m_SceneAsset: {fileID: 102900000, guid: 803464718d98b004695e23d2dba52a1c, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/2_Maison/HydratationMaisonCanalisation.unity
+  <TabagismeMaisonSecouer>k__BackingField:
+    m_SceneAsset: {fileID: 102900000, guid: 76f23035327c1e9448978270e4a5bee7, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/2_Maison/TabagismeMaisonSecouer.unity
+  <ActiviteMaisonMagazine>k__BackingField:
+    m_SceneAsset: {fileID: 102900000, guid: 7e7c84ce9c2ee5c499e97f8d12bd8d6e, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/2_Maison/ActiviteMaisonMagazine.unity
+  <ActiviteMaisonTele>k__BackingField:
+    m_SceneAsset: {fileID: 102900000, guid: c3dda087302d50347a3f7289a85ba551, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/2_Maison/ActiviteMaisonTele.unity
+  <AlcoolMaisonFrigo>k__BackingField:
+    m_SceneAsset: {fileID: 102900000, guid: 69398259d672f84469bf1fdfa3dd0b73, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/2_Maison/AlcoolMaisonFrigo.unity
+  <AlcoolMaisonBoisson>k__BackingField:
+    m_SceneAsset: {fileID: 102900000, guid: cccafd9d03692db46a6025b989014cc0, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/2_Maison/AlcoolMaisonBoisson.unity
+  <HormoneMaisonJeter>k__BackingField:
+    m_SceneAsset: {fileID: 102900000, guid: 930dd37035bcbd6418ab5e05cfff00ca, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/2_Maison/HormoneMaisonJeter.unity
+  <AlimentationMaisonRadio>k__BackingField:
+    m_SceneAsset: {fileID: 102900000, guid: 3491ec9a0d337ad408ad5b263fce2959, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/2_Maison/AlimentationMaisonRadio.unity
+  <ChimiqueEntrepriseTaper>k__BackingField:
+    m_SceneAsset: {fileID: 102900000, guid: f0e86b78fac79cb4db960b4b6b7abae3, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/5_Entreprise/ChimiqueEntrepriseTaper.unity
+  <ActiviteEntrepriseDrag>k__BackingField:
+    m_SceneAsset: {fileID: 102900000, guid: 5758faee6f77e9747989a9c5d1cb00b0, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/5_Entreprise/ActiviteEntrepriseDrag.unity
+  <VaccinationEntrepriseDrag>k__BackingField:
+    m_SceneAsset: {fileID: 102900000, guid: fec09a1193f977b41924054aaff30285, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/5_Entreprise/VaccinationEntrepriseDrag.unity
+  <SceneNames>k__BackingField:
+  - Plage
+  - Maison
+  - Lotissement
+  - Entreprise
+  - Ville
+  - Clinique
+  <BadgeDisplayer>k__BackingField: BadgeDisplayer
+  <MiniGamePopUpMenu>k__BackingField: MiniGamePopUpMenu
+  <MiniGameReward>k__BackingField: MiniGameReward
+  <BooksMenu>k__BackingField: BooksMenu
+  <LevelsMenu>k__BackingField: LevelsMenu
+  <MiniGamesMenu>k__BackingField: MiniGamesMenu
+  <SettingsMenu>k__BackingField: SettingsMenu
+  <PauseMenu>k__BackingField: PauseMenu
   <SortAndSplode_SpawnNumber>k__BackingField: 10
   <SortAndSplode_SpawnCooldown>k__BackingField: 0.75
   <RunAndDrink_DrinksNumber>k__BackingField: 3
+  <APN_GuySpeed>k__BackingField: 0
+  <HPT_fillSpeed>k__BackingField: 0.2
+  <ALT_GuyToMotivateSpeed>k__BackingField: 100
