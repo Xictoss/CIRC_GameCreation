@@ -15,7 +15,7 @@ MonoBehaviour:
   miniGameName: HydratationVilleTaper
   miniGameDesc: 
   miniGameTitle: 
-  endDesc: 
+  endDesc: Congratulations
   endExplication: 
   scene:
     m_SceneAsset: {fileID: 102900000, guid: 29904fbb5f89a06479f76464df4487b7, type: 3}

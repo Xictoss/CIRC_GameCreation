@@ -15,7 +15,7 @@ MonoBehaviour:
   miniGameName: AlcoolLotissementTaper
   miniGameDesc: 
   miniGameTitle: 
-  endDesc: 
+  endDesc: Congratulations
   endExplication: 
   scene:
     m_SceneAsset: {fileID: 102900000, guid: d2ce1a190709eb4408e3359773eb57ef, type: 3}

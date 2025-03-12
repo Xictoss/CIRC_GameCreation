@@ -15,7 +15,7 @@ MonoBehaviour:
   miniGameName: HydrationPlageTaper
   miniGameDesc: 
   miniGameTitle: 
-  endDesc: 
+  endDesc: Congratulations
   endExplication: 
   scene:
     m_SceneAsset: {fileID: 102900000, guid: ded2a45487b02764783ff3865418c2b6, type: 3}

@@ -15,7 +15,7 @@ MonoBehaviour:
   miniGameName: TabagismeVilleDrag
   miniGameDesc: 
   miniGameTitle: 
-  endDesc: 
+  endDesc: Congratulations
   endExplication: 
   scene:
     m_SceneAsset: {fileID: 102900000, guid: d5c42c37911d7f3498118dc8266b46ac, type: 3}

@@ -15,14 +15,14 @@
       "url": "https://helteix-verdaccio.euvtgm.easypanel.host"
     },
     "com.ltx.singletons": {
-      "version": "1.0.2",
+      "version": "1.0.3",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://helteix-verdaccio.euvtgm.easypanel.host"
     },
     "com.ltx.tools": {
-      "version": "1.0.7",
+      "version": "1.0.9",
       "depth": 0,
       "source": "registry",
       "dependencies": {},

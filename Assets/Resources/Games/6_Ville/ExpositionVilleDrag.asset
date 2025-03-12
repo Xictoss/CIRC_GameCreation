@@ -15,7 +15,7 @@ MonoBehaviour:
   miniGameName: ExpositionVilleDrag
   miniGameDesc: 
   miniGameTitle: 
-  endDesc: 
+  endDesc: Congratulations
   endExplication: 
   scene:
     m_SceneAsset: {fileID: 102900000, guid: f646d39872b8f6143895db13fa884e09, type: 3}

@@ -15,7 +15,7 @@ MonoBehaviour:
   miniGameName: AlccolPlageCocktail
   miniGameDesc: 
   miniGameTitle: 
-  endDesc: 
+  endDesc: Congratulations
   endExplication: 
   scene:
     m_SceneAsset: {fileID: 102900000, guid: 4e8a0eaebf96a9a48842013b8395264c, type: 3}

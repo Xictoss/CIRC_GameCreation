@@ -15,7 +15,7 @@ MonoBehaviour:
   miniGameName: ActiviteEntrepriseDrag
   miniGameDesc: "ExplicationEnEntr\xE9eDeMiniJeuActiviteEntrepriseDrag"
   miniGameTitle: Mini-Game
-  endDesc: Bravo !
+  endDesc: Congratulations
   endExplication: "ExplicationECACActivit\xE9Physique"
   scene:
     m_SceneAsset: {fileID: 102900000, guid: 5758faee6f77e9747989a9c5d1cb00b0, type: 3}
