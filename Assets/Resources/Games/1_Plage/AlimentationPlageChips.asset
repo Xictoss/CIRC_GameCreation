@@ -15,7 +15,7 @@ MonoBehaviour:
   miniGameName: AlimentationPlageChips
   miniGameDesc: 
   miniGameTitle: 
-  endDesc: 
+  endDesc: Congratulations
   endExplication: 
   scene:
     m_SceneAsset: {fileID: 102900000, guid: a9cc9f2100ce5ee4cb18f09b453c2db9, type: 3}

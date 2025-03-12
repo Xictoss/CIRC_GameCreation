@@ -15,7 +15,7 @@ MonoBehaviour:
   miniGameName: VaccinationEntrepriseDrag
   miniGameDesc: 
   miniGameTitle: 
-  endDesc: 
+  endDesc: Congratulations
   endExplication: 
   scene:
     m_SceneAsset: {fileID: 102900000, guid: fec09a1193f977b41924054aaff30285, type: 3}

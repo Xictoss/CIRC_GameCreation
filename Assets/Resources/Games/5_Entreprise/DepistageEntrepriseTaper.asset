@@ -15,7 +15,7 @@ MonoBehaviour:
   miniGameName: DepistageEntrepriseTaper
   miniGameDesc: 
   miniGameTitle: 
-  endDesc: 
+  endDesc: Congratulations
   endExplication: 
   scene:
     m_SceneAsset: {fileID: 102900000, guid: 589d91b66e2fbbf43b68be749afbf959, type: 3}

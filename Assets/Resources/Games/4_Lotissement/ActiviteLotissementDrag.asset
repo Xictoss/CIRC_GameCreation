@@ -15,7 +15,7 @@ MonoBehaviour:
   miniGameName: ActiviteLotissementDrag
   miniGameDesc: 
   miniGameTitle: 
-  endDesc: 
+  endDesc: Congratulations
   endExplication: 
   scene:
     m_SceneAsset: {fileID: 102900000, guid: 8a18f1f2bd330a745b1866afffc37b4b, type: 3}

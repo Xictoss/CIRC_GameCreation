@@ -15,7 +15,7 @@ MonoBehaviour:
   miniGameName: ChimiqueEntrepriseTaper
   miniGameDesc: 
   miniGameTitle: 
-  endDesc: 
+  endDesc: Congratulations
   endExplication: 
   scene:
     m_SceneAsset: {fileID: 102900000, guid: f0e86b78fac79cb4db960b4b6b7abae3, type: 3}

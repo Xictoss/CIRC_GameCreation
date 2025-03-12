@@ -15,6 +15,8 @@ MonoBehaviour:
   miniGameName: TabagismeMaisonSecouer
   miniGameDesc: 
   miniGameTitle: 
+  endDesc: Congratulations
+  endExplication: 
   scene:
     m_SceneAsset: {fileID: 102900000, guid: 76f23035327c1e9448978270e4a5bee7, type: 3}
     m_IsDirty: 0

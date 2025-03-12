@@ -12,7 +12,7 @@ namespace CIRC.MenuSystem.MiniGameReward
     {
         [SerializeField] private TMP_Text endDesc, endExplication;
         [SerializeField] private Image display;
-        [SerializeField] private Localize localize;
+        [SerializeField] private Localize descLocalize, titleLocalize;
 
         [Space(10f)]
         [SerializeField] private float shakeForce, shakeDuration;
@@ -25,7 +25,8 @@ namespace CIRC.MenuSystem.MiniGameReward
             endExplication.text = ctx.endExplication;
             display.sprite = ctx.image;
             
-            localize.SetTerm(endExplication.text);
+            descLocalize.SetTerm(endExplication.text);
+            titleLocalize.SetTerm(endDesc.text);
             
             gameObject.SetActive(true);
             

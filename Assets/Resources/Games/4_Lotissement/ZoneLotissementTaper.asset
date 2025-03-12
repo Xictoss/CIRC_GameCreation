@@ -15,7 +15,7 @@ MonoBehaviour:
   miniGameName: ZoneLotissementTaper
   miniGameDesc: 
   miniGameTitle: 
-  endDesc: 
+  endDesc: Congratulations
   endExplication: 
   scene:
     m_SceneAsset: {fileID: 102900000, guid: d6b7c27dfdd5da949b400eac3d9a433a, type: 3}

@@ -15,7 +15,7 @@ MonoBehaviour:
   miniGameName: ActivitePlageNager
   miniGameDesc: "ExplicationEnEntr\xE9eDeMiniJeuActivitePlageNager"
   miniGameTitle: Mini-Game
-  endDesc: Bravo
+  endDesc: Congratulations
   endExplication: "ExplicationECACActivit\xE9Physique"
   scene:
     m_SceneAsset: {fileID: 102900000, guid: 31c0e57efbe73474ca93483796b188df, type: 3}
