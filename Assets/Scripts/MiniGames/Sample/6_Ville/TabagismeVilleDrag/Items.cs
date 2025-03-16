@@ -8,19 +8,16 @@ namespace CIRC.MiniGames.Sample
     public class Items : MonoBehaviour, IDragHandler, IEndDragHandler
     {
         public bool isArrived { get; private set; }
-        private string tag;
         private RectTransform rt;
         [SerializeField] private Transform spawnAnchor;
 
         private void Awake()
         {
             rt = GetComponent<RectTransform>();
-            tag = gameObject.tag;
         }
         public void OnDrag(PointerEventData eventData)
         {
             rt.position += (Vector3)eventData.delta;
-
         }
 
         public void OnEndDrag(PointerEventData eventData)
@@ -43,7 +40,7 @@ namespace CIRC.MiniGames.Sample
 
         private bool IsValidEndZone(GameObject endZone)
         {
-            return endZone.CompareTag(tag);
+            return endZone.CompareTag("MiniGameZone1");
         }
     }
 }

@@ -7,5 +7,6 @@ namespace CIRC.MiniGames.Sample
     public struct TabagismeVilleDragContext : IMiniGameContext
     {
         public MiniGameDataHolder miniGameData;
+        public bool isRight;
     }
 }

@@ -9,6 +9,7 @@ namespace CIRC.MiniGames.Sample
     public class TabagismeVilleDragHandler : MonoBehaviour, IMiniGameHandler<TabagismeVilleDragContext>
     {
         [SerializeField] private MiniGameDataHolder miniGameData;
+        [SerializeField] private Items items;
         
         private TabagismeVilleDrag miniGame;
         
@@ -23,6 +24,7 @@ namespace CIRC.MiniGames.Sample
             return new TabagismeVilleDragContext
             {
                 miniGameData = miniGameData,
+                isRight = items.isArrived
             };
         }
     }

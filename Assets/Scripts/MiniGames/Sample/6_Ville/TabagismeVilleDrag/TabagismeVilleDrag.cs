@@ -12,7 +12,7 @@ namespace CIRC.MiniGames.Sample
 
         public override bool Refresh(ref TabagismeVilleDragContext context)
         {
-            return false;
+            return context.isRight;
         }
 
         public override void End(ref TabagismeVilleDragContext context, bool isSuccess)
