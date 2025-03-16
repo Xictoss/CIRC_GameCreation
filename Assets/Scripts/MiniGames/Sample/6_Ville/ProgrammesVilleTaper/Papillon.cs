@@ -5,10 +5,10 @@ using UnityEngine.EventSystems;
 
 namespace CIRC.MiniGames.Sample
 {
-    public class VactinationBandage : MonoBehaviour, IDragHandler, IEndDragHandler
+    public class Papillon : MonoBehaviour, IDragHandler, IEndDragHandler
     {
         [SerializeField] private RectTransform spawnRt;
-        [SerializeField] private RectTransform butterFlySpotRt;
+        [SerializeField] private RectTransform bandageSpotRt;
         private RectTransform rt;
         private bool canDrag = true;
         public bool IsPlaced { get; private set; }
@@ -36,7 +36,7 @@ namespace CIRC.MiniGames.Sample
             {
                 if (IsValidEndZone(result.gameObject))
                 {
-                    transform.DOMove(butterFlySpotRt.position, 0.5f).OnComplete(() => { IsPlaced = true; });
+                    transform.DOMove(bandageSpotRt.position, 0.5f).OnComplete(() => { IsPlaced = true; });
                     return;
                 }
             }
