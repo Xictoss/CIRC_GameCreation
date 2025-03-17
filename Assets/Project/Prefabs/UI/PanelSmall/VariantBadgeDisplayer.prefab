@@ -86,6 +86,7 @@ GameObject:
   - component: {fileID: 2090909150785376214}
   - component: {fileID: 673797566567857765}
   - component: {fileID: 2576253777272985912}
+  - component: {fileID: 1886754765129046845}
   m_Layer: 5
   m_Name: Desc
   m_TagString: Untagged
@@ -211,6 +212,45 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1886754765129046845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8098597023831986558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 344445a89b4f74a0e9a0a766903df87e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mTerm: 
+  mTermSecondary: 
+  PrimaryTermModifier: 0
+  SecondaryTermModifier: 0
+  TermPrefix: 
+  TermSuffix: 
+  LocalizeOnAwake: 1
+  IgnoreRTL: 0
+  MaxCharactersInRTL: 0
+  IgnoreNumbersInRTL: 1
+  CorrectAlignmentForRTL: 1
+  AddSpacesToJoinedLanguages: 0
+  AllowLocalizedParameters: 1
+  AllowParameters: 1
+  TranslatedObjects: []
+  LocalizeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  AlwaysForceLocalize: 0
+  LocalizeCallBack:
+    Target: {fileID: 0}
+    MethodName: 
+  mGUI_ShowReferences: 0
+  mGUI_ShowTems: 1
+  mGUI_ShowCallback: 0
+  mLocalizeTarget: {fileID: 0}
+  mLocalizeTargetName: I2.Loc.LocalizeTarget_TextMeshPro_UGUI
 --- !u!1001 &8274161708110006987
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -392,8 +432,8 @@ MonoBehaviour:
   title: {fileID: 2061743785082115704}
   desc: {fileID: 2576253777272985912}
   display: {fileID: 5094552049427026053}
-  titleLocalize: {fileID: 0}
-  descLocalize: {fileID: 0}
+  titleLocalize: {fileID: 439111681887084294}
+  descLocalize: {fileID: 1886754765129046845}
   shakeForce: 0.1
   shakeDuration: 0.2
 --- !u!114 &2061743785082115704 stripped

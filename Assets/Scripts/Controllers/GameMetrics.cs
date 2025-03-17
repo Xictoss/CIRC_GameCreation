@@ -56,6 +56,8 @@ namespace CIRC.Controllers
         public string SettingsMenu { get; private set; }
         [field: SerializeField, Foldout("Menu Names")]
         public string PauseMenu { get; private set; }
+        [field: SerializeField, Foldout("Menu Names")]
+        public string CreditsMenu { get; private set; }
 
         #endregion
         

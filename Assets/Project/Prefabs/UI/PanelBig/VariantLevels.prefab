@@ -531,7 +531,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -50}
+  m_AnchoredPosition: {x: 0, y: -60}
   m_SizeDelta: {x: -200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &749998353030218512
@@ -646,7 +646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mTerm: Plage
-  mTermSecondary: 
+  mTermSecondary: '-'
   PrimaryTermModifier: 0
   SecondaryTermModifier: 0
   TermPrefix: 
@@ -2115,7 +2115,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 214064318825089279, guid: a8af97d9b2ed8d5409444a5ca90bf482, type: 3}
       propertyPath: m_RaycastTarget
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2219619404724187979, guid: a8af97d9b2ed8d5409444a5ca90bf482, type: 3}
       propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
@@ -2265,6 +2265,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6924165668923522085, guid: a8af97d9b2ed8d5409444a5ca90bf482, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7086590299190804976}
+    - targetCorrespondingSourceObject: {fileID: 6924165668923522085, guid: a8af97d9b2ed8d5409444a5ca90bf482, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5192466437193902361}
     - targetCorrespondingSourceObject: {fileID: 3709168665942416945, guid: a8af97d9b2ed8d5409444a5ca90bf482, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5041415870636986606}
@@ -2335,9 +2338,6 @@ MonoBehaviour:
   - m_SceneAsset: {fileID: 102900000, guid: f80b0e6dfd16ab04e91f88e81ab4189d, type: 3}
     m_IsDirty: 0
     m_ScenePath: Assets/Scenes/MainScenes/Levels/2_MaisonScene.unity
-  - m_SceneAsset: {fileID: 102900000, guid: f07f8c1d778ef70458d1e7bd6fa75068, type: 3}
-    m_IsDirty: 0
-    m_ScenePath: Assets/Scenes/MainScenes/Levels/3_ParcScene.unity
   - m_SceneAsset: {fileID: 102900000, guid: 1bb59939e1338c74d8af03e66fdd3839, type: 3}
     m_IsDirty: 0
     m_ScenePath: Assets/Scenes/MainScenes/Levels/3_LotissementScene.unity
@@ -2347,8 +2347,11 @@ MonoBehaviour:
   - m_SceneAsset: {fileID: 102900000, guid: ff5f0a10577364446a22986cddf07f7d, type: 3}
     m_IsDirty: 0
     m_ScenePath: Assets/Scenes/MainScenes/Levels/5_VilleScene.unity
-  levelName: {fileID: 0}
-  textLocalization: {fileID: 0}
+  - m_SceneAsset: {fileID: 102900000, guid: 6b47cf3037fd2e540a62feda844e4064, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/Levels/6_CliniqueScene.unity
+  levelName: {fileID: 602308339335887302}
+  textLocalization: {fileID: 830450731930948403}
   levelSprites:
   - {fileID: 21300000, guid: 18d1ec3c4b8dda64a9b70cff348b5df8, type: 3}
   - {fileID: 21300000, guid: 524ee5d49c80bb0469d30722fa7e7af2, type: 3}
@@ -2364,9 +2367,21 @@ MonoBehaviour:
   - {fileID: 523237649508615000}
   - {fileID: 3144171687425296864}
   levelImage: {fileID: 9043230588857982922}
-  progressBar: {fileID: 0}
+  progressBar: {fileID: 5994134501160953425}
   shakeForce: 0.1
   shakeDuration: 0.2
+--- !u!225 &5192466437193902361
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4204767454167172272}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &7189385459885948826 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4145587344180381455, guid: a8af97d9b2ed8d5409444a5ca90bf482, type: 3}

@@ -55,7 +55,7 @@ namespace CIRC.SceneManagement
                 //Debug.Log($"Unloaded {scene.name}");
             }
 
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(1.5f);
             //Load scenes
             Scene mainScene = default;
             for (int i = 0; i < scenes.Length; i++)

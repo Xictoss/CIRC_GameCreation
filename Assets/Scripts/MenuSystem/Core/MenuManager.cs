@@ -30,7 +30,7 @@ namespace CIRC.MenuSystem
                 TryAddMenu(menu.MenuName, menu);
                 menu.Object.SetActive(false);
                 
-               // Debug.Log($"Menu : {menu.MenuName} added");
+               //Debug.Log($"Menu : {menu.MenuName} added");
             }
 
             currentMenu = null;

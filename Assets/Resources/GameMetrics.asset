@@ -56,6 +56,7 @@ MonoBehaviour:
   <MiniGamesMenu>k__BackingField: MiniGamesMenu
   <SettingsMenu>k__BackingField: SettingsMenu
   <PauseMenu>k__BackingField: PauseMenu
+  <CreditsMenu>k__BackingField: CreditsMenu
   <SortAndSplode_SpawnNumber>k__BackingField: 10
   <SortAndSplode_SpawnCooldown>k__BackingField: 0.75
   <RunAndDrink_DrinksNumber>k__BackingField: 3
