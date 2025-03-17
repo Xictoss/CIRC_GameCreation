@@ -562,17 +562,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Beach
+  m_text: Plage
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fa328c1ae3ffb6b4583cf371153b0be6, type: 2}
-  m_sharedMaterial: {fileID: 21918420405216288, guid: fa328c1ae3ffb6b4583cf371153b0be6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 939edab8897095f47bc63c854ec5ad9f, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: d1edd5b02b614fc4fbe59a3a4325f8cf, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -589,8 +589,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2215,7 +2215,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7948698520376646835, guid: a8af97d9b2ed8d5409444a5ca90bf482, type: 3}
       propertyPath: m_text
-      value: Levels
+      value: Niveaux
       objectReference: {fileID: 0}
     - target: {fileID: 8428718228866828695, guid: a8af97d9b2ed8d5409444a5ca90bf482, type: 3}
       propertyPath: m_RaycastTarget
@@ -2348,6 +2348,7 @@ MonoBehaviour:
     m_IsDirty: 0
     m_ScenePath: Assets/Scenes/MainScenes/Levels/5_VilleScene.unity
   levelName: {fileID: 0}
+  textLocalization: {fileID: 0}
   levelSprites:
   - {fileID: 21300000, guid: 18d1ec3c4b8dda64a9b70cff348b5df8, type: 3}
   - {fileID: 21300000, guid: 524ee5d49c80bb0469d30722fa7e7af2, type: 3}
@@ -2363,6 +2364,7 @@ MonoBehaviour:
   - {fileID: 523237649508615000}
   - {fileID: 3144171687425296864}
   levelImage: {fileID: 9043230588857982922}
+  progressBar: {fileID: 0}
   shakeForce: 0.1
   shakeDuration: 0.2
 --- !u!1 &7189385459885948826 stripped
@@ -2456,6 +2458,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8349608455172830292}
     m_Modifications:
+    - target: {fileID: 46542005097577672, guid: bf9ee91ac2cfd7b4da3edee9490cbe4d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 391.8288
+      objectReference: {fileID: 0}
+    - target: {fileID: 46542005097577672, guid: bf9ee91ac2cfd7b4da3edee9490cbe4d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 103.8262
+      objectReference: {fileID: 0}
+    - target: {fileID: 46542005097577672, guid: bf9ee91ac2cfd7b4da3edee9490cbe4d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 46542005097577672, guid: bf9ee91ac2cfd7b4da3edee9490cbe4d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 7.3131
+      objectReference: {fileID: 0}
     - target: {fileID: 1905218919669447103, guid: bf9ee91ac2cfd7b4da3edee9490cbe4d, type: 3}
       propertyPath: m_UseSpriteMesh
       value: 1
@@ -2575,6 +2593,22 @@ PrefabInstance:
     - target: {fileID: 6079828008746919447, guid: bf9ee91ac2cfd7b4da3edee9490cbe4d, type: 3}
       propertyPath: m_Name
       value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 7487650475496150438, guid: bf9ee91ac2cfd7b4da3edee9490cbe4d, type: 3}
+      propertyPath: m_text
+      value: Jouer
+      objectReference: {fileID: 0}
+    - target: {fileID: 7487650475496150438, guid: bf9ee91ac2cfd7b4da3edee9490cbe4d, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 939edab8897095f47bc63c854ec5ad9f, type: 2}
+    - target: {fileID: 7487650475496150438, guid: bf9ee91ac2cfd7b4da3edee9490cbe4d, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: acf0f7879d765da47aaef7f5c9b0eed7, type: 2}
+    - target: {fileID: 7487650475496150438, guid: bf9ee91ac2cfd7b4da3edee9490cbe4d, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1628689255843794062, guid: bf9ee91ac2cfd7b4da3edee9490cbe4d, type: 3}

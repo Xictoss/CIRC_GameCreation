@@ -49,10 +49,10 @@ namespace CIRC.SceneManagement
             {
                 AsyncOperation op = SceneManager.UnloadSceneAsync(scene);
                 
-                Debug.Log($"Beginning unloading : {scene.name}");
+                //Debug.Log($"Beginning unloading : {scene.name}");
                 yield return op;
                 
-                Debug.Log($"Unloaded {scene.name}");
+                //Debug.Log($"Unloaded {scene.name}");
             }
 
             yield return new WaitForSeconds(1);
@@ -61,12 +61,12 @@ namespace CIRC.SceneManagement
             for (int i = 0; i < scenes.Length; i++)
             {
                 SceneReference sceneReference = scenes[i];
-                Debug.Log($"Beginning loading : {sceneReference.ScenePath}");
+                //Debug.Log($"Beginning loading : {sceneReference.ScenePath}");
                 AsyncOperation op = SceneManager.LoadSceneAsync(sceneReference.BuildIndex, LoadSceneMode.Additive);
                 yield return op;
                 
                 
-                Debug.Log($"Loaded : {sceneReference.ScenePath}");
+                //Debug.Log($"Loaded : {sceneReference.ScenePath}");
                 if (!mainScene.IsValid())
                 {
                     mainScene = SceneManager.GetSceneByPath(sceneReference.ScenePath);
