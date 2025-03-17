@@ -137,3 +137,4 @@ MonoBehaviour:
   <APN_GuySpeed>k__BackingField: 0
   <HPT_fillSpeed>k__BackingField: 0.2
   <ALT_GuyToMotivateSpeed>k__BackingField: 100
+  <AVT_BikeSpeed>k__BackingField: 100

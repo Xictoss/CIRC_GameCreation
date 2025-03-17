@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2540a0aa5a245e189541b8ac74d1260, type: 3}
+  m_Name: TabagismeVilleTaper
+  m_EditorClassIdentifier: 
+  miniGameName: TabagismeVilleTaper
+  miniGameDesc: 
+  miniGameTitle: 
+  endDesc: 
+  endExplication: 
+  scene:
+    m_SceneAsset: {fileID: 0}
+    m_IsDirty: 0
+    m_ScenePath: 
+  gameSubject: 8
+  badgeDisplay: {fileID: 11400000, guid: f13253da6c2bcbd4184e9ed4558e4687, type: 2}
+  GUID: 5902df98-2647-48af-a3bb-8bfdbc75ef2d

@@ -5,23 +5,30 @@ using UnityEngine.EventSystems;
 
 namespace CIRC.MiniGames.Sample
 {
-    public class Items : MonoBehaviour, IDragHandler, IEndDragHandler
+    public class Key : MonoBehaviour, IDragHandler, IEndDragHandler
     {
-        public bool isArrived { get; private set; }
+        [SerializeField] private RectTransform spawnRt;
+        [SerializeField] private RectTransform keySpotRt;
         private RectTransform rt;
-        [SerializeField] private Transform spawnAnchor;
-
+        private bool canDrag = true;
+        public bool IsPlaced { get; private set; }
+        
         private void Awake()
         {
             rt = GetComponent<RectTransform>();
         }
+        
         public void OnDrag(PointerEventData eventData)
         {
+            
+            if (IsPlaced || !canDrag) return;
+
             rt.position += (Vector3)eventData.delta;
         }
 
         public void OnEndDrag(PointerEventData eventData)
         {
+            canDrag = false;
             List<RaycastResult> results = new List<RaycastResult>();
             EventSystem.current.RaycastAll(eventData, results);
 
@@ -29,15 +36,14 @@ namespace CIRC.MiniGames.Sample
             {
                 if (IsValidEndZone(result.gameObject))
                 {
-                    transform.position = result.gameObject.transform.position;
-                    isArrived = true;
+                    transform.DOMove(keySpotRt.position, 0.5f).OnComplete(() => { IsPlaced = true; });
                     return;
                 }
-                transform.DOMove(spawnAnchor.position, 0.5f);
-                
             }
+            transform.DOMove(spawnRt.position, 0.5f).OnComplete((() => { canDrag = true; }));
+            
         }
-
+        
         private bool IsValidEndZone(GameObject endZone)
         {
             return endZone.CompareTag("MiniGameZone1");

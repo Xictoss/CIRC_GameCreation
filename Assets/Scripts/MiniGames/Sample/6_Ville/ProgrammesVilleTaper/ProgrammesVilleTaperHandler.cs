@@ -6,25 +6,25 @@ using UnityEngine;
 
 namespace CIRC.MiniGames.Sample
 {
-    public class TabagismeVilleDragHandler : MonoBehaviour, IMiniGameHandler<TabagismeVilleDragContext>
+    public class ProgrammesVilleTaperHandler : MonoBehaviour, IMiniGameHandler<ProgrammesVilleTaperContext>
     {
         [SerializeField] private MiniGameDataHolder miniGameData;
-        [SerializeField] private Items items;
+        [SerializeField] private Papillon _papillon;
         
-        private TabagismeVilleDrag miniGame;
+        private ProgrammesVilleTaper miniGame;
         
         private void Start()
         {
-            miniGame = new TabagismeVilleDrag();
+            miniGame = new ProgrammesVilleTaper();
             MiniGameManager.Instance.StartMiniGame(miniGame, this);
         }
         
-        public TabagismeVilleDragContext GetContext()
+        public ProgrammesVilleTaperContext GetContext()
         {
-            return new TabagismeVilleDragContext
+            return new ProgrammesVilleTaperContext
             {
                 miniGameData = miniGameData,
-                isRight = items.isArrived
+                isPlaced = _papillon.IsPlaced
             };
         }
     }

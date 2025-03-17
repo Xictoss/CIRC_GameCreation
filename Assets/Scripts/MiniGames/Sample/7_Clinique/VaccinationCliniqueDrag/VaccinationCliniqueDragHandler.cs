@@ -6,25 +6,25 @@ using UnityEngine;
 
 namespace CIRC.MiniGames.Sample
 {
-    public class TabagismeVilleDragHandler : MonoBehaviour, IMiniGameHandler<TabagismeVilleDragContext>
+    public class VaccinationCliniqueDragHandler : MonoBehaviour, IMiniGameHandler<VaccinationCliniqueDragContext>
     {
         [SerializeField] private MiniGameDataHolder miniGameData;
-        [SerializeField] private Items items;
+        [SerializeField] private Bandage2 bandage2;
         
-        private TabagismeVilleDrag miniGame;
+        private VaccinationCliniqueDrag miniGame;
         
         private void Start()
         {
-            miniGame = new TabagismeVilleDrag();
+            miniGame = new VaccinationCliniqueDrag();
             MiniGameManager.Instance.StartMiniGame(miniGame, this);
         }
         
-        public TabagismeVilleDragContext GetContext()
+        public VaccinationCliniqueDragContext GetContext()
         {
-            return new TabagismeVilleDragContext
+            return new VaccinationCliniqueDragContext
             {
                 miniGameData = miniGameData,
-                isRight = items.isArrived
+                IsPlaced = bandage2.IsPlaced
             };
         }
     }

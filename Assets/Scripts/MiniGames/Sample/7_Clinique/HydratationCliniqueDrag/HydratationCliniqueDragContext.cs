@@ -4,7 +4,7 @@ using CIRC.Progression;
 
 namespace CIRC.MiniGames.Sample
 {
-    public struct TabagismeVilleDragContext : IMiniGameContext
+    public struct HydratationCliniqueDragContext : IMiniGameContext
     {
         public MiniGameDataHolder miniGameData;
         public bool isRight;

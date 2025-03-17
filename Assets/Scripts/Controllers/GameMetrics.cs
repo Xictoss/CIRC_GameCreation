@@ -119,6 +119,10 @@ namespace CIRC.Controllers
         
         [field: SerializeField, Foldout("MiniGames/ActiviteLotissementTaper")]
         public float ALT_GuyToMotivateSpeed { get; private set; }
+        
+        [field: SerializeField, Foldout("MiniGames/ActiviteVilleTaper")]
+
+        public float AVT_BikeSpeed { get; private set; }
 
         #endregion MiniGameMetrics
 

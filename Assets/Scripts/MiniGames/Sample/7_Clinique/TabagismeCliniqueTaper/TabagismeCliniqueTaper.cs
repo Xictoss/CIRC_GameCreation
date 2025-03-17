@@ -4,18 +4,18 @@ using CIRC.MiniGames.Core;
 
 namespace CIRC.MiniGames.Sample
 {
-    public class TabagismeVilleDrag : MiniGame<TabagismeVilleDragContext>
+    public class TabagismeCliniqueTaper : MiniGame<TabagismeCliniqueTaperContext>
     {
-        public override void Begin(ref TabagismeVilleDragContext context)
+        public override void Begin(ref TabagismeCliniqueTaperContext context)
         {
         }
 
-        public override bool Refresh(ref TabagismeVilleDragContext context)
+        public override bool Refresh(ref TabagismeCliniqueTaperContext context)
         {
             return context.isRight;
         }
 
-        public override void End(ref TabagismeVilleDragContext context, bool isSuccess)
+        public override void End(ref TabagismeCliniqueTaperContext context, bool isSuccess)
         {
             if (isSuccess)
             {

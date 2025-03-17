@@ -4,9 +4,9 @@ using CIRC.Progression;
 
 namespace CIRC.MiniGames.Sample
 {
-    public struct TabagismeVilleDragContext : IMiniGameContext
+    public struct VaccinationVilleDragContext : IMiniGameContext
     {
         public MiniGameDataHolder miniGameData;
-        public bool isRight;
+        public bool IsPlaced;
     }
 }
