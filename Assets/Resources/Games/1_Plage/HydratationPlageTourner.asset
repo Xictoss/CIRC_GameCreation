@@ -23,4 +23,5 @@ MonoBehaviour:
     m_ScenePath: Assets/Scenes/MainScenes/MiniGames/1_Plage/HydratationPlageTourner.unity
   gameSubject: 1
   badgeDisplay: {fileID: 11400000, guid: a6b0d26ae5478544fa0e5fb87fcb4ab5, type: 2}
+  levelInt: 1
   GUID: 156fbc13-41b4-42f8-974b-aea9e7e785a7

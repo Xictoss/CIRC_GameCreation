@@ -23,4 +23,5 @@ MonoBehaviour:
     m_ScenePath: Assets/Scenes/MainScenes/MiniGames/6_Ville/TabagismeVilleDrag.unity
   gameSubject: 7
   badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
+  levelInt: 5
   GUID: 5889e9c4-23b9-4fcf-a04e-01845def26d1

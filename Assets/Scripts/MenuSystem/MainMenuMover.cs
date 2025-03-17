@@ -10,6 +10,7 @@ namespace CIRC.MenuSystem
     {
         [SerializeField] private MenuMoveLink[] menus;
         [SerializeField] private PriorityScale targetPriority;
+        [SerializeField] private CanvasGroup[] panelGroups;
         
         private void OnEnable()
         {
@@ -63,8 +64,21 @@ namespace CIRC.MenuSystem
 
         private void MoveMenu(Transform menu, Transform target, float moveDuration)
         {
+            menu.DOKill(true);
+            
+            for (int i = 0; i < panelGroups.Length; i++)
+            {
+                panelGroups[i].blocksRaycasts = false;
+            }
+            
             menu.DOMove(target.position, moveDuration)
-                .SetEase(Ease.InOutCirc);
+                .SetEase(Ease.InOutCirc).SetTarget(menu).OnComplete(() =>
+                {
+                    for (int i = 0; i < panelGroups.Length; i++)
+                    {
+                        panelGroups[i].blocksRaycasts = true;
+                    }
+                });
         }
     }
 }

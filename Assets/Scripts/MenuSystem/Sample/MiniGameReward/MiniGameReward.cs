@@ -25,6 +25,7 @@ namespace CIRC.MenuSystem.MiniGameReward
             endExplication.text = ctx.endExplication;
             display.sprite = ctx.image;
             
+            Debug.Log(endExplication.text);
             descLocalize.SetTerm(endExplication.text);
             titleLocalize.SetTerm(endDesc.text);
             

@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -50}
-  m_SizeDelta: {x: -70, y: 300}
+  m_SizeDelta: {x: -70, y: 452.5712}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &1493063326636465206
 CanvasRenderer:
@@ -68,15 +68,15 @@ MonoBehaviour:
   m_text: Dans ce mini-jeu votre but sera de trier la bonne nourriture et la mauvaise
     nourriture.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 939edab8897095f47bc63c854ec5ad9f, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: acf0f7879d765da47aaef7f5c9b0eed7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281443904
-  m_fontColor: {r: 0.25062856, g: 0.6509434, b: 0.19344072, a: 1}
+    rgba: 4283126128
+  m_fontColor: {r: 0.438, g: 0.31650114, b: 0.2954434, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -178,7 +178,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -123}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &6217701943469858717
@@ -543,8 +543,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 175}
-  m_SizeDelta: {x: 500, y: 150}
+  m_AnchoredPosition: {x: 61.883118, y: 201.82407}
+  m_SizeDelta: {x: 364.5848, y: 103.4102}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &4351328512708962806
 CanvasRenderer:
@@ -574,17 +574,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PLAY
+  m_text: Jouer
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fa328c1ae3ffb6b4583cf371153b0be6, type: 2}
-  m_sharedMaterial: {fileID: 21918420405216288, guid: fa328c1ae3ffb6b4583cf371153b0be6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 939edab8897095f47bc63c854ec5ad9f, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: d1edd5b02b614fc4fbe59a3a4325f8cf, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -611,7 +611,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 10
+  m_characterSpacing: 20
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -786,7 +786,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7948698520376646835, guid: 3ad3326ed5bda184987a5d1570f91828, type: 3}
       propertyPath: m_text
-      value: Mini-Game
+      value: Mini-Jeux
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8782269605055461505, guid: 3ad3326ed5bda184987a5d1570f91828, type: 3}
@@ -907,6 +907,7 @@ MonoBehaviour:
   title: {fileID: 5316990786625071649}
   desc: {fileID: 7102116113547548316}
   button: {fileID: 808845196484580518}
+  localize: {fileID: 0}
   shakeForce: 0.1
   shakeDuration: 0.2
 --- !u!114 &5316990786625071649 stripped

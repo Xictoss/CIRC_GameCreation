@@ -5,5 +5,6 @@ namespace CIRC.Progression
     {
         public string ID;
         public bool Status;
+        public int LevelIndex;
     }
 }

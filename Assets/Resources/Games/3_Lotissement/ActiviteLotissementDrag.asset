@@ -23,4 +23,5 @@ MonoBehaviour:
     m_ScenePath: Assets/Scenes/MainScenes/MiniGames/4_Lotissement/ActiviteLotissementDrag.unity
   gameSubject: 11
   badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
+  levelInt: 3
   GUID: db3c1c2a-1672-409c-b9f5-e47662afcdb7

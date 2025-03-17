@@ -23,4 +23,5 @@ MonoBehaviour:
     m_ScenePath: Assets/Scenes/MainScenes/MiniGames/2_Maison/HydratationMaisonCanalisation.unity
   gameSubject: 1
   badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
+  levelInt: 2
   GUID: d3224596-8fc9-4f03-a827-a3ce6e9afd07

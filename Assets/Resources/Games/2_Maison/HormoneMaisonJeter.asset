@@ -23,4 +23,5 @@ MonoBehaviour:
     m_ScenePath: Assets/Scenes/MainScenes/MiniGames/2_Maison/HormoneMaisonJeter.unity
   gameSubject: 3
   badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
+  levelInt: 2
   GUID: be8f8882-e8ee-4d08-ac66-ad0ef50095d5

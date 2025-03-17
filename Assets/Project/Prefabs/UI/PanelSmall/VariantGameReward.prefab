@@ -68,15 +68,15 @@ MonoBehaviour:
   m_text: Dans ce mini-jeu votre but sera de trier la bonne nourriture et la mauvaise
     nourriture.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 939edab8897095f47bc63c854ec5ad9f, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: acf0f7879d765da47aaef7f5c9b0eed7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4291468889
-  m_fontColor: {r: 0.3476326, g: 0.61839277, b: 0.7924528, a: 1}
+    rgba: 4283126128
+  m_fontColor: {r: 0.438, g: 0.31650114, b: 0.2954434, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 72bfb54ab91485344aff52978b060e96, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8158b429ee006b44c863dc2b5def1ed7, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -442,6 +442,8 @@ MonoBehaviour:
   endDesc: {fileID: 4828998944880126733}
   endExplication: {fileID: 6291651888855192866}
   display: {fileID: 1243819267025789764}
+  descLocalize: {fileID: 0}
+  titleLocalize: {fileID: 0}
   shakeForce: 0.1
   shakeDuration: 0.2
 --- !u!224 &6045142203568224086 stripped

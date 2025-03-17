@@ -23,4 +23,5 @@ MonoBehaviour:
     m_ScenePath: Assets/Scenes/MainScenes/MiniGames/1_Plage/ExpositionPlageParasol.unity
   gameSubject: 6
   badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
+  levelInt: 1
   GUID: f8384141-cc74-4c57-8a21-b023e1e178d1

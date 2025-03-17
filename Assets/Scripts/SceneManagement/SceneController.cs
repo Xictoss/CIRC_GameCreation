@@ -27,7 +27,8 @@ namespace CIRC.SceneManagement
         public void LoadScene(SceneReference scene)
         {
             previousScene = SceneManager.GetActiveScene().path;
-            SceneManager.LoadScene(scene.BuildIndex);
+            
+            SceneLoader.LoadScenes(scene);
         }
 
         public void SubToSceneChange(ILoadScene classToSub, PriorityScale priority)
@@ -50,12 +51,12 @@ namespace CIRC.SceneManagement
             }
         }
         
-        public void OnSceneChanged(Scene currentScene, Scene nextScene)
+        public void OnSceneChanged(string[] scenes, string[] scenes1)
         {
             foreach (ILoadScene subbedClass in subbedClasses.GetKeys())
             {
                 //Debug.Log(subbedClass);
-                subbedClass.OnSceneLoaded(previousScene, nextScene);
+                subbedClass.OnSceneLoaded(scenes[0], scenes1[0]);
             }
         }
     }

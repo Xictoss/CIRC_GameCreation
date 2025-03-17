@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f2540a0aa5a245e189541b8ac74d1260, type: 3}
-  m_Name: HydratationVilleTaper
+  m_Name: AlimentationEntrepriseTaper
   m_EditorClassIdentifier: 
-  miniGameName: HydratationVilleTaper
+  miniGameName: AlimentationEntrepriseTaper
   miniGameDesc: 
   miniGameTitle: 
   endDesc: Congratulations
   endExplication: 
   scene:
-    m_SceneAsset: {fileID: 102900000, guid: 29904fbb5f89a06479f76464df4487b7, type: 3}
+    m_SceneAsset: {fileID: 102900000, guid: 5b3b1612916bd2f4bbb04174268a87e0, type: 3}
     m_IsDirty: 0
-    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/6_Ville/HydratationVilleTaper.unity
-  gameSubject: 1
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/5_Entreprise/AlimentationEntrepriseTaper.unity
+  gameSubject: 0
   badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
-  GUID: 55a030cb-6040-450d-98f5-dee583ab1349
+  levelInt: 4
+  GUID: 35c77825-8464-4fa7-83b4-6e3f681fc1bb

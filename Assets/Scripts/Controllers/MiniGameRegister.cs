@@ -16,10 +16,10 @@ namespace CIRC.Controllers
         public void SetCurrentMiniGame(MiniGameDataHolder data)
         {
             currentMiniGame = data;
-            WasCompleted = GameController.ProgressionManager.miniGameStatus[data.GUID];
+            WasCompleted = GameController.ProgressionManager.miniGameStatus[data.GUID].Item1;
         }
         
-        public void OnSceneLoaded(string previousScene, Scene currentScene)
+        public void OnSceneLoaded(string previousScene, string currentScene)
         {
             if (!previousScene.StartsWith("Assets/Scenes/MainScenes/MiniGames")) return;
             

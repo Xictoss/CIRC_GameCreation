@@ -23,4 +23,5 @@ MonoBehaviour:
     m_ScenePath: Assets/Scenes/MainScenes/MiniGames/1_Plage/AlimentationPlageChips.unity
   gameSubject: 0
   badgeDisplay: {fileID: 11400000, guid: a944493942e33de49b646dc28437b588, type: 2}
+  levelInt: 1
   GUID: 32199c82-2e43-44c3-a389-ee5805e2bb62

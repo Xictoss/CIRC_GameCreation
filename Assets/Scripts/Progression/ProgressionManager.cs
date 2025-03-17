@@ -7,7 +7,7 @@ namespace CIRC.Progression
     public class ProgressionManager : ISaveListener<GameSave>
     {
         public int Priority => 1;
-        public Dictionary<string, bool> miniGameStatus { get; private set; } = new Dictionary<string, bool>();
+        public Dictionary<string, (bool, int)> miniGameStatus { get; private set; } = new();
         
         public void Write(ref GameSave saveFile)
         {
@@ -16,7 +16,8 @@ namespace CIRC.Progression
                     new MiniGameStatus
                     {
                         ID = ctx.Key, 
-                        Status = ctx.Value
+                        Status = ctx.Value.Item1,
+                        LevelIndex = ctx.Value.Item2
                     })
                 .ToArray();
         }
@@ -28,23 +29,23 @@ namespace CIRC.Progression
             for (int i = 0; i < saveFile.miniGameStatus.Length; i++)
             {
                 MiniGameStatus miniGame = saveFile.miniGameStatus[i];
-                miniGameStatus.Add(miniGame.ID, miniGame.Status);
+                miniGameStatus.Add(miniGame.ID, (miniGame.Status, miniGame.LevelIndex));
             }
         }
 
         public void CompleteMiniGame(string ID)
         {
-            if (!miniGameStatus.TryAdd(ID, true))
+            if (miniGameStatus.TryGetValue(ID, out (bool, int) game))
             {
-                miniGameStatus[ID] = true;
+                miniGameStatus[ID] = (true, game.Item2);
             }
         }
 
         public void ResetMiniGame(string ID)
         {
-            if (!miniGameStatus.TryAdd(ID, false))
+            if (miniGameStatus.TryGetValue(ID, out (bool, int) game))
             {
-                miniGameStatus[ID] = false;
+                miniGameStatus[ID] = (false, game.Item2);
             }
         }
     }
