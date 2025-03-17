@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using LTX.Singletons;
+using UnityEditor;
 using UnityEngine;
 
 namespace CIRC.MenuSystem
@@ -19,6 +20,8 @@ namespace CIRC.MenuSystem
         protected override void Awake()
         {
             base.Awake();
+
+            if (!IsInstance) return;
             
             menus = new Dictionary<string, BaseMenu>();
             openedMenus = new Stack<BaseMenu>();

@@ -23,4 +23,5 @@ MonoBehaviour:
     m_ScenePath: Assets/Scenes/MainScenes/MiniGames/2_Maison/AlcoolMaisonFrigo.unity
   gameSubject: 2
   badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
+  levelInt: 2
   GUID: 2c95180f-ef86-4ea3-9634-07cc53b9cf26

@@ -60,7 +60,7 @@ namespace CIRC.CameraScripts
             GameController.SceneController.RemoveSubbedClass(this);
         }
 
-        public void OnSceneLoaded(string previousScene, Scene currentScene)
+        public void OnSceneLoaded(string previousScene, string currentScene)
         {
             if (!previousScene.StartsWith("Assets/Scenes/MainScenes/MiniGames")) return;
             

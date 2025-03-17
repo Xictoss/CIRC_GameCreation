@@ -20,7 +20,7 @@ namespace CIRC.UIRelated
 
         private void RefreshUI()
         {
-            Dictionary<string, bool> progressionManagerMiniGameStatus = GameController.ProgressionManager.miniGameStatus;
+            Dictionary<string, (bool, int)> progressionManagerMiniGameStatus = GameController.ProgressionManager.miniGameStatus;
             MiniGameDataHolder[] miniGameDataHolders = GameController.MiniGamesObserver.miniGames;
             
             
@@ -30,7 +30,7 @@ namespace CIRC.UIRelated
                 BadgeData badge = badges[i];
 
                 bool hadComplete = false;
-                foreach ((string key, bool value) in progressionManagerMiniGameStatus)
+                foreach ((string key, (bool value, int levelIndex)) in progressionManagerMiniGameStatus)
                 {
                     if (!value) continue;
                     

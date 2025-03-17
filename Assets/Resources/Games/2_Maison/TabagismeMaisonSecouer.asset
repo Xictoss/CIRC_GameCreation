@@ -23,4 +23,5 @@ MonoBehaviour:
     m_ScenePath: Assets/Scenes/MainScenes/MiniGames/2_Maison/TabagismeMaisonSecouer.unity
   gameSubject: 7
   badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
+  levelInt: 2
   GUID: 538aa4e0-e538-49ff-9464-61aea5735fee

@@ -16,7 +16,8 @@ namespace CIRC.Controllers
                     .Select(ctx => new MiniGameStatus()
                     {
                         ID = ctx.GUID,
-                        Status = false
+                        Status = false,
+                        LevelIndex = ctx.levelInt
                     })
                     .ToArray()
             };

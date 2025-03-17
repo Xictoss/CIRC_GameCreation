@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using CIRC.Collections;
 using CIRC.Controllers;
+using CIRC.Progression;
 using DevLocker.Utils;
 using DG.Tweening;
 using I2.Loc;
@@ -20,6 +21,7 @@ namespace CIRC.MenuSystem
         [SerializeField] private Sprite[] levelSprites;
         [SerializeField] private Image[] selectedLevels;
         [SerializeField] private Image levelImage;
+        [SerializeField] private Image progressBar;
         private int currentLevel;
         
         [Space(10f)]
@@ -44,7 +46,14 @@ namespace CIRC.MenuSystem
             levelName.text = GameMetrics.Global.SceneNames[currentLevel];
             textLocalization.SetTerm(levelName.text);
             selectedLevels[currentLevel].color = colorOn;
+
+            var games = GameController.ProgressionManager.miniGameStatus
+                .Where(game => game.Value.Item2 == currentLevel+1).ToArray();
             
+            float total = games.Length;
+            float completed = games.Count(game => game.Value.Item1);
+            progressBar.fillAmount = completed / total;
+
             //Debug.Log($"Current Level : {currentLevel}");
         }
 

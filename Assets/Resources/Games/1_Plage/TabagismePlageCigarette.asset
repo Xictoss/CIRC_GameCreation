@@ -23,4 +23,5 @@ MonoBehaviour:
     m_ScenePath: Assets/Scenes/MainScenes/MiniGames/1_Plage/TabagismePlageCigarette.unity
   gameSubject: 7
   badgeDisplay: {fileID: 11400000, guid: f13253da6c2bcbd4184e9ed4558e4687, type: 2}
+  levelInt: 1
   GUID: 3172c271-b839-4694-b0b2-bc39fbf88bbd

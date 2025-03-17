@@ -23,4 +23,5 @@ MonoBehaviour:
     m_ScenePath: Assets/Scenes/MainScenes/MiniGames/1_Plage/HydrationPlageTaper.unity
   gameSubject: 1
   badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
+  levelInt: 1
   GUID: 08c97871-1364-44bb-b152-7ac0464fd940

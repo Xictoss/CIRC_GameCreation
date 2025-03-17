@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0229dcce44a48669489e6dfd7202af5, type: 3}
   m_Name: GameMetrics
   m_EditorClassIdentifier: 
+  <SceneLoader>k__BackingField: {fileID: 8060071963915939581, guid: 9e1458e79b64ec84abf61a276b88ca42, type: 3}
   <MainMenuScene>k__BackingField:
     m_SceneAsset: {fileID: 102900000, guid: 5a7482f936737ce478c44ba6194d8bba, type: 3}
     m_IsDirty: 0

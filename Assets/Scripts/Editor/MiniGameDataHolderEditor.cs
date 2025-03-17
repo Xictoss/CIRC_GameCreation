@@ -1,3 +1,4 @@
+using System.IO;
 using CIRC.Progression;
 using UnityEditor;
 using UnityEngine;
@@ -10,28 +11,26 @@ namespace CIRC.Editor
         private void OnEnable()
         {
             var miniGameDataHolder = target as MiniGameDataHolder;
+            SerializedObject serializedObject = new SerializedObject(miniGameDataHolder);
 
             // Check if the GUID is empty or invalid
             if (string.IsNullOrEmpty(miniGameDataHolder.GUID))
             {
-                GenerateNewGuid(miniGameDataHolder);
+                SerializedProperty guidProperty = serializedObject.FindProperty("GUID");
+
+                // Generate a new GUID
+                guidProperty.stringValue = System.Guid.NewGuid().ToString();
+                Debug.Log($"Generated new GUID: {guidProperty.stringValue} for {miniGameDataHolder.miniGameName}");
             }
-        }
 
-        private void GenerateNewGuid(MiniGameDataHolder miniGameDataHolder)
-        {
-            SerializedObject serializedObject = new SerializedObject(miniGameDataHolder);
-            SerializedProperty guidProperty = serializedObject.FindProperty("GUID");
-
-            // Generate a new GUID
-            guidProperty.stringValue = System.Guid.NewGuid().ToString();
-
-            // Apply changes and save the asset
+            var value = AssetDatabase.GetAssetPath(target);
+            var dir = Directory.GetParent(value);
+            var levelIndex = int.Parse(dir.Name.Split('_')[0]);
+            serializedObject.FindProperty("levelInt").intValue = levelIndex;
+            
             serializedObject.ApplyModifiedProperties();
             EditorUtility.SetDirty(miniGameDataHolder);
             AssetDatabase.SaveAssets();
-
-            Debug.Log($"Generated new GUID: {guidProperty.stringValue} for {miniGameDataHolder.miniGameName}");
         }
     }
 }

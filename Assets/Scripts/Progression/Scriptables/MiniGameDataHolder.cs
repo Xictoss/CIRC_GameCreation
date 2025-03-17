@@ -22,6 +22,7 @@ namespace CIRC.Progression
         public GameSubject gameSubject;
         public BadgeData badgeDisplay;
         
+        public int levelInt;
         public string GUID;
     }
 }

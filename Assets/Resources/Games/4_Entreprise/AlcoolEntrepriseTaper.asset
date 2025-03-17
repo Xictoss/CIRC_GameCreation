@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f2540a0aa5a245e189541b8ac74d1260, type: 3}
-  m_Name: ZoneLotissementTaper
+  m_Name: AlcoolEntrepriseTaper
   m_EditorClassIdentifier: 
-  miniGameName: ZoneLotissementTaper
+  miniGameName: AlcoolEntrepriseTaper
   miniGameDesc: 
   miniGameTitle: 
   endDesc: Congratulations
   endExplication: 
   scene:
-    m_SceneAsset: {fileID: 102900000, guid: d6b7c27dfdd5da949b400eac3d9a433a, type: 3}
+    m_SceneAsset: {fileID: 102900000, guid: 0c2d11edd6348ba48abeefbf473f9749, type: 3}
     m_IsDirty: 0
-    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/4_Lotissement/ZoneLotissementTaper.unity
-  gameSubject: 8
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/5_Entreprise/AlcoolEntrepriseTaper.unity
+  gameSubject: 2
   badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
-  GUID: beeae481-074b-428d-aece-2623811965d8
+  levelInt: 4
+  GUID: 9bdcab8e-d2e7-478d-bb97-ef71528b13ac

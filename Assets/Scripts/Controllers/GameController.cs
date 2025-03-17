@@ -36,7 +36,7 @@ namespace CIRC.Controllers
             Application.targetFrameRate = 60;
 
             SceneController = new SceneController();
-            SceneManager.activeSceneChanged += SceneController.OnSceneChanged;
+            SceneLoader.OnSceneLoaded += SceneController.OnSceneChanged;
             
             Logger = new Logger();
 
@@ -59,7 +59,7 @@ namespace CIRC.Controllers
         {
             //SaveProgress();
             Save.RemoveListener(ProgressionManager);
-            SceneManager.activeSceneChanged -= SceneController.OnSceneChanged;
+            SceneLoader.OnSceneLoaded -= SceneController.OnSceneChanged;
         }
 
         #region Progress Functions

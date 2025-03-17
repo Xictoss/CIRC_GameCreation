@@ -1,3 +1,4 @@
+using CIRC.SceneManagement;
 using DevLocker.Utils;
 using NaughtyAttributes;
 using UnityEngine;
@@ -8,6 +9,7 @@ namespace CIRC.Controllers
     public partial class GameMetrics : ScriptableObject
     {
         public static GameMetrics Global => GameController.Metrics;
+        [field : SerializeField] public SceneLoader SceneLoader { get; private set; }
 
         #region Scenes
         
