@@ -20,7 +20,7 @@ Material:
   stringTagMap: {}
   disabledShaderPasses:
   - MOTIONVECTORS
-  m_LockedProperties: 
+  m_LockedProperties: _RippleDensity
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -39,21 +39,21 @@ Material:
     m_Ints: []
     m_Floats:
     - _Float: 0
-    - _FoamAmount: 5
+    - _FoamAmount: 0
     - _FoamCutOff: 1.05
-    - _FoamScale: 200
+    - _FoamScale: 0
     - _FoamSpeed: 0.03
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _RippleDensity: 65
-    - _RippleSilmness: 8
+    - _RippleDensity: 27.56
+    - _RippleSilmness: 7.46
     - _RippleSpeed: 2
     - _WaveScale: 1
     - _WaveSpeed: 0.1
     m_Colors:
     - _BaseColor: {r: 0, g: 0.6481993, b: 1, a: 0}
     - _FoamColor: {r: 1.534591, g: 1.534591, b: 1.534591, a: 1}
-    - _RippleColor: {r: 0.496855, g: 1.329623, b: 2, a: 0}
+    - _RippleColor: {r: 0.0009765625, g: 0.0009765625, b: 0.0009765625, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &8707576389941040286
