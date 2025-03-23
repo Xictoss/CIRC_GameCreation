@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: TabagismeVilleDrag
   m_EditorClassIdentifier: 
   miniGameName: TabagismeVilleDrag
-  miniGameDesc: 
-  miniGameTitle: 
+  miniGameDesc: "ExplicationEnEntr\xE9eDeMiniJeuTabagismeVilleDrag"
+  miniGameTitle: Mini-Game
   endDesc: Congratulations
-  endExplication: 
+  endExplication: ExplicationECACExpositionAuSoleil
   scene:
     m_SceneAsset: {fileID: 102900000, guid: d5c42c37911d7f3498118dc8266b46ac, type: 3}
     m_IsDirty: 0
-    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/6_Ville/TabagismeVilleDrag.unity
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/5_Ville/TabagismeVilleDrag.unity
   gameSubject: 7
   badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
   levelInt: 5

@@ -6,6 +6,7 @@ namespace CIRC.Animals
     public class AnimalData : ScriptableObject
     {
         public string animalName;
+        public Sprite animalSprite;
         public string[] animalDialogs;
 
         public float dialogDuration;

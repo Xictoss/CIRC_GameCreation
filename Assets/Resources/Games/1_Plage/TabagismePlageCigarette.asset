@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: TabagismePlageCigarette
   m_EditorClassIdentifier: 
   miniGameName: TabagismePlageCigarette
-  miniGameDesc: 
-  miniGameTitle: 
+  miniGameDesc: "ExplicationEnEntr\xE9eDeMiniJeuTabagismePlageCigarette"
+  miniGameTitle: Mini-Game
   endDesc: Congratulations
-  endExplication: 
+  endExplication: ExplicationECACTabagisme
   scene:
     m_SceneAsset: {fileID: 102900000, guid: 09ef5d522f9bd454c98b0731e7d80c19, type: 3}
     m_IsDirty: 0
     m_ScenePath: Assets/Scenes/MainScenes/MiniGames/1_Plage/TabagismePlageCigarette.unity
-  gameSubject: 7
+  gameSubject: 8
   badgeDisplay: {fileID: 11400000, guid: f13253da6c2bcbd4184e9ed4558e4687, type: 2}
   levelInt: 1
   GUID: 3172c271-b839-4694-b0b2-bc39fbf88bbd

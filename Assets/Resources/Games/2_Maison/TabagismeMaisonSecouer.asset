@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: TabagismeMaisonSecouer
   m_EditorClassIdentifier: 
   miniGameName: TabagismeMaisonSecouer
-  miniGameDesc: 
-  miniGameTitle: 
+  miniGameDesc: "ExplicationEnEntr\xE9eDeMiniJeuTabagismeMaisonSecouer"
+  miniGameTitle: Mini-Game
   endDesc: Congratulations
-  endExplication: 
+  endExplication: ExplicationECACTabagisme
   scene:
     m_SceneAsset: {fileID: 102900000, guid: 76f23035327c1e9448978270e4a5bee7, type: 3}
     m_IsDirty: 0
     m_ScenePath: Assets/Scenes/MainScenes/MiniGames/2_Maison/TabagismeMaisonSecouer.unity
-  gameSubject: 7
-  badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
+  gameSubject: 8
+  badgeDisplay: {fileID: 11400000, guid: f13253da6c2bcbd4184e9ed4558e4687, type: 2}
   levelInt: 2
   GUID: 538aa4e0-e538-49ff-9464-61aea5735fee

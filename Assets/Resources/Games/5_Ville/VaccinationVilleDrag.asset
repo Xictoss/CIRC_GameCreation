@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: VaccinationVilleDrag
   m_EditorClassIdentifier: 
   miniGameName: VaccinationVilleDrag
-  miniGameDesc: 
-  miniGameTitle: 
-  endDesc: 
-  endExplication: 
+  miniGameDesc: "ExplicationEnEntr\xE9eDeMiniJeuVaccinationVilleDrag"
+  miniGameTitle: Mini-Game
+  endDesc: Congratulations
+  endExplication: ExplicationECACVaccinationContreLeHPV
   scene:
-    m_SceneAsset: {fileID: 0}
+    m_SceneAsset: {fileID: 102900000, guid: 88f12f7c4ae656341aaf4a1740c68860, type: 3}
     m_IsDirty: 0
-    m_ScenePath: 
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/5_Ville/VaccinationVilleDrag.unity
   gameSubject: 9
   badgeDisplay: {fileID: 11400000, guid: e3f165d3282234b4f89c5eca5b870215, type: 2}
+  levelInt: 5
   GUID: 5f1ebf68-ce0c-40c1-b94f-74fc2dff656c

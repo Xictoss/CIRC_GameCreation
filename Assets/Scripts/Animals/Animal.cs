@@ -9,9 +9,11 @@ namespace CIRC.Animals
 
         private IEnumerator Start()
         {
+            GetComponent<SpriteRenderer>().sprite = AnimalData.animalSprite;
+            
             while (true)
             {
-                yield return new WaitForSeconds(AnimalData.dialogCooldown + AnimalData.dialogDuration);
+                yield return new WaitForSeconds(AnimalData.dialogCooldown + AnimalData.dialogDuration + Random.Range(-2f, 2f));
                 
                 DialogsManager.Instance.SpawnDialog(AnimalData, transform.position);
             }

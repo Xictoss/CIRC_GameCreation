@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: AlcoolEntrepriseTaper
   m_EditorClassIdentifier: 
   miniGameName: AlcoolEntrepriseTaper
-  miniGameDesc: 
-  miniGameTitle: 
+  miniGameDesc: "ExplicationEnEntr\xE9eDeMiniJeuAlcoolEntrepriseTaper"
+  miniGameTitle: Mini-Game
   endDesc: Congratulations
-  endExplication: 
+  endExplication: ExplicationECACAlcool
   scene:
     m_SceneAsset: {fileID: 102900000, guid: 0c2d11edd6348ba48abeefbf473f9749, type: 3}
     m_IsDirty: 0
-    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/5_Entreprise/AlcoolEntrepriseTaper.unity
-  gameSubject: 2
-  badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/4_Entreprise/AlcoolEntrepriseTaper.unity
+  gameSubject: 1
+  badgeDisplay: {fileID: 11400000, guid: 440083da761281d47a0afbe6396b33e5, type: 2}
   levelInt: 4
   GUID: 9bdcab8e-d2e7-478d-bb97-ef71528b13ac
