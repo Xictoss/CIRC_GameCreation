@@ -19,7 +19,7 @@ namespace CIRC.MiniGames.Sample
         
         public void OnPointerClick(PointerEventData eventData)
         {
-
+            Debug.Log("caca");
             Vector3 GoalCenter = guyTransform.position;
             
             Bounds bounds2 = goalTransform.RectTransformToWorldBounds();

@@ -22,7 +22,7 @@ namespace CIRC.MiniGames.Sample
             canClick = false;
             if (!CheckCheckEnd())
             {
-                gameObject.transform.DOShakePosition(1).OnComplete(() =>
+                gameObject.transform.DOShakePosition(1, 20, 50).OnComplete(() =>
                 {
                     canClick = true;
                     shakeRemains--;

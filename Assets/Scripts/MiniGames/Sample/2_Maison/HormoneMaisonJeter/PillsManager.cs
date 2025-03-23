@@ -29,7 +29,7 @@ namespace CIRC.MiniGames.Sample
                 pillLink.pills.isHormonal = pillLink.isHormonal;
 
                 if (pillLink.isHormonal)
-                {
+                {   
                     pillLink.pills.OnEnd += OnPillsEnd;
                     TMP_Text pill = Instantiate(pillUIPrefab, nameListParent);
                     pillLink.listPills = pill;
