@@ -22,7 +22,7 @@ namespace CIRC.MiniGames.Sample
                 GameController.SaveProgress();
             }
             
-            GameController.SceneController.LoadScene(GameController.Metrics.PlageScene);
+            GameController.SceneController.LoadScene(GameController.Metrics.MaisonScene);
         }
     }
 }
