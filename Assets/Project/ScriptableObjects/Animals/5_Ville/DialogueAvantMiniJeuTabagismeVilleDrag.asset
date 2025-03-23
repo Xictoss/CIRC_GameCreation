@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7461c8a6ed9d437b92c6c29015714c2a, type: 3}
   m_Name: DialogueAvantMiniJeuTabagismeVilleDrag
   m_EditorClassIdentifier: 
-  animalName: Saphira
-  animalSprite: {fileID: 21300000, guid: a0725d280c0ee734f8311fe7e59303e6, type: 3}
+  animalName: Snooze
+  animalSprite: {fileID: 21300000, guid: ef961bb7168af214bbed0088e1916a9c, type: 3}
   animalDialogs:
   - DialogueAvantMiniJeuTabagismeVilleDrag
   dialogDuration: 5

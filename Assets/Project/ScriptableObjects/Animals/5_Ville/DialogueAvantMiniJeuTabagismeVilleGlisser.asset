@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7461c8a6ed9d437b92c6c29015714c2a, type: 3}
   m_Name: DialogueAvantMiniJeuTabagismeVilleGlisser
   m_EditorClassIdentifier: 
-  animalName: Phanfan
-  animalSprite: {fileID: 0}
+  animalName: Saphira
+  animalSprite: {fileID: 21300000, guid: a0725d280c0ee734f8311fe7e59303e6, type: 3}
   animalDialogs:
   - DialogueAvantMiniJeuTabagismeVilleGlisser
   dialogDuration: 5

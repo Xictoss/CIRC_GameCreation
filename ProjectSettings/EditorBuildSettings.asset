@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScenes/Levels/2_MaisonScene.unity
     guid: f80b0e6dfd16ab04e91f88e81ab4189d
   - enabled: 1
+    path: Assets/Scenes/MainScenes/Levels/3_ParcScene.unity
+    guid: f07f8c1d778ef70458d1e7bd6fa75068
+  - enabled: 1
     path: Assets/Scenes/MainScenes/Levels/3_LotissementScene.unity
     guid: 1bb59939e1338c74d8af03e66fdd3839
   - enabled: 1
@@ -20,6 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScenes/Levels/5_VilleScene.unity
     guid: ff5f0a10577364446a22986cddf07f7d
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/Levels/7_StadeScene.unity
+    guid: 822cd96448fa04a46b6ef81badd63599
   - enabled: 1
     path: Assets/Scenes/MainScenes/Levels/6_CliniqueScene.unity
     guid: 6b47cf3037fd2e540a62feda844e4064
@@ -126,13 +132,13 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScenes/MiniGames/5_Ville/VaccinationVilleDrag.unity
     guid: 88f12f7c4ae656341aaf4a1740c68860
   - enabled: 1
-    path: Assets/Scenes/MainScenes/MiniGames/7_Clinique/HydratationCliniqueDrag.unity
+    path: Assets/Scenes/MainScenes/MiniGames/6_Clinique/HydratationCliniqueDrag.unity
     guid: fbdc8aad1c195d840a008a58605d4e27
   - enabled: 1
-    path: Assets/Scenes/MainScenes/MiniGames/7_Clinique/TabagismeCliniqueTaper.unity
+    path: Assets/Scenes/MainScenes/MiniGames/6_Clinique/TabagismeCliniqueTaper.unity
     guid: 11cdc64c490f9ba4bb6cf8e4a910f86e
   - enabled: 1
-    path: Assets/Scenes/MainScenes/MiniGames/7_Clinique/VaccinationCliniqueDrag.unity
+    path: Assets/Scenes/MainScenes/MiniGames/6_Clinique/VaccinationCliniqueDrag.unity
     guid: 05988fd282fa4a84b80c4535cb0c243d
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 46661899d2991954fb32fdca03a8b7e5, type: 2}
