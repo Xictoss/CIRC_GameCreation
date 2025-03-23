@@ -10,11 +10,11 @@ namespace CIRC.MiniGames.Sample
         [SerializeField] private MiniGameDataHolder miniGameData;
         [SerializeField] private Water water;
 
-        private ActiviteMaisonMagazine miniGame;
+        private AlccolPlageCocktail miniGame;
 
         private void Start()
         {
-            miniGame = new ActiviteMaisonMagazine();
+            miniGame = new AlccolPlageCocktail();
             MiniGameManager.Instance.StartMiniGame(miniGame, this);
         }
 
