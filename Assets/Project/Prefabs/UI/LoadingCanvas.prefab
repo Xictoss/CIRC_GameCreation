@@ -131,7 +131,7 @@ MonoBehaviour:
   cloudNumber: 8
   moveDistance: 3000
   minDuration: 10
-  maxDuration: 15
+  maxDuration: 12.5
   verticalOffsetRange: 200
   begin: {fileID: 4315983977955578092}
   middle: {fileID: 6838546055622857381}
@@ -776,6 +776,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 400}
-  m_SizeDelta: {x: 0, y: 1200}
+  m_AnchoredPosition: {x: 0, y: 513.4702}
+  m_SizeDelta: {x: 0, y: 973.0596}
   m_Pivot: {x: 0.5, y: 0.5}

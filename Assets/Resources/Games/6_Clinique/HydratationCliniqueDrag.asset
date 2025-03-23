@@ -19,7 +19,7 @@ MonoBehaviour:
   endExplication: ExplicationECACHydratation
   scene:
     m_SceneAsset: {fileID: 102900000, guid: fbdc8aad1c195d840a008a58605d4e27, type: 3}
-    m_IsDirty: 1
+    m_IsDirty: 0
     m_ScenePath: Assets/Scenes/MainScenes/MiniGames/6_Clinique/HydratationCliniqueDrag.unity
   gameSubject: 4
   badgeDisplay: {fileID: 11400000, guid: a6b0d26ae5478544fa0e5fb87fcb4ab5, type: 2}

@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: ActiviteVilleTaper
   m_EditorClassIdentifier: 
   miniGameName: ActiviteVilleTaper
-  miniGameDesc: "ExplicationECACActivit\xE9Physique"
+  miniGameDesc: "ExplicationEnEntr\xE9eDeMiniJeuActiviteVilleTaper"
   miniGameTitle: Mini-Game
   endDesc: Congratulations
-  endExplication: "ExplicationEnEntr\xE9eDeMiniJeuActiviteVilleTaper"
+  endExplication: "ExplicationECACActivit\xE9Physique"
   scene:
     m_SceneAsset: {fileID: 102900000, guid: 59ad04b6438f93a4ba7ac4896cf8a2b1, type: 3}
     m_IsDirty: 0

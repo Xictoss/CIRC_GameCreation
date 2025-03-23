@@ -27,7 +27,7 @@ namespace CIRC.MenuSystem
         {
             if (newsLetter)
             {
-                Application.OpenURL("https://www.iarc.who.int/fr/");
+                Application.OpenURL("https://www.iarc.who.int/iarcnewsletter/");
             }
             else
             {
@@ -64,6 +64,21 @@ namespace CIRC.MenuSystem
 
             button.image.sprite = buttonSprites[nextIndex];
             source.volume = Mathf.Clamp01(0.5f * nextIndex);
+
+            string key = sourceIndex ? "AudioSource" : "MusicSource";
+            PlayerPrefs.SetInt(key, nextIndex);
+        }
+
+        private void LoadVolumeState()
+        {
+            int audioIndex = PlayerPrefs.GetInt("AudioSource", buttonSprites.Length-1);
+            int musicIndex = PlayerPrefs.GetInt("MusicSource", buttonSprites.Length-1);
+            
+            soundButton.image.sprite = buttonSprites[audioIndex];
+            SoundManager.Instance.audioSource.volume = Mathf.Clamp01(0.5f * audioIndex);
+            
+            musicButton.image.sprite = buttonSprites[musicIndex];
+            SoundManager.Instance.musicSource.volume = Mathf.Clamp01(0.5f * musicIndex);
         }
 
         public override void OpenMenu(MenuContext ctx)
@@ -76,6 +91,8 @@ namespace CIRC.MenuSystem
                     currentTween = null;
                 });
             }
+            
+            LoadVolumeState();
         }
 
         public override void CloseMenu()

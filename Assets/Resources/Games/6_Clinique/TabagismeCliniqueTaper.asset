@@ -19,7 +19,7 @@ MonoBehaviour:
   endExplication: ExplicationECACTabagisme
   scene:
     m_SceneAsset: {fileID: 102900000, guid: 11cdc64c490f9ba4bb6cf8e4a910f86e, type: 3}
-    m_IsDirty: 1
+    m_IsDirty: 0
     m_ScenePath: Assets/Scenes/MainScenes/MiniGames/6_Clinique/TabagismeCliniqueTaper.unity
   gameSubject: 8
   badgeDisplay: {fileID: 11400000, guid: f13253da6c2bcbd4184e9ed4558e4687, type: 2}
