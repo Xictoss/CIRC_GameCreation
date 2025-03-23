@@ -6,6 +6,7 @@ using CIRC.Controllers;
 using DevLocker.Utils;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 namespace CIRC.SceneManagement
 {
@@ -55,7 +56,7 @@ namespace CIRC.SceneManagement
                 //Debug.Log($"Unloaded {scene.name}");
             }
 
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(1f + Random.Range(-0.2f, 0.75f));
             //Load scenes
             Scene mainScene = default;
             for (int i = 0; i < scenes.Length; i++)

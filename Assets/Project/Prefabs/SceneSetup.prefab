@@ -264,6 +264,14 @@ PrefabInstance:
       propertyPath: zoomClamp.x
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 8256851702755533798, guid: b304b63d6e3476643a9c744c10a62982, type: 3}
+      propertyPath: zoomMoveSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8256851702755533798, guid: b304b63d6e3476643a9c744c10a62982, type: 3}
+      propertyPath: zoomSensitivity
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8341801476333539556, guid: b304b63d6e3476643a9c744c10a62982, type: 3}
       propertyPath: m_Name
       value: Camera

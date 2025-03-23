@@ -77,8 +77,6 @@ namespace CIRC.UIRelated
                 newCloud.localPosition = pos;
             }
             
-            newCloud.localScale = new Vector3(Random.Range(1, 4f), Random.Range(1, 1.5f), 1);
-            
             clouds.Add(newCloud);
             
             MoveCloud(newCloud);
