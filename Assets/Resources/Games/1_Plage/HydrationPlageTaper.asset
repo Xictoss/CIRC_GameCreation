@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: HydrationPlageTaper
   m_EditorClassIdentifier: 
   miniGameName: HydrationPlageTaper
-  miniGameDesc: 
-  miniGameTitle: 
+  miniGameDesc: "ExplicationEnEntr\xE9eDeMiniJeuHydrationPlagePomper"
+  miniGameTitle: Mini-Game
   endDesc: Congratulations
-  endExplication: 
+  endExplication: ExplicationECACHydratation
   scene:
     m_SceneAsset: {fileID: 102900000, guid: ded2a45487b02764783ff3865418c2b6, type: 3}
     m_IsDirty: 0
     m_ScenePath: Assets/Scenes/MainScenes/MiniGames/1_Plage/HydrationPlageTaper.unity
-  gameSubject: 1
-  badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
+  gameSubject: 4
+  badgeDisplay: {fileID: 11400000, guid: a6b0d26ae5478544fa0e5fb87fcb4ab5, type: 2}
   levelInt: 1
   GUID: 08c97871-1364-44bb-b152-7ac0464fd940

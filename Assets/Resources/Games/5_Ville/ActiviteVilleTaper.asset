@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: ActiviteVilleTaper
   m_EditorClassIdentifier: 
   miniGameName: ActiviteVilleTaper
-  miniGameDesc: 
-  miniGameTitle: 
-  endDesc: 
-  endExplication: 
+  miniGameDesc: "ExplicationECACActivit\xE9Physique"
+  miniGameTitle: Mini-Game
+  endDesc: Congratulations
+  endExplication: "ExplicationEnEntr\xE9eDeMiniJeuActiviteVilleTaper"
   scene:
-    m_SceneAsset: {fileID: 0}
+    m_SceneAsset: {fileID: 102900000, guid: 59ad04b6438f93a4ba7ac4896cf8a2b1, type: 3}
     m_IsDirty: 0
-    m_ScenePath: 
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/5_Ville/ActiviteVilleTaper.unity
   gameSubject: 0
   badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
+  levelInt: 5
   GUID: b2774e89-714b-485f-9f57-13c0b1b60402

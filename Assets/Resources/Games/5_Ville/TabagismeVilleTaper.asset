@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: TabagismeVilleTaper
   m_EditorClassIdentifier: 
   miniGameName: TabagismeVilleTaper
-  miniGameDesc: 
-  miniGameTitle: 
-  endDesc: 
-  endExplication: 
+  miniGameDesc: "ExplicationEnEntr\xE9eDeMiniJeuTabagismeVilleGlisser"
+  miniGameTitle: Mini-Game
+  endDesc: Congratulations
+  endExplication: ExplicationECACTabagisme
   scene:
-    m_SceneAsset: {fileID: 0}
+    m_SceneAsset: {fileID: 102900000, guid: 619fc27bc9ee5c34aa5dfed18638981f, type: 3}
     m_IsDirty: 0
-    m_ScenePath: 
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/5_Ville/TabagismeVilleTaper.unity
   gameSubject: 8
   badgeDisplay: {fileID: 11400000, guid: f13253da6c2bcbd4184e9ed4558e4687, type: 2}
+  levelInt: 5
   GUID: 5902df98-2647-48af-a3bb-8bfdbc75ef2d

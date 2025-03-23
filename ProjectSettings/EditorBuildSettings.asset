@@ -63,13 +63,13 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScenes/MiniGames/2_Maison/TabagismeMaisonSecouer.unity
     guid: 76f23035327c1e9448978270e4a5bee7
   - enabled: 1
-    path: Assets/Scenes/MainScenes/MiniGames/5_Entreprise/ActiviteEntrepriseDrag.unity
+    path: Assets/Scenes/MainScenes/MiniGames/4_Entreprise/ActiviteEntrepriseDrag.unity
     guid: 5758faee6f77e9747989a9c5d1cb00b0
   - enabled: 1
-    path: Assets/Scenes/MainScenes/MiniGames/5_Entreprise/ChimiqueEntrepriseTaper.unity
+    path: Assets/Scenes/MainScenes/MiniGames/4_Entreprise/ChimiqueEntrepriseTaper.unity
     guid: f0e86b78fac79cb4db960b4b6b7abae3
   - enabled: 1
-    path: Assets/Scenes/MainScenes/MiniGames/5_Entreprise/VaccinationEntrepriseDrag.unity
+    path: Assets/Scenes/MainScenes/MiniGames/4_Entreprise/VaccinationEntrepriseDrag.unity
     guid: fec09a1193f977b41924054aaff30285
   - enabled: 1
     path: Assets/Scenes/MainScenes/MiniGames/1_Plage/AlimentationPlageChips.unity
@@ -87,35 +87,59 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScenes/MiniGames/1_Plage/HydrationPlageTaper.unity
     guid: ded2a45487b02764783ff3865418c2b6
   - enabled: 1
-    path: Assets/Scenes/MainScenes/MiniGames/4_Lotissement/ActiviteLotissementDrag.unity
+    path: Assets/Scenes/MainScenes/MiniGames/3_Lotissement/ActiviteLotissementDrag.unity
     guid: 8a18f1f2bd330a745b1866afffc37b4b
   - enabled: 1
-    path: Assets/Scenes/MainScenes/MiniGames/4_Lotissement/ActiviteLotissementTaper.unity
+    path: Assets/Scenes/MainScenes/MiniGames/3_Lotissement/ActiviteLotissementTaper.unity
     guid: 1ed1df698f7c60e4ea854aff4fe7f6fd
   - enabled: 1
-    path: Assets/Scenes/MainScenes/MiniGames/4_Lotissement/AlcoolLotissementTaper.unity
+    path: Assets/Scenes/MainScenes/MiniGames/3_Lotissement/AlcoolLotissementTaper.unity
     guid: d2ce1a190709eb4408e3359773eb57ef
   - enabled: 1
-    path: Assets/Scenes/MainScenes/MiniGames/4_Lotissement/ZoneLotissementTaper.unity
+    path: Assets/Scenes/MainScenes/MiniGames/3_Lotissement/ZoneLotissementTaper.unity
     guid: d6b7c27dfdd5da949b400eac3d9a433a
   - enabled: 1
-    path: Assets/Scenes/MainScenes/MiniGames/5_Entreprise/AlcoolEntrepriseTaper.unity
+    path: Assets/Scenes/MainScenes/MiniGames/4_Entreprise/AlcoolEntrepriseTaper.unity
     guid: 0c2d11edd6348ba48abeefbf473f9749
   - enabled: 1
-    path: Assets/Scenes/MainScenes/MiniGames/5_Entreprise/AlimentationEntrepriseTaper.unity
+    path: Assets/Scenes/MainScenes/MiniGames/4_Entreprise/AlimentationEntrepriseTaper.unity
     guid: 5b3b1612916bd2f4bbb04174268a87e0
   - enabled: 1
-    path: Assets/Scenes/MainScenes/MiniGames/5_Entreprise/DepistageEntrepriseTaper.unity
+    path: Assets/Scenes/MainScenes/MiniGames/4_Entreprise/DepistageEntrepriseTaper.unity
     guid: 589d91b66e2fbbf43b68be749afbf959
   - enabled: 1
-    path: Assets/Scenes/MainScenes/MiniGames/6_Ville/ExpositionVilleDrag.unity
+    path: Assets/Scenes/MainScenes/MiniGames/5_Ville/ExpositionVilleDrag.unity
     guid: f646d39872b8f6143895db13fa884e09
   - enabled: 1
-    path: Assets/Scenes/MainScenes/MiniGames/6_Ville/HydratationVilleTaper.unity
+    path: Assets/Scenes/MainScenes/MiniGames/5_Ville/HydratationVilleTaper.unity
     guid: 29904fbb5f89a06479f76464df4487b7
   - enabled: 1
-    path: Assets/Scenes/MainScenes/MiniGames/6_Ville/TabagismeVilleDrag.unity
+    path: Assets/Scenes/MainScenes/MiniGames/5_Ville/TabagismeVilleDrag.unity
     guid: d5c42c37911d7f3498118dc8266b46ac
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MiniGames/5_Ville/ActiviteVilleTaper.unity
+    guid: 59ad04b6438f93a4ba7ac4896cf8a2b1
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MiniGames/5_Ville/AlimentationVilleGlisser.unity
+    guid: 86f38148d04e2a043b7faae68fab25e3
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MiniGames/5_Ville/ProgrammesVilleTaper.unity
+    guid: 9e278ebff9fc8bb4ebae644b7c3097db
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MiniGames/5_Ville/TabagismeVilleTaper.unity
+    guid: 619fc27bc9ee5c34aa5dfed18638981f
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MiniGames/5_Ville/VaccinationVilleDrag.unity
+    guid: 88f12f7c4ae656341aaf4a1740c68860
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MiniGames/6_Clinique/HydratationCliniqueDrag.unity
+    guid: fbdc8aad1c195d840a008a58605d4e27
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MiniGames/6_Clinique/TabagismeCliniqueTaper.unity
+    guid: 11cdc64c490f9ba4bb6cf8e4a910f86e
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MiniGames/6_Clinique/VaccinationCliniqueDrag.unity
+    guid: 05988fd282fa4a84b80c4535cb0c243d
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 46661899d2991954fb32fdca03a8b7e5, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: f120053cde1ae38408022f418871162c, type: 2}

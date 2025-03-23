@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: AlimentationMaisonRadio
   m_EditorClassIdentifier: 
   miniGameName: AlimentationMaisonRadio
-  miniGameDesc: 
-  miniGameTitle: 
+  miniGameDesc: "ExplicationEnEntr\xE9eDeMiniJeuAlimentationMaisonRadio"
+  miniGameTitle: Mini-Game
   endDesc: Congratulations
-  endExplication: 
+  endExplication: "ExplicationECACAlimentationD\xE9s\xE9quilibr\xE9e"
   scene:
     m_SceneAsset: {fileID: 102900000, guid: 3491ec9a0d337ad408ad5b263fce2959, type: 3}
     m_IsDirty: 0
     m_ScenePath: Assets/Scenes/MainScenes/MiniGames/2_Maison/AlimentationMaisonRadio.unity
-  gameSubject: 12
-  badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
+  gameSubject: 5
+  badgeDisplay: {fileID: 11400000, guid: a944493942e33de49b646dc28437b588, type: 2}
   levelInt: 2
   GUID: 42ee6793-b42a-442d-a4d6-2a5a73dcb9e7

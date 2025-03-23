@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2540a0aa5a245e189541b8ac74d1260, type: 3}
+  m_Name: HydratationCliniqueDrag
+  m_EditorClassIdentifier: 
+  miniGameName: HydratationCliniqueDrag
+  miniGameDesc: "ExplicationEnEntr\xE9eDeMiniJeuHydratationCliniqueDrag"
+  miniGameTitle: Mini-Game
+  endDesc: Congratulation
+  endExplication: ExplicationECACHydratation
+  scene:
+    m_SceneAsset: {fileID: 102900000, guid: fbdc8aad1c195d840a008a58605d4e27, type: 3}
+    m_IsDirty: 0
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/6_Clinique/HydratationCliniqueDrag.unity
+  gameSubject: 4
+  badgeDisplay: {fileID: 11400000, guid: a6b0d26ae5478544fa0e5fb87fcb4ab5, type: 2}
+  levelInt: 6
+  GUID: 90254777-e008-4fa2-999e-1785814fc108

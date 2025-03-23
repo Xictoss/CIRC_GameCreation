@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: ZoneLotissementTaper
   m_EditorClassIdentifier: 
   miniGameName: ZoneLotissementTaper
-  miniGameDesc: 
-  miniGameTitle: 
+  miniGameDesc: "ExplicationEnEntr\xE9eDeMiniJeuZoneLotissementTaper"
+  miniGameTitle: Mini-Game
   endDesc: Congratulations
-  endExplication: 
+  endExplication: "ExplicationECACZoneExpos\xE9eAuRadon"
   scene:
     m_SceneAsset: {fileID: 102900000, guid: d6b7c27dfdd5da949b400eac3d9a433a, type: 3}
     m_IsDirty: 0
-    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/4_Lotissement/ZoneLotissementTaper.unity
-  gameSubject: 8
-  badgeDisplay: {fileID: 11400000, guid: 81f84dbfa0476da478eb455498080a4f, type: 2}
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/3_Lotissement/ZoneLotissementTaper.unity
+  gameSubject: 6
+  badgeDisplay: {fileID: 11400000, guid: acb6ae9204cc37946ab77c50a1a40541, type: 2}
   levelInt: 3
   GUID: beeae481-074b-428d-aece-2623811965d8
