@@ -19,7 +19,7 @@ MonoBehaviour:
   endExplication: ExplicationECACVaccinationContreLeHPV
   scene:
     m_SceneAsset: {fileID: 102900000, guid: 05988fd282fa4a84b80c4535cb0c243d, type: 3}
-    m_IsDirty: 1
+    m_IsDirty: 0
     m_ScenePath: Assets/Scenes/MainScenes/MiniGames/6_Clinique/VaccinationCliniqueDrag.unity
   gameSubject: 9
   badgeDisplay: {fileID: 11400000, guid: e3f165d3282234b4f89c5eca5b870215, type: 2}
