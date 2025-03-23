@@ -6,6 +6,6 @@ namespace CIRC.MiniGames.Sample
     public struct HormoneMaisonJeterContext : IMiniGameContext
     {
         public MiniGameDataHolder miniGameData;
-        public PillsManager pillsManager;
+        public bool isDone;
     }
 }

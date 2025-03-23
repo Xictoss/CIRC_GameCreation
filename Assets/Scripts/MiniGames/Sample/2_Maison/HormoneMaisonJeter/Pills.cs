@@ -11,6 +11,8 @@ namespace CIRC.MiniGames.Sample
         public event Action<Pills> OnEnd;
 
         public bool isHormonal;
+        
+        public bool isDone { get; private set; }
         private RectTransform rt;
         
         private void Awake()
@@ -40,8 +42,11 @@ namespace CIRC.MiniGames.Sample
                             0));
                         return;
                     }
-                    
-                    OnEnd?.Invoke(this);
+                    if (isHormonal)
+                    {
+                        isDone = true;
+                        return;
+                    }
                     gameObject.SetActive(false);
                 }
             }

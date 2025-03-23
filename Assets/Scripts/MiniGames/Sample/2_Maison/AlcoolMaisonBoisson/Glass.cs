@@ -9,6 +9,7 @@ namespace CIRC.MiniGames.Sample
     {
         public bool isArrived { get; private set; } 
         private RectTransform rt;
+        [SerializeField] private RectTransform anchor;
         
         private void Awake()
         {
@@ -29,18 +30,23 @@ namespace CIRC.MiniGames.Sample
             {
                 if (result.gameObject.CompareTag("MiniGameZone1"))
                 {
-                    isArrived = true;
+                    Invoke(nameof(Complete), 2f);
                     return;
                 }
                 if (result.gameObject.CompareTag("MiniGameZone2"))
                 {
-                    rt.DOShakePosition(0.2f, 15f).OnComplete(()=> rt.position = new Vector3(
-                        Screen.currentResolution.width/2,
-                        Screen.currentResolution.height/2,
-                        0));
+                    rt.DOShakePosition(0.2f, 15f).OnComplete(() =>
+                    {
+                        rt.transform.DOMove(anchor.transform.position, 0.5f);
+                    });
                     return;
                 }
             }
         }
+        
+        private void Complete()
+        {
+            isArrived = true;
+        } 
     }
 }

@@ -20,7 +20,7 @@ namespace CIRC.MiniGames.Sample
             if (IsArrived) return;
 
             IsArrived = true;
-            image.color = Color.black;
+            image.color = new Color(0 ,0 ,0 ,0);
         }
     }
 }

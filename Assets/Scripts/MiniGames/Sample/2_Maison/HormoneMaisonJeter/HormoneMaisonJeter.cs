@@ -11,7 +11,7 @@ namespace CIRC.MiniGames.Sample
 
         public override bool Refresh(ref HormoneMaisonJeterContext context)
         {
-            return context.pillsManager.IsDone;
+            return context.isDone;
         }
 
         public override void End(ref HormoneMaisonJeterContext context, bool isSuccess)

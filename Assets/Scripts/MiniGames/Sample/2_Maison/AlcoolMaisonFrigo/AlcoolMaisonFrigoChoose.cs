@@ -7,6 +7,7 @@ namespace CIRC.MiniGames.Sample
     public class AlcoolMaisonFrigoChoose : MonoBehaviour, IPointerClickHandler
     {
         public bool isFinished { get; private set; }
+        [SerializeField] private RectTransform pickUpAnchor;
 
         public void OnPointerClick(PointerEventData eventData)
         {
@@ -16,7 +17,7 @@ namespace CIRC.MiniGames.Sample
             }
             else if (gameObject.CompareTag("MiniGameZone2"))
             {
-                transform.DOShakePosition(1, Vector3.up * 10, 100).OnComplete(() => isFinished = true);
+                transform.DOMove(pickUpAnchor.position,2).OnComplete(() => isFinished = true);
             }
         }
     }

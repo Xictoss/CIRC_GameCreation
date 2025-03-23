@@ -8,7 +8,7 @@ namespace CIRC.MiniGames.Sample
     public class HormoneMaisonJeterHandler : MonoBehaviour, IMiniGameHandler<HormoneMaisonJeterContext>
     {
         [SerializeField] private MiniGameDataHolder miniGameData;
-        [SerializeField] private PillsManager pillsManager;
+        [SerializeField] private Pills pills;
         
         private HormoneMaisonJeter miniGame;
         
@@ -23,7 +23,7 @@ namespace CIRC.MiniGames.Sample
             return new HormoneMaisonJeterContext
             {
                 miniGameData = miniGameData,
-                pillsManager = pillsManager,
+                isDone = pills.isDone
             };
         }
     }

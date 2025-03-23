@@ -40,8 +40,13 @@ namespace CIRC.MiniGames.Sample
             tvScreen.sprite = newSprite;
             if (channels[newSprite])
             {
-                IsArrived = true;
+                Invoke(nameof(Complete), 2f);
             } 
         }
+
+        private void Complete()
+        {
+            IsArrived = true;
+        } 
     }
 }
