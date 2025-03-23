@@ -19,8 +19,8 @@ MonoBehaviour:
   endExplication: "ExplicationECACLimiterUtilisationDeM\xE9dicamentsHormonaux"
   scene:
     m_SceneAsset: {fileID: 102900000, guid: 63b4bffdd81401b4182713142241078c, type: 3}
-    m_IsDirty: 0
-    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/7_Clinique/LimiterCliniqueDrag.unity
+    m_IsDirty: 1
+    m_ScenePath: Assets/Scenes/MainScenes/MiniGames/6_Clinique/LimiterCliniqueDrag.unity
   gameSubject: 3
   badgeDisplay: {fileID: 11400000, guid: 1b5ba0dc1bd638b45bc4a369b6caa4c6, type: 2}
   levelInt: 6

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7461c8a6ed9d437b92c6c29015714c2a, type: 3}
   m_Name: DialogueAvantMiniJeuActiviteLotissementTaper
   m_EditorClassIdentifier: 
-  animalName: Phanfan
+  animalName: Spotty
+  animalSprite: {fileID: 21300000, guid: 7a3fe1e0c7f290342b48dac7e59adda5, type: 3}
   animalDialogs:
   - DialogueAvantMiniJeuActiviteLotissementTaper
   dialogDuration: 5
