@@ -3,7 +3,6 @@ using CIRC.Controllers;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
-
 namespace CIRC.MiniGames.Sample
 {
     public class GuyRun : MonoBehaviour, IPointerClickHandler
@@ -19,7 +18,6 @@ namespace CIRC.MiniGames.Sample
         
         public void OnPointerClick(PointerEventData eventData)
         {
-            Debug.Log("caca");
             Vector3 GoalCenter = guyTransform.position;
             
             Bounds bounds2 = goalTransform.RectTransformToWorldBounds();

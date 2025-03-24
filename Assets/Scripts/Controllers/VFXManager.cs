@@ -11,21 +11,22 @@ namespace CIRC.Controllers
 
         public void PlayVFX(string vfxName, Vector3 position)
         {
-            VisualEffect effect = vfxAssets
+            ParticleSystem effect = vfxAssets
                 .Select(ctx => ctx)
                 .FirstOrDefault(ctx => ctx.vfxName == vfxName).vfx;
 
-            VisualEffect instantiatedVFX = Instantiate(effect, position, Quaternion.identity);
+            ParticleSystem instantiatedVFX = Instantiate(effect, position, Quaternion.identity);
             instantiatedVFX.Play();
-            
             Destroy(instantiatedVFX.gameObject, 2f);
         }
     }
+    
+    
     
     [System.Serializable]
     public struct VFXAsset
     {
         public string vfxName;
-        public VisualEffect vfx;
+        public ParticleSystem vfx;
     }
 }

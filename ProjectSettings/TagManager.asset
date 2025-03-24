@@ -41,6 +41,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: UI_VFX
+    uniqueID: 2955487503
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
